@@ -1,7 +1,7 @@
 @App:name("PublishMqttInXmlFormat")
 /*
 Purpose:
-    This application demonstrates how to configure WSO2 Stream Processor to send sweet production events via MQTT transport in XML format and view the output on the mqtt-consumer.
+    This application demonstrates how to configure WSO2 Streaming Integrator to send sweet production events via MQTT transport in XML format and view the output on the mqtt-consumer.
 
 Prerequisites:
     1) Save this sample. The following message appears on the console.

@@ -3,7 +3,7 @@
 
 /*
 Purpose:
-    This application demonstrates how to configure WSO2 Stream Processor to send sweet production events via TCP transport in binary format and view the output on the console.
+    This application demonstrates how to configure WSO2 Streaming Integrator to send sweet production events via TCP transport in binary format and view the output on the console.
 
 Prerequisites:
     1) Save this sample. 

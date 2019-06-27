@@ -3,7 +3,7 @@
 @App:description('Receive events via HTTP transport in JSON format with custom mapping and view the output on the console')
 /*
 Purpose:
-    This application demonstrates how to configure WSO2 Stream Processor to receive events to the SweetProductionStream via HTTP transport in JSON format using custom mapping and log the events in LowProductionAlertStream to the output console.
+    This application demonstrates how to configure WSO2 Streaming Integrator to receive events to the SweetProductionStream via HTTP transport in JSON format using custom mapping and log the events in LowProductionAlertStream to the output console.
 
 Prerequisites:
     1) Save this sample

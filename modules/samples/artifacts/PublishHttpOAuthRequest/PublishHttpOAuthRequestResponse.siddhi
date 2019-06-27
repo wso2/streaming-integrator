@@ -2,7 +2,7 @@
 @App:description("sending an HTTP event via an OAuth protected endpoint and catching its response.")
 /*
 Purpose:
-	This application demonstrates how to configure WSO2 Stream Processor to sending an HTTP event via an OAuth
+	This application demonstrates how to configure WSO2 Streaming Integrator to sending an HTTP event via an OAuth
 	 protected endpoint and catching its response.
 Prerequisites:
      1) Replace the Sink configuration values for following options.

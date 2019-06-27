@@ -3,7 +3,7 @@
 
 /*
 Purpose:
-	This application demonstrates how to configure WSO2 Stream Processor to send sweet production events via HTTP transport in JSON default format, Receive response from the http server and process the response using siddhi.
+	This application demonstrates how to configure WSO2 Streaming Integrator to send sweet production events via HTTP transport in JSON default format, Receive response from the http server and process the response using siddhi.
 
 Prerequisites:
 	* Save this sample. If there is no syntax error, the following message is shown on the console:

@@ -3,7 +3,7 @@
 
 /*
 Purpose:
-	This application demonstrates how to configure WSO2 Stream Processor to send snmp set request via SNMP in keyvalue using custom mapping.
+	This application demonstrates how to configure WSO2 Streaming Integrator to send snmp set request via SNMP in keyvalue using custom mapping.
 
 Prerequisites:
 	1) Save this sample.

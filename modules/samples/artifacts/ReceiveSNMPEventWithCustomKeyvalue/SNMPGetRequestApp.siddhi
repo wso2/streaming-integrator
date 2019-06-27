@@ -4,7 +4,7 @@
 /*
 
 Purpose:
-    This application demonstrates how to configure WSO2 Stream Processor to resive snmp source via SNMP in keyvalue using custom mapping.
+    This application demonstrates how to configure WSO2 Streaming Integrator to resive snmp source via SNMP in keyvalue using custom mapping.
 
 Prerequisites:
 	1) Save this sample.

@@ -3,7 +3,7 @@
 
 /*
 Purpose:
-	This application demonstrates how to configure WSO2 Stream Processor to receive Hl7 events in XML format to the hl7Stream via MLLP protocol and log the events in xmlStream to the output console.
+	This application demonstrates how to configure WSO2 Streaming Integrator to receive Hl7 events in XML format to the hl7Stream via MLLP protocol and log the events in xmlStream to the output console.
 
 Prerequisites:
     1) Install the HAPI testpanel. (Reference: https://hapifhir.github.io/hapi-hl7v2/hapi-testpanel/install.html)

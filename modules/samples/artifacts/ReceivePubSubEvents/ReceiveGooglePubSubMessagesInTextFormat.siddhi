@@ -4,7 +4,7 @@
 
 /*
 Purpose:
-    This application demonstrates how to configure WSO2 Stream Processor using googlepubsub source in Siddhi to consume events. Events which are in TEXT format are consumed from a googlepubsub topic.
+    This application demonstrates how to configure WSO2 Streaming Integrator using googlepubsub source in Siddhi to consume events. Events which are in TEXT format are consumed from a googlepubsub topic.
 
 Prerequisites:
    1.Create a Google Cloud Platform account.

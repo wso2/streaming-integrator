@@ -2,7 +2,7 @@
 @App:description("Send HTTP events to an OAuth-protected endpoint. Here we use refresh token grant type.")
 /*
 Purpose:
-	This application demonstrates how to configure WSO2 Stream Processor to send HTTP events to an OAuth-protected
+	This application demonstrates how to configure WSO2 Streaming Integrator to send HTTP events to an OAuth-protected
 	endpoint. Here we use refresh token grant type.
 Prerequisites:
      1) Replace the Sink configuration values for following options.

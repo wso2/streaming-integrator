@@ -4,7 +4,7 @@
 
 /*
 Purpose:
-	This application demonstrates how to configure WSO2 Stream Processor to send sweet production events via Kafka transport in Avro format with custom mapping
+	This application demonstrates how to configure WSO2 Streaming Integrator to send sweet production events via Kafka transport in Avro format with custom mapping
 
 Prerequisites:
     1) Set up Kafka as follows:

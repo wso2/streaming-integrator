@@ -2,7 +2,7 @@
 @app:description("Receives the events from the rabbitmq broker using the AMQP protocol.")
 /*
 Purpose:
-    This application demonstrates how to configure WSO2 Stream Processor to receive events to the SweetProductionStream via rabbitmq broker in JSON format using default mapping and log the events in LowProductionAlertStream to the output console.
+    This application demonstrates how to configure WSO2 Streaming Integrator to receive events to the SweetProductionStream via rabbitmq broker in JSON format using default mapping and log the events in LowProductionAlertStream to the output console.
 
 Prerequisites:
     1) Save this sample

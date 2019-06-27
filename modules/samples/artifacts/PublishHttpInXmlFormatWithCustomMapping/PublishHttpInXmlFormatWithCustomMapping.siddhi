@@ -3,7 +3,7 @@
 
 /*
 Purpose:
-	This application demonstrates how to configure WSO2 Stream Processor to send sweet production events via HTTP transport in XML format using custom mapping. Map the input events($.item.id) to stream events(name) and log the events in LowProducitonAlertStream on the output console.
+	This application demonstrates how to configure WSO2 Streaming Integrator to send sweet production events via HTTP transport in XML format using custom mapping. Map the input events($.item.id) to stream events(name) and log the events in LowProducitonAlertStream on the output console.
 
 Prerequisites:
 	1) Save this sample. The following message appears on the console. 

@@ -3,7 +3,7 @@
 
 /*
 Purpose:
-	This application demonstrates how to configure WSO2 Stream Processor to send sweet production events via JMS transport in Keyvalue format.
+	This application demonstrates how to configure WSO2 Streaming Integrator to send sweet production events via JMS transport in Keyvalue format.
 
 Prerequisites:
     1) Setup ActiveMQ

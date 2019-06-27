@@ -22,7 +22,7 @@ How to run
 9. Navigate to <SP_HOME>/bin
 10. Issue the command as ./worker.sh
     * Once WSO2 SP server is successfully started, a log similar to the following is printed in the Terminal.
-        * WSO2 Stream Processor started in x sec
+        * WSO2 Streaming Integrator started in x sec
 11. Start the TCP-Client using "ant" command
     * If the client starts successfully, the following messages appear on the terminal.
         * TCP client connected.
@@ -30,7 +30,7 @@ How to run
         * TCP client finished sending events
         
 Note:
- Performance is measured from start, inorder to repeat another test, the WSO2 Stream Processor runtime should be restarted. 
+ Performance is measured from start, inorder to repeat another test, the WSO2 Streaming Integrator runtime should be restarted. 
 
 How to build performance extension
 ==================================

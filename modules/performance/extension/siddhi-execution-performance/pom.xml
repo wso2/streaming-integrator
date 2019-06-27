@@ -21,8 +21,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>org.wso2.sp</groupId>
-        <artifactId>wso2sp-performance</artifactId>
+    <groupId>org.wso2.ei</groupId>
+        <artifactId>wso2-streaming-integrator-performance</artifactId>
         <version>4.4.0-m5-SNAPSHOT</version>
         <relativePath>../../pom.xml</relativePath>
     </parent>

@@ -1,9 +1,9 @@
 @App:name("PublishRabbitmqInXmlFormat")
-@APP:description("demonstrates how to configure WSO2 Stream Processor to send sweet production events via RabbitMQ transport in XML format, and view the output on the rabbitmq-consumer")
+@APP:description("demonstrates how to configure WSO2 Streaming Integrator to send sweet production events via RabbitMQ transport in XML format, and view the output on the rabbitmq-consumer")
 
 /*
 Purpose:
-    This application demonstrates how to configure WSO2 Stream Processor to send sweet production events via RabbitMQ transport in XML format, and view the output on the rabbitmq-consumer.
+    This application demonstrates how to configure WSO2 Streaming Integrator to send sweet production events via RabbitMQ transport in XML format, and view the output on the rabbitmq-consumer.
 
 Prerequisites:
     1) Save this sample. The following message appears on the console.

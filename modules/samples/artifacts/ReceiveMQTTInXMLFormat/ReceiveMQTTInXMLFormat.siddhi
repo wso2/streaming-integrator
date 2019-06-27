@@ -4,7 +4,7 @@
 
 /*
 Purpose:
-    This application demonstrates how to configure WSO2 Stream Processor  to receive events to the SweetProductionStream via MQTT transport in XML format and log the events in LowProductionAlertStream to the output console.
+    This application demonstrates how to configure WSO2 Streaming Integrator  to receive events to the SweetProductionStream via MQTT transport in XML format and log the events in LowProductionAlertStream to the output console.
 
 Prerequisites:
     1) Save this sample

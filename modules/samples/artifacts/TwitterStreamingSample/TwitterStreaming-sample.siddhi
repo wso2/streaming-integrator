@@ -3,7 +3,7 @@
 
 /*
 Purpose:
-	This application demonstrates how to configure WSO2 Stream Processor for retrieving tweets from Twitter App
+	This application demonstrates how to configure WSO2 Streaming Integrator for retrieving tweets from Twitter App
 	using twitter source.
 	
 Prerequisites:

@@ -5,7 +5,7 @@
 /*
 
 Purpose:
-    This application demonstrates how to configure WSO2 Stream Processor to receive events via HTTP transport and view the output on the console. The count of all events arriving to the stream is calculated.
+    This application demonstrates how to configure WSO2 Streaming Integrator to receive events via HTTP transport and view the output on the console. The count of all events arriving to the stream is calculated.
 
 Prerequisites:
     1) Save this sample

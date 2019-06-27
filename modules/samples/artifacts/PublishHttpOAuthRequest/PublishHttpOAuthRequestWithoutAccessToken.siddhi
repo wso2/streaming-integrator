@@ -2,7 +2,7 @@
 @App:description("Send a HTTP events to an OAuth-protected endpoint without access token")
 /*
 Purpose:
-	This application demonstrates how to configure WSO2 Stream Processor to send a HTTP events to an OAuth-protected
+	This application demonstrates how to configure WSO2 Streaming Integrator to send a HTTP events to an OAuth-protected
 	endpoint without access token
 Prerequisites:
      1) Replace the Sink configuration values for following options.

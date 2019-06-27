@@ -1,7 +1,7 @@
 @App:name("TensorFlowTestApp")
 /*
 Purpose:
-	This application demonstrates how to import a pretrained Tensorflow model WSO2 Stream Processor to perform a regression task.
+	This application demonstrates how to import a pretrained Tensorflow model WSO2 Streaming Integrator to perform a regression task.
 
 Prerequisites:
     1) Replace {SP_HOME} with absolute path to the Stream Processor home directory.

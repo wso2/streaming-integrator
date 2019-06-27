@@ -1,8 +1,8 @@
 @App:name('PublishWSO2Events')
-@App:Description('Demonstrates how to configure WSO2 Stream Processor to send sweet production events via Wso2event transport.')
+@App:Description('Demonstrates how to configure WSO2 Streaming Integrator to send sweet production events via Wso2event transport.')
 /*
 Purpose:
-    This application demonstrates how to configure WSO2 Stream Processor to send sweet production events via Wso2event transport in wso2event format,and view the output on the wso2event-consumer.
+    This application demonstrates how to configure WSO2 Streaming Integrator to send sweet production events via Wso2event transport in wso2event format,and view the output on the wso2event-consumer.
 
 Prerequisites:
     1) Save this sample. The following message would be shown on the console
