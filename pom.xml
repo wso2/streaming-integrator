@@ -894,7 +894,7 @@
     </build>
     <properties>
 
-        <carbon.analytics.version>2.1.28-SNAPSHOT</carbon.analytics.version>
+        <carbon.analytics.version>2.1.28</carbon.analytics.version>
         <siddhi.version>4.5.9</siddhi.version>
 
         <carbon.analytics-common.version>6.1.26</carbon.analytics-common.version>
