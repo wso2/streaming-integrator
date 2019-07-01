@@ -50,27 +50,16 @@
         </fileSet>
 
         <fileSet>
-            <directory>carbon-home/conf/worker</directory>
-            <outputDirectory>conf/worker</outputDirectory>
-            <fileMode>644</fileMode>
-        </fileSet>
-        <fileSet>
-            <directory>carbon-home/conf/editor</directory>
-            <outputDirectory>conf/editor</outputDirectory>
+            <directory>carbon-home/conf</directory>
+            <outputDirectory>conf</outputDirectory>
             <fileMode>644</fileMode>
         </fileSet>
 
         <fileSet>
-            <directory>carbon-home/conf/transports/worker</directory>
-            <outputDirectory>wso2/worker/conf/transports</outputDirectory>
+            <directory>carbon-home/conf/transports/server</directory>
+            <outputDirectory>wso2/server/conf/transports</outputDirectory>
             <fileMode>644</fileMode>
         </fileSet>
-        <fileSet>
-            <directory>carbon-home/conf/transports/editor</directory>
-            <outputDirectory>wso2/editor/conf/transports</outputDirectory>
-            <fileMode>644</fileMode>
-        </fileSet>
-
 
         <fileSet>
             <directory>carbon-home/conf/osgi</directory>
@@ -120,7 +109,7 @@
         </fileSet>
         <fileSet>
             <directory>carbon-home/deployment/siddhi-files</directory>
-            <outputDirectory>wso2/worker/deployment/siddhi-files</outputDirectory>
+            <outputDirectory>wso2/server/deployment/siddhi-files</outputDirectory>
             <fileMode>644</fileMode>
             <excludes>
                 <exclude>empty.txt</exclude>
@@ -128,7 +117,7 @@
         </fileSet>
         <fileSet>
             <directory>.</directory>
-            <outputDirectory>wso2/worker/deployment/csv-files</outputDirectory>
+            <outputDirectory>wso2/server/deployment/csv-files</outputDirectory>
             <excludes>
                 <exclude>*/**</exclude>
             </excludes>
@@ -136,31 +125,7 @@
         </fileSet>
         <fileSet>
             <directory>.</directory>
-            <outputDirectory>wso2/worker/deployment/simulation-configs</outputDirectory>
-            <excludes>
-                <exclude>*/**</exclude>
-            </excludes>
-            <fileMode>644</fileMode>
-        </fileSet>
-        <fileSet>
-            <directory>.</directory>
-            <outputDirectory>wso2/editor/deployment/workspace</outputDirectory>
-            <excludes>
-                <exclude>*/**</exclude>
-            </excludes>
-            <fileMode>644</fileMode>
-        </fileSet>
-        <fileSet>
-            <directory>.</directory>
-            <outputDirectory>wso2/editor/deployment/csv-files</outputDirectory>
-            <excludes>
-                <exclude>*/**</exclude>
-            </excludes>
-            <fileMode>644</fileMode>
-        </fileSet>
-        <fileSet>
-            <directory>.</directory>
-            <outputDirectory>wso2/editor/deployment/simulation-configs</outputDirectory>
+            <outputDirectory>wso2/server/deployment/simulation-configs</outputDirectory>
             <excludes>
                 <exclude>*/**</exclude>
             </excludes>
@@ -207,13 +172,6 @@
             </includes>
             <fileMode>644</fileMode>
         </fileSet>
-
-        <!--Privacy policy app -->
-        <fileSet>
-            <directory>src/policies/</directory>
-            <outputDirectory>wso2/editor/deployment/web-ui-apps/policies</outputDirectory>
-            <fileMode>644</fileMode>
-        </fileSet>
     </fileSets>
     <files>
         <file>
@@ -255,38 +213,20 @@
         <!--TODO: Workaround for issue trustStore and keystore certificate system properties
         fixed-->
         <file>
-            <source>carbon-home/runtime/worker/carbon.sh</source>
-            <outputDirectory>wso2/worker/bin/</outputDirectory>
+            <source>carbon-home/runtime/server/carbon.sh</source>
+            <outputDirectory>wso2/server/bin/</outputDirectory>
             <filtered>true</filtered>
             <fileMode>755</fileMode>
         </file>
         <file>
-            <source>carbon-home/runtime/worker/carbon.bat</source>
-            <outputDirectory>wso2/worker/bin/</outputDirectory>
+            <source>carbon-home/runtime/server/carbon.bat</source>
+            <outputDirectory>wso2/server/bin/</outputDirectory>
             <filtered>true</filtered>
             <fileMode>755</fileMode>
         </file>
         <file>
-            <source>carbon-home/runtime/editor/carbon.sh</source>
-            <outputDirectory>wso2/editor/bin/</outputDirectory>
-            <filtered>true</filtered>
-            <fileMode>755</fileMode>
-        </file>
-        <file>
-            <source>carbon-home/runtime/editor/carbon.bat</source>
-            <outputDirectory>wso2/editor/bin/</outputDirectory>
-            <filtered>true</filtered>
-            <fileMode>755</fileMode>
-        </file>
-        <file>
-            <source>carbon-home/conf/editor/log4j2.xml</source>
-            <outputDirectory>conf/editor/</outputDirectory>
-            <filtered>true</filtered>
-            <fileMode>644</fileMode>
-        </file>
-        <file>
-            <source>carbon-home/conf/worker/log4j2.xml</source>
-            <outputDirectory>conf/worker/</outputDirectory>
+            <source>carbon-home/conf/server/log4j2.xml</source>
+            <outputDirectory>conf/server</outputDirectory>
             <filtered>true</filtered>
             <fileMode>644</fileMode>
         </file>
