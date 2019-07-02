@@ -14,13 +14,13 @@ How to run
    * After the successful build, you can find the jar file with all the
      dependencies inside siddhi-execution-performance target folder
 4. Copy the jar file to <SP_HOME>/lib folder
-5. Navigate to <SP_HOME>/wso2/worker/deployment/siddhi-files
+5. Navigate to <SP_HOME>/wso2/server/deployment/siddhi-files
 6. Save the siddhi app with .siddhi file extension
     * siddhi applications that are used for the tests can be found inside modules/performance/artifacts
 7. Sample client that are used for the tests can be found inside modules/performance/sample-clients
 8. Copy that TCP Client to <SP_HOME>/samples
 9. Navigate to <SP_HOME>/bin
-10. Issue the command as ./worker.sh
+10. Issue the command as ./worstreaming-integrator.sh
     * Once WSO2 SP server is successfully started, a log similar to the following is printed in the Terminal.
         * WSO2 Streaming Integrator started in x sec
 11. Start the TCP-Client using "ant" command
@@ -45,7 +45,7 @@ How to build performance extension
 4. Copy the converted jar file in <destination> to <SP_HOME>/lib folder
 5. Copy the original jar file to <SP_HOME>/samples/sample-clients/lib folder.
 6. Start WSO2 SP server and run your siddhi app with the performance extension.
-7. Navigate to <SP_HOME>/wso2/worker/performance-results directory.
+7. Navigate to <SP_HOME>/wso2/server/performance-results directory.
    You can see the performance results of your siddhi app as log files there
 
 How to use the Parameters for Performance Extension
