@@ -17,11 +17,11 @@
   # Carbon Configuration Parameters
 wso2.carbon:
     # value to uniquely identify a server
-  id: wso2-sp
+  id: wso2-si
     # server name
   name: WSO2 Streaming Integrator
     # server type
-  type: wso2-sp
+  type: wso2-si
     # ports used by this server
   ports:
       # port offset
@@ -377,7 +377,7 @@ wso2.datasources:
   # Cluster Configuration
 cluster.config:
   enabled: false
-  groupId:  sp
+  groupId:  si
   coordinationStrategyClass: org.wso2.carbon.cluster.coordinator.rdbms.RDBMSCoordinationStrategy
   strategyConfig:
     datasource: WSO2_CLUSTER_DB

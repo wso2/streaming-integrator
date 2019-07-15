@@ -27,7 +27,7 @@
         <relativePath>../../pom.xml</relativePath>
     </parent>
 
-    <groupId>org.wso2.extension.siddhi.execution.performance</groupId>
+    <groupId>io.siddhi.extension.execution.performance</groupId>
     <artifactId>siddhi-execution-performance-parent</artifactId>
     <packaging>pom</packaging>
     <name>Siddhi Execution Performance Extension Parent</name>
@@ -39,12 +39,12 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>org.wso2.siddhi</groupId>
+                <groupId>io.siddhi</groupId>
                 <artifactId>siddhi-core</artifactId>
                 <version>${siddhi.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.wso2.siddhi</groupId>
+                <groupId>io.siddhi</groupId>
                 <artifactId>siddhi-query-api</artifactId>
                 <version>${siddhi.version}</version>
             </dependency>

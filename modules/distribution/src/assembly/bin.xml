@@ -172,6 +172,15 @@
             </includes>
             <fileMode>644</fileMode>
         </fileSet>
+         <!--Commented since we do not copy resources-->
+        <!--<fileSet>-->
+            <!--<directory>src/resources/dockerfiles</directory>-->
+            <!--<outputDirectory>dockerfiles</outputDirectory>-->
+            <!--<excludes>-->
+                <!--<exclude>**/Dockerfile</exclude>-->
+                <!--<exclude>**/.gitkeep</exclude>-->
+            <!--</excludes>-->
+        <!--</fileSet>-->
     </fileSets>
     <files>
         <file>
@@ -218,6 +227,14 @@
             <filtered>true</filtered>
             <fileMode>755</fileMode>
         </file>
+
+        <!--<file>-->
+            <!--<source>src/resources/dockerfiles/Dockerfile</source>-->
+            <!--<outputDirectory>dockerfiles/</outputDirectory>-->
+            <!--<filtered>true</filtered>-->
+            <!--<fileMode>644</fileMode>-->
+        <!--</file>-->
+
         <file>
             <source>carbon-home/runtime/server/carbon.bat</source>
             <outputDirectory>wso2/server/bin/</outputDirectory>
