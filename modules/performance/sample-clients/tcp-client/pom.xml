@@ -19,9 +19,9 @@
 <project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-    <groupId>org.wso2.ei</groupId>
+        <groupId>org.wso2.ei</groupId>
         <artifactId>performance-sample-clients</artifactId>
-        <version>4.4.0-m1-SNAPSHOT</version>
+        <version>1.0.0-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
@@ -49,17 +49,17 @@
             <version>${log4j.version}</version>
         </dependency>
         <dependency>
-            <groupId>org.wso2.extension.siddhi.io.tcp</groupId>
+            <groupId>io.siddhi.extension.io.tcp</groupId>
             <artifactId>siddhi-io-tcp</artifactId>
             <version>${siddhi.io.tcp.version}</version>
         </dependency>
         <dependency>
-            <groupId>org.wso2.extension.siddhi.map.binary</groupId>
+            <groupId>io.siddhi.extension.map.binary</groupId>
             <artifactId>siddhi-map-binary</artifactId>
             <version>${siddhi.map.binary.version}</version>
         </dependency>
         <dependency>
-            <groupId>org.wso2.siddhi</groupId>
+            <groupId>io.siddhi</groupId>
             <artifactId>siddhi-core</artifactId>
             <version>${siddhi.version}</version>
         </dependency>

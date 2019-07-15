@@ -45,7 +45,7 @@
 
     <dependencies>
         <dependency>
-            <groupId>org.wso2.siddhi</groupId>
+            <groupId>io.siddhi</groupId>
             <artifactId>siddhi-core</artifactId>
         </dependency>
         <dependency>
@@ -53,7 +53,7 @@
             <artifactId>siddhi-io-rabbitmq</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.wso2.extension.siddhi.map.json</groupId>
+            <groupId>io.siddhi.extension.map.json</groupId>
             <artifactId>siddhi-map-json</artifactId>
         </dependency>
     </dependencies>
