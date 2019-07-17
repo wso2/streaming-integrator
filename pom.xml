@@ -801,8 +801,7 @@
         </pluginManagement>
     </build>
     <properties>
-        <!--Still Carbon analytics 3.0.0 has not released due to an issue in jenkins-->
-        <carbon.analytics.version>3.0.0</carbon.analytics.version>
+        <carbon.analytics.version>3.0.1</carbon.analytics.version>
         <siddhi.version>5.1.1</siddhi.version>
 
         <carbon.analytics-common.version>6.1.26</carbon.analytics-common.version>
@@ -832,7 +831,7 @@
         <carbon.kernel.package.import.version.range>[5.2.0, 6.0.0)</carbon.kernel.package.import.version.range>
         <carbon.kernel.pax.version>5.2.8</carbon.kernel.pax.version>
 
-        <carbon.deployment.version>5.2.0</carbon.deployment.version>
+        <carbon.deployment.version>5.2.1</carbon.deployment.version>
 
         <carbon.datasources.version>1.1.4</carbon.datasources.version>
         <carbon.metrics.version>2.3.8</carbon.metrics.version>
