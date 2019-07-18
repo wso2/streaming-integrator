@@ -46,4 +46,4 @@ WORKDIR ${USER_HOME}
 EXPOSE 7443 7070 9717 9612 7711 7611
 
 # initiate container and execute the micro integrator product startup script
-ENTRYPOINT ["/home/wso2carbon/wso2-streaming-integrator/bin/streaming-integrator.sh"]
+ENTRYPOINT ["/home/wso2carbon/wso2-streaming-integrator/bin/server.sh"]
