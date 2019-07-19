@@ -20,8 +20,8 @@ How to run
 7. Sample client that are used for the tests can be found inside modules/performance/sample-clients
 8. Copy that TCP Client to <SP_HOME>/samples
 9. Navigate to <SP_HOME>/bin
-10. Issue the command as ./worstreaming-integrator.sh
-    * Once WSO2 SP server is successfully started, a log similar to the following is printed in the Terminal.
+10. Issue the command as ./server.sh
+    * Once WSO2 SI server is successfully started, a log similar to the following is printed in the Terminal.
         * WSO2 Streaming Integrator started in x sec
 11. Start the TCP-Client using "ant" command
     * If the client starts successfully, the following messages appear on the terminal.
