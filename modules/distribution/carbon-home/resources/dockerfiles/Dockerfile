@@ -20,4 +20,4 @@
 
 FROM wso2/streaming-integrator:latest
 
-COPY files/siddhi-files /home/wso2carbon/wso2-streaming-integrator/wso2/server/deployment/siddhi-files
+COPY files/siddhi-files /home/wso2carbon/wso2si/wso2/server/deployment/siddhi-files

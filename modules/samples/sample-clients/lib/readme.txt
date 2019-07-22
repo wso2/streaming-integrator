@@ -1,1 +1,0 @@
-This contains dependencies related to sample clients

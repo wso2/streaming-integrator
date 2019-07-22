@@ -1095,7 +1095,7 @@
                             <descriptors>
                                 <descriptor>${basedir}/src/assembly/bin.xml</descriptor>
                             </descriptors>
-                            <finalName>wso2-streaming-integrator-${project.version}</finalName>
+                            <finalName>wso2si-${project.version}</finalName>
                             <appendAssemblyId>false</appendAssemblyId>
                         </configuration>
                     </execution>
@@ -1113,10 +1113,10 @@
                             <skip>${docker.skip}</skip>
                             <target>
                                 <echo message="prepare phase"/>
-                                <unzip src="${project.build.directory}/${project.artifactId}-${project.version}.zip" dest="${project.build.directory}/docker"/>
-                                <move file="${project.build.directory}/docker/${project.artifactId}-${project.version}" tofile="${project.build.directory}/docker/${project.artifactId}"/>
-                                <chmod file="${project.build.directory}/docker/${project.artifactId}/bin/*.sh" perm="+x"/>
-                                <chmod file="${project.build.directory}/docker/${project.artifactId}/wso2/server/bin/*.sh" perm="+x"/>
+                                <unzip src="${project.build.directory}/wso2si-${project.version}.zip" dest="${project.build.directory}/docker"/>
+                                <move file="${project.build.directory}/docker/wso2si-${project.version}" tofile="${project.build.directory}/docker/wso2si"/>
+                                <chmod file="${project.build.directory}/docker/wso2si/bin/*.sh" perm="+x"/>
+                                <chmod file="${project.build.directory}/docker/wso2si/wso2/server/bin/*.sh" perm="+x"/>
                             </target>
                         </configuration>
                         <goals>

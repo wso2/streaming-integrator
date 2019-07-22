@@ -17,7 +17,7 @@
   -->
 <assembly>
     <includeBaseDirectory>true</includeBaseDirectory>
-    <baseDirectory>wso2-streaming-integrator-${project.version}</baseDirectory>
+    <baseDirectory>wso2si-${project.version}</baseDirectory>
     <id>WSO2 Streaming Integrator Distribution</id>
     <formats>
         <format>zip</format>
@@ -87,25 +87,6 @@
                 <include>**/*.txt</include>
             </includes>
             <fileMode>444</fileMode>
-        </fileSet>
-        <fileSet>
-            <directory>../samples</directory>
-            <outputDirectory>samples</outputDirectory>
-            <excludes>
-                <exclude>target/**</exclude>
-                <exclude>scripts/**</exclude>
-                <exclude>pom.xml</exclude>
-                <exclude>LICENSE.txt</exclude>
-                <exclude>release-notes.html</exclude>
-                <exclude>**/*.ipr</exclude>
-                <exclude>**/*.iwr</exclude>
-                <exclude>**/*.eclipse</exclude>
-                <exclude>**/*.iml</exclude>
-                <exclude>**/*.releaseBackup</exclude>
-                <exclude>%regex[(?!.*utils/).*pom.xml]</exclude>
-                <exclude>**/target/**</exclude>
-            </excludes>
-            <fileMode>644</fileMode>
         </fileSet>
         <fileSet>
             <directory>carbon-home/deployment/siddhi-files</directory>

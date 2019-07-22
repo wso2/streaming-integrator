@@ -27,7 +27,7 @@ ARG USER_GROUP=wso2
 ARG USER_GROUP_ID=802
 ARG USER_HOME=/home/${USER}
 # docker image build arguments for wso2 product installation
-ARG STREMING_INTEGRATOR_NAME=wso2-streaming-integrator
+ARG STREMING_INTEGRATOR_NAME=wso2si
 ARG STREMING_INTEGRATOR_HOME=${USER_HOME}/${STREMING_INTEGRATOR_NAME}
 
 # create the user and group
@@ -46,4 +46,4 @@ WORKDIR ${USER_HOME}
 EXPOSE 7443 7070 9717 9612 7711 7611
 
 # initiate container and execute the micro integrator product startup script
-ENTRYPOINT ["/home/wso2carbon/wso2-streaming-integrator/bin/server.sh"]
+ENTRYPOINT ["/home/wso2carbon/wso2si/bin/server.sh"]

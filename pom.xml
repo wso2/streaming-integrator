@@ -1005,7 +1005,6 @@
     <modules>
         <module>modules/distribution</module>
         <module>modules/tests</module>
-        <module>modules/samples/sample-clients</module>
         <module>modules/integration</module>
         <module>modules/performance</module>
     </modules>
