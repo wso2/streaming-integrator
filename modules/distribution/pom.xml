@@ -16,14 +16,13 @@
   ~ * limitations under the License.
   ~ */
   -->
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
         <groupId>org.wso2.ei</groupId>
         <artifactId>wso2-streaming-integrator-parent</artifactId>
-        <version>1.0.0-SNAPSHOT</version>
+        <version>1.0.0-m1</version>
         <relativePath>../../pom.xml</relativePath>
     </parent>
 
@@ -1040,9 +1039,8 @@
                         <phase>package</phase>
                         <configuration>
                             <tasks>
-                                <replace dir="target/wso2carbon-kernel-${carbon.kernel.version}/wso2" token="false"
-                                         value="true">
-                                    <include name="**/bundles.info"/>
+                                <replace dir="target/wso2carbon-kernel-${carbon.kernel.version}/wso2" token="false" value="true">
+                                    <include name="**/bundles.info" />
                                 </replace>
                             </tasks>
                         </configuration>
@@ -1055,19 +1053,19 @@
                         <phase>install</phase>
                         <configuration>
                             <tasks>
-                                <delete dir="target/archive-tmp"/>
-                                <delete dir="target/dependency-maven-plugin-markers"/>
-                                <delete dir="target/org.eclipse.equinox.executable-3.5.0.v20110530-7P7NFUFFLWUl76mart"/>
-                                <delete dir="target/p2-repo"/>
-                                <delete file="target/tmp"/>
-                                <delete dir="target/wso2carbon-kernel-${carbon.kernel.version}"/>
-                                <delete dir="target/antrun"/>
-                                <delete dir="target/maven-shared-archive-resources"/>
-                                <delete dir="target/findbugs"/>
-                                <delete file="target/checkstyle-cachefile"/>
-                                <delete file="target/checkstyle-checker.xml"/>
-                                <delete file="target/checkstyle-result.xml"/>
-                                <delete file="target/checkstyle-suppressions.xml"/>
+                                <delete dir="target/archive-tmp" />
+                                <delete dir="target/dependency-maven-plugin-markers" />
+                                <delete dir="target/org.eclipse.equinox.executable-3.5.0.v20110530-7P7NFUFFLWUl76mart" />
+                                <delete dir="target/p2-repo" />
+                                <delete file="target/tmp" />
+                                <delete dir="target/wso2carbon-kernel-${carbon.kernel.version}" />
+                                <delete dir="target/antrun" />
+                                <delete dir="target/maven-shared-archive-resources" />
+                                <delete dir="target/findbugs" />
+                                <delete file="target/checkstyle-cachefile" />
+                                <delete file="target/checkstyle-checker.xml" />
+                                <delete file="target/checkstyle-result.xml" />
+                                <delete file="target/checkstyle-suppressions.xml" />
                             </tasks>
                         </configuration>
                         <goals>
@@ -1112,11 +1110,11 @@
                         <configuration>
                             <skip>${docker.skip}</skip>
                             <target>
-                                <echo message="prepare phase"/>
-                                <unzip src="${project.build.directory}/wso2si-${project.version}.zip" dest="${project.build.directory}/docker"/>
-                                <move file="${project.build.directory}/docker/wso2si-${project.version}" tofile="${project.build.directory}/docker/wso2si"/>
-                                <chmod file="${project.build.directory}/docker/wso2si/bin/*.sh" perm="+x"/>
-                                <chmod file="${project.build.directory}/docker/wso2si/wso2/server/bin/*.sh" perm="+x"/>
+                                <echo message="prepare phase" />
+                                <unzip src="${project.build.directory}/wso2si-${project.version}.zip" dest="${project.build.directory}/docker" />
+                                <move file="${project.build.directory}/docker/wso2si-${project.version}" tofile="${project.build.directory}/docker/wso2si" />
+                                <chmod file="${project.build.directory}/docker/wso2si/bin/*.sh" perm="+x" />
+                                <chmod file="${project.build.directory}/docker/wso2si/wso2/server/bin/*.sh" perm="+x" />
                             </target>
                         </configuration>
                         <goals>
