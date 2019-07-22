@@ -53,7 +53,9 @@ docker pull wso2/streaming-integrator
 
 ## Deploy in kubernetes
 
-WSO2 Streaming Integrator can be deployed in a Kubernetes cluster using Siddhi Operator. For more details please refer to [Installing the Streaming Integrator Using Kubernetes](https://docs.wso2.com/display/INSTALL/Installing+Enterprise+Integrator+Using+Kubernetes)
+WSO2 Streaming Integrator can be deployed in a Kubernetes cluster using Siddhi Operator. 
+* [Siddhi operator](https://github.com/siddhi-io/siddhi-operator) enables the deployment of Siddhi apps directly in your kubernetes cluster using a kubernetes custom resource.
+For more details please refer to [Installing the Streaming Integrator Using Kubernetes](https://docs.wso2.com/display/INSTALL/Installing+Enterprise+Integrator+Using+Kubernetes)
 
 ## Support
 
