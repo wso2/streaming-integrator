@@ -50,7 +50,11 @@ Please follow the steps mentioned below to build the WSO2 Streaming Integrator f
 
 ## Getting Started
 
-Get started with Streaming integrator in a few minutes by following [Streaming Integrator Quick Start Guide](https://docs.wso2.com/display/SP4xx/Quick+Start+Guide)
+Please refer the below guides to get started with the Streaming Integrator
+
+* [Quick Start Guide](): Step by step guide to get your first app running in less than 5 mins
+
+* [Streaming Integrator 101](): 30 mins guide to explore the end to end development lifecycle of Streaming Integrator
 
 ## Deploy in Docker
 
