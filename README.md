@@ -50,7 +50,7 @@ Please follow the steps mentioned below to build the WSO2 Streaming Integrator f
 
 ## Getting Started
 
-Please refer the below guides to get you self started with the Streaming Integrator
+Please refer the below guides to get started with the Streaming Integrator
 
 * [Quick Start Guide](): Step by step guide to get your first app running in less than 5 mins
 
