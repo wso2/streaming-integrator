@@ -299,7 +299,7 @@ state.persistence:
   enabled: true
   intervalInMin: 1
   revisionsToKeep: 3
-  persistenceStore: org.wso2.carbon.stream.processor.core.persistence.DBPersistenceStore
+  persistenceStore: org.wso2.carbon.streaming.integrator.core.persistence.DBPersistenceStore
   # config:
     # location: siddhi-app-persistence
   config:
