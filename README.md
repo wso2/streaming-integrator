@@ -35,7 +35,7 @@ WSO2 SI can be effectively used for,
 - Streaming data Integration 
 - Execute complex integrations based on streaming data with WSO2 Micro Integrator
 
-WSO2 SI is powered by [Siddhi.io](https://siddhi.io/), a well known cloud native open source stream processing engine. Siddhi let’s users write complex stream processing logics using a SQL like language referred to as [SiddhiQL](https://siddhi.io/en/v5.0/docs/). Users can aggregate, transform, enrich, analyze, cleanse and correlate streams of data on the fly using Siddhi queries and constructs. 
+WSO2 SI is powered by [Siddhi.io](https://siddhi.io/), a well-known cloud native open source stream processing engine. Siddhi lets users write complex stream processing logics using a SQL-like language referred to as [SiddhiQL](https://siddhi.io/en/v5.0/docs/). Users can aggregate, transform, enrich, analyze, cleanse and correlate streams of data on the fly using Siddhi queries and constructs. 
 
 WSO2 SI lets users connect to any data source with any destination regardless of the different protocols, data formats that different endpoints use. The SI store API provides the capability to fetch stored and aggregated data kept in-memory and in DBs via a REST API on demand using ad-hoc quarries.
 
