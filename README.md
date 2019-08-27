@@ -39,7 +39,7 @@ WSO2 SI is powered by [Siddhi.io](https://siddhi.io/), a well-known cloud native
 
 WSO2 SI lets users connect to any data source with any destination regardless of the different protocols, data formats that different endpoints use. The SI store API provides the capability to fetch stored and aggregated data kept in-memory and in DBs via a REST API on demand using ad-hoc quarries.
 
-The [SI tooling](https://github.com/wso2/streaming-integrator-tooling) provides a web based IDE which allows users to build Siddhi apps with a drag-and-drop graphical editor or a streaming SQL editor. It facilitates users to test their siddhi apps with capability to simulate data streams and to debug Siddhi queries. The deployed siddhi apps can be directly deployed in VM via the IDE or export as a docker image, or K8s artifacts that can be used with Siddhi K8s operator.
+The [SI tooling](https://github.com/wso2/streaming-integrator-tooling) provides a web-based IDE which allows users to build Siddhi apps with a drag-and-drop graphical editor or a streaming SQL editor. It facilitates users to test their siddhi apps with the capability to simulate data streams and to debug Siddhi queries. The deployed siddhi apps can be directly deployed in VM via the IDE or export as a docker image, or K8s artifacts that can be used with Siddhi K8s operator.
 
 SI has native support for Kubernetes with a [K8s Operator] (https://siddhi.io/en/v5.1/docs/siddhi-as-a-kubernetes-microservice/) designed to provide a convenient way of deploying SI on a K8s. SI has a very simple deployment architecture, the users can achieve high availability with zero data loss with two nodes of SI.
 
