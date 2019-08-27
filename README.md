@@ -41,9 +41,9 @@ WSO2 SI lets users connect to any data source with any destination regardless of
 
 The [SI tooling](https://github.com/wso2/streaming-integrator-tooling) provides a web-based IDE which allows users to build Siddhi apps with a drag-and-drop graphical editor or a streaming SQL editor. It facilitates users to test their siddhi apps with the capability to simulate data streams and to debug Siddhi queries. The deployed siddhi apps can be directly deployed in VM via the IDE or export as a docker image, or K8s artifacts that can be used with Siddhi K8s operator.
 
-SI has native support for Kubernetes with a [K8s Operator] (https://siddhi.io/en/v5.1/docs/siddhi-as-a-kubernetes-microservice/) designed to provide a convenient way of deploying SI on a K8s. SI has a very simple deployment architecture, the users can achieve high availability with zero data loss with two nodes of SI.
+SI has native support for Kubernetes with a [K8s Operator](https://siddhi.io/en/v5.1/docs/siddhi-as-a-kubernetes-microservice/) designed to provide a convenient way of deploying SI on a K8s. SI has a very simple deployment architecture, the users can achieve high availability with zero data loss with two nodes of SI.
 
-Integration flows deployed in [WSO2 Micro Integration(MI)] (https://github.com/wso2/micro-integrator) can be invoked directly by SI in a seamless manner using low latency RPC, this allows users to build robust data processing and integration pipelines by combining powerful streaming and integration capabilities. 
+Integration flows deployed in [WSO2 Micro Integration(MI)](https://github.com/wso2/micro-integrator) can be invoked directly by SI in a seamless manner using low latency RPC, this allows users to build robust data processing and integration pipelines by combining powerful streaming and integration capabilities. 
 
 ![Streaming Integrator/ Workflow](docs/images/streaming-integrator.png)
 
