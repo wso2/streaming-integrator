@@ -27,37 +27,51 @@
 
 ## Overview
 
-WSO2 Streaming Integrator(SI) is a streaming data processing server which lets users integrate streaming data and take action based on streaming data. 
+WSO2 Streaming Integrator (SI) is a streaming data processing server which lets users integrate streaming data and 
+take actions based on streaming data. 
 
 WSO2 SI can be effectively used for, 
 - Realtime ETL with files, DBs, SaaS apps, HTTP endpoints, etc.
-- Work with streaming messaging systems such as Kafka and NATS
-- Streaming data Integration 
-- Execute complex integrations based on streaming data with WSO2 Micro Integrator
+- Working with streaming messaging systems such as Kafka and NATS
+- Streaming data integration 
+- Executing complex integrations based on streaming data with [WSO2 Micro Integrator](https://github.com/wso2/micro-integrator)
 
 WSO2 SI is powered by [Siddhi.io](https://siddhi.io/), a well-known cloud native open source stream processing engine. Siddhi lets users write complex stream processing logics using a SQL-like language referred to as [SiddhiQL](https://siddhi.io/en/v5.0/docs/). Users can aggregate, transform, enrich, analyze, cleanse and correlate streams of data on the fly using Siddhi queries and constructs. 
 
-WSO2 SI lets users connect to any data source with any destination regardless of the different protocols, data formats that different endpoints use. The SI store API provides the capability to fetch stored and aggregated data kept in-memory and in DBs via a REST API on demand using ad-hoc quarries.
+WSO2 SI lets users connect to any data source with any destination regardless of different protocols and data 
+formats that are used by different endpoints. The SI store API provides the capability to fetch stored and 
+aggregated data 
+kept in-memory and in DBs via a REST API on demand using ad-hoc queries.
 
-The [SI tooling](https://github.com/wso2/streaming-integrator-tooling) provides a web-based IDE which allows users to build Siddhi apps with a drag-and-drop graphical editor or a streaming SQL editor. It facilitates users to test their siddhi apps with the capability to simulate data streams and to debug Siddhi queries. The deployed siddhi apps can be directly deployed in VM via the IDE or export as a docker image, or K8s artifacts that can be used with Siddhi K8s operator.
+[SI tooling](https://github.com/wso2/streaming-integrator-tooling) provides a web-based IDE which allows users to
+ build Siddhi apps with a drag-and-drop graphical editor, or a streaming SQL code editor. It facilitates users to test 
+ their Siddhi apps with the capability to simulate data streams and to debug Siddhi queries. Created Siddhi apps
+  can be directly deployed in a VM via the IDE, exported as a Docker image, or K8s artifacts that can be used with the
+  Siddhi K8s Operator.
 
-SI has native support for Kubernetes with a [K8s Operator](https://siddhi.io/en/v5.1/docs/siddhi-as-a-kubernetes-microservice/) designed to provide a convenient way of deploying SI on a K8s. SI has a very simple deployment architecture, the users can achieve high availability with zero data loss with two nodes of SI.
+SI has native support for Kubernetes with a [K8s Operator](https://siddhi.io/en/v5.1/docs/siddhi-as-a-kubernetes-microservice/) designed to provide a convenient way of deploying SI on K8s. SI has a 
+very simple deployment architecture, and the users can achieve high availability with zero data loss with two nodes of
+ SI.
 
-Integration flows deployed in [WSO2 Micro Integration(MI)](https://github.com/wso2/micro-integrator) can be invoked directly by SI in a seamless manner using low latency RPC, this allows users to build robust data processing and integration pipelines by combining powerful streaming and integration capabilities. 
+Integration flows deployed in [WSO2 Micro Integrator (MI)](https://github.com/wso2/micro-integrator) can be invoked 
+directly by SI in a seamless manner using low latency RPC. This allows users to build robust data processing and 
+integration pipelines by combining powerful streaming and integration capabilities. 
 
 ![Streaming Integrator/ Workflow](docs/images/streaming-integrator.png)
 
 ## Download
 
-The Streaming Integrator is currently on development stage so please follow the [How to build]() section to build the streaming integrator from the source.
+WSO2 Streaming Integrator is currently on development stage, so please follow the [Building from the Source]() section
+ to build 
+WSO2 Streaming Integrator from the source.
 <!-- Please download the latest WSO2 Streaming Integrator release from [here]()  -->
 
 ## Building from the Source
 
-Please follow the steps mentioned below to build the WSO2 Streaming Integrator from source.
+Please follow the steps mentioned below to build WSO2 Streaming Integrator from source.
 
-1. Clone or download the source code from this repository.
-2. Run the `mvn clean install` from the root directory of the repository
+1. Clone or download the source code from this repository
+2. Run `mvn clean install` from the root directory of the repository
 3. The generated Streaming Integrator distribution can be found at `streaming-integrator/modules/distribution/target/-streaming-integrator-<version>.zip`
 
 ## Getting Started
@@ -70,26 +84,28 @@ Please refer the below guides to get started with the Streaming Integrator
 
 ## Deploy in Docker
 
-WSO2 Streaming Integrator has a docker distribution so that it can be deployed in any container-orchestration system.
-The docker image can be build from the source or can be download directly from the docker_hub.
+WSO2 Streaming Integrator has a Docker distribution so that it can be deployed in any container-orchestration system.
+The Docker image can be built from the source, or downloaded directly from Docker Hub.
 
-### Build the docker image
+### Build the Docker Image
 
-To build the docker image from the source the host machine should have docker installed and run the `mvn clean install -Ddocker.skip=false` from the root directory.
+To build the Docker image from the source, the host machine should have Docker installed. Run `mvn clean 
+install -Ddocker.skip=false` from the root directory to build the Docker image.
 
-### Get from docker hub
+### Get the Image from Docker Hub
 
-Please use following command to get the docker image from the docker hub.
+Please use the following command to get the Docker image from Docker Hub.
 
 ```bash
 docker pull wso2/streaming-integrator
 ```
 
-## Deploy in kubernetes
+## Deploy in Kubernetes
 
 WSO2 Streaming Integrator can be deployed in a Kubernetes cluster using Siddhi Operator. 
-* [Siddhi operator](https://github.com/siddhi-io/siddhi-operator) enables the deployment of Siddhi apps directly in your kubernetes cluster using a kubernetes custom resource.
-For more details please refer to [Installing the Streaming Integrator Using Kubernetes](https://docs.wso2.com/display/INSTALL/Installing+Enterprise+Integrator+Using+Kubernetes)
+* [Siddhi operator](https://github.com/siddhi-io/siddhi-operator) enables the deployment of Siddhi apps directly in 
+your Kubernetes cluster using a Kubernetes Custom Resource.
+For more details please refer to [Installing Streaming Integrator Using Kubernetes](https://docs.wso2.com/display/INSTALL/Installing+Enterprise+Integrator+Using+Kubernetes).
 
 ## Support
 
