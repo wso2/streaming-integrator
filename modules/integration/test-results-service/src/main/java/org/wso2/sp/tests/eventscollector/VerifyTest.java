@@ -53,7 +53,7 @@ import javax.ws.rs.core.Response;
 @SwaggerDefinition(
         info = @Info(
                 title = "SP Test Events Swagger Definition", version = "1.0",
-                description = "Stream Processor Test Events in-memory persisting service",
+                description = "Streaming Integrator Test Events in-memory persisting service",
                 license = @License(name = "Apache 2.0", url = "http://www.apache.org/licenses/LICENSE-2.0"),
                 contact = @Contact(
                         name = "WSO2 Pvt Ltd",

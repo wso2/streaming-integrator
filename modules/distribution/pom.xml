@@ -131,7 +131,7 @@
             <type>zip</type>
         </dependency>
 
-        <!-- Stream Processor related Features-->
+        <!-- Streaming Integrator related Features-->
         <dependency>
             <groupId>org.wso2.carbon.analytics</groupId>
             <artifactId>org.wso2.carbon.streaming.integrator.core.feature</artifactId>
@@ -228,6 +228,14 @@
             <artifactId>org.wso2.carbon.uiserver.feature</artifactId>
             <type>zip</type>
         </dependency>
+
+        <!--Status Dashboard-->
+        <dependency>
+            <groupId>org.wso2.carbon.analytics</groupId>
+            <artifactId>org.wso2.carbon.si.metrics.core.feature</artifactId>
+            <type>zip</type>
+        </dependency>
+        <!--Data Provider-->
         <dependency>
             <groupId>org.wso2.carbon.analytics</groupId>
             <artifactId>org.wso2.carbon.data.provider.feature</artifactId>
@@ -236,6 +244,13 @@
         <dependency>
             <groupId>org.wso2.carbon.analytics</groupId>
             <artifactId>org.wso2.carbon.permissions.rest.api.feature</artifactId>
+            <type>zip</type>
+        </dependency>
+
+        <!-- Siddhi operator related features-->
+        <dependency>
+            <groupId>org.wso2.carbon.analytics</groupId>
+            <artifactId>org.wso2.siddhi.parser.service.feature</artifactId>
             <type>zip</type>
         </dependency>
     </dependencies>
@@ -320,13 +335,6 @@
                                     <type>jar</type>
                                 </artifactItem>
                                 <artifactItem>
-                                    <groupId>org.wso2.extension.siddhi.execution.sentiment</groupId>
-                                    <artifactId>siddhi-execution-sentiment</artifactId>
-                                    <version>${siddhi.execution.sentiment.version}</version>
-                                    <type>jar</type>
-                                </artifactItem>
-
-                                <artifactItem>
                                     <groupId>io.siddhi.extension.execution.map</groupId>
                                     <artifactId>siddhi-execution-map</artifactId>
                                     <version>${siddhi.execution.map.version}</version>
@@ -351,12 +359,6 @@
                                     <type>jar</type>
                                 </artifactItem>
                                 <artifactItem>
-                                    <groupId>io.siddhi.extension.execution.streamingml</groupId>
-                                    <artifactId>siddhi-execution-streamingml</artifactId>
-                                    <version>${siddhi.execution.streamingml.version}</version>
-                                    <type>jar</type>
-                                </artifactItem>
-                                <artifactItem>
                                     <groupId>io.siddhi.extension.execution.unitconversion</groupId>
                                     <artifactId>siddhi-execution-unitconversion</artifactId>
                                     <version>${siddhi.execution.unitconversion.version}</version>
@@ -366,30 +368,6 @@
                                     <groupId>io.siddhi.extension.script.js</groupId>
                                     <artifactId>siddhi-script-js</artifactId>
                                     <version>${siddhi.script.js.version}</version>
-                                    <type>jar</type>
-                                </artifactItem>
-                                <artifactItem>
-                                    <groupId>io.siddhi.extension.execution.reorder</groupId>
-                                    <artifactId>siddhi-execution-reorder</artifactId>
-                                    <version>${siddhi.execution.reorder.version}</version>
-                                    <type>jar</type>
-                                </artifactItem>
-                                <artifactItem>
-                                    <groupId>org.wso2.extension.siddhi.execution.approximate</groupId>
-                                    <artifactId>siddhi-execution-approximate</artifactId>
-                                    <version>${siddhi.execution.approximate.version}</version>
-                                    <type>jar</type>
-                                </artifactItem>
-                                <artifactItem>
-                                    <groupId>org.wso2.extension.siddhi.execution.graph</groupId>
-                                    <artifactId>siddhi-execution-graph</artifactId>
-                                    <version>${siddhi.execution.graph.version}</version>
-                                    <type>jar</type>
-                                </artifactItem>
-                                <artifactItem>
-                                    <groupId>io.siddhi.extension.execution.tensorflow</groupId>
-                                    <artifactId>siddhi-execution-tensorflow</artifactId>
-                                    <version>${siddhi.execution.tensorflow.version}</version>
                                     <type>jar</type>
                                 </artifactItem>
                                 <artifactItem>
@@ -445,12 +423,6 @@
                                     <groupId>io.siddhi.extension.io.http</groupId>
                                     <artifactId>siddhi-io-http</artifactId>
                                     <version>${siddhi.io.http.version}</version>
-                                    <type>jar</type>
-                                </artifactItem>
-                                <artifactItem>
-                                    <groupId>org.wso2.extension.siddhi.io.twitter</groupId>
-                                    <artifactId>siddhi-io-twitter</artifactId>
-                                    <version>${siddhi.io.twitter.version}</version>
                                     <type>jar</type>
                                 </artifactItem>
                                 <artifactItem>
@@ -529,18 +501,6 @@
                                 </artifactItem>
                                 <!--Store Extensions-->
                                 <artifactItem>
-                                    <groupId>org.wso2.extension.siddhi.store.solr</groupId>
-                                    <artifactId>siddhi-store-solr</artifactId>
-                                    <version>${siddhi.store.solr.version}</version>
-                                    <type>jar</type>
-                                </artifactItem>
-                                <artifactItem>
-                                    <groupId>io.siddhi.extension.store.mongodb</groupId>
-                                    <artifactId>siddhi-store-mongodb</artifactId>
-                                    <version>${siddhi.store.mongodb.version}</version>
-                                    <type>jar</type>
-                                </artifactItem>
-                                <artifactItem>
                                     <groupId>io.siddhi.extension.store.rdbms</groupId>
                                     <artifactId>siddhi-store-rdbms</artifactId>
                                     <version>${siddhi.store.rdbms.version}</version>
@@ -553,24 +513,6 @@
                                     <type>jar</type>
                                 </artifactItem>
                                 <artifactItem>
-                                    <groupId>org.wso2.extension.siddhi.store.hbase</groupId>
-                                    <artifactId>siddhi-store-hbase</artifactId>
-                                    <version>${siddhi.store.hbase.version}</version>
-                                    <type>jar</type>
-                                </artifactItem>
-                                <artifactItem>
-                                    <groupId>org.wso2.extension.siddhi.store.cassandra</groupId>
-                                    <artifactId>siddhi-store-cassandra</artifactId>
-                                    <version>${siddhi.store.cassandra.version}</version>
-                                    <type>jar</type>
-                                </artifactItem>
-                                <artifactItem>
-                                    <groupId>org.wso2.extension.siddhi.store.redis</groupId>
-                                    <artifactId>siddhi-store-redis</artifactId>
-                                    <version>${siddhi.store.redis.version}</version>
-                                    <type>jar</type>
-                                </artifactItem>
-                                <artifactItem>
                                     <groupId>io.siddhi.extension.store.elasticsearch</groupId>
                                     <artifactId>siddhi-store-elasticsearch</artifactId>
                                     <version>${siddhi.store.elasticsearch.version}</version>
@@ -580,12 +522,6 @@
                                     <groupId>org.wso2.extension.siddhi.store.influxdb</groupId>
                                     <artifactId>siddhi-store-influxdb</artifactId>
                                     <version>${siddhi.store.influxdb.version}</version>
-                                    <type>jar</type>
-                                </artifactItem>
-                                <artifactItem>
-                                    <groupId>org.wso2.extension.siddhi.io.sqs</groupId>
-                                    <artifactId>siddhi-io-sqs</artifactId>
-                                    <version>${siddhi.io.sqs.version}</version>
                                     <type>jar</type>
                                 </artifactItem>
                                 <artifactItem>
@@ -729,7 +665,7 @@
                                     <version>${carbon.deployment.version}</version>
                                 </feature>
 
-                                <!-- Stream Processor Features -->
+                                <!-- Streaming Integrator Features -->
                                 <feature>
                                     <id>org.wso2.carbon.streaming.integrator.core.feature</id>
                                     <version>${carbon.analytics.version}</version>
@@ -821,6 +757,12 @@
                                 <!-- Data Provider -->
                                 <feature>
                                     <id>org.wso2.carbon.data.provider.feature</id>
+                                    <version>${carbon.analytics.version}</version>
+                                </feature>
+
+                                <!-- Siddhi operator-->
+                                <feature>
+                                    <id>org.wso2.siddhi.parser.service.feature</id>
                                     <version>${carbon.analytics.version}</version>
                                 </feature>
                             </features>
@@ -947,7 +889,7 @@
                                     <version>${carbon.deployment.version}</version>
                                 </feature>
 
-                                <!-- Stream Processor Features -->
+                                <!-- Streaming Integrator Features -->
                                 <feature>
                                     <id>org.wso2.carbon.streaming.integrator.core.feature.group</id>
                                     <version>${carbon.analytics.version}</version>
@@ -1024,6 +966,11 @@
                                 </feature>
                                 <feature>
                                     <id>org.wso2.carbon.permissions.rest.api.feature</id>
+                                    <version>${carbon.analytics.version}</version>
+                                </feature>
+                                <!--Siddhi operator-->
+                                <feature>
+                                    <id>org.wso2.siddhi.parser.service.feature</id>
                                     <version>${carbon.analytics.version}</version>
                                 </feature>
                             </features>
@@ -1135,7 +1082,7 @@
                         </goals>
                         <configuration>
                             <skipDocker>${docker.skip}</skipDocker>
-                            <imageName>wso2/streaming-integrator</imageName>
+                            <imageName>anugayan/streaming-integrator</imageName>
                             <imageTags>
                                 <imageTag>${project.version}</imageTag>
                             </imageTags>

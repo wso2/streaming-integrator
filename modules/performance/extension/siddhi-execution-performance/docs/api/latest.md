@@ -2,7 +2,7 @@
 
 ## Throughput
 
-### throughput *<a target="_blank" href="https://wso2.github.io/siddhi/documentation/siddhi-4.0/#stream-processor">(Stream Processor)</a>*
+### throughput *<a target="_blank" href="https://wso2.github.io/siddhi/documentation/siddhi-4.0/#stream-processor">(Streaming Integrator)</a>*
 
 <p style="word-wrap: break-word">Measuring performance of stream processor with simple passthrough</p>
 
