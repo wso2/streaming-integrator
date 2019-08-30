@@ -77,7 +77,7 @@ The Docker image can be built from the source, or downloaded directly from Docke
 
 Before building the docker image, install Docker on the host machine.
 
-To build the Docker image from the source, issue the following command from the root directory. <br/>
+To build the Docker image from the source, issue the following command from the root directory.<br/>
 `mvn clean install -Ddocker.skip=false`
 
 ### Get the Image from Docker Hub
