@@ -1,1 +1,1 @@
-WSO2 Stream Processor v${project.version}
+WSO2 Streaming Integrator v${project.version}

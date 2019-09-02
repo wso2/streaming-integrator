@@ -31,7 +31,7 @@ public class SPBaseTest extends SPInit {
     private static final Logger log = Logger.getLogger(SPBaseTest.class);
 
     /**
-     * Base test class for all Stream Processor test cases.
+     * Base test class for all Streaming Integrator test cases.
      */
     @BeforeSuite(alwaysRun = true)
     public void createEnvironment(ITestContext ctx) throws Exception {
