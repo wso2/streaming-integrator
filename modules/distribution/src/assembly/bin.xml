@@ -97,6 +97,11 @@
             </excludes>
         </fileSet>
         <fileSet>
+            <directory>carbon-home/bin/bootstrap</directory>
+            <outputDirectory>bin/bootstrap</outputDirectory>
+            <fileMode>644</fileMode>
+        </fileSet>
+        <fileSet>
             <directory>.</directory>
             <outputDirectory>wso2/server/deployment/csv-files</outputDirectory>
             <excludes>
