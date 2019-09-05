@@ -32,7 +32,7 @@ WSO2 Streaming Integrator (SI) is a streaming data processing server that allows
 WSO2 SI can be effectively used for:
 - Realtime ETL with files, DBs, SaaS apps, HTTP endpoints, etc.
 - Working with streaming messaging systems such as Kafka and NATS.
-- Streaming data integration 
+- Streaming data integration
 - Executing complex integrations based on streaming data with [WSO2 Micro Integrator](https://github.com/wso2/micro-integrator).
 
 WSO2 SI is powered by [Siddhi.io](https://siddhi.io/), a well-known cloud native open source stream processing engine. Siddhi lets users write complex stream processing logic using a SQL-like language known as [SiddhiQL](https://siddhi.io/en/v5.0/docs/). You can aggregate, transform, enrich, analyze, cleanse and correlate streams of data on the fly using Siddhi queries and constructs.
@@ -54,15 +54,15 @@ WSO2 Streaming Integrator is currently in the development stage. Therefore, you 
 
 ## Building from the Source
 
-Please follow the steps mentioned below to build WSO2 Streaming Integrator from source.
+To build WSO2 Streaming Integrator from source, follow the steps below.
 
-1. Clone or download the source code from this repository
-2. Run `mvn clean install` from the root directory of the repository
+1. Clone or download the source code from this repository.
+2. Run `mvn clean install` from the root directory of the repository.
 3. The generated Streaming Integrator distribution can be found at `streaming-integrator/modules/distribution/target/-streaming-integrator-<version>.zip`
 
 ## Getting Started
 
-Please refer the below guides to get started with the Streaming Integrator.
+To started with the Streaming Integrator follow the guides given below.
 
 * [Quick Start Guide](https://ei.docs.wso2.com/en/next/streaming-integrator/quick-start-guide/getting-started-with-si/): Step by step guide to get your first Siddhi application running in less than 5 minutes.
 
@@ -75,10 +75,9 @@ The Docker image can be built from the source, or downloaded directly from Docke
 
 ### Build the Docker Image
 
-!!!tip"Before you begin:"
-    You need to install Docker in the host machine.
+Before building the docker image, install Docker on the host machine.
 
-To build the Docker image from the source, issue the following command from the root directory. <br/>
+To build the Docker image from the source, issue the following command from the root directory.<br/>
 `mvn clean install -Ddocker.skip=false`
 
 ### Get the Image from Docker Hub
@@ -95,7 +94,7 @@ docker pull wso2/streaming-integrator
 WSO2 Streaming Integrator can be deployed in a Kubernetes cluster using Siddhi Operator.
 
 * [Siddhi operator](https://github.com/siddhi-io/siddhi-operator) enables the deployment of Siddhi applications directly in your Kubernetes cluster using a Kubernetes Custom Resource.
-For more details please refer to [Installing Streaming Integrator Using Kubernetes](https://docs.wso2.com/display/INSTALL/Installing+Enterprise+Integrator+Using+Kubernetes).
+For more details see [Installing Streaming Integrator Using Kubernetes](https://docs.wso2.com/display/INSTALL/Installing+Enterprise+Integrator+Using+Kubernetes).
 
 ## Support
 
