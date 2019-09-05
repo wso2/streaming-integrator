@@ -60,6 +60,13 @@ To build WSO2 Streaming Integrator from source, follow the steps below.
 2. Run `mvn clean install` from the root directory of the repository.
 3. The generated Streaming Integrator distribution can be found at `streaming-integrator/modules/distribution/target/-streaming-integrator-<version>.zip`
 
+When building with dependencies, you need to build in the following order.
+1. [siddhi](https://github.com/siddhi-io/siddhi)
+2. [carbon-analytics-common](https://github.com/wso2/carbon-analytics-common)
+3. [carbon-analytics](https://github.com/wso2/carbon-analytics)
+4. [carbon-dashboards](https://github.com/wso2/carbon-dashboards)
+5. [carbon-ui-server](https://github.com/wso2/carbon-ui-server)
+
 ## Getting Started
 
 To started with the Streaming Integrator follow the guides given below.
