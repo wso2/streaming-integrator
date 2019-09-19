@@ -58,7 +58,8 @@ public class KafkaReceiver {
 
         SiddhiAppRuntime siddhiAppRuntime = siddhiManager.createSiddhiAppRuntime(
                 "@App:name('KafkaSample') " +
-                        "@sink(type='log')" +
+                        "@sink(type='log'," +
+                        "@map(type='" + type + "'))" +
                         "define stream logStream(batchNumber long, lowTotal double);\n" +
                         "@source(" +
                         "type='kafka', " +
