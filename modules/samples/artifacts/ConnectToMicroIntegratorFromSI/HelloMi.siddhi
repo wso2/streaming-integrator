@@ -1,11 +1,12 @@
-@App:name("HelloMiWithGrpc")
+@App:name("HelloMi")
 @App:description("Trigger a sequence in MicroIntegrator from Streaming Integrator using gRPC protocol")
 
 /*
 Purpose:
-    This app demonstrates how to use siddhi grpc sink and source to publish an event from Streaming Integrator to Micro
-    Integrator and trigger a sequence in MI. After the integration flow is complete in Mi we will receive the response
-    through grpc source
+    This app shows how to trigger a sequence in Micro Integrator from Streaming Integrator (SI). An event will be
+    received by Stgreaming Ingtegrator and it will be sent to Micro Integrator. After it goes through the specified
+    sequence MI will send the response back to SI. From there we can use the response in our queries. gRPC protocol
+    will be used for establishing connection between SI and MI.
 
 Prerequisites:
     1. Download the latest Micro Integrator pack from https://github.com/wso2/micro-integrator/releases
@@ -20,7 +21,7 @@ Prerequisites:
         started in 8 sec
 
 Executing the Sample
-    1. Copy this HelloMiWithGrpc.siddhi file to {SIHome}/wso2/server/deployment/siddhi-files/
+    1. Copy this HelloMi.siddhi file to {SIHome}/wso2/server/deployment/siddhi-files/
     2. start the Streaming Integrator by issuing the command ./server.sh in {SIHome}/bin
     The following logs will be printed if it starts successfully
     INFO {io.siddhi.extension.io.grpc.sink.GrpcCallSink} - grpcTestApp: gRPC service on FooStream has successfully
