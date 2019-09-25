@@ -12,8 +12,8 @@ Executing the Sample
 
     The following logs will be printed if it starts successfully
     INFO {io.siddhi.extension.io.http.sink.HttpSink} - HttpRequestResponseSample:@sink( type = "http-request",
-        sink.id = "production-request", publisher.url = "http://localhost:8080/abc", @map( type = "json"))define stream
-        LowProductionAlertStream (name string, amount double) has successfully connected to http://localhost:8080/abc
+        sink.id = "production-request", publisher.url = "http://0.0.0.0:8080/abc", @map( type = "json"))define stream
+        LowProductionAlertStream (name string, amount double) has successfully connected to http://0.0.0.0:8080/abc
     INFO {org.wso2.carbon.streaming.integrator.core.internal.StreamProcessorService} - Siddhi App
         HttpRequestResponseSample deployed successfully
     INFO {org.wso2.carbon.kernel.internal.CarbonStartupHandler} - WSO2 Streaming Integrator started in 10.517 sec
@@ -24,7 +24,7 @@ Testing the Sample:
    2) Send events as follows,
       Send events to the HTTP endpoint defined by 'publish.url' in the Sink configuration using the curl command:
       Open a new terminal and issue the following command:
-            * curl -X POST -d '<events><event><name>toffee</name><amount>75.6</amount></event></events>' http://localhost:8006/SweetProductionStream --header "Content-Type:application/xml"
+            * curl -X POST -d '<events><event><name>toffee</name><amount>75.6</amount></event></events>' http://0.0.0.0:8006/SweetProductionStream --header "Content-Type:application/xml"
 
     3) When publishing the events,
        http-request sink will send the request to the http server and the server will echo the received request as the
@@ -41,7 +41,7 @@ Testing the Sample:
             Event{timestamp=1568913620809, data=[toffee, 75.6], isExpired=false}
 
  Notes:
-  If the message "LowProductionAlertStream' stream could not connect to 'localhost:8080", it could be due to port 8080
+  If the message "LowProductionAlertStream' stream could not connect to '0.0.0.0:8080", it could be due to port 8080
   defined in the Siddhi application is already being used by a different program. To resolve this issue, do the
     following:
         1) Stop this Siddhi application (Click 'Run' on menu bar -> 'Stop').
@@ -50,10 +50,10 @@ Testing the Sample:
         3) Start the application and check whether the expected output appears on the console.
 */
 
-@source(type='http', receiver.url='http://localhost:8006/SweetProductionStream', @map(type = 'xml'))
+@source(type='http', receiver.url='http://0.0.0.0:8006/SweetProductionStream', @map(type = 'xml'))
 define stream SweetProductionStream (name string, amount double);
 
-@sink(type='http-request', sink.id='production-request', publisher.url='http://localhost:8080/abc',
+@sink(type='http-request', sink.id='production-request', publisher.url='http://0.0.0.0:8080/abc',
 @map(type='json'))
 define stream LowProductionAlertStream (name string, amount double);
 
