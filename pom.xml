@@ -820,7 +820,7 @@
 
         <testng.version>6.9.4</testng.version>
         <plugin.version.antlr>4.5.1</plugin.version.antlr>
-        <docker.maven.plugin.version>1.0.0</docker.maven.plugin.version>
+        <docker.maven.plugin.version>1.2.1</docker.maven.plugin.version>
 
         <!-- OSGI -->
         <osgi.api.version>6.0.0</osgi.api.version>
