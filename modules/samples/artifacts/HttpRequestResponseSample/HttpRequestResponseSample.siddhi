@@ -50,7 +50,7 @@ Testing the Sample:
         3) Start the application and check whether the expected output appears on the console.
 */
 
-@source(type='http', receiver.url='http://localhost:8006/inputstream', @map(type = 'xml'))
+@source(type='http', receiver.url='http://localhost:8006/SweetProductionStream', @map(type = 'xml'))
 define stream SweetProductionStream (name string, amount double);
 
 @sink(type='http-request', sink.id='production-request', publisher.url='http://localhost:8080/abc',
