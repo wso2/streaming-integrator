@@ -394,6 +394,12 @@
                                     <version>${siddhi.execution.stats.version}</version>
                                     <type>jar</type>
                                 </artifactItem>
+                                <artifactItem>
+                                    <groupId>io.siddhi.extension.execution.list</groupId>
+                                    <artifactId>siddhi-execution-list</artifactId>
+                                    <version>${siddhi.execution.list.version}</version>
+                                    <type>jar</type>
+                                </artifactItem>
                                 <!--IO Extensions-->
                                 <artifactItem>
                                     <groupId>io.siddhi.extension.io.jms</groupId>
@@ -585,7 +591,7 @@
                                     <type>jar</type>
                                 </artifactItem>
                                 <artifactItem>
-                                    <groupId>org.wso2.extension.siddhi.store.redis</groupId>
+                                    <groupId>io.siddhi.extension.store.redis</groupId>
                                     <artifactId>siddhi-store-redis</artifactId>
                                     <version>${siddhi.store.redis.version}</version>
                                     <type>jar</type>
