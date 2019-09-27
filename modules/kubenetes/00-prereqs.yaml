@@ -1,0 +1,151 @@
+---
+
+apiVersion: apiextensions.k8s.io/v1beta1
+kind: CustomResourceDefinition
+metadata:
+  creationTimestamp: null
+  name: siddhiprocesses.siddhi.io
+spec:
+  group: siddhi.io
+  names:
+    kind: SiddhiProcess
+    listKind: SiddhiProcessList
+    plural: siddhiprocesses
+    singular: siddhiprocess
+    shortNames:
+      - sp
+      - sps
+      - siddhi
+      - siddhis
+  scope: Namespaced
+  subresources:
+    status: {}
+  validation:
+    openAPIV3Schema:
+      properties:
+        apiVersion:
+          type: string
+        kind:
+          type: string
+        metadata:
+          type: object
+        spec:
+          type: object
+        status:
+          type: object
+  version: v1alpha2
+  versions:
+  - name: v1alpha2
+    served: true
+    storage: true
+  additionalPrinterColumns:
+    - name: Status
+      type: string
+      description: Status
+      JSONPath: .status.status
+    - name: Ready
+      type: string
+      description: Ready deployments
+      JSONPath: .status.ready
+    - name: Age
+      type: date
+      description: Age
+      JSONPath: .metadata.creationTimestamp
+      
+---
+
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: siddhi-operator
+
+---
+
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  creationTimestamp: null
+  name: siddhi-operator
+rules:
+- apiGroups:
+  - ""
+  resources:
+  - pods
+  - services
+  - endpoints
+  - persistentvolumeclaims
+  - events
+  - configmaps
+  - secrets
+  verbs:
+  - '*'
+- apiGroups:
+  - ""
+  resources:
+  - namespaces
+  verbs:
+  - get
+- apiGroups:
+  - apps
+  resources:
+  - deployments
+  - daemonsets
+  - replicasets
+  - statefulsets
+  verbs:
+  - '*'
+- apiGroups:
+  - monitoring.coreos.com
+  resources:
+  - servicemonitors
+  verbs:
+  - get
+  - create
+- apiGroups:
+  - siddhi.io
+  resources:
+  - '*'
+  verbs:
+  - '*'
+- apiGroups:
+  - nats.io
+  resources:
+  - natsclusters
+  - natsserviceroles
+  verbs: ["*"]
+- apiGroups:
+  - streaming.nats.io
+  resources:
+  - natsstreamingclusters
+  verbs: ["*"]
+- apiGroups:
+  - "extensions"
+  - ""
+  resources:
+  - ingresses
+  - ingresses/status
+  verbs:
+  - get
+  - update
+  - create
+  - list
+  - patch
+  - delete
+  - watch
+
+
+---
+
+kind: RoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: siddhi-operator
+subjects:
+- kind: ServiceAccount
+  name: siddhi-operator
+roleRef:
+  kind: Role
+  name: siddhi-operator
+  apiGroup: rbac.authorization.k8s.io
+
+---
