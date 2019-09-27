@@ -671,6 +671,16 @@
                 <version>${siddhi.execution.json.version}</version>
             </dependency>
             <dependency>
+                <groupId>io.siddhi.extension.execution.stats</groupId>
+                <artifactId>siddhi-execution-stats</artifactId>
+                <version>${siddhi.execution.stats.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.siddhi.extension.execution.list</groupId>
+                <artifactId>siddhi-execution-list</artifactId>
+                <version>${siddhi.execution.list.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>io.siddhi.extension.map.json</groupId>
                 <artifactId>siddhi-map-json</artifactId>
                 <version>${siddhi.map.json.version}</version>
@@ -807,8 +817,8 @@
         </pluginManagement>
     </build>
     <properties>
-        <carbon.analytics.version>3.0.7</carbon.analytics.version>
-        <siddhi.version>5.1.3</siddhi.version>
+        <carbon.analytics.version>3.0.8</carbon.analytics.version>
+        <siddhi.version>5.1.5</siddhi.version>
 
         <carbon.analytics-common.version>6.1.32</carbon.analytics-common.version>
         <!-- Maven plugins -->
@@ -922,28 +932,29 @@
         <project.scm.id>scm-server</project.scm.id>
 
         <!--Siddhi Extension Versions-->
-        <siddhi.execution.math.version>5.0.3</siddhi.execution.math.version>
+        <siddhi.execution.math.version>5.0.4</siddhi.execution.math.version>
         <siddhi.execution.unitconversion.version>2.0.2</siddhi.execution.unitconversion.version>
         <siddhi.execution.regex.version>5.0.5</siddhi.execution.regex.version>
         <siddhi.execution.streamingml.version>2.0.2</siddhi.execution.streamingml.version>
         <siddhi.execution.string.version>5.0.5</siddhi.execution.string.version>
-        <siddhi.execution.time.version>5.0.3</siddhi.execution.time.version>
-        <siddhi.execution.unique.version>5.0.3</siddhi.execution.unique.version>
+        <siddhi.execution.time.version>5.0.4</siddhi.execution.time.version>
+        <siddhi.execution.unique.version>5.0.4</siddhi.execution.unique.version>
         <siddhi.execution.timeseries.version>5.0.1</siddhi.execution.timeseries.version>
 
         <siddhi.execution.markov.version>5.0.1</siddhi.execution.markov.version>
         <siddhi.execution.geo.version>5.0.0</siddhi.execution.geo.version>
-        <siddhi.execution.map.version>5.0.4</siddhi.execution.map.version>
+        <siddhi.execution.map.version>5.0.5</siddhi.execution.map.version>
         <siddhi.execution.graph.version>2.0.0</siddhi.execution.graph.version>
         <siddhi.execution.env.version>2.0.0</siddhi.execution.env.version>
         <siddhi.execution.json.version>2.0.2</siddhi.execution.json.version>
         <siddhi.execution.stats.version>2.0.0</siddhi.execution.stats.version>
+        <siddhi.execution.list.version>1.0.0</siddhi.execution.list.version>
 
         <siddhi.io.file.version>2.0.1</siddhi.io.file.version>
-        <siddhi.io.tcp.version>3.0.3</siddhi.io.tcp.version>
+        <siddhi.io.tcp.version>3.0.4</siddhi.io.tcp.version>
         <siddhi.io.jms.version>2.0.2</siddhi.io.jms.version>
         <siddhi.io.email.version>2.0.3</siddhi.io.email.version>
-        <siddhi.io.rabbitmq.version>3.0.1</siddhi.io.rabbitmq.version>
+        <siddhi.io.rabbitmq.version>3.0.2</siddhi.io.rabbitmq.version>
         <siddhi.io.mqtt.version>3.0.0</siddhi.io.mqtt.version>
         <siddhi.io.kafka.version>5.0.4</siddhi.io.kafka.version>
         <siddhi.io.http.version>2.1.0</siddhi.io.http.version>
@@ -952,28 +963,28 @@
         <siddhi.io.websocket.version>3.0.0</siddhi.io.websocket.version>
         <siddhi.io.cdc.version>2.0.3</siddhi.io.cdc.version>
         <siddhi.io.prometheus.version>2.0.1</siddhi.io.prometheus.version>
-        <siddhi.io.nats.version>2.0.5</siddhi.io.nats.version>
-        <siddhi.io.googlepubsub.version>2.0.1</siddhi.io.googlepubsub.version>
+        <siddhi.io.nats.version>2.0.6</siddhi.io.nats.version>
+        <siddhi.io.googlepubsub.version>2.0.2</siddhi.io.googlepubsub.version>
         <siddhi.io.hl7.version>3.0.0</siddhi.io.hl7.version>
         <siddhi.io.snmp.version>2.0.0</siddhi.io.snmp.version>
-        <siddhi.io.grpc.version>1.0.0</siddhi.io.grpc.version>
+        <siddhi.io.grpc.version>1.0.1</siddhi.io.grpc.version>
         <siddhi.io.gcs.version>1.0.0</siddhi.io.gcs.version>
-        <siddhi.io.s3.version>1.0.0</siddhi.io.s3.version>
+        <siddhi.io.s3.version>1.0.1</siddhi.io.s3.version>
 
         <siddhi.map.json.version>5.0.4</siddhi.map.json.version>
-        <siddhi.map.avro.version>2.0.3</siddhi.map.avro.version>
-        <siddhi.map.binary.version>2.0.3</siddhi.map.binary.version>
+        <siddhi.map.avro.version>2.0.4</siddhi.map.avro.version>
+        <siddhi.map.binary.version>2.0.4</siddhi.map.binary.version>
         <siddhi.map.text.version>2.0.4</siddhi.map.text.version>
         <siddhi.map.xml.version>5.0.3</siddhi.map.xml.version>
-        <siddhi.map.keyvalue.version>2.0.3</siddhi.map.keyvalue.version>
+        <siddhi.map.keyvalue.version>2.0.4</siddhi.map.keyvalue.version>
         <siddhi.map.csv.version>2.0.3</siddhi.map.csv.version>
 
-        <siddhi.store.mongodb.version>2.0.1</siddhi.store.mongodb.version>
-        <siddhi.store.rdbms.version>6.0.3</siddhi.store.rdbms.version>
+        <siddhi.store.mongodb.version>2.0.2</siddhi.store.mongodb.version>
+        <siddhi.store.rdbms.version>6.0.4</siddhi.store.rdbms.version>
         <siddhi.store.solr.version>2.0.0</siddhi.store.solr.version>
         <siddhi.store.hbase.version>5.0.0</siddhi.store.hbase.version>
         <siddhi.store.cassandra.version>2.0.0</siddhi.store.cassandra.version>
-        <siddhi.store.redis.version>3.1.0</siddhi.store.redis.version>
+        <siddhi.store.redis.version>3.1.1</siddhi.store.redis.version>
         <siddhi.store.elasticsearch.version>3.1.1</siddhi.store.elasticsearch.version>
         <siddhi.store.influxdb.version>2.0.0</siddhi.store.influxdb.version>
 
