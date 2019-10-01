@@ -961,7 +961,7 @@
         <siddhi.io.sqs.version>3.0.0</siddhi.io.sqs.version>
         <siddhi.io.websocket.version>3.0.0</siddhi.io.websocket.version>
         <siddhi.io.cdc.version>2.0.3</siddhi.io.cdc.version>
-        <siddhi.io.prometheus.version>2.0.1</siddhi.io.prometheus.version>
+        <siddhi.io.prometheus.version>2.1.0</siddhi.io.prometheus.version>
         <siddhi.io.nats.version>2.0.6</siddhi.io.nats.version>
         <siddhi.io.googlepubsub.version>2.0.2</siddhi.io.googlepubsub.version>
         <siddhi.io.hl7.version>3.0.0</siddhi.io.hl7.version>
