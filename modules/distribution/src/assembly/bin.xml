@@ -189,7 +189,7 @@
 
         <!-- Copying the in-place update tools-->
         <fileSet>
-            <directory>carbon-home/updates/in-place/</directory>
+            <directory>target/update/</directory>
             <outputDirectory>bin/</outputDirectory>
             <fileMode>744</fileMode>
         </fileSet>
