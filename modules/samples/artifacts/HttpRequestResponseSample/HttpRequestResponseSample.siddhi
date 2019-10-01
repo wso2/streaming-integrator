@@ -7,7 +7,7 @@ Purpose:
 	transport in JSON default format, Receive response from the http server and process the response using siddhi.
 
 Executing the Sample
-    1. Copy this HelloMi.siddhi file to {SIHome}/wso2/server/deployment/siddhi-files/
+    1. Copy this HttpRequestResponseSample.siddhi file to {SIHome}/wso2/server/deployment/siddhi-files/
     2. start the Streaming Integrator by issuing the command ./server.sh in {SIHome}/bin
 
     The following logs will be printed if it starts successfully

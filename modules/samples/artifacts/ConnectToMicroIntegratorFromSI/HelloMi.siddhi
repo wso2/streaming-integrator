@@ -30,20 +30,20 @@ Executing the Sample
 
 Testing the Sample
     Open a terminal and issue the following curl command
-        curl -X POST -d '<events><event><message>sugar</message><headers>'Content-Type:xml'</headers></event></events>' http://localhost:8006/inputstream --header "Content-Type:application/xml"
+        curl -X POST -d "{\"event\":{\"message\":\"http_curl\",\"headers\":\"'Content-Type:json'\"}}" http://localhost:8006/inputstream --header "Content-Type:application/json"
 */
 
-@source(type='http', receiver.url='http://localhost:8006/inputstream', @map(type = 'xml'))
-define stream InputStream (message String);
+@source(type='http', receiver.url='http://localhost:8006/inputstream', @map(type = 'json'))
+define stream InputStream (message String, headers string);
 
-@sink(type='grpc-call', publisher.url = 'grpc://localhost:8888/org.wso2.grpc.EventService/process/inSeq', sink.id= '1', @map(type='xml'))
-define stream FooStream (message String);
+@sink(type='grpc-call', publisher.url = 'grpc://localhost:8888/org.wso2.grpc.EventService/process/inSeq', sink.id= '1', headers='{{headers}}', @map(type='json'))
+define stream FooStream (message String, headers string);
 
-@source(type='grpc-call-response', sequence='mySeq', sink.id= '1', @map(type='json'))
-define stream BarStream (message String);
+@source(type='grpc-call-response', sink.id= '1', @map(type='json'))
+define stream BarStream (message String, headers string);
 
 @sink(type='log')
-define stream OutputStream (message String);
+define stream OutputStream (message String, headers string);
 
 from InputStream
 select *
@@ -51,4 +51,4 @@ insert into FooStream;
 
 from BarStream
 select *
-insert into outputStream
+insert into OutputStream
