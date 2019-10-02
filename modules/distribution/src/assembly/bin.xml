@@ -31,6 +31,14 @@
                 <exclude>README.txt</exclude>
                 <exclude>LICENSE.txt</exclude>
                 <exclude>bin/carbon.sh</exclude>
+                <exclude>bin/ciphertool.sh</exclude>
+                <exclude>bin/ciphertool.bat</exclude>
+                <exclude>bin/icf-provider.bat</exclude>
+                <exclude>bin/icf-provider.sh</exclude>
+                <exclude>bin/jartobundle.sh</exclude>
+                <exclude>bin/jartobundle.bat</exclude>
+                <exclude>bin/osgi-lib.bat</exclude>
+                <exclude>bin/osgi-lib.sh</exclude>
                 <exclude>release-notes.html</exclude>
                 <exclude>conf/osgi/launch.properties</exclude>
                 <exclude>conf/deployment.yaml</exclude>
@@ -75,15 +83,6 @@
             <directory>carbon-home/bin</directory>
             <outputDirectory>bin</outputDirectory>
             <includes>
-                <include>**/*.sh</include>
-                <include>**/*.bat</include>
-            </includes>
-            <fileMode>755</fileMode>
-        </fileSet>
-        <fileSet>
-            <directory>carbon-home/bin</directory>
-            <outputDirectory>bin</outputDirectory>
-            <includes>
                 <include>**/*.txt</include>
             </includes>
             <fileMode>444</fileMode>
@@ -97,9 +96,9 @@
             </excludes>
         </fileSet>
         <fileSet>
-            <directory>carbon-home/bin/bootstrap</directory>
-            <outputDirectory>bin/bootstrap</outputDirectory>
-            <fileMode>644</fileMode>
+            <directory>carbon-home/bin</directory>
+            <outputDirectory>bin</outputDirectory>
+            <fileMode>755</fileMode>
         </fileSet>
         <fileSet>
             <directory>.</directory>
