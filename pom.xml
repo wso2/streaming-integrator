@@ -816,10 +816,10 @@
         </pluginManagement>
     </build>
     <properties>
-        <carbon.analytics.version>3.0.11</carbon.analytics.version>
+        <carbon.analytics.version>3.0.12</carbon.analytics.version>
         <siddhi.version>5.1.5</siddhi.version>
 
-        <carbon.analytics-common.version>6.1.33</carbon.analytics-common.version>
+        <carbon.analytics-common.version>6.1.35</carbon.analytics-common.version>
         <!-- Maven plugins -->
         <!--Bundle Plugin - Overridden from parent due to a bug in latest version related to capability providers-->
         <maven.bundle.plugin.version>2.5.4</maven.bundle.plugin.version>
