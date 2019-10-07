@@ -73,7 +73,7 @@ To started with the Streaming Integrator follow the guides given below.
 
 * [Quick Start Guide](https://ei.docs.wso2.com/en/next/streaming-integrator/quick-start-guide/getting-started-with-si/): Step by step guide to get your first Siddhi application running in less than 5 minutes.
 
-* [Streaming Integrator 101](): A 30 minute guide to explore the end to end development lifecycle of the Streaming Integrator.
+* [Streaming Integrator 101](https://ei.docs.wso2.com/en/latest/streaming-integrator/quick-start-guide/quick-start-guide-101/): A 30 minute guide to explore the end to end development lifecycle of the Streaming Integrator.
 
 ## Deploy in Docker
 
@@ -113,3 +113,5 @@ For more details and to take advantage of this unique opportunity please visit o
 ## Reporting Issues
 
 We encourage you to report issues, documentation faults and feature requests regarding WSO2 Streaming integrator through the [WSO2 SI Issue Tracker](https://github.com/wso2/streaming-integrator/issues).
+
+When reporting security issues, please report them to [security@wso2.com](mailto:security@wso2.com), and make sure that you adhere to [WSO2 Security Vulnerability Reporting Guidelines](https://docs.wso2.com/display/Security/WSO2+Security+Vulnerability+Reporting+Guidelines). 
