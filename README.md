@@ -113,3 +113,5 @@ For more details and to take advantage of this unique opportunity please visit o
 ## Reporting Issues
 
 We encourage you to report issues, documentation faults and feature requests regarding WSO2 Streaming integrator through the [WSO2 SI Issue Tracker](https://github.com/wso2/streaming-integrator/issues).
+
+When reporting security issues, please report them to [security@wso2.com](mailto:security@wso2.com), and make sure that you adhere to [WSO2 Security Vulnerability Reporting Guidelines](https://docs.wso2.com/display/Security/WSO2+Security+Vulnerability+Reporting+Guidelines). 
