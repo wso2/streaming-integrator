@@ -24,6 +24,7 @@
   [![GitHub Open Issues](https://img.shields.io/github/issues-raw/wso2/streaming-integrator.svg)](https://github.com/wso2/streaming-integrator/commits/master)
   [![GitHub Last Commit](https://img.shields.io/github/last-commit/wso2/streaming-integrator.svg)](https://github.com/wso2/streaming-integrator/commits/master)
   [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+  [<img src="https://img.shields.io/badge/Slack-@wso2--ei-blue">](https://wso2-ei.slack.com/messages/streamingintegrator/)
 
 ## Overview
 
