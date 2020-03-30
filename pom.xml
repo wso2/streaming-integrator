@@ -816,7 +816,7 @@
         </pluginManagement>
     </build>
     <properties>
-        <carbon.analytics.version>3.0.13</carbon.analytics.version>
+        <carbon.analytics.version>3.0.34</carbon.analytics.version>
         <siddhi.version>5.1.5</siddhi.version>
 
         <carbon.analytics-common.version>6.1.35</carbon.analytics-common.version>
@@ -842,7 +842,7 @@
 
         <!-- Dependencies -->
         <open.tracing.version>0.31.0</open.tracing.version>
-        <carbon.kernel.version>5.2.8</carbon.kernel.version>
+        <carbon.kernel.version>5.2.12</carbon.kernel.version>
         <carbon.kernel.package.import.version.range>[5.2.0, 6.0.0)</carbon.kernel.package.import.version.range>
         <carbon.kernel.pax.version>5.2.8</carbon.kernel.pax.version>
 
