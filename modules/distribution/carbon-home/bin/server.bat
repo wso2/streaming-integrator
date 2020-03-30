@@ -53,6 +53,9 @@ rem find CARBON_HOME if it does not exist due to either an invalid value passed
 rem by the user or the %0 problem on Windows 9x
 if not exist "%CARBON_HOME%\bin\version.txt" goto noServerHome
 
+rem Installing jars
+java -cp ".\*;%CARBON_HOME%\bin\tools\*" -Dwso2.carbon.tool="install-jars" org.wso2.carbon.tools.CarbonToolExecutor "%CARBON_HOME%"
+
 goto startServer
 
 :noServerHome
