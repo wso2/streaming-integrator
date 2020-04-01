@@ -253,6 +253,13 @@
             <artifactId>org.wso2.siddhi.parser.service.feature</artifactId>
             <type>zip</type>
         </dependency>
+
+        <!-- Extension Installer -->
+        <dependency>
+            <groupId>org.wso2.carbon.analytics</groupId>
+            <artifactId>org.wso2.carbon.siddhi.extensions.installer.core.feature</artifactId>
+            <type>zip</type>
+        </dependency>
     </dependencies>
 
     <build>
@@ -846,6 +853,12 @@
                                     <id>org.wso2.siddhi.parser.service.feature</id>
                                     <version>${carbon.analytics.version}</version>
                                 </feature>
+
+                                <!-- Extension Installer -->
+                                <feature>
+                                    <id>org.wso2.carbon.siddhi.extensions.installer.core.feature</id>
+                                    <version>${carbon.analytics.version}</version>
+                                </feature>
                             </features>
                         </configuration>
                     </execution>
@@ -1052,6 +1065,11 @@
                                 <!--Siddhi operator-->
                                 <feature>
                                     <id>org.wso2.siddhi.parser.service.feature</id>
+                                    <version>${carbon.analytics.version}</version>
+                                </feature>
+                                <!-- Extension Installer -->
+                                <feature>
+                                    <id>org.wso2.carbon.siddhi.extensions.installer.core.feature.group</id>
                                     <version>${carbon.analytics.version}</version>
                                 </feature>
                             </features>

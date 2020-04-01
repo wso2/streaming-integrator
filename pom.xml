@@ -707,6 +707,19 @@
                 <artifactId>org.wso2.carbon.privacy.forgetme.tool</artifactId>
                 <version>${forgetme.tool.version}</version>
             </dependency>
+
+            <!-- Extension Installer -->
+            <dependency>
+                <groupId>org.wso2.carbon.analytics</groupId>
+                <artifactId>org.wso2.carbon.siddhi.extensions.installer.core</artifactId>
+                <version>${carbon.analytics.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.wso2.carbon.analytics</groupId>
+                <artifactId>org.wso2.carbon.siddhi.extensions.installer.core.feature</artifactId>
+                <version>${carbon.analytics.version}</version>
+                <type>zip</type>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
