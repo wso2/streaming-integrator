@@ -186,6 +186,13 @@
             <!--</excludes>-->
         <!--</fileSet>-->
 
+        <!-- Extension Installer CLI tool -->
+        <fileSet>
+            <directory>target/extension-installer/org.wso2.carbon.siddhi.extensions.installer.cli-${carbon.analytics.version}/</directory>
+            <outputDirectory>wso2/tools/extension-installer/</outputDirectory>
+            <fileMode>744</fileMode>
+        </fileSet>
+
         <!-- Copying the in-place update tools-->
         <fileSet>
             <directory>target/update/</directory>
@@ -289,6 +296,19 @@
             <outputDirectory>wso2/tools/identity-anonymization-tool/conf/</outputDirectory>
             <destName>config.json</destName>
             <fileMode>644</fileMode>
+        </file>
+
+        <!-- Extension Installer CLI tool -->
+        <file>
+            <source>src/scripts/extension-installer.sh</source>
+            <outputDirectory>bin/</outputDirectory>
+            <fileMode>744</fileMode>
+        </file>
+
+        <file>
+            <source>src/scripts/extension-installer.bat</source>
+            <outputDirectory>bin/</outputDirectory>
+            <fileMode>744</fileMode>
         </file>
     </files>
 </assembly>
