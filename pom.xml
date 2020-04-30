@@ -720,6 +720,13 @@
                 <version>${carbon.analytics.version}</version>
                 <type>zip</type>
             </dependency>
+
+            <!-- Extension Installer CLI tool -->
+            <dependency>
+                <groupId>org.wso2.carbon.analytics</groupId>
+                <artifactId>org.wso2.carbon.siddhi.extensions.installer.cli</artifactId>
+                <version>${carbon.analytics.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
