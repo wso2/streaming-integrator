@@ -64,9 +64,9 @@ To build WSO2 Streaming Integrator from source, follow the steps below.
 
 To started with the Streaming Integrator follow the guides given below.
 
-* [Quick Start Guide](https://ei.docs.wso2.com/en/next/streaming-integrator/quick-start-guide/getting-started-with-si/): Step by step guide to get your first Siddhi application running in less than 5 minutes.
+* [Quick Start Guide](https://ei.docs.wso2.com/en/latest/streaming-integrator/quick-start-guide/quick-start-guide/): Step by step guide to get your first Siddhi application running in less than 5 minutes.
 
-* [Streaming Integrator 101](): A 30 minute guide to explore the end to end development lifecycle of the Streaming Integrator.
+* [Streaming Integrator 101](https://ei.docs.wso2.com/en/latest/streaming-integrator/quick-start-guide/getting-started/getting-started-guide-overview/): A 30 minute guide to explore the end to end development lifecycle of the Streaming Integrator.
 
 ## Deploy in Docker
 
