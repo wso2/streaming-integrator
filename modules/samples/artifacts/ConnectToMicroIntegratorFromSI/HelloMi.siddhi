@@ -1,0 +1,54 @@
+@App:name("HelloMi")
+@App:description("Trigger a sequence in MicroIntegrator from Streaming Integrator using gRPC protocol")
+
+/*
+Purpose:
+    This app shows how to trigger a sequence in Micro Integrator from Streaming Integrator (SI). An event will be
+    received by Stgreaming Ingtegrator and it will be sent to Micro Integrator. After it goes through the specified
+    sequence MI will send the response back to SI. From there we can use the response in our queries. gRPC protocol
+    will be used for establishing connection between SI and MI.
+
+Prerequisites:
+    1. Download the latest Micro Integrator pack from https://github.com/wso2/micro-integrator/releases
+    2. Extract it and open the extracted folder. Let's call this as {MIHome}. Let's also call the extracted directory
+        of SI as {SIHome}
+    3. Copy the file grpcInboundEndpoint.xml from {SIHome}/samples/artifacts/ConnectToMicroIntegratorUsingGrpc to
+        {MIHome}/repository/deployment/server/synapse-configs/default/inbound-endpoints
+    4. Copy the file inSeq.xml from {SIHome}/samples/artifacts/ConnectToMicroIntegratorUsingGrpc to
+        {MIHome}/repository/deployment/server/synapse-configs/default/sequences
+    5. Start the Micro Integrator by issuing the command "./micro-integrator.sh" from {MIHome}/bin. If started
+        successfully it will print [micro-integrator]  INFO - StartupFinalizerServiceComponent WSO2 Micro Integrator
+        started in 8 sec
+
+Executing the Sample
+    1. Copy this HelloMi.siddhi file to {SIHome}/wso2/server/deployment/siddhi-files/
+    2. start the Streaming Integrator by issuing the command ./server.sh in {SIHome}/bin
+    The following logs will be printed if it starts successfully
+    INFO {io.siddhi.extension.io.grpc.sink.GrpcCallSink} - grpcTestApp: gRPC service on FooStream has successfully
+        connected to grpc://localhost:8888/org.wso2.grpc.EventService/process/inSeq
+    INFO {org.wso2.carbon.kernel.internal.CarbonStartupHandler} - WSO2 Streaming Integrator started in 9.915 sec
+
+Testing the Sample
+    Open a terminal and issue the following curl command
+        curl -X POST -d "{\"event\":{\"message\":\"http_curl\",\"headers\":\"'Content-Type:json'\"}}" http://localhost:8006/inputstream --header "Content-Type:application/json"
+*/
+
+@source(type='http', receiver.url='http://localhost:8006/inputstream', @map(type = 'json'))
+define stream InputStream (message String, headers string);
+
+@sink(type='grpc-call', publisher.url = 'grpc://localhost:8888/org.wso2.grpc.EventService/process/inSeq', sink.id= '1', headers='{{headers}}', @map(type='json'))
+define stream FooStream (message String, headers string);
+
+@source(type='grpc-call-response', sink.id= '1', @map(type='json'))
+define stream BarStream (message String, headers string);
+
+@sink(type='log')
+define stream OutputStream (message String, headers string);
+
+from InputStream
+select *
+insert into FooStream;
+
+from BarStream
+select *
+insert into OutputStream

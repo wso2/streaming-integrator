@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<inboundEndpoint xmlns="http://ws.apache.org/ns/synapse" name="GrpcInboundEndpoint" sequence="inSeq" onError="fault" protocol="grpc" suspend="false">
+	<parameters>
+		<parameter name="inbound.grpc.port">8888</parameter> 
+	</parameters> 
+</inboundEndpoint>

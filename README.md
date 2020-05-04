@@ -24,6 +24,7 @@
   [![GitHub Open Issues](https://img.shields.io/github/issues-raw/wso2/streaming-integrator.svg)](https://github.com/wso2/streaming-integrator/commits/master)
   [![GitHub Last Commit](https://img.shields.io/github/last-commit/wso2/streaming-integrator.svg)](https://github.com/wso2/streaming-integrator/commits/master)
   [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+  [<img src="https://img.shields.io/badge/Slack-@wso2--ei-blue">](https://wso2-ei.slack.com/messages/streamingintegrator/)
 
 ## Overview
 
@@ -60,6 +61,13 @@ To build WSO2 Streaming Integrator from source, follow the steps below.
 2. Run `mvn clean install` from the root directory of the repository.
 3. The generated Streaming Integrator distribution can be found at `streaming-integrator/modules/distribution/target/-streaming-integrator-<version>.zip`
 
+When building with dependencies, you need to build in the following order.
+1. [siddhi](https://github.com/siddhi-io/siddhi)
+2. [carbon-analytics-common](https://github.com/wso2/carbon-analytics-common)
+3. [carbon-analytics](https://github.com/wso2/carbon-analytics)
+4. [carbon-dashboards](https://github.com/wso2/carbon-dashboards)
+5. [carbon-ui-server](https://github.com/wso2/carbon-ui-server)
+
 ## Getting Started
 
 To started with the Streaming Integrator follow the guides given below.
@@ -67,6 +75,7 @@ To started with the Streaming Integrator follow the guides given below.
 * [Quick Start Guide](https://ei.docs.wso2.com/en/latest/streaming-integrator/quick-start-guide/quick-start-guide/): Step by step guide to get your first Siddhi application running in less than 5 minutes.
 
 * [Streaming Integrator 101](https://ei.docs.wso2.com/en/latest/streaming-integrator/quick-start-guide/getting-started/getting-started-guide-overview/): A 30 minute guide to explore the end to end development lifecycle of the Streaming Integrator.
+
 
 ## Deploy in Docker
 
@@ -106,3 +115,5 @@ For more details and to take advantage of this unique opportunity please visit o
 ## Reporting Issues
 
 We encourage you to report issues, documentation faults and feature requests regarding WSO2 Streaming integrator through the [WSO2 SI Issue Tracker](https://github.com/wso2/streaming-integrator/issues).
+
+When reporting security issues, please report them to [security@wso2.com](mailto:security@wso2.com), and make sure that you adhere to [WSO2 Security Vulnerability Reporting Guidelines](https://docs.wso2.com/display/Security/WSO2+Security+Vulnerability+Reporting+Guidelines). 

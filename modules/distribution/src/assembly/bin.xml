@@ -31,6 +31,14 @@
                 <exclude>README.txt</exclude>
                 <exclude>LICENSE.txt</exclude>
                 <exclude>bin/carbon.sh</exclude>
+                <exclude>bin/ciphertool.sh</exclude>
+                <exclude>bin/ciphertool.bat</exclude>
+                <exclude>bin/icf-provider.bat</exclude>
+                <exclude>bin/icf-provider.sh</exclude>
+                <exclude>bin/jartobundle.sh</exclude>
+                <exclude>bin/jartobundle.bat</exclude>
+                <exclude>bin/osgi-lib.bat</exclude>
+                <exclude>bin/osgi-lib.sh</exclude>
                 <exclude>release-notes.html</exclude>
                 <exclude>conf/osgi/launch.properties</exclude>
                 <exclude>conf/deployment.yaml</exclude>
@@ -75,15 +83,6 @@
             <directory>carbon-home/bin</directory>
             <outputDirectory>bin</outputDirectory>
             <includes>
-                <include>**/*.sh</include>
-                <include>**/*.bat</include>
-            </includes>
-            <fileMode>755</fileMode>
-        </fileSet>
-        <fileSet>
-            <directory>carbon-home/bin</directory>
-            <outputDirectory>bin</outputDirectory>
-            <includes>
                 <include>**/*.txt</include>
             </includes>
             <fileMode>444</fileMode>
@@ -95,6 +94,11 @@
             <excludes>
                 <exclude>empty.txt</exclude>
             </excludes>
+        </fileSet>
+        <fileSet>
+            <directory>carbon-home/bin</directory>
+            <outputDirectory>bin</outputDirectory>
+            <fileMode>755</fileMode>
         </fileSet>
         <fileSet>
             <directory>.</directory>
@@ -136,6 +140,25 @@
             </excludes>
             <fileMode>644</fileMode>
         </fileSet>
+        <fileSet>
+            <directory>../samples</directory>
+            <outputDirectory>samples</outputDirectory>
+            <excludes>
+                <exclude>target/**</exclude>
+                <exclude>scripts/**</exclude>
+                <exclude>pom.xml</exclude>
+                <exclude>LICENSE.txt</exclude>
+                <exclude>release-notes.html</exclude>
+                <exclude>**/*.ipr</exclude>
+                <exclude>**/*.iwr</exclude>
+                <exclude>**/*.eclipse</exclude>
+                <exclude>**/*.iml</exclude>
+                <exclude>**/*.releaseBackup</exclude>
+                <exclude>%regex[(?!.*utils/).*pom.xml]</exclude>
+                <exclude>**/target/**</exclude>
+            </excludes>
+            <fileMode>644</fileMode>
+        </fileSet>
 
         <!--Forget me tool-->
         <!--This includes only the relevant dependencies -->
@@ -162,6 +185,20 @@
                 <!--<exclude>**/.gitkeep</exclude>-->
             <!--</excludes>-->
         <!--</fileSet>-->
+
+        <!-- Extension Installer CLI tool -->
+        <fileSet>
+            <directory>target/extension-installer/org.wso2.carbon.siddhi.extensions.installer.cli-${carbon.analytics.version}/</directory>
+            <outputDirectory>wso2/tools/extension-installer/</outputDirectory>
+            <fileMode>744</fileMode>
+        </fileSet>
+
+        <!-- Copying the in-place update tools-->
+        <fileSet>
+            <directory>target/update/</directory>
+            <outputDirectory>bin/</outputDirectory>
+            <fileMode>744</fileMode>
+        </fileSet>
     </fileSets>
     <files>
         <file>
@@ -259,6 +296,19 @@
             <outputDirectory>wso2/tools/identity-anonymization-tool/conf/</outputDirectory>
             <destName>config.json</destName>
             <fileMode>644</fileMode>
+        </file>
+
+        <!-- Extension Installer CLI tool -->
+        <file>
+            <source>src/scripts/extension-installer.sh</source>
+            <outputDirectory>bin/</outputDirectory>
+            <fileMode>744</fileMode>
+        </file>
+
+        <file>
+            <source>src/scripts/extension-installer.bat</source>
+            <outputDirectory>bin/</outputDirectory>
+            <fileMode>744</fileMode>
         </file>
     </files>
 </assembly>

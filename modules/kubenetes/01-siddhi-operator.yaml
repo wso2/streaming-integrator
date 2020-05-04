@@ -1,0 +1,51 @@
+---
+# This config map used to parse configurations to the siddhi operator.
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: siddhi-operator-config
+data:
+  siddhiHome: /home/wso2carbon/wso2si/
+  siddhiProfile: server
+  siddhiImage: wso2/streaming-integrator:1.0.0
+  autoIngressCreation: "true"
+  # ingressTLS: siddhi-tls
+---
+
+# Deployment of the siddhi operator
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: siddhi-operator
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: siddhi-operator
+  template:
+    metadata:
+      labels:
+        name: siddhi-operator
+    spec:
+      serviceAccountName: siddhi-operator
+      containers:
+        - name: siddhi-operator
+          image: siddhiio/siddhi-operator:0.2.0-beta
+          command:
+          - siddhi-operator
+          imagePullPolicy: Always
+          env:
+            - name: WATCH_NAMESPACE
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.namespace
+            - name: POD_NAME
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.name
+            - name: OPERATOR_NAME
+              value: siddhi-operator
+            - name: OPERATOR_VERSION
+              value: 0.2.0-beta
+            - name: OPERATOR_CONFIGMAP
+              value: siddhi-operator-config
