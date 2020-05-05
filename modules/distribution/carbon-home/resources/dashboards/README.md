@@ -4,9 +4,10 @@ In order to use these dashboards with grafana you have to follow these instructi
 
 ## 1. Start the grafana server.
 
-i. Navigate to grafana directory.  
-ii. Issue following command in the console `bin/grafana-server`.  
-iii. Navigate to grafana home with following URL `localhost:3000`.
+i. Download grafana from the following URL  https://grafana.com/grafana/download  
+ii. Extract the downloaded file and Navigate to grafana directory.  
+iii. Issue following command in the console `bin/grafana-server`.  
+iv. Navigate to grafana home with following URL `localhost:3000`.
 
 ## 2. Load dashboards into grafana.
 Once you have login to the grafana follow these steps to import dashboards into grafana
