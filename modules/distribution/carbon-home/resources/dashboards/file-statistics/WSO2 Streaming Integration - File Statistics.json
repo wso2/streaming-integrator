@@ -16,7 +16,7 @@
   "gnetId": null,
   "graphTooltip": 0,
   "id": 5,
-  "iteration": 1588656424016,
+  "iteration": 1588735519183,
   "links": [
     {
       "icon": "dashboard",
@@ -350,7 +350,7 @@
           "decimals": 2,
           "link": true,
           "linkTargetBlank": true,
-          "linkTooltip": "Source/$__cell",
+          "linkTooltip": "$__cell",
           "linkUrl": "/d/dTYbaauWk/siddhi-io-file-source?orgId=1&var-app=$app&var-source=$__cell&from=now-5m&to=now&refresh=5s",
           "mappingType": 1,
           "pattern": "file_path",
@@ -1117,7 +1117,7 @@
           "decimals": 2,
           "link": true,
           "linkTargetBlank": true,
-          "linkTooltip": "Sink/$__cell",
+          "linkTooltip": "$__cell",
           "linkUrl": "d/RMcQSPuZk/siddhi-io-file-sink?orgId=1&var-app=$app&var-sink=$__cell&refresh=5s",
           "mappingType": 1,
           "pattern": "file_path",
@@ -3161,6 +3161,7 @@
       {
         "allValue": null,
         "current": {
+          "tags": [],
           "text": "TestFile",
           "value": "TestFile"
         },
@@ -3260,5 +3261,5 @@
   "timezone": "",
   "title": "WSO2 Streaming Integration - File Statistics",
   "uid": "XURMQjsZk",
-  "version": 338
+  "version": 341
 }
