@@ -35,13 +35,26 @@ metrics.prometheus:
     1. `bin/server.sh` (if you are on a Linux/Mac OS) .
     2. `server.bat` (if you are on a Windows OS).
 
-## 3. Start the grafana server.
+## 3. Start the Prometheus Server.
+1. Install the Prometheus Server using the following link.
+   https://prometheus.io/docs/prometheus/latest/getting_started/
+2. Navigate to prometheus directory and open the `prometheus.yaml` file  
+3. Add following configurations under the `scrape_configs:`  
+    ````
+    scrape_configs:
+      - job_name: 'prometheus'
+        static_configs:
+        - targets: ['localhost:9005']
+    ````  
+4. Start the prometheus server by executing following command in the terminal `./prometheus`
+
+## 4. Start the grafana Server.
 1. Download grafana from the following URL  https://grafana.com/grafana/download  
 2. Extract the downloaded file and Navigate to grafana directory.  
 3. Issue following command in the console `bin/grafana-server`.  
 4. Navigate to grafana home with following URL `localhost:3000`.
 
-## 4. Load dashboards into grafana.
+## 5. Load dashboards into grafana.
 Once you have login to the grafana follow these steps to import dashboards into grafana
 
 1. Navigate to +(plus) icon at the left upper corner.  
