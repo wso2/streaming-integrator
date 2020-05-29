@@ -16,7 +16,7 @@
   "gnetId": null,
   "graphTooltip": 0,
   "id": 9,
-  "iteration": 1588664573093,
+  "iteration": 1590758806117,
   "links": [
     {
       "icon": "dashboard",
@@ -137,270 +137,102 @@
       "valueName": "avg"
     },
     {
-      "columns": [],
+      "aliasColors": {
+        "Events per min": "rgb(236, 124, 36)"
+      },
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
       "datasource": null,
-      "fontSize": "120%",
+      "decimals": 2,
+      "fill": 3,
+      "fillGradient": 10,
       "gridPos": {
         "h": 8,
         "w": 20,
         "x": 4,
         "y": 1
       },
-      "id": 10,
-      "options": {},
-      "pageSize": 6,
-      "showHeader": true,
-      "sort": {
-        "col": 8,
-        "desc": true
+      "hiddenSeries": false,
+      "id": 12,
+      "interval": "1m",
+      "legend": {
+        "alignAsTable": true,
+        "avg": true,
+        "current": true,
+        "hideEmpty": false,
+        "hideZero": false,
+        "max": false,
+        "min": false,
+        "rightSide": true,
+        "show": true,
+        "total": false,
+        "values": true
       },
-      "styles": [
-        {
-          "alias": "Status",
-          "colorMode": "cell",
-          "colors": [
-            "#37872D",
-            "#FF780A",
-            "#C4162A"
-          ],
-          "dateFormat": "YYYY-MM-DD HH:mm:ss",
-          "decimals": 2,
-          "mappingType": 1,
-          "pattern": "Value #B",
-          "thresholds": [
-            "1",
-            "2"
-          ],
-          "type": "string",
-          "unit": "locale",
-          "valueMaps": [
-            {
-              "text": "Consuming",
-              "value": "0"
-            },
-            {
-              "text": "Idle",
-              "value": "1"
-            },
-            {
-              "text": "Error",
-              "value": "2"
-            }
-          ]
-        },
-        {
-          "alias": "Total Changes",
-          "colorMode": null,
-          "colors": [
-            "rgba(245, 54, 54, 0.9)",
-            "rgba(237, 129, 40, 0.89)",
-            "rgba(50, 172, 45, 0.97)"
-          ],
-          "dateFormat": "YYYY-MM-DD HH:mm:ss",
-          "decimals": null,
-          "mappingType": 1,
-          "pattern": "Value #A",
-          "thresholds": [],
-          "type": "number",
-          "unit": "none"
-        },
-        {
-          "alias": "",
-          "colorMode": null,
-          "colors": [
-            "rgba(245, 54, 54, 0.9)",
-            "rgba(237, 129, 40, 0.89)",
-            "rgba(50, 172, 45, 0.97)"
-          ],
-          "dateFormat": "YYYY-MM-DD HH:mm:ss",
-          "decimals": 2,
-          "mappingType": 1,
-          "pattern": "Time",
-          "thresholds": [],
-          "type": "hidden",
-          "unit": "short"
-        },
-        {
-          "alias": "Database Type",
-          "colorMode": null,
-          "colors": [
-            "rgba(245, 54, 54, 0.9)",
-            "rgba(237, 129, 40, 0.89)",
-            "rgba(50, 172, 45, 0.97)"
-          ],
-          "dateFormat": "YYYY-MM-DD HH:mm:ss",
-          "decimals": 2,
-          "mappingType": 1,
-          "pattern": "db_type",
-          "thresholds": [],
-          "type": "string",
-          "unit": "short"
-        },
-        {
-          "alias": "Database URL",
-          "colorMode": null,
-          "colors": [
-            "rgba(245, 54, 54, 0.9)",
-            "rgba(237, 129, 40, 0.89)",
-            "rgba(50, 172, 45, 0.97)"
-          ],
-          "dateFormat": "YYYY-MM-DD HH:mm:ss",
-          "decimals": 2,
-          "link": true,
-          "linkTargetBlank": true,
-          "linkTooltip": "CDC Listening Mode:$__cell",
-          "linkUrl": "/d/nhe5jbqWk/siddhi-io-cdc-listening-mode?orgId=1&var-app=$app&var-db_url=$__cell&from=now-30m&to=now&refresh=5s",
-          "mappingType": 1,
-          "pattern": "db_url",
-          "thresholds": [],
-          "type": "hidden",
-          "unit": "short"
-        },
-        {
-          "alias": "Last Change",
-          "colorMode": null,
-          "colors": [
-            "rgba(245, 54, 54, 0.9)",
-            "rgba(237, 129, 40, 0.89)",
-            "rgba(50, 172, 45, 0.97)"
-          ],
-          "dateFormat": "LT MMMM D, YYYY",
-          "decimals": 2,
-          "mappingType": 1,
-          "pattern": "Value #C",
-          "thresholds": [],
-          "type": "date",
-          "unit": "short"
-        },
-        {
-          "alias": "Changes/Sec",
-          "colorMode": null,
-          "colors": [
-            "rgba(245, 54, 54, 0.9)",
-            "rgba(237, 129, 40, 0.89)",
-            "rgba(50, 172, 45, 0.97)"
-          ],
-          "dateFormat": "YYYY-MM-DD HH:mm:ss",
-          "decimals": 2,
-          "mappingType": 1,
-          "pattern": "Value #D",
-          "thresholds": [],
-          "type": "number",
-          "unit": "short"
-        },
-        {
-          "alias": "Idle Time",
-          "colorMode": null,
-          "colors": [
-            "rgba(245, 54, 54, 0.9)",
-            "rgba(237, 129, 40, 0.89)",
-            "rgba(50, 172, 45, 0.97)"
-          ],
-          "dateFormat": "YYYY-MM-DD HH:mm:ss",
-          "decimals": 0,
-          "mappingType": 1,
-          "pattern": "Value #E",
-          "preserveFormat": false,
-          "sanitize": false,
-          "thresholds": [],
-          "type": "number",
-          "unit": "s"
-        },
-        {
-          "alias": "Table Name",
-          "colorMode": null,
-          "colors": [
-            "rgba(245, 54, 54, 0.9)",
-            "rgba(237, 129, 40, 0.89)",
-            "rgba(50, 172, 45, 0.97)"
-          ],
-          "dateFormat": "YYYY-MM-DD HH:mm:ss",
-          "decimals": 2,
-          "link": true,
-          "linkTargetBlank": true,
-          "linkTooltip": "$__cell_3",
-          "linkUrl": "/d/nhe5jbqWk/siddhi-io-cdc-listening-mode?orgId=1&var-app=$app&var-db_url=$__cell_3&from=now-30m&to=now&refresh=5s",
-          "mappingType": 1,
-          "pattern": "tablename",
-          "thresholds": [],
-          "type": "number",
-          "unit": "short"
-        },
-        {
-          "alias": "Database",
-          "colorMode": null,
-          "colors": [
-            "rgba(245, 54, 54, 0.9)",
-            "rgba(237, 129, 40, 0.89)",
-            "rgba(50, 172, 45, 0.97)"
-          ],
-          "dateFormat": "YYYY-MM-DD HH:mm:ss",
-          "decimals": 2,
-          "mappingType": 1,
-          "pattern": "database",
-          "thresholds": [],
-          "type": "number",
-          "unit": "short"
-        },
-        {
-          "alias": "Hostname",
-          "colorMode": null,
-          "colors": [
-            "rgba(245, 54, 54, 0.9)",
-            "rgba(237, 129, 40, 0.89)",
-            "rgba(50, 172, 45, 0.97)"
-          ],
-          "dateFormat": "YYYY-MM-DD HH:mm:ss",
-          "decimals": 2,
-          "mappingType": 1,
-          "pattern": "host",
-          "thresholds": [],
-          "type": "number",
-          "unit": "short"
-        }
-      ],
+      "lines": true,
+      "linewidth": 2,
+      "nullPointMode": "null",
+      "options": {
+        "dataLinks": []
+      },
+      "percentage": false,
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
       "targets": [
         {
-          "expr": "sum(siddhi_cdc_source_listening_mode_event_count{app_name=~\"$app\"}) by (db_url, db_type, database, tablename, host)",
-          "format": "table",
-          "hide": false,
-          "instant": true,
-          "refId": "A"
-        },
-        {
-          "expr": "sum(siddhi_cdc_source_listening_mode_db_status{app_name=~\"$app\"}) by (db_url)",
-          "format": "table",
-          "hide": false,
-          "instant": true,
+          "expr": "increase(siddhi_cdc_source_listening_mode_events_per_table{app_name=~\"$app\"}[1m])",
+          "instant": false,
+          "intervalFactor": 1,
+          "legendFormat": "{{tablename}}",
           "refId": "B"
-        },
-        {
-          "expr": "sum(siddhi_cdc_source_listening_mode_last_receive_time{app_name=~\"$app\"}) by (db_url)",
-          "format": "table",
-          "hide": false,
-          "instant": true,
-          "refId": "C"
-        },
-        {
-          "expr": "sum(rate(siddhi_cdc_source_listening_mode_events_per_table{app_name=~\"$app\"}[1m])) by (db_url)",
-          "format": "table",
-          "hide": false,
-          "instant": true,
-          "refId": "D"
-        },
-        {
-          "expr": "sum(siddhi_cdc_source_listening_mode_idle_time{app_name=~\"$app\"}) by (db_url)",
-          "format": "table",
-          "hide": false,
-          "instant": true,
-          "refId": "E"
         }
       ],
+      "thresholds": [],
       "timeFrom": null,
+      "timeRegions": [],
       "timeShift": null,
-      "title": "Table Details",
-      "transform": "table",
-      "type": "table"
+      "title": "Received Events",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "decimals": null,
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": "0",
+          "show": true
+        },
+        {
+          "format": "wps",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
     },
     {
       "cacheTimeout": null,
@@ -491,102 +323,270 @@
       "valueName": "current"
     },
     {
-      "aliasColors": {
-        "Events per min": "rgb(236, 124, 36)"
-      },
-      "bars": false,
-      "dashLength": 10,
-      "dashes": false,
+      "columns": [],
       "datasource": null,
-      "decimals": 2,
-      "fill": 3,
-      "fillGradient": 10,
+      "fontSize": "120%",
       "gridPos": {
-        "h": 9,
+        "h": 8,
         "w": 24,
         "x": 0,
         "y": 9
       },
-      "hiddenSeries": false,
-      "id": 12,
-      "interval": "1m",
-      "legend": {
-        "alignAsTable": true,
-        "avg": true,
-        "current": true,
-        "hideEmpty": false,
-        "hideZero": false,
-        "max": false,
-        "min": false,
-        "rightSide": true,
-        "show": true,
-        "total": false,
-        "values": true
+      "id": 10,
+      "options": {},
+      "pageSize": 6,
+      "showHeader": true,
+      "sort": {
+        "col": 8,
+        "desc": true
       },
-      "lines": true,
-      "linewidth": 2,
-      "nullPointMode": "null",
-      "options": {
-        "dataLinks": []
-      },
-      "percentage": false,
-      "pointradius": 2,
-      "points": false,
-      "renderer": "flot",
-      "seriesOverrides": [],
-      "spaceLength": 10,
-      "stack": false,
-      "steppedLine": false,
-      "targets": [
+      "styles": [
         {
-          "expr": "increase(siddhi_cdc_source_listening_mode_events_per_table{app_name=~\"$app\"}[1m])",
-          "instant": false,
-          "intervalFactor": 1,
-          "legendFormat": "{{tablename}}",
-          "refId": "B"
-        }
-      ],
-      "thresholds": [],
-      "timeFrom": null,
-      "timeRegions": [],
-      "timeShift": null,
-      "title": "Received Events",
-      "tooltip": {
-        "shared": true,
-        "sort": 0,
-        "value_type": "individual"
-      },
-      "type": "graph",
-      "xaxis": {
-        "buckets": null,
-        "mode": "time",
-        "name": null,
-        "show": true,
-        "values": []
-      },
-      "yaxes": [
-        {
-          "decimals": null,
-          "format": "short",
-          "label": null,
-          "logBase": 1,
-          "max": null,
-          "min": "0",
-          "show": true
+          "alias": "Status",
+          "colorMode": "cell",
+          "colors": [
+            "#37872D",
+            "#FF780A",
+            "#C4162A"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "mappingType": 1,
+          "pattern": "Value #B",
+          "thresholds": [
+            "1",
+            "2"
+          ],
+          "type": "string",
+          "unit": "locale",
+          "valueMaps": [
+            {
+              "text": "Consuming",
+              "value": "0"
+            },
+            {
+              "text": "Idle",
+              "value": "1"
+            },
+            {
+              "text": "Error",
+              "value": "2"
+            }
+          ]
         },
         {
-          "format": "wps",
-          "label": null,
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": true
+          "alias": "Total Changes",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": null,
+          "mappingType": 1,
+          "pattern": "Value #A",
+          "thresholds": [],
+          "type": "number",
+          "unit": "none"
+        },
+        {
+          "alias": "",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "mappingType": 1,
+          "pattern": "Time",
+          "thresholds": [],
+          "type": "hidden",
+          "unit": "short"
+        },
+        {
+          "alias": "Database Type",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "mappingType": 1,
+          "pattern": "A_db_type",
+          "thresholds": [],
+          "type": "string",
+          "unit": "short"
+        },
+        {
+          "alias": "Database URL",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "link": false,
+          "linkTargetBlank": true,
+          "linkTooltip": "CDC Listening Mode:$__cell",
+          "linkUrl": "/d/nhe5jbqWk/siddhi-io-cdc-listening-mode?orgId=1&var-app=$app&var-db_url=$__cell&from=now-30m&to=now&refresh=5s",
+          "mappingType": 1,
+          "pattern": "db_url",
+          "thresholds": [],
+          "type": "hidden",
+          "unit": "short"
+        },
+        {
+          "alias": "Idle Time",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "LT MMMM D, YYYY",
+          "decimals": null,
+          "mappingType": 1,
+          "pattern": "Value #C",
+          "thresholds": [],
+          "type": "number",
+          "unit": "s"
+        },
+        {
+          "alias": "Changes/Sec",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "mappingType": 1,
+          "pattern": "Value #D",
+          "thresholds": [],
+          "type": "number",
+          "unit": "short"
+        },
+        {
+          "alias": "Last Change",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "LT MMMM D, YYYY",
+          "decimals": 0,
+          "mappingType": 1,
+          "pattern": "Value #E",
+          "preserveFormat": false,
+          "sanitize": false,
+          "thresholds": [],
+          "type": "date",
+          "unit": "s"
+        },
+        {
+          "alias": "Table",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "link": true,
+          "linkTargetBlank": true,
+          "linkTooltip": "$__cell_5",
+          "linkUrl": "/d/nhe5jbqWk/siddhi-io-cdc-listening-mode?orgId=1&var-app=$app&var-db_url=$__cell_5&from=now-30m&to=now&refresh=5s",
+          "mappingType": 1,
+          "pattern": "D_tablename",
+          "thresholds": [],
+          "type": "number",
+          "unit": "short"
+        },
+        {
+          "alias": "Database",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "mappingType": 1,
+          "pattern": "C_database",
+          "thresholds": [],
+          "type": "number",
+          "unit": "short"
+        },
+        {
+          "alias": "Host",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "mappingType": 1,
+          "pattern": "B_host",
+          "thresholds": [],
+          "type": "number",
+          "unit": "short"
         }
       ],
-      "yaxis": {
-        "align": false,
-        "alignLevel": null
-      }
+      "targets": [
+        {
+          "expr": "sum(siddhi_cdc_source_listening_mode_event_count{app_name=~\"$app\"}) by (db_url, A_db_type, C_database, D_tablename, B_host)",
+          "format": "table",
+          "hide": false,
+          "instant": true,
+          "refId": "A"
+        },
+        {
+          "expr": "sum(rate(siddhi_cdc_source_listening_mode_events_per_table{app_name=~\"$app\"}[1m])) by (db_url)",
+          "format": "table",
+          "hide": false,
+          "instant": true,
+          "refId": "D"
+        },
+        {
+          "expr": "sum(siddhi_cdc_source_listening_mode_db_status{app_name=~\"$app\"}) by (db_url)",
+          "format": "table",
+          "hide": false,
+          "instant": true,
+          "refId": "B"
+        },
+        {
+          "expr": "sum(siddhi_cdc_source_listening_mode_idle_time{app_name=~\"$app\"}) by (db_url)",
+          "format": "table",
+          "hide": false,
+          "instant": true,
+          "refId": "C"
+        },
+        {
+          "expr": "sum(siddhi_cdc_source_listening_mode_last_receive_time{app_name=~\"$app\"}) by (db_url)",
+          "format": "table",
+          "hide": false,
+          "instant": true,
+          "refId": "E"
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Table Details",
+      "transform": "table",
+      "type": "table"
     },
     {
       "collapsed": false,
@@ -595,7 +595,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 18
+        "y": 17
       },
       "id": 16,
       "panels": [],
@@ -625,7 +625,7 @@
         "h": 4,
         "w": 4,
         "x": 0,
-        "y": 19
+        "y": 18
       },
       "id": 18,
       "interval": null,
@@ -689,14 +689,200 @@
       "valueName": "avg"
     },
     {
+      "aliasColors": {
+        "Events per min": "rgb(236, 124, 36)"
+      },
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": null,
+      "decimals": null,
+      "fill": 3,
+      "fillGradient": 10,
+      "gridPos": {
+        "h": 8,
+        "w": 20,
+        "x": 4,
+        "y": 18
+      },
+      "hiddenSeries": false,
+      "id": 28,
+      "interval": "1m",
+      "legend": {
+        "alignAsTable": true,
+        "avg": true,
+        "current": true,
+        "hideEmpty": false,
+        "hideZero": true,
+        "max": false,
+        "min": false,
+        "rightSide": true,
+        "show": true,
+        "total": false,
+        "values": true
+      },
+      "lines": true,
+      "linewidth": 2,
+      "nullPointMode": "null",
+      "options": {
+        "dataLinks": []
+      },
+      "percentage": false,
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "expr": "increase(siddhi_cdc_source_polling_mode_event_count{app_name=~\"$app\"}[1m])",
+          "instant": false,
+          "intervalFactor": 1,
+          "legendFormat": "{{tablename}}",
+          "refId": "B"
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Received Events",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "decimals": null,
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": "0",
+          "show": true
+        },
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": false,
+      "colorValue": false,
+      "colors": [
+        "#299c46",
+        "rgba(237, 129, 40, 0.89)",
+        "#d44a3a"
+      ],
+      "datasource": null,
+      "description": "",
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 4,
+        "x": 0,
+        "y": 22
+      },
+      "hideTimeOverride": true,
+      "id": 24,
+      "interval": "",
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "options": {},
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": true,
+        "ymax": null,
+        "ymin": null
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "expr": "sum(siddhi_cdc_source_polling_mode_event_count{app_name=~\"$app\"})",
+          "format": "time_series",
+          "instant": true,
+          "intervalFactor": 1,
+          "refId": "A"
+        }
+      ],
+      "thresholds": "",
+      "timeFrom": "1h",
+      "timeShift": null,
+      "title": "Total Changes",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "0",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
       "columns": [],
       "datasource": null,
       "fontSize": "120%",
       "gridPos": {
         "h": 8,
-        "w": 20,
-        "x": 4,
-        "y": 19
+        "w": 24,
+        "x": 0,
+        "y": 26
       },
       "id": 26,
       "options": {},
@@ -783,7 +969,7 @@
           "dateFormat": "YYYY-MM-DD HH:mm:ss",
           "decimals": 2,
           "mappingType": 1,
-          "pattern": "db_type",
+          "pattern": "A_db_type",
           "thresholds": [],
           "type": "string",
           "unit": "short"
@@ -836,8 +1022,9 @@
           "decimals": null,
           "mappingType": 1,
           "pattern": "Value #D",
+          "preserveFormat": false,
           "thresholds": [],
-          "type": "number",
+          "type": "string",
           "unit": "short"
         },
         {
@@ -883,7 +1070,7 @@
           "dateFormat": "YYYY-MM-DD HH:mm:ss",
           "decimals": 2,
           "mappingType": 1,
-          "pattern": "database",
+          "pattern": "C_database",
           "thresholds": [],
           "type": "string",
           "unit": "short"
@@ -900,17 +1087,17 @@
           "decimals": 2,
           "link": true,
           "linkTargetBlank": true,
-          "linkTooltip": "CDC Polling Mode: $__cell_3",
-          "linkUrl": "/d/6quI2aqZz/siddhi-io-cdc-polling-mode?var-app=$app&var-db_url=$__cell_3&from=now-24h&to=now&refresh=5s",
+          "linkTooltip": "CDC Polling Mode: $__cell_5",
+          "linkUrl": "/d/6quI2aqZz/siddhi-io-cdc-polling-mode?var-app=$app&var-db_url=$__cell_5&from=now-24h&to=now&refresh=5s",
           "mappingType": 1,
-          "pattern": "tablename",
+          "pattern": "D_tablename",
           "sanitize": false,
           "thresholds": [],
           "type": "string",
           "unit": "short"
         },
         {
-          "alias": "Hostname",
+          "alias": "JDBC URL",
           "colorMode": null,
           "colors": [
             "rgba(245, 54, 54, 0.9)",
@@ -920,7 +1107,7 @@
           "dateFormat": "YYYY-MM-DD HH:mm:ss",
           "decimals": 2,
           "mappingType": 1,
-          "pattern": "host",
+          "pattern": "B_host",
           "thresholds": [],
           "type": "number",
           "unit": "short"
@@ -928,25 +1115,11 @@
       ],
       "targets": [
         {
-          "expr": "sum(siddhi_cdc_source_polling_mode_event_count{app_name=~\"$app\"}) by (db_url, db_type, database, tablename, host)",
+          "expr": "sum(siddhi_cdc_source_polling_mode_event_count{app_name=~\"$app\"}) by (db_url, A_db_type, C_database, D_tablename, B_host)",
           "format": "table",
           "hide": false,
           "instant": true,
           "refId": "A"
-        },
-        {
-          "expr": "sum(siddhi_cdc_source_polling_mode_db_status{app_name=~\"$app\"}) by (db_url)",
-          "format": "table",
-          "hide": false,
-          "instant": true,
-          "refId": "B"
-        },
-        {
-          "expr": "sum(siddhi_cdc_source_polling_mode_last_receive_time{app_name=~\"$app\"}) by (db_url)",
-          "format": "table",
-          "hide": false,
-          "instant": true,
-          "refId": "C"
         },
         {
           "expr": "sum(siddhi_cdc_source_polling_mode_events_in_last_polling_interval{app_name=~\"$app\"}) by (db_url)",
@@ -956,11 +1129,11 @@
           "refId": "D"
         },
         {
-          "expr": "sum(rate(siddhi_cdc_source_polling_mode_event_count{app_name=~\"$app\"}[1m])) by (db_url)",
+          "expr": "sum(siddhi_cdc_source_polling_mode_db_status{app_name=~\"$app\"}) by (db_url)",
           "format": "table",
           "hide": false,
           "instant": true,
-          "refId": "E"
+          "refId": "B"
         },
         {
           "expr": "sum(siddhi_cdc_source_polling_mode_idle_time{app_name=~\"$app\"}) by (db_url)",
@@ -968,6 +1141,13 @@
           "hide": false,
           "instant": true,
           "refId": "F"
+        },
+        {
+          "expr": "sum(siddhi_cdc_source_polling_mode_last_receive_time{app_name=~\"$app\"}) by (db_url)",
+          "format": "table",
+          "hide": false,
+          "instant": true,
+          "refId": "C"
         }
       ],
       "timeFrom": null,
@@ -975,192 +1155,6 @@
       "title": "Table Details",
       "transform": "table",
       "type": "table"
-    },
-    {
-      "cacheTimeout": null,
-      "colorBackground": false,
-      "colorValue": false,
-      "colors": [
-        "#299c46",
-        "rgba(237, 129, 40, 0.89)",
-        "#d44a3a"
-      ],
-      "datasource": null,
-      "description": "",
-      "format": "none",
-      "gauge": {
-        "maxValue": 100,
-        "minValue": 0,
-        "show": false,
-        "thresholdLabels": false,
-        "thresholdMarkers": true
-      },
-      "gridPos": {
-        "h": 4,
-        "w": 4,
-        "x": 0,
-        "y": 23
-      },
-      "hideTimeOverride": true,
-      "id": 24,
-      "interval": "",
-      "links": [],
-      "mappingType": 1,
-      "mappingTypes": [
-        {
-          "name": "value to text",
-          "value": 1
-        },
-        {
-          "name": "range to text",
-          "value": 2
-        }
-      ],
-      "maxDataPoints": 100,
-      "nullPointMode": "connected",
-      "nullText": null,
-      "options": {},
-      "postfix": "",
-      "postfixFontSize": "50%",
-      "prefix": "",
-      "prefixFontSize": "50%",
-      "rangeMaps": [
-        {
-          "from": "null",
-          "text": "N/A",
-          "to": "null"
-        }
-      ],
-      "sparkline": {
-        "fillColor": "rgba(31, 118, 189, 0.18)",
-        "full": false,
-        "lineColor": "rgb(31, 120, 193)",
-        "show": true,
-        "ymax": null,
-        "ymin": null
-      },
-      "tableColumn": "",
-      "targets": [
-        {
-          "expr": "sum(siddhi_cdc_source_polling_mode_event_count{app_name=~\"$app\"})",
-          "format": "time_series",
-          "instant": true,
-          "intervalFactor": 1,
-          "refId": "A"
-        }
-      ],
-      "thresholds": "",
-      "timeFrom": "1h",
-      "timeShift": null,
-      "title": "Total Changes",
-      "type": "singlestat",
-      "valueFontSize": "80%",
-      "valueMaps": [
-        {
-          "op": "=",
-          "text": "0",
-          "value": "null"
-        }
-      ],
-      "valueName": "current"
-    },
-    {
-      "aliasColors": {
-        "Events per min": "rgb(236, 124, 36)"
-      },
-      "bars": false,
-      "dashLength": 10,
-      "dashes": false,
-      "datasource": null,
-      "decimals": null,
-      "fill": 3,
-      "fillGradient": 10,
-      "gridPos": {
-        "h": 10,
-        "w": 24,
-        "x": 0,
-        "y": 27
-      },
-      "hiddenSeries": false,
-      "id": 28,
-      "interval": "1m",
-      "legend": {
-        "alignAsTable": true,
-        "avg": true,
-        "current": true,
-        "hideEmpty": false,
-        "hideZero": true,
-        "max": false,
-        "min": false,
-        "rightSide": true,
-        "show": true,
-        "total": false,
-        "values": true
-      },
-      "lines": true,
-      "linewidth": 2,
-      "nullPointMode": "null",
-      "options": {
-        "dataLinks": []
-      },
-      "percentage": false,
-      "pointradius": 2,
-      "points": false,
-      "renderer": "flot",
-      "seriesOverrides": [],
-      "spaceLength": 10,
-      "stack": false,
-      "steppedLine": false,
-      "targets": [
-        {
-          "expr": "increase(siddhi_cdc_source_polling_mode_event_count{app_name=~\"$app\"}[1m])",
-          "instant": false,
-          "intervalFactor": 1,
-          "legendFormat": "{{tablename}}",
-          "refId": "B"
-        }
-      ],
-      "thresholds": [],
-      "timeFrom": null,
-      "timeRegions": [],
-      "timeShift": null,
-      "title": "Received Events",
-      "tooltip": {
-        "shared": true,
-        "sort": 0,
-        "value_type": "individual"
-      },
-      "type": "graph",
-      "xaxis": {
-        "buckets": null,
-        "mode": "time",
-        "name": null,
-        "show": true,
-        "values": []
-      },
-      "yaxes": [
-        {
-          "decimals": null,
-          "format": "short",
-          "label": null,
-          "logBase": 1,
-          "max": null,
-          "min": "0",
-          "show": true
-        },
-        {
-          "format": "short",
-          "label": null,
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": true
-        }
-      ],
-      "yaxis": {
-        "align": false,
-        "alignLevel": null
-      }
     }
   ],
   "refresh": "5s",
@@ -1219,5 +1213,5 @@
   "timezone": "",
   "title": "WSO2 Streaming Integrator - CDC Statistics",
   "uid": "_MLjsAqWz",
-  "version": 29
+  "version": 36
 }
