@@ -43,7 +43,7 @@ USER ${USER}
 WORKDIR ${USER_HOME}
 
 # expose streaming-integrator ports
-EXPOSE 7443 7070 9717 9612 7711 7611
+EXPOSE 7443 7070 9090 9443 7711 7611
 
 # initiate container and execute the streaming integrator product startup script
 ENTRYPOINT ["/home/wso2carbon/wso2si/bin/server.sh"]
