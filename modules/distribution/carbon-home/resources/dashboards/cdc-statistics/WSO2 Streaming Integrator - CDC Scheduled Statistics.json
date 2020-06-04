@@ -16,7 +16,7 @@
   "gnetId": null,
   "graphTooltip": 0,
   "id": 11,
-  "iteration": 1588664578524,
+  "iteration": 1590758811007,
   "links": [
     {
       "icon": "dashboard",
@@ -597,7 +597,7 @@
           "expr": "increase(siddhi_cdc_source_polling_mode_event_count{app_name=~\"$app\", db_url=~\"$db_url\"}[1m])",
           "instant": false,
           "intervalFactor": 1,
-          "legendFormat": "{{tablename}}",
+          "legendFormat": "{{D_tablename}}",
           "refId": "B"
         }
       ],
@@ -654,7 +654,7 @@
         "allValue": null,
         "current": {
           "isNone": true,
-          "selected": false,
+          "selected": true,
           "text": "None",
           "value": ""
         },
@@ -680,9 +680,10 @@
       {
         "allValue": null,
         "current": {
-          "selected": false,
           "text": "All",
-          "value": "$__all"
+          "value": [
+            "$__all"
+          ]
         },
         "datasource": "Prometheus",
         "definition": "label_values(siddhi_cdc_source_polling_mode_event_count{app_name=~\"$app\"}, db_url)",
@@ -726,5 +727,5 @@
   "timezone": "",
   "title": "WSO2 Streaming Integrator - CDC Scheduled Statistics",
   "uid": "6quI2aqZz",
-  "version": 33
+  "version": 34
 }
