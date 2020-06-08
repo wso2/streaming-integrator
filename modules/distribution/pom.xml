@@ -1076,16 +1076,16 @@
                         </configuration>
                     </execution>
                     <!-- TODO Enable after configuring Jenkins to push docker -->
-                    <!--<execution>-->
-                    <!--<id>push-image</id>-->
-                    <!--<phase>deploy</phase>-->
-                    <!--<goals>-->
-                    <!--<goal>push</goal>-->
-                    <!--</goals>-->
-                    <!--<configuration>-->
-                    <!--<imageName>wso2/micro-integrator:${project.version}</imageName>-->
-                    <!--</configuration>-->
-                    <!--</execution>-->
+<!--                    <execution>-->
+<!--                    <id>push-image</id>-->
+<!--                    <phase>deploy</phase>-->
+<!--                    <goals>-->
+<!--                    <goal>push</goal>-->
+<!--                    </goals>-->
+<!--                    <configuration>-->
+<!--                    <imageName>wso2/streaming-integrator:${project.version}</imageName>-->
+<!--                    </configuration>-->
+<!--                    </execution>-->
                 </executions>
             </plugin>
         </plugins>
