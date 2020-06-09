@@ -12,22 +12,22 @@ data:
   # ingressTLS: siddhi-tls
 ---
 
-# Deployment of the siddhi operator
+# Deployment of the streaming integrator
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: siddhi-operator
+  name: streaming-integrator
 spec:
   replicas: 1
   selector:
     matchLabels:
-      name: siddhi-operator
+      name: streaming-integrator
   template:
     metadata:
       labels:
-        name: siddhi-operator
+        name: streaming-integrator
     spec:
-      serviceAccountName: siddhi-operator
+      serviceAccountName: streaming-integrator
       containers:
         - name: siddhi-operator
           image: siddhiio/siddhi-operator:0.2.0-beta

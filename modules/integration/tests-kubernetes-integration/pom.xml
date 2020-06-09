@@ -132,8 +132,4 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
-    <properties>
-        <!-->todo please remove find bug exclude after doing the fixes in DeploymentConfigurationReader<-->
-        <mavan.findbugsplugin.exclude.file>findbugs-exclude.xml</mavan.findbugsplugin.exclude.file>
-    </properties>
 </project>
