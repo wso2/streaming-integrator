@@ -16,7 +16,7 @@
   "gnetId": null,
   "graphTooltip": 0,
   "id": 8,
-  "iteration": 1588656393524,
+  "iteration": 1592292056291,
   "links": [
     {
       "icon": "dashboard",
@@ -42,13 +42,6 @@
       "id": 2,
       "panels": [],
       "repeat": "sink",
-      "scopedVars": {
-        "sink": {
-          "selected": false,
-          "text": "/home/sahan/SI/sink/BarStream6.json",
-          "value": "/home/sahan/SI/sink/BarStream6.json"
-        }
-      },
       "title": "$sink",
       "type": "row"
     },
@@ -71,7 +64,7 @@
         "thresholdMarkers": true
       },
       "gridPos": {
-        "h": 4,
+        "h": 5,
         "w": 6,
         "x": 0,
         "y": 1
@@ -105,13 +98,6 @@
           "to": "null"
         }
       ],
-      "scopedVars": {
-        "sink": {
-          "selected": false,
-          "text": "/home/sahan/SI/sink/BarStream6.json",
-          "value": "/home/sahan/SI/sink/BarStream6.json"
-        }
-      },
       "sparkline": {
         "fillColor": "rgba(31, 118, 189, 0.18)",
         "full": false,
@@ -123,7 +109,7 @@
       "tableColumn": "",
       "targets": [
         {
-          "expr": "siddhi_file_sink_file_status{app_name=~\"$app\", file_path=~\"$sink\"}",
+          "expr": "siddhi_file_sink_file_status{app=~\"$app\", file_path=~\"$sink\"}",
           "format": "time_series",
           "instant": true,
           "legendFormat": "",
@@ -167,68 +153,6 @@
     },
     {
       "cacheTimeout": null,
-      "datasource": null,
-      "gridPos": {
-        "h": 8,
-        "w": 5,
-        "x": 6,
-        "y": 1
-      },
-      "id": 10,
-      "links": [],
-      "options": {
-        "fieldOptions": {
-          "calcs": [
-            "mean"
-          ],
-          "defaults": {
-            "mappings": [],
-            "max": 100,
-            "min": 0,
-            "thresholds": [
-              {
-                "color": "red",
-                "value": null
-              },
-              {
-                "color": "dark-green",
-                "value": 75
-              }
-            ],
-            "unit": "percent"
-          },
-          "override": {},
-          "values": false
-        },
-        "orientation": "horizontal",
-        "showThresholdLabels": false,
-        "showThresholdMarkers": false
-      },
-      "pluginVersion": "6.5.3",
-      "scopedVars": {
-        "sink": {
-          "selected": false,
-          "text": "/home/sahan/SI/sink/BarStream6.json",
-          "value": "/home/sahan/SI/sink/BarStream6.json"
-        }
-      },
-      "targets": [
-        {
-          "expr": "siddhi_file_sink_event_count{app_name=~\"$app\", file_path=~\"$sink\"} / ignoring(mode, stream_name, file_name)(siddhi_file_sink_dropped_events{app_name=~\"$app\", file_path=~\"$sink\"} + ignoring(mode, stream_name, file_name) siddhi_file_sink_event_count{}) * 100",
-          "format": "time_series",
-          "hide": false,
-          "instant": true,
-          "legendFormat": "Success",
-          "refId": "C"
-        }
-      ],
-      "timeFrom": null,
-      "timeShift": null,
-      "title": "Successful Writes",
-      "type": "gauge"
-    },
-    {
-      "cacheTimeout": null,
       "colorBackground": true,
       "colorValue": false,
       "colors": [
@@ -248,7 +172,7 @@
       "gridPos": {
         "h": 4,
         "w": 3,
-        "x": 11,
+        "x": 6,
         "y": 1
       },
       "id": 12,
@@ -280,13 +204,6 @@
           "to": "null"
         }
       ],
-      "scopedVars": {
-        "sink": {
-          "selected": false,
-          "text": "/home/sahan/SI/sink/BarStream6.json",
-          "value": "/home/sahan/SI/sink/BarStream6.json"
-        }
-      },
       "sparkline": {
         "fillColor": "rgba(255, 135, 0, 0.52)",
         "full": false,
@@ -298,7 +215,7 @@
       "tableColumn": "",
       "targets": [
         {
-          "expr": "siddhi_file_sink_lines_count{app_name=~\"$app\", file_path=~\"$sink\"}",
+          "expr": "siddhi_file_sink_lines_count{app=~\"$app\", file_path=~\"$sink\"}",
           "instant": true,
           "legendFormat": "",
           "refId": "A"
@@ -340,7 +257,7 @@
       "gridPos": {
         "h": 4,
         "w": 3,
-        "x": 14,
+        "x": 9,
         "y": 1
       },
       "id": 14,
@@ -372,13 +289,6 @@
           "to": "null"
         }
       ],
-      "scopedVars": {
-        "sink": {
-          "selected": false,
-          "text": "/home/sahan/SI/sink/BarStream6.json",
-          "value": "/home/sahan/SI/sink/BarStream6.json"
-        }
-      },
       "sparkline": {
         "fillColor": "rgba(255, 135, 0, 0.52)",
         "full": false,
@@ -390,7 +300,7 @@
       "tableColumn": "",
       "targets": [
         {
-          "expr": "siddhi_file_sink_total_written_byte{app_name=~\"$app\", file_path=~\"$sink\"}",
+          "expr": "siddhi_file_sink_total_written_byte{app=~\"$app\", file_path=~\"$sink\"}",
           "format": "time_series",
           "instant": true,
           "legendFormat": "",
@@ -413,6 +323,62 @@
       "valueName": "current"
     },
     {
+      "cacheTimeout": null,
+      "datasource": null,
+      "gridPos": {
+        "h": 7,
+        "w": 6,
+        "x": 12,
+        "y": 1
+      },
+      "id": 10,
+      "links": [],
+      "options": {
+        "fieldOptions": {
+          "calcs": [
+            "mean"
+          ],
+          "defaults": {
+            "decimals": 2,
+            "mappings": [],
+            "max": 100,
+            "min": 0,
+            "thresholds": [
+              {
+                "color": "red",
+                "value": null
+              },
+              {
+                "color": "dark-green",
+                "value": 75
+              }
+            ],
+            "unit": "percent"
+          },
+          "override": {},
+          "values": false
+        },
+        "orientation": "horizontal",
+        "showThresholdLabels": false,
+        "showThresholdMarkers": false
+      },
+      "pluginVersion": "6.5.3",
+      "targets": [
+        {
+          "expr": "siddhi_file_sink_event_count{app=~\"$app\", file_path=~\"$sink\"} / ignoring(mode, stream_name, file_name)(siddhi_file_sink_dropped_events{app=~\"$app\", file_path=~\"$sink\"} + ignoring(mode, stream_name, file_name) siddhi_file_sink_event_count{}) * 100",
+          "format": "time_series",
+          "hide": false,
+          "instant": true,
+          "legendFormat": "Success",
+          "refId": "C"
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Successful Writes",
+      "type": "gauge"
+    },
+    {
       "aliasColors": {
         "KB": "#f47b20"
       },
@@ -424,9 +390,9 @@
       "fill": 3,
       "fillGradient": 10,
       "gridPos": {
-        "h": 8,
-        "w": 7,
-        "x": 17,
+        "h": 9,
+        "w": 6,
+        "x": 18,
         "y": 1
       },
       "hiddenSeries": false,
@@ -454,13 +420,6 @@
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
-      "scopedVars": {
-        "sink": {
-          "selected": false,
-          "text": "/home/sahan/SI/sink/BarStream6.json",
-          "value": "/home/sahan/SI/sink/BarStream6.json"
-        }
-      },
       "seriesOverrides": [],
       "spaceLength": 10,
       "stack": false,
@@ -517,6 +476,177 @@
     },
     {
       "cacheTimeout": null,
+      "colorBackground": true,
+      "colorValue": false,
+      "colors": [
+        "#212a32",
+        "rgba(237, 129, 40, 0.89)",
+        "#d44a3a"
+      ],
+      "datasource": null,
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 2,
+        "w": 3,
+        "x": 6,
+        "y": 5
+      },
+      "id": 16,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "options": {},
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(255, 135, 0, 0.52)",
+        "full": false,
+        "lineColor": "#f47b20",
+        "show": true,
+        "ymax": null,
+        "ymin": null
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "expr": "siddhi_file_sink_event_count{app=~\"$app\", file_path=~\"$sink\"}",
+          "instant": true,
+          "legendFormat": "",
+          "refId": "A"
+        }
+      ],
+      "thresholds": "",
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Successful Writes",
+      "type": "singlestat",
+      "valueFontSize": "50%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "0",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": true,
+      "colorValue": false,
+      "colors": [
+        "#212a32",
+        "rgba(237, 129, 40, 0.89)",
+        "#d44a3a"
+      ],
+      "datasource": null,
+      "description": "The number of events dropped.",
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 2,
+        "w": 3,
+        "x": 9,
+        "y": 5
+      },
+      "id": 18,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "options": {},
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(255, 135, 0, 0.52)",
+        "full": false,
+        "lineColor": "#f47b20",
+        "show": true,
+        "ymax": null,
+        "ymin": null
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "expr": "siddhi_file_sink_dropped_events{app=~\"$app\", file_path=~\"$sink\"} + siddhi_file_sink_total_error_count{file_path=~\"$sink\", app=~\"$app\"}",
+          "instant": true,
+          "legendFormat": "",
+          "refId": "A"
+        }
+      ],
+      "thresholds": "",
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Dropped Events",
+      "type": "singlestat",
+      "valueFontSize": "50%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "0",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
+      "cacheTimeout": null,
       "colorBackground": false,
       "colorValue": false,
       "colors": [
@@ -537,7 +667,7 @@
         "h": 4,
         "w": 3,
         "x": 0,
-        "y": 5
+        "y": 6
       },
       "id": 6,
       "interval": null,
@@ -573,13 +703,6 @@
           "to": "-3000"
         }
       ],
-      "scopedVars": {
-        "sink": {
-          "selected": false,
-          "text": "/home/sahan/SI/sink/BarStream6.json",
-          "value": "/home/sahan/SI/sink/BarStream6.json"
-        }
-      },
       "sparkline": {
         "fillColor": "rgba(255, 135, 0, 0.52)",
         "full": true,
@@ -591,7 +714,7 @@
       "tableColumn": "",
       "targets": [
         {
-          "expr": "rate(siddhi_file_sink_total_written_byte{app_name=~\"$app\", file_path=~\"$sink\"}[1m])",
+          "expr": "rate(siddhi_file_sink_total_written_byte{app=~\"$app\", file_path=~\"$sink\"}[1m])",
           "instant": false,
           "legendFormat": "",
           "refId": "A"
@@ -639,7 +762,7 @@
         "h": 4,
         "w": 3,
         "x": 3,
-        "y": 5
+        "y": 6
       },
       "id": 8,
       "interval": null,
@@ -675,13 +798,6 @@
           "to": "-3000"
         }
       ],
-      "scopedVars": {
-        "sink": {
-          "selected": false,
-          "text": "/home/sahan/SI/sink/BarStream6.json",
-          "value": "/home/sahan/SI/sink/BarStream6.json"
-        }
-      },
       "sparkline": {
         "fillColor": "rgba(255, 135, 0, 0.52)",
         "full": true,
@@ -693,7 +809,7 @@
       "tableColumn": "",
       "targets": [
         {
-          "expr": "rate(siddhi_file_sink_event_count{app_name=~\"$app\", file_path=~\"$sink\"}[1m])",
+          "expr": "rate(siddhi_file_sink_event_count{app=~\"$app\", file_path=~\"$sink\"}[1m])",
           "instant": false,
           "legendFormat": "",
           "refId": "A"
@@ -724,190 +840,6 @@
       "colorBackground": true,
       "colorValue": false,
       "colors": [
-        "#212a32",
-        "rgba(237, 129, 40, 0.89)",
-        "#d44a3a"
-      ],
-      "datasource": null,
-      "format": "none",
-      "gauge": {
-        "maxValue": 100,
-        "minValue": 0,
-        "show": false,
-        "thresholdLabels": false,
-        "thresholdMarkers": true
-      },
-      "gridPos": {
-        "h": 2,
-        "w": 3,
-        "x": 11,
-        "y": 5
-      },
-      "id": 16,
-      "interval": null,
-      "links": [],
-      "mappingType": 1,
-      "mappingTypes": [
-        {
-          "name": "value to text",
-          "value": 1
-        },
-        {
-          "name": "range to text",
-          "value": 2
-        }
-      ],
-      "maxDataPoints": 100,
-      "nullPointMode": "connected",
-      "nullText": null,
-      "options": {},
-      "postfix": "",
-      "postfixFontSize": "50%",
-      "prefix": "",
-      "prefixFontSize": "50%",
-      "rangeMaps": [
-        {
-          "from": "null",
-          "text": "N/A",
-          "to": "null"
-        }
-      ],
-      "scopedVars": {
-        "sink": {
-          "selected": false,
-          "text": "/home/sahan/SI/sink/BarStream6.json",
-          "value": "/home/sahan/SI/sink/BarStream6.json"
-        }
-      },
-      "sparkline": {
-        "fillColor": "rgba(255, 135, 0, 0.52)",
-        "full": false,
-        "lineColor": "#f47b20",
-        "show": true,
-        "ymax": null,
-        "ymin": null
-      },
-      "tableColumn": "",
-      "targets": [
-        {
-          "expr": "siddhi_file_sink_event_count{app_name=~\"$app\", file_path=~\"$sink\"}",
-          "instant": true,
-          "legendFormat": "",
-          "refId": "A"
-        }
-      ],
-      "thresholds": "",
-      "timeFrom": null,
-      "timeShift": null,
-      "title": "Successful Writes",
-      "type": "singlestat",
-      "valueFontSize": "50%",
-      "valueMaps": [
-        {
-          "op": "=",
-          "text": "0",
-          "value": "null"
-        }
-      ],
-      "valueName": "current"
-    },
-    {
-      "cacheTimeout": null,
-      "colorBackground": true,
-      "colorValue": false,
-      "colors": [
-        "#212a32",
-        "rgba(237, 129, 40, 0.89)",
-        "#d44a3a"
-      ],
-      "datasource": null,
-      "format": "none",
-      "gauge": {
-        "maxValue": 100,
-        "minValue": 0,
-        "show": false,
-        "thresholdLabels": false,
-        "thresholdMarkers": true
-      },
-      "gridPos": {
-        "h": 2,
-        "w": 3,
-        "x": 14,
-        "y": 5
-      },
-      "id": 18,
-      "interval": null,
-      "links": [],
-      "mappingType": 1,
-      "mappingTypes": [
-        {
-          "name": "value to text",
-          "value": 1
-        },
-        {
-          "name": "range to text",
-          "value": 2
-        }
-      ],
-      "maxDataPoints": 100,
-      "nullPointMode": "connected",
-      "nullText": null,
-      "options": {},
-      "postfix": "",
-      "postfixFontSize": "50%",
-      "prefix": "",
-      "prefixFontSize": "50%",
-      "rangeMaps": [
-        {
-          "from": "null",
-          "text": "N/A",
-          "to": "null"
-        }
-      ],
-      "scopedVars": {
-        "sink": {
-          "selected": false,
-          "text": "/home/sahan/SI/sink/BarStream6.json",
-          "value": "/home/sahan/SI/sink/BarStream6.json"
-        }
-      },
-      "sparkline": {
-        "fillColor": "rgba(255, 135, 0, 0.52)",
-        "full": false,
-        "lineColor": "#f47b20",
-        "show": true,
-        "ymax": null,
-        "ymin": null
-      },
-      "tableColumn": "",
-      "targets": [
-        {
-          "expr": "siddhi_file_sink_dropped_events{app_name=~\"$app\", file_path=~\"$sink\"}",
-          "instant": true,
-          "legendFormat": "",
-          "refId": "A"
-        }
-      ],
-      "thresholds": "",
-      "timeFrom": null,
-      "timeShift": null,
-      "title": "Dropped Events",
-      "type": "singlestat",
-      "valueFontSize": "50%",
-      "valueMaps": [
-        {
-          "op": "=",
-          "text": "0",
-          "value": "null"
-        }
-      ],
-      "valueName": "current"
-    },
-    {
-      "cacheTimeout": null,
-      "colorBackground": true,
-      "colorValue": false,
-      "colors": [
         "rgba(41, 44, 46, 0.71)",
         "rgba(237, 129, 40, 0.89)",
         "#d44a3a"
@@ -922,9 +854,9 @@
         "thresholdMarkers": true
       },
       "gridPos": {
-        "h": 2,
+        "h": 3,
         "w": 3,
-        "x": 11,
+        "x": 6,
         "y": 7
       },
       "id": 22,
@@ -956,13 +888,6 @@
           "to": "null"
         }
       ],
-      "scopedVars": {
-        "sink": {
-          "selected": false,
-          "text": "/home/sahan/SI/sink/BarStream6.json",
-          "value": "/home/sahan/SI/sink/BarStream6.json"
-        }
-      },
       "sparkline": {
         "fillColor": "rgba(122, 77, 11, 0.43)",
         "full": false,
@@ -974,7 +899,7 @@
       "tableColumn": "",
       "targets": [
         {
-          "expr": "siddhi_file_sink_last_published_time{app_name=~\"$app\", file_path=~\"$sink\"}",
+          "expr": "siddhi_file_sink_last_published_time{app=~\"$app\", file_path=~\"$sink\"}",
           "instant": true,
           "legendFormat": "",
           "refId": "A"
@@ -1014,9 +939,9 @@
         "thresholdMarkers": true
       },
       "gridPos": {
-        "h": 2,
+        "h": 3,
         "w": 3,
-        "x": 14,
+        "x": 9,
         "y": 7
       },
       "id": 20,
@@ -1048,13 +973,6 @@
           "to": "null"
         }
       ],
-      "scopedVars": {
-        "sink": {
-          "selected": false,
-          "text": "/home/sahan/SI/sink/BarStream6.json",
-          "value": "/home/sahan/SI/sink/BarStream6.json"
-        }
-      },
       "sparkline": {
         "fillColor": "rgba(122, 77, 11, 0.43)",
         "full": false,
@@ -1066,7 +984,7 @@
       "tableColumn": "",
       "targets": [
         {
-          "expr": "siddhi_file_sink_elapsed_time{app_name=~\"$app\", file_path=~\"$sink\"}",
+          "expr": "siddhi_file_sink_elapsed_time{app=~\"$app\", file_path=~\"$sink\"}",
           "instant": true,
           "legendFormat": "",
           "refId": "A"
@@ -1076,6 +994,182 @@
       "timeFrom": null,
       "timeShift": null,
       "title": "Elapse Time",
+      "type": "singlestat",
+      "valueFontSize": "50%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "0",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": false,
+      "colorValue": true,
+      "colors": [
+        "#E02F44",
+        "rgba(237, 129, 40, 0.89)",
+        "#d44a3a"
+      ],
+      "datasource": null,
+      "description": "The number of errors occurred while  writing events into the file.",
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 2,
+        "w": 3,
+        "x": 12,
+        "y": 8
+      },
+      "id": 28,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "options": {},
+      "postfix": " ",
+      "postfixFontSize": "30%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(255, 135, 0, 0.18)",
+        "full": false,
+        "lineColor": "#f47b20",
+        "show": true,
+        "ymax": null,
+        "ymin": null
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "expr": "siddhi_file_sink_total_error_count{file_path=~\"$sink\", app=~\"$app\"}",
+          "format": "time_series",
+          "hide": false,
+          "instant": true,
+          "legendFormat": "",
+          "refId": "A"
+        }
+      ],
+      "thresholds": "",
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Client Connection Errors",
+      "type": "singlestat",
+      "valueFontSize": "50%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "0",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": false,
+      "colorValue": true,
+      "colors": [
+        "#E02F44",
+        "rgba(237, 129, 40, 0.89)",
+        "#d44a3a"
+      ],
+      "datasource": null,
+      "description": "The number of events dropped due to invalid UTF-8 encoding.",
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 2,
+        "w": 3,
+        "x": 15,
+        "y": 8
+      },
+      "id": 29,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "options": {},
+      "postfix": " ",
+      "postfixFontSize": "30%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(255, 135, 0, 0.18)",
+        "full": false,
+        "lineColor": "#f47b20",
+        "show": true,
+        "ymax": null,
+        "ymin": null
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "expr": "siddhi_file_sink_dropped_events{app=~\"$app\", file_path=~\"$sink\"} ",
+          "format": "time_series",
+          "hide": false,
+          "instant": true,
+          "legendFormat": "",
+          "refId": "A"
+        }
+      ],
+      "thresholds": "",
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Invalid events",
       "type": "singlestat",
       "valueFontSize": "50%",
       "valueMaps": [
@@ -1099,10 +1193,10 @@
       "fill": 3,
       "fillGradient": 10,
       "gridPos": {
-        "h": 8,
+        "h": 10,
         "w": 24,
         "x": 0,
-        "y": 9
+        "y": 10
       },
       "hiddenSeries": false,
       "id": 26,
@@ -1114,7 +1208,7 @@
         "hideZero": false,
         "max": true,
         "min": true,
-        "rightSide": true,
+        "rightSide": false,
         "show": true,
         "total": false,
         "values": true
@@ -1129,13 +1223,6 @@
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
-      "scopedVars": {
-        "sink": {
-          "selected": false,
-          "text": "/home/sahan/SI/sink/BarStream6.json",
-          "value": "/home/sahan/SI/sink/BarStream6.json"
-        }
-      },
       "seriesOverrides": [],
       "spaceLength": 10,
       "stack": false,
@@ -1191,7 +1278,7 @@
       }
     }
   ],
-  "refresh": false,
+  "refresh": "5s",
   "schemaVersion": 21,
   "style": "dark",
   "tags": [],
@@ -1200,18 +1287,20 @@
       {
         "allValue": null,
         "current": {
-          "text": "TestSink1",
-          "value": "TestSink1"
+          "isNone": true,
+          "selected": false,
+          "text": "None",
+          "value": ""
         },
         "datasource": "Prometheus",
-        "definition": "label_values(siddhi_file_apps, app_name)",
+        "definition": "label_values(siddhi_file_apps, app)",
         "hide": 2,
         "includeAll": false,
         "label": "App Name",
         "multi": false,
         "name": "app",
         "options": [],
-        "query": "label_values(siddhi_file_apps, app_name)",
+        "query": "label_values(siddhi_file_apps, app)",
         "refresh": 1,
         "regex": "",
         "skipUrlSync": false,
@@ -1231,14 +1320,14 @@
           ]
         },
         "datasource": "Prometheus",
-        "definition": "label_values(siddhi_file_sink_event_count{app_name=~\"$app\"}, file_path)",
+        "definition": "label_values(siddhi_file_sink_event_count{app=~\"$app\"}, file_path)",
         "hide": 0,
         "includeAll": true,
         "label": "Files",
         "multi": true,
         "name": "sink",
         "options": [],
-        "query": "label_values(siddhi_file_sink_event_count{app_name=~\"$app\"}, file_path)",
+        "query": "label_values(siddhi_file_sink_event_count{app=~\"$app\"}, file_path)",
         "refresh": 1,
         "regex": "/\\./i",
         "skipUrlSync": false,
@@ -1252,7 +1341,7 @@
     ]
   },
   "time": {
-    "from": "now-5m",
+    "from": "now-30m",
     "to": "now"
   },
   "timepicker": {
@@ -1272,5 +1361,5 @@
   "timezone": "",
   "title": "WSO2 Streaming Integration - File Sink Statistics",
   "uid": "RMcQSPuZk",
-  "version": 21
+  "version": 25
 }

@@ -16,15 +16,15 @@
   "gnetId": null,
   "graphTooltip": 0,
   "id": 12,
-  "iteration": 1590759363668,
+  "iteration": 1592292334689,
   "links": [
     {
       "icon": "dashboard",
       "tags": [],
       "targetBlank": true,
-      "title": "WSO2 Streaming Integrator - RDBMS Table Statistics",
+      "title": "WSO2 Streaming Integration - RDBMS Table Statistics",
       "type": "link",
-      "url": "/d/sXoDGygMk/wso2-streaming-integrator-rdbms-table-statistics?orgId=1&var-app=$app&var-db_url=All&from=now-30m&to=now&refresh=5s"
+      "url": "/d/sXoDGygMk/wso2-streaming-integration-rdbms-table-statistics?orgId=1&var-app=$app&var-db_url=All&from=now-30m&to=now&refresh=5s"
     }
   ],
   "panels": [
@@ -93,7 +93,7 @@
       "tableColumn": "",
       "targets": [
         {
-          "expr": "count(siddhi_store_rdbms_db_status{app_name=~\"$app\"})",
+          "expr": "count(siddhi_store_rdbms_db_status{app=~\"$app\"})",
           "format": "time_series",
           "instant": true,
           "refId": "A"
@@ -163,7 +163,7 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "increase(siddhi_store_rdbms_total_writes{app_name=~\"$app\"}[1m])",
+          "expr": "increase(siddhi_store_rdbms_total_writes{app=~\"$app\"}[1m])",
           "instant": false,
           "intervalFactor": 1,
           "legendFormat": "{{D_tablename}}",
@@ -278,7 +278,7 @@
       "tableColumn": "",
       "targets": [
         {
-          "expr": "sum(siddhi_store_rdbms_insert_rows_count{app_name=~\"$app\"})",
+          "expr": "sum(siddhi_store_rdbms_insert_rows_count{app=~\"$app\"})",
           "format": "time_series",
           "hide": false,
           "instant": true,
@@ -367,7 +367,7 @@
       "tableColumn": "",
       "targets": [
         {
-          "expr": "sum(siddhi_store_rdbms_update_rows_count{app_name=~\"$app\"})",
+          "expr": "sum(siddhi_store_rdbms_update_rows_count{app=~\"$app\"})",
           "format": "time_series",
           "hide": false,
           "instant": true,
@@ -456,7 +456,7 @@
       "tableColumn": "",
       "targets": [
         {
-          "expr": "sum(siddhi_store_rdbms_delete_rows_count{app_name=~\"$app\"})",
+          "expr": "sum(siddhi_store_rdbms_delete_rows_count{app=~\"$app\"})",
           "format": "time_series",
           "hide": false,
           "instant": true,
@@ -620,7 +620,7 @@
           "unit": "short"
         },
         {
-          "alias": "Idle For",
+          "alias": "Idle Time",
           "colorMode": null,
           "colors": [
             "rgba(245, 54, 54, 0.9)",
@@ -650,7 +650,7 @@
           "link": true,
           "linkTargetBlank": true,
           "linkTooltip": "$__cell_5",
-          "linkUrl": "/d/sXoDGygMk/wso2-streaming-integrator-rdbms-table-statistics?orgId=1&var-app=$app&var-db_url=$__cell_5&from=now-30m&to=now&refresh=5s",
+          "linkUrl": "/d/sXoDGygMk/wso2-streaming-integration-rdbms-table-statistics?orgId=1&var-app=$app&var-db_url=$__cell_5&from=now-30m&to=now&refresh=5s",
           "mappingType": 1,
           "pattern": "D_tablename",
           "thresholds": [],
@@ -692,7 +692,7 @@
           "unit": "short"
         },
         {
-          "alias": "Processing For",
+          "alias": "Processing Time",
           "colorMode": null,
           "colors": [
             "rgba(245, 54, 54, 0.9)",
@@ -706,47 +706,70 @@
           "thresholds": [],
           "type": "number",
           "unit": "ms"
+        },
+        {
+          "alias": "Total Errors",
+          "colorMode": "value",
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 0,
+          "mappingType": 1,
+          "pattern": "Value #F",
+          "thresholds": [],
+          "type": "number",
+          "unit": "none"
         }
       ],
       "targets": [
         {
-          "expr": "sum(siddhi_store_rdbms_total_writes{app_name=~\"$app\"}) by (db_url, A_db_type, C_database, D_tablename, B_shortenUrl)",
+          "expr": "sum(siddhi_store_rdbms_total_writes{app=~\"$app\"}) by (db_url, A_db_type, C_database, D_tablename, B_shortenUrl)",
           "format": "table",
           "hide": false,
           "instant": true,
           "refId": "A"
         },
         {
-          "expr": "sum(siddhi_store_rdbms_db_status{app_name=~\"$app\"}) by (db_url)",
+          "expr": "sum(siddhi_store_rdbms_db_status{app=~\"$app\"}) by (db_url)",
           "format": "table",
           "hide": false,
           "instant": true,
           "refId": "B"
         },
         {
-          "expr": "sum(siddhi_store_rdbms_idle_time{app_name=~\"$app\"}) by (db_url)",
+          "expr": "sum(siddhi_store_rdbms_idle_time{app=~\"$app\"}) by (db_url)",
           "format": "table",
           "hide": false,
           "instant": true,
           "refId": "C"
         },
         {
-          "expr": "sum(siddhi_store_rdbms_processing_time{app_name=~\"$app\"}) by (db_url)",
+          "expr": "sum(siddhi_store_rdbms_processing_time{app=~\"$app\"}) by (db_url)",
           "format": "table",
           "instant": true,
           "refId": "D"
         },
         {
-          "expr": "sum(siddhi_store_rdbms_last_change_time{app_name=~\"$app\"}) by (db_url)",
+          "expr": "sum(siddhi_store_rdbms_last_change_time{app=~\"$app\"}) by (db_url)",
           "format": "table",
           "hide": false,
           "instant": true,
           "refId": "E"
+        },
+        {
+          "expr": "sum(siddhi_store_rdbms_total_error_count{app=~\"$app\"}) by (db_url)",
+          "format": "table",
+          "hide": false,
+          "instant": true,
+          "refId": "F"
         }
       ],
       "timeFrom": null,
       "timeShift": null,
-      "title": "Table Details",
+      "title": "RDBMS Statistics",
       "transform": "table",
       "type": "table"
     }
@@ -754,7 +777,11 @@
   "refresh": "5s",
   "schemaVersion": 21,
   "style": "dark",
-  "tags": [],
+  "tags": [
+    "wso2",
+    "RDBMS",
+    "streaming-integration"
+  ],
   "templating": {
     "list": [
       {
@@ -766,14 +793,14 @@
           "value": ""
         },
         "datasource": "Prometheus",
-        "definition": "label_values(siddhi_store_rdbms_apps, app_name)",
+        "definition": "label_values(siddhi_store_rdbms_apps, app)",
         "hide": 0,
         "includeAll": false,
         "label": "App Name",
         "multi": false,
         "name": "app",
         "options": [],
-        "query": "label_values(siddhi_store_rdbms_apps, app_name)",
+        "query": "label_values(siddhi_store_rdbms_apps, app)",
         "refresh": 1,
         "regex": "",
         "skipUrlSync": false,
@@ -805,7 +832,7 @@
     ]
   },
   "timezone": "",
-  "title": "WSO2 Streaming Integrator - RDBMS Statistics",
+  "title": "WSO2 Streaming Integration - RDBMS Statistics",
   "uid": "3tPjCPgMz",
-  "version": 27
+  "version": 36
 }
