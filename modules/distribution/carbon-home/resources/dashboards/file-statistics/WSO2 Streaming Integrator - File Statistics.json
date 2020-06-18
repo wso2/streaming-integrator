@@ -16,21 +16,21 @@
   "gnetId": null,
   "graphTooltip": 0,
   "id": 5,
-  "iteration": 1588735519183,
+  "iteration": 1592292054849,
   "links": [
     {
       "icon": "dashboard",
       "tags": [],
       "targetBlank": true,
-      "title": "Source Detailed View",
+      "title": "WSO2 Streaming Integrator - File Source Statistics",
       "type": "link",
-      "url": "/d/dTYbaauWk/siddhi-io-file-source?orgId=1&var-app=$app&var-source=All&from=now-5m&to=now&refresh=5s"
+      "url": "/d/dTYbaauWk/siddhi-io-file-source?orgId=1&var-app=$app&var-source=All&from=now-30m&to=now&refresh=5s"
     },
     {
       "icon": "dashboard",
       "tags": [],
       "targetBlank": true,
-      "title": "Sink Detailed View",
+      "title": "WSO2 Streaming Integrator - File Sink Statistics",
       "type": "link",
       "url": "/d/RMcQSPuZk/siddhi-io-file-sink?orgId=1&var-app=$app&refresh=5s&var-sink=All"
     }
@@ -115,7 +115,7 @@
       "tableColumn": "",
       "targets": [
         {
-          "expr": "count(siddhi_file_source_event_count{app_name=~\"$app\"})",
+          "expr": "count(siddhi_file_source_event_count{app=~\"$app\"})",
           "format": "time_series",
           "instant": true,
           "refId": "A"
@@ -389,48 +389,71 @@
           "thresholds": [],
           "type": "number",
           "unit": "dateTimeAsUS"
+        },
+        {
+          "alias": "Total Errors",
+          "colorMode": "value",
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 0,
+          "mappingType": 1,
+          "pattern": "Value #F",
+          "thresholds": [],
+          "type": "number",
+          "unit": "none"
         }
       ],
       "targets": [
         {
-          "expr": "sum(siddhi_file_source_event_count{app_name=~\"$app\"}) by (file_name, mode, stream_name, file_path)",
+          "expr": "sum(siddhi_file_source_event_count{app=~\"$app\"}) by (file_name, mode, stream_name, file_path)",
           "format": "table",
           "hide": false,
           "instant": true,
           "refId": "B"
         },
         {
-          "expr": "sum(siddhi_file_source_file_size{app_name=~\"$app\"}) by (file_path)",
+          "expr": "sum(siddhi_file_source_file_size{app=~\"$app\"}) by (file_path)",
           "format": "table",
           "hide": false,
           "instant": true,
           "refId": "C"
         },
         {
-          "expr": "sum(siddhi_file_source_file_status{app_name=~\"$app\"}) by (file_path)",
+          "expr": "sum(siddhi_file_source_file_status{app=~\"$app\"}) by (file_path)",
           "format": "table",
           "hide": false,
           "instant": true,
           "refId": "D"
         },
         {
-          "expr": "sum(siddhi_file_source_elapse_time{app_name=~\"$app\"}) by (file_path)",
+          "expr": "sum(siddhi_file_source_elapse_time{app=~\"$app\"}) by (file_path)",
           "format": "table",
           "hide": false,
           "instant": true,
           "refId": "A"
         },
         {
-          "expr": "sum(siddhi_file_source_started_time{app_name=~\"$app\"}) by (file_path)",
+          "expr": "sum(siddhi_file_source_started_time{app=~\"$app\"}) by (file_path)",
           "format": "table",
           "hide": false,
           "instant": true,
           "refId": "E"
+        },
+        {
+          "expr": "sum((siddhi_file_source_event_count{app=~\"$app\"} - ignoring(file_name, mode, stream_name)siddhi_file_source_total_valid_events_count{app=~\"$app\"}) + siddhi_file_source_error_count{app=~\"$app\"}) by (file_path)",
+          "format": "table",
+          "hide": false,
+          "instant": true,
+          "refId": "F"
         }
       ],
       "timeFrom": null,
       "timeShift": null,
-      "title": "File Details",
+      "title": "File Source Statistics",
       "transform": "table",
       "type": "table"
     },
@@ -499,7 +522,7 @@
       "tableColumn": "",
       "targets": [
         {
-          "expr": "count(siddhi_file_source_file_status{app_name=~\"$app\"} >= 2)",
+          "expr": "count(siddhi_file_source_file_status{app=~\"$app\"} >= 2)",
           "format": "time_series",
           "instant": true,
           "refId": "A"
@@ -585,7 +608,7 @@
       "tableColumn": "",
       "targets": [
         {
-          "expr": "count(siddhi_file_source_file_status{app_name=~\"$app\"} == 1)",
+          "expr": "count(siddhi_file_source_file_status{app=~\"$app\"} == 1)",
           "format": "time_series",
           "instant": true,
           "refId": "A"
@@ -672,7 +695,7 @@
       "tableColumn": "",
       "targets": [
         {
-          "expr": "sum(siddhi_file_source_event_count{app_name=~\"$app\"})",
+          "expr": "sum(siddhi_file_source_event_count{app=~\"$app\"})",
           "format": "time_series",
           "instant": true,
           "intervalFactor": 1,
@@ -703,7 +726,7 @@
       "dashes": false,
       "datasource": null,
       "decimals": 2,
-      "fill": 3,
+      "fill": 0,
       "fillGradient": 10,
       "gridPos": {
         "h": 8,
@@ -727,7 +750,7 @@
         "values": true
       },
       "lines": true,
-      "linewidth": 1,
+      "linewidth": 2,
       "nullPointMode": "null",
       "options": {
         "dataLinks": []
@@ -742,7 +765,7 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "rate(siddhi_file_source_event_count{app_name=~\"$app\"}[1m])",
+          "expr": "rate(siddhi_file_source_event_count{app=~\"$app\"}[1m])",
           "instant": false,
           "intervalFactor": 1,
           "legendFormat": "{{file_name}}",
@@ -870,7 +893,7 @@
       "tableColumn": "",
       "targets": [
         {
-          "expr": "count(siddhi_file_sink_event_count{app_name=~\"$app\"})",
+          "expr": "count(siddhi_file_sink_event_count{app=~\"$app\"})",
           "instant": true,
           "refId": "A"
         }
@@ -1056,8 +1079,8 @@
           "alias": "Stream Status",
           "colorMode": "cell",
           "colors": [
-            "#FADE2A",
             "#37872D",
+            "#FA6400",
             "#F2495C"
           ],
           "dateFormat": "YYYY-MM-DD HH:mm:ss",
@@ -1065,7 +1088,7 @@
           "mappingType": 1,
           "pattern": "Value #D",
           "thresholds": [
-            "1",
+            "2",
             "4"
           ],
           "type": "string",
@@ -1140,48 +1163,71 @@
           "thresholds": [],
           "type": "number",
           "unit": "ms"
+        },
+        {
+          "alias": "Total Errors",
+          "colorMode": "value",
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 0,
+          "mappingType": 1,
+          "pattern": "Value #F",
+          "thresholds": [],
+          "type": "number",
+          "unit": "none"
         }
       ],
       "targets": [
         {
-          "expr": "sum(siddhi_file_sink_event_count{app_name=~\"$app\"}) by (file_name, mode, stream_name, file_path)",
+          "expr": "sum(siddhi_file_sink_event_count{app=~\"$app\"}) by (file_name, mode, stream_name, file_path)",
           "format": "table",
           "hide": false,
           "instant": true,
           "refId": "B"
         },
         {
-          "expr": "sum(siddhi_file_sink_file_size{app_name=~\"$app\"}) by (file_path)",
+          "expr": "sum(siddhi_file_sink_file_size{app=~\"$app\"}) by (file_path)",
           "format": "table",
           "hide": false,
           "instant": true,
           "refId": "C"
         },
         {
-          "expr": "sum(siddhi_file_sink_file_status{app_name=~\"$app\"}) by (file_path)",
+          "expr": "sum(siddhi_file_sink_file_status{app=~\"$app\"}) by (file_path)",
           "format": "table",
           "hide": false,
           "instant": true,
           "refId": "D"
         },
         {
-          "expr": "sum(siddhi_file_sink_lines_count{app_name=~\"$app\"}) by (file_path)",
+          "expr": "sum(siddhi_file_sink_lines_count{app=~\"$app\"}) by (file_path)",
           "format": "table",
           "instant": true,
           "legendFormat": "",
           "refId": "A"
         },
         {
-          "expr": "sum(siddhi_file_sink_elapsed_time{app_name=~\"$app\"}) by (file_path)",
+          "expr": "sum(siddhi_file_sink_elapsed_time{app=~\"$app\"}) by (file_path)",
           "format": "table",
           "instant": true,
           "legendFormat": "",
           "refId": "E"
+        },
+        {
+          "expr": "sum(siddhi_file_sink_total_error_count{app=~\"$app\"} + siddhi_file_sink_dropped_events{app=~\"$app\"} ) by (file_path)",
+          "format": "table",
+          "instant": true,
+          "legendFormat": "",
+          "refId": "F"
         }
       ],
       "timeFrom": null,
       "timeShift": null,
-      "title": "File Details",
+      "title": "File Sink Statistics",
       "transform": "table",
       "type": "table"
     },
@@ -1250,7 +1296,7 @@
       "tableColumn": "",
       "targets": [
         {
-          "expr": "count(siddhi_file_sink_file_status{app_name=~\"$app\"} == 1)",
+          "expr": "count(siddhi_file_sink_file_status{app=~\"$app\"} == 1)",
           "instant": true,
           "refId": "A"
         }
@@ -1335,7 +1381,7 @@
       "tableColumn": "",
       "targets": [
         {
-          "expr": "count(siddhi_file_sink_file_status{app_name=~\"$app\"} == 3)",
+          "expr": "count(siddhi_file_sink_file_status{app=~\"$app\"} == 3)",
           "instant": true,
           "refId": "A"
         }
@@ -1420,7 +1466,7 @@
       "tableColumn": "",
       "targets": [
         {
-          "expr": "sum(siddhi_file_sink_event_count{app_name=~\"$app\"})",
+          "expr": "sum(siddhi_file_sink_event_count{app=~\"$app\"})",
           "instant": true,
           "refId": "A"
         }
@@ -1449,7 +1495,7 @@
       "dashes": false,
       "datasource": null,
       "decimals": 2,
-      "fill": 3,
+      "fill": 0,
       "fillGradient": 10,
       "gridPos": {
         "h": 9,
@@ -1474,7 +1520,7 @@
         "values": true
       },
       "lines": true,
-      "linewidth": 1,
+      "linewidth": 2,
       "nullPointMode": "null",
       "options": {
         "dataLinks": []
@@ -1489,7 +1535,7 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "rate(siddhi_file_sink_event_count{app_name=~\"$app\"}[1m])",
+          "expr": "rate(siddhi_file_sink_event_count{app=~\"$app\"}[1m])",
           "format": "time_series",
           "hide": false,
           "instant": false,
@@ -1638,7 +1684,7 @@
       "tableColumn": "",
       "targets": [
         {
-          "expr": "count(siddhi_file_delete{app_name=~\"$app\"})",
+          "expr": "count(siddhi_file_delete{app=~\"$app\"})",
           "instant": true,
           "refId": "A"
         }
@@ -1758,7 +1804,7 @@
       ],
       "targets": [
         {
-          "expr": "sum(siddhi_file_delete{app_name=~\"$app\"}) by (_source, time)",
+          "expr": "sum(siddhi_file_delete{app=~\"$app\"}) by (_source, time)",
           "format": "table",
           "instant": true,
           "legendFormat": "",
@@ -1836,7 +1882,7 @@
       "tableColumn": "",
       "targets": [
         {
-          "expr": "count(siddhi_file_delete{app_name=~\"$app\"} == 1)",
+          "expr": "count(siddhi_file_delete{app=~\"$app\"} == 1)",
           "instant": true,
           "refId": "A"
         }
@@ -1921,7 +1967,7 @@
       "tableColumn": "",
       "targets": [
         {
-          "expr": "count(siddhi_file_delete{app_name=~\"$app\"} == 0)",
+          "expr": "count(siddhi_file_delete{app=~\"$app\"} == 0)",
           "instant": true,
           "refId": "A"
         }
@@ -2024,7 +2070,7 @@
       "tableColumn": "",
       "targets": [
         {
-          "expr": "count(siddhi_file_move{app_name=~\"$app\"})",
+          "expr": "count(siddhi_file_move{app=~\"$app\"})",
           "instant": true,
           "refId": "A"
         }
@@ -2160,7 +2206,7 @@
       ],
       "targets": [
         {
-          "expr": "sum(siddhi_file_move{app_name=~\"$app\"}) by (_source, time, destination)",
+          "expr": "sum(siddhi_file_move{app=~\"$app\"}) by (_source, time, destination)",
           "format": "table",
           "instant": true,
           "legendFormat": "",
@@ -2238,7 +2284,7 @@
       "tableColumn": "",
       "targets": [
         {
-          "expr": "count(siddhi_file_move{app_name=~\"$app\"} == 1)",
+          "expr": "count(siddhi_file_move{app=~\"$app\"} == 1)",
           "instant": true,
           "refId": "A"
         }
@@ -2323,7 +2369,7 @@
       "tableColumn": "",
       "targets": [
         {
-          "expr": "count(siddhi_file_move{app_name=~\"$app\"} == 0)",
+          "expr": "count(siddhi_file_move{app=~\"$app\"} == 0)",
           "instant": true,
           "refId": "A"
         }
@@ -2426,7 +2472,7 @@
       "tableColumn": "",
       "targets": [
         {
-          "expr": "count(siddhi_file_copy{app_name=~\"$app\"})",
+          "expr": "count(siddhi_file_copy{app=~\"$app\"})",
           "instant": true,
           "refId": "A"
         }
@@ -2566,7 +2612,7 @@
       ],
       "targets": [
         {
-          "expr": "sum(siddhi_file_copy{app_name=~\"$app\"}) by (_source, time, destination)",
+          "expr": "sum(siddhi_file_copy{app=~\"$app\"}) by (_source, time, destination)",
           "format": "table",
           "instant": true,
           "legendFormat": "",
@@ -2644,7 +2690,7 @@
       "tableColumn": "",
       "targets": [
         {
-          "expr": "count(siddhi_file_copy{app_name=~\"$app\"} == 1)",
+          "expr": "count(siddhi_file_copy{app=~\"$app\"} == 1)",
           "instant": true,
           "refId": "A"
         }
@@ -2729,7 +2775,7 @@
       "tableColumn": "",
       "targets": [
         {
-          "expr": "count(siddhi_file_copy{app_name=~\"$app\"} == 0)",
+          "expr": "count(siddhi_file_copy{app=~\"$app\"} == 0)",
           "instant": true,
           "refId": "A"
         }
@@ -2832,7 +2878,7 @@
       "tableColumn": "",
       "targets": [
         {
-          "expr": "count(siddhi_file_archive{app_name=~\"$app\"})",
+          "expr": "count(siddhi_file_archive{app=~\"$app\"})",
           "instant": true,
           "refId": "A"
         }
@@ -2968,7 +3014,7 @@
       ],
       "targets": [
         {
-          "expr": "sum(siddhi_file_archive{app_name=~\"$app\"}) by (_source, time, type, destination)",
+          "expr": "sum(siddhi_file_archive{app=~\"$app\"}) by (_source, time, type, destination)",
           "format": "table",
           "instant": true,
           "legendFormat": "",
@@ -3046,7 +3092,7 @@
       "tableColumn": "",
       "targets": [
         {
-          "expr": "count(siddhi_file_archive{app_name=~\"$app\"} == 1)",
+          "expr": "count(siddhi_file_archive{app=~\"$app\"} == 1)",
           "instant": true,
           "refId": "A"
         }
@@ -3131,7 +3177,7 @@
       "tableColumn": "",
       "targets": [
         {
-          "expr": "count(siddhi_file_archive{app_name=~\"$app\"} == 0)",
+          "expr": "count(siddhi_file_archive{app=~\"$app\"} == 0)",
           "instant": true,
           "refId": "A"
         }
@@ -3161,19 +3207,20 @@
       {
         "allValue": null,
         "current": {
-          "tags": [],
-          "text": "TestFile",
-          "value": "TestFile"
+          "isNone": true,
+          "selected": false,
+          "text": "None",
+          "value": ""
         },
         "datasource": "Prometheus",
-        "definition": "label_values(siddhi_file_apps, app_name)",
+        "definition": "label_values(siddhi_file_apps, app)",
         "hide": 0,
         "includeAll": false,
         "label": "App Name",
         "multi": false,
         "name": "app",
         "options": [],
-        "query": "label_values(siddhi_file_apps, app_name)",
+        "query": "label_values(siddhi_file_apps, app)",
         "refresh": 1,
         "regex": "",
         "skipUrlSync": false,
@@ -3193,14 +3240,14 @@
           ]
         },
         "datasource": "Prometheus",
-        "definition": "label_values(siddhi_file_source_event_count{app_name=~\"$app\"}, file_path)",
+        "definition": "label_values(siddhi_file_source_event_count{app=~\"$app\"}, file_path)",
         "hide": 2,
         "includeAll": true,
         "label": "Source",
         "multi": true,
         "name": "source",
         "options": [],
-        "query": "label_values(siddhi_file_source_event_count{app_name=~\"$app\"}, file_path)",
+        "query": "label_values(siddhi_file_source_event_count{app=~\"$app\"}, file_path)",
         "refresh": 1,
         "regex": "/\\./i",
         "skipUrlSync": false,
@@ -3220,14 +3267,14 @@
           ]
         },
         "datasource": "Prometheus",
-        "definition": "label_values(siddhi_file_sink_event_count{app_name=~\"$app\"}, file_path)",
+        "definition": "label_values(siddhi_file_sink_event_count{app=~\"$app\"}, file_path)",
         "hide": 2,
         "includeAll": true,
         "label": "Sink",
         "multi": true,
         "name": "sink",
         "options": [],
-        "query": "label_values(siddhi_file_sink_event_count{app_name=~\"$app\"}, file_path)",
+        "query": "label_values(siddhi_file_sink_event_count{app=~\"$app\"}, file_path)",
         "refresh": 1,
         "regex": "/\\./i",
         "skipUrlSync": false,
@@ -3241,7 +3288,7 @@
     ]
   },
   "time": {
-    "from": "now-15m",
+    "from": "now-30m",
     "to": "now"
   },
   "timepicker": {
@@ -3259,7 +3306,7 @@
     ]
   },
   "timezone": "",
-  "title": "WSO2 Streaming Integration - File Statistics",
+  "title": "WSO2 Streaming Integrator - File Statistics",
   "uid": "XURMQjsZk",
-  "version": 341
+  "version": 358
 }

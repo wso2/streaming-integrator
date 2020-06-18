@@ -16,7 +16,7 @@
   "gnetId": null,
   "graphTooltip": 0,
   "id": 10,
-  "iteration": 1590758792264,
+  "iteration": 1592292230353,
   "links": [
     {
       "icon": "dashboard",
@@ -24,7 +24,7 @@
       "title": "WSO2 Streaming Integrator - CDC Statistics",
       "tooltip": "",
       "type": "link",
-      "url": "/d/_MLjsAqWz/siddhi-io-cdc-overview?orgId=1&var-app=$app&refresh=5s"
+      "url": "/d/_MLjsAqWz/wso2-streaming-integrator-cdc-statistics?orgId=1&var-app=$app&refresh=5s"
     }
   ],
   "panels": [
@@ -107,7 +107,7 @@
       "tableColumn": "",
       "targets": [
         {
-          "expr": "siddhi_cdc_source_listening_mode_events_per_table{app_name=~\"$app\", db_url=~\"$db_url\"}",
+          "expr": "siddhi_cdc_source_listening_mode_events_per_table{app=~\"$app\", db_url=~\"$db_url\"}",
           "instant": true,
           "refId": "A"
         }
@@ -191,7 +191,7 @@
       "tableColumn": "",
       "targets": [
         {
-          "expr": "siddhi_cdc_source_listening_mode_event_count{app_name=~\"$app\", db_url=~\"$db_url\", operation_type=\"Insert\"}",
+          "expr": "siddhi_cdc_source_listening_mode_event_count{app=~\"$app\", db_url=~\"$db_url\", operation_type=\"Insert\"}",
           "instant": true,
           "refId": "A"
         }
@@ -275,7 +275,7 @@
       "tableColumn": "",
       "targets": [
         {
-          "expr": "siddhi_cdc_source_listening_mode_event_count{app_name=~\"$app\", db_url=~\"$db_url\", operation_type=\"Update\"}",
+          "expr": "siddhi_cdc_source_listening_mode_event_count{app=~\"$app\", db_url=~\"$db_url\", operation_type=\"Update\"}",
           "instant": true,
           "refId": "A"
         }
@@ -359,7 +359,7 @@
       "tableColumn": "",
       "targets": [
         {
-          "expr": "siddhi_cdc_source_listening_mode_event_count{app_name=~\"$app\", db_url=~\"$db_url\", operation_type=\"Delete\"}",
+          "expr": "siddhi_cdc_source_listening_mode_event_count{app=~\"$app\", db_url=~\"$db_url\", operation_type=\"Delete\"}",
           "instant": true,
           "refId": "A"
         }
@@ -444,7 +444,7 @@
       "tableColumn": "",
       "targets": [
         {
-          "expr": "siddhi_cdc_source_listening_mode_last_receive_time{app_name=~\"$app\", db_url=~\"$db_url\"}",
+          "expr": "siddhi_cdc_source_listening_mode_last_receive_time{app=~\"$app\", db_url=~\"$db_url\"}",
           "instant": true,
           "refId": "A"
         }
@@ -453,91 +453,6 @@
       "timeFrom": null,
       "timeShift": null,
       "title": "Last Change Occured At",
-      "type": "singlestat",
-      "valueFontSize": "80%",
-      "valueMaps": [
-        {
-          "op": "=",
-          "text": "N/A",
-          "value": "null"
-        }
-      ],
-      "valueName": "current"
-    },
-    {
-      "cacheTimeout": null,
-      "colorBackground": false,
-      "colorValue": false,
-      "colors": [
-        "#299c46",
-        "rgba(237, 129, 40, 0.89)",
-        "#d44a3a"
-      ],
-      "datasource": "Prometheus",
-      "decimals": 2,
-      "format": "short",
-      "gauge": {
-        "maxValue": 100,
-        "minValue": 0,
-        "show": false,
-        "thresholdLabels": false,
-        "thresholdMarkers": true
-      },
-      "gridPos": {
-        "h": 4,
-        "w": 3,
-        "x": 15,
-        "y": 1
-      },
-      "id": 13,
-      "interval": null,
-      "links": [],
-      "mappingType": 1,
-      "mappingTypes": [
-        {
-          "name": "value to text",
-          "value": 1
-        },
-        {
-          "name": "range to text",
-          "value": 2
-        }
-      ],
-      "maxDataPoints": 100,
-      "nullPointMode": "connected",
-      "nullText": null,
-      "options": {},
-      "postfix": "",
-      "postfixFontSize": "50%",
-      "prefix": "",
-      "prefixFontSize": "50%",
-      "rangeMaps": [
-        {
-          "from": "null",
-          "text": "N/A",
-          "to": "null"
-        }
-      ],
-      "sparkline": {
-        "fillColor": "rgba(31, 118, 189, 0.18)",
-        "full": false,
-        "lineColor": "rgb(31, 120, 193)",
-        "show": false,
-        "ymax": null,
-        "ymin": null
-      },
-      "tableColumn": "",
-      "targets": [
-        {
-          "expr": "rate(siddhi_cdc_source_listening_mode_events_per_table{app_name=~\"$app\", db_url=~\"$db_url\"}[1m])",
-          "instant": true,
-          "refId": "A"
-        }
-      ],
-      "thresholds": "",
-      "timeFrom": null,
-      "timeShift": null,
-      "title": "Current Changes/Sec",
       "type": "singlestat",
       "valueFontSize": "80%",
       "valueMaps": [
@@ -571,7 +486,7 @@
       "gridPos": {
         "h": 4,
         "w": 3,
-        "x": 18,
+        "x": 15,
         "y": 1
       },
       "id": 4,
@@ -673,7 +588,7 @@
       "gridPos": {
         "h": 4,
         "w": 3,
-        "x": 21,
+        "x": 18,
         "y": 1
       },
       "id": 20,
@@ -716,7 +631,7 @@
       "tableColumn": "",
       "targets": [
         {
-          "expr": "siddhi_cdc_source_listening_mode_idle_time{app_name=~\"$app\", db_url=~\"$db_url\"}",
+          "expr": "siddhi_cdc_source_listening_mode_idle_time{app=~\"$app\", db_url=~\"$db_url\"}",
           "instant": true,
           "refId": "A"
         }
@@ -731,6 +646,91 @@
         {
           "op": "=",
           "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": false,
+      "colorValue": true,
+      "colors": [
+        "#C4162A",
+        "rgba(237, 129, 40, 0.89)",
+        "#E02F44"
+      ],
+      "datasource": "Prometheus",
+      "decimals": null,
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 2,
+        "w": 3,
+        "x": 21,
+        "y": 1
+      },
+      "id": 40,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "options": {},
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false,
+        "ymax": null,
+        "ymin": null
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "expr": "siddhi_cdc_source_listening_mode_events_per_table{app=~\"$app\", db_url=~\"$db_url\"} - ignoring(tablename)siddhi_cdc_source_listening_mode_total_valid_events_count{app=~\"$app\", db_url=~\"$db_url\"}",
+          "instant": true,
+          "refId": "A"
+        }
+      ],
+      "thresholds": "",
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Mapping Errors",
+      "type": "singlestat",
+      "valueFontSize": "50%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "-",
           "value": "null"
         }
       ],
@@ -801,7 +801,7 @@
       "tableColumn": "",
       "targets": [
         {
-          "expr": "siddhi_cdc_source_listening_mode_last_receive_time_by_operation{app_name=~\"$app\", db_url=~\"$db_url\", operation_type=\"Insert\"}",
+          "expr": "siddhi_cdc_source_listening_mode_last_receive_time_by_operation{app=~\"$app\", db_url=~\"$db_url\", operation_type=\"Insert\"}",
           "instant": true,
           "refId": "A"
         }
@@ -886,7 +886,7 @@
       "tableColumn": "",
       "targets": [
         {
-          "expr": "siddhi_cdc_source_listening_mode_last_receive_time_by_operation{app_name=~\"$app\", db_url=~\"$db_url\", operation_type=\"Update\"}",
+          "expr": "siddhi_cdc_source_listening_mode_last_receive_time_by_operation{app=~\"$app\", db_url=~\"$db_url\", operation_type=\"Update\"}",
           "instant": true,
           "refId": "A"
         }
@@ -971,7 +971,7 @@
       "tableColumn": "",
       "targets": [
         {
-          "expr": "siddhi_cdc_source_listening_mode_last_receive_time_by_operation{app_name=~\"$app\", db_url=~\"$db_url\", operation_type=\"Delete\"}",
+          "expr": "siddhi_cdc_source_listening_mode_last_receive_time_by_operation{app=~\"$app\", db_url=~\"$db_url\", operation_type=\"Delete\"}",
           "instant": true,
           "refId": "A"
         }
@@ -980,6 +980,92 @@
       "timeFrom": null,
       "timeShift": null,
       "title": "Last Delete",
+      "type": "singlestat",
+      "valueFontSize": "50%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "-",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": false,
+      "colorValue": true,
+      "colors": [
+        "#C4162A",
+        "rgba(237, 129, 40, 0.89)",
+        "#d44a3a"
+      ],
+      "datasource": "Prometheus",
+      "decimals": null,
+      "description": "Number of errors occured while capturing the data from the table.",
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 2,
+        "w": 3,
+        "x": 21,
+        "y": 3
+      },
+      "id": 41,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "options": {},
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false,
+        "ymax": null,
+        "ymin": null
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "expr": "siddhi_cdc_source_listening_mode_total_error_count{app=~\"$app\", db_url=~\"$db_url\"}",
+          "instant": true,
+          "refId": "A"
+        }
+      ],
+      "thresholds": "",
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Transport Level Errors",
       "type": "singlestat",
       "valueFontSize": "50%",
       "valueMaps": [
@@ -1040,7 +1126,7 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "increase(siddhi_cdc_source_listening_mode_event_count{app_name=~\"$app\", db_url=~\"$db_url\"}[1m])",
+          "expr": "increase(siddhi_cdc_source_listening_mode_event_count{app=~\"$app\", db_url=~\"$db_url\"}[1m])",
           "format": "time_series",
           "instant": false,
           "interval": "",
@@ -1101,19 +1187,20 @@
       {
         "allValue": null,
         "current": {
-          "tags": [],
+          "isNone": true,
+          "selected": false,
           "text": "None",
           "value": ""
         },
         "datasource": "Prometheus",
-        "definition": "label_values(siddhi_cdc_apps, app_name)",
+        "definition": "label_values(siddhi_cdc_apps, app)",
         "hide": 0,
         "includeAll": false,
         "label": "App Name",
         "multi": false,
         "name": "app",
         "options": [],
-        "query": "label_values(siddhi_cdc_apps, app_name)",
+        "query": "label_values(siddhi_cdc_apps, app)",
         "refresh": 1,
         "regex": "",
         "skipUrlSync": false,
@@ -1133,14 +1220,14 @@
           ]
         },
         "datasource": "Prometheus",
-        "definition": "label_values(siddhi_cdc_source_listening_mode_events_per_table{app_name=~\"$app\"}, db_url)",
+        "definition": "label_values(siddhi_cdc_source_listening_mode_events_per_table{app=~\"$app\"}, db_url)",
         "hide": 0,
         "includeAll": true,
         "label": "Database URL",
         "multi": true,
         "name": "db_url",
         "options": [],
-        "query": "label_values(siddhi_cdc_source_listening_mode_events_per_table{app_name=~\"$app\"}, db_url)",
+        "query": "label_values(siddhi_cdc_source_listening_mode_events_per_table{app=~\"$app\"}, db_url)",
         "refresh": 1,
         "regex": "",
         "skipUrlSync": false,
@@ -1174,5 +1261,5 @@
   "timezone": "",
   "title": "WSO2 Streaming Integrator - CDC Streaming Statistics",
   "uid": "nhe5jbqWk",
-  "version": 35
+  "version": 45
 }

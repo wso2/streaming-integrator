@@ -15,18 +15,15 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 0,
-  "id": 8,
-  "iteration": 1588656393524,
+  "id": 13,
+  "iteration": 1592292338342,
   "links": [
     {
       "icon": "dashboard",
-      "includeVars": false,
-      "keepTime": false,
       "tags": [],
-      "title": "WSO2 Streaming Integration - File Statistics",
-      "tooltip": "",
+      "title": "WSO2 Streaming Integrator - RDBMS Statistics",
       "type": "link",
-      "url": "/d/XURMQjsZk/siddhi-io-file-overview?orgId=1&var_app=$app&refresh=5s"
+      "url": "/d/3tPjCPgMz/wso2-streaming-integrator-rdbms-statistic?orgId=1&var-app=$app&refresh=5s&from=now-30m&to=now"
     }
   ],
   "panels": [
@@ -41,27 +38,21 @@
       },
       "id": 2,
       "panels": [],
-      "repeat": "sink",
-      "scopedVars": {
-        "sink": {
-          "selected": false,
-          "text": "/home/sahan/SI/sink/BarStream6.json",
-          "value": "/home/sahan/SI/sink/BarStream6.json"
-        }
-      },
-      "title": "$sink",
+      "repeat": "db_url",
+      "title": "$db_url",
       "type": "row"
     },
     {
       "cacheTimeout": null,
-      "colorBackground": false,
-      "colorValue": true,
+      "colorBackground": true,
+      "colorValue": false,
       "colors": [
-        "#E0B400",
-        "#37872D",
+        "rgba(41, 44, 46, 0.71)",
+        "rgba(237, 129, 40, 0.89)",
         "#d44a3a"
       ],
-      "datasource": null,
+      "datasource": "Prometheus",
+      "description": "The number of changes applied to the table by executing `Insert`, `Update`, `Delete` Queries.",
       "format": "none",
       "gauge": {
         "maxValue": 100,
@@ -72,7 +63,7 @@
       },
       "gridPos": {
         "h": 4,
-        "w": 6,
+        "w": 5,
         "x": 0,
         "y": 1
       },
@@ -105,13 +96,6 @@
           "to": "null"
         }
       ],
-      "scopedVars": {
-        "sink": {
-          "selected": false,
-          "text": "/home/sahan/SI/sink/BarStream6.json",
-          "value": "/home/sahan/SI/sink/BarStream6.json"
-        }
-      },
       "sparkline": {
         "fillColor": "rgba(31, 118, 189, 0.18)",
         "full": false,
@@ -123,120 +107,36 @@
       "tableColumn": "",
       "targets": [
         {
-          "expr": "siddhi_file_sink_file_status{app_name=~\"$app\", file_path=~\"$sink\"}",
-          "format": "time_series",
+          "expr": "siddhi_store_rdbms_total_writes{app=~\"$app\", db_url=~\"$db_url\"}",
           "instant": true,
-          "legendFormat": "",
           "refId": "A"
         }
       ],
-      "thresholds": "1,4",
+      "thresholds": "",
       "timeFrom": null,
       "timeShift": null,
-      "title": "Status",
+      "title": "Total Writes",
       "type": "singlestat",
-      "valueFontSize": "80%",
+      "valueFontSize": "100%",
       "valueMaps": [
         {
           "op": "=",
           "text": "N/A",
           "value": "null"
-        },
-        {
-          "op": "=",
-          "text": "Connecting",
-          "value": "0"
-        },
-        {
-          "op": "=",
-          "text": "Publishing",
-          "value": "1"
-        },
-        {
-          "op": "=",
-          "text": "Idle",
-          "value": "3"
-        },
-        {
-          "op": "=",
-          "text": "Retrying",
-          "value": "4"
         }
       ],
       "valueName": "current"
     },
     {
       "cacheTimeout": null,
-      "datasource": null,
-      "gridPos": {
-        "h": 8,
-        "w": 5,
-        "x": 6,
-        "y": 1
-      },
-      "id": 10,
-      "links": [],
-      "options": {
-        "fieldOptions": {
-          "calcs": [
-            "mean"
-          ],
-          "defaults": {
-            "mappings": [],
-            "max": 100,
-            "min": 0,
-            "thresholds": [
-              {
-                "color": "red",
-                "value": null
-              },
-              {
-                "color": "dark-green",
-                "value": 75
-              }
-            ],
-            "unit": "percent"
-          },
-          "override": {},
-          "values": false
-        },
-        "orientation": "horizontal",
-        "showThresholdLabels": false,
-        "showThresholdMarkers": false
-      },
-      "pluginVersion": "6.5.3",
-      "scopedVars": {
-        "sink": {
-          "selected": false,
-          "text": "/home/sahan/SI/sink/BarStream6.json",
-          "value": "/home/sahan/SI/sink/BarStream6.json"
-        }
-      },
-      "targets": [
-        {
-          "expr": "siddhi_file_sink_event_count{app_name=~\"$app\", file_path=~\"$sink\"} / ignoring(mode, stream_name, file_name)(siddhi_file_sink_dropped_events{app_name=~\"$app\", file_path=~\"$sink\"} + ignoring(mode, stream_name, file_name) siddhi_file_sink_event_count{}) * 100",
-          "format": "time_series",
-          "hide": false,
-          "instant": true,
-          "legendFormat": "Success",
-          "refId": "C"
-        }
-      ],
-      "timeFrom": null,
-      "timeShift": null,
-      "title": "Successful Writes",
-      "type": "gauge"
-    },
-    {
-      "cacheTimeout": null,
       "colorBackground": true,
       "colorValue": false,
       "colors": [
-        "#212a32",
+        "rgba(41, 44, 46, 0.71)",
         "rgba(237, 129, 40, 0.89)",
         "#d44a3a"
       ],
-      "datasource": null,
+      "datasource": "Prometheus",
       "format": "none",
       "gauge": {
         "maxValue": 100,
@@ -246,12 +146,12 @@
         "thresholdMarkers": true
       },
       "gridPos": {
-        "h": 4,
-        "w": 3,
-        "x": 11,
+        "h": 2,
+        "w": 5,
+        "x": 5,
         "y": 1
       },
-      "id": 12,
+      "id": 6,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -280,17 +180,10 @@
           "to": "null"
         }
       ],
-      "scopedVars": {
-        "sink": {
-          "selected": false,
-          "text": "/home/sahan/SI/sink/BarStream6.json",
-          "value": "/home/sahan/SI/sink/BarStream6.json"
-        }
-      },
       "sparkline": {
-        "fillColor": "rgba(255, 135, 0, 0.52)",
+        "fillColor": "rgba(31, 118, 189, 0.18)",
         "full": false,
-        "lineColor": "#f47b20",
+        "lineColor": "rgb(31, 120, 193)",
         "show": false,
         "ymax": null,
         "ymin": null
@@ -298,22 +191,21 @@
       "tableColumn": "",
       "targets": [
         {
-          "expr": "siddhi_file_sink_lines_count{app_name=~\"$app\", file_path=~\"$sink\"}",
+          "expr": "siddhi_store_rdbms_insert_rows_count{app=~\"$app\", db_url=~\"$db_url\"}",
           "instant": true,
-          "legendFormat": "",
           "refId": "A"
         }
       ],
       "thresholds": "",
       "timeFrom": null,
       "timeShift": null,
-      "title": "Written Lines",
+      "title": "Total Inserts",
       "type": "singlestat",
-      "valueFontSize": "80%",
+      "valueFontSize": "70%",
       "valueMaps": [
         {
           "op": "=",
-          "text": "0",
+          "text": "-",
           "value": "null"
         }
       ],
@@ -324,12 +216,12 @@
       "colorBackground": true,
       "colorValue": false,
       "colors": [
-        "#212a32",
+        "rgba(41, 44, 46, 0.71)",
         "rgba(237, 129, 40, 0.89)",
         "#d44a3a"
       ],
-      "datasource": null,
-      "format": "decbytes",
+      "datasource": "Prometheus",
+      "format": "none",
       "gauge": {
         "maxValue": 100,
         "minValue": 0,
@@ -338,9 +230,93 @@
         "thresholdMarkers": true
       },
       "gridPos": {
-        "h": 4,
-        "w": 3,
-        "x": 14,
+        "h": 2,
+        "w": 5,
+        "x": 10,
+        "y": 1
+      },
+      "id": 10,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "options": {},
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false,
+        "ymax": null,
+        "ymin": null
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "expr": "siddhi_store_rdbms_update_rows_count{app=~\"$app\", db_url=~\"$db_url\"}",
+          "instant": true,
+          "refId": "A"
+        }
+      ],
+      "thresholds": "",
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Total Updates",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "-",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": true,
+      "colorValue": false,
+      "colors": [
+        "rgba(41, 44, 46, 0.71)",
+        "rgba(237, 129, 40, 0.89)",
+        "#d44a3a"
+      ],
+      "datasource": "Prometheus",
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 2,
+        "w": 5,
+        "x": 15,
         "y": 1
       },
       "id": 14,
@@ -372,247 +348,33 @@
           "to": "null"
         }
       ],
-      "scopedVars": {
-        "sink": {
-          "selected": false,
-          "text": "/home/sahan/SI/sink/BarStream6.json",
-          "value": "/home/sahan/SI/sink/BarStream6.json"
-        }
-      },
       "sparkline": {
-        "fillColor": "rgba(255, 135, 0, 0.52)",
+        "fillColor": "rgba(31, 118, 189, 0.18)",
         "full": false,
-        "lineColor": "#f47b20",
-        "show": true,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false,
         "ymax": null,
         "ymin": null
       },
       "tableColumn": "",
       "targets": [
         {
-          "expr": "siddhi_file_sink_total_written_byte{app_name=~\"$app\", file_path=~\"$sink\"}",
-          "format": "time_series",
+          "expr": "siddhi_store_rdbms_delete_rows_count{app=~\"$app\", db_url=~\"$db_url\"}",
           "instant": true,
-          "legendFormat": "",
           "refId": "A"
         }
       ],
       "thresholds": "",
       "timeFrom": null,
       "timeShift": null,
-      "title": "Written Bytes",
+      "title": "Total Deletes",
       "type": "singlestat",
-      "valueFontSize": "80%",
+      "valueFontSize": "70%",
       "valueMaps": [
         {
           "op": "=",
-          "text": "0",
+          "text": "-",
           "value": "null"
-        }
-      ],
-      "valueName": "current"
-    },
-    {
-      "aliasColors": {
-        "KB": "#f47b20"
-      },
-      "bars": false,
-      "dashLength": 10,
-      "dashes": false,
-      "datasource": null,
-      "decimals": 2,
-      "fill": 3,
-      "fillGradient": 10,
-      "gridPos": {
-        "h": 8,
-        "w": 7,
-        "x": 17,
-        "y": 1
-      },
-      "hiddenSeries": false,
-      "id": 24,
-      "legend": {
-        "alignAsTable": false,
-        "avg": true,
-        "current": true,
-        "hideEmpty": false,
-        "hideZero": false,
-        "max": true,
-        "min": true,
-        "rightSide": false,
-        "show": true,
-        "total": false,
-        "values": true
-      },
-      "lines": true,
-      "linewidth": 1,
-      "nullPointMode": "null",
-      "options": {
-        "dataLinks": []
-      },
-      "percentage": false,
-      "pointradius": 2,
-      "points": false,
-      "renderer": "flot",
-      "scopedVars": {
-        "sink": {
-          "selected": false,
-          "text": "/home/sahan/SI/sink/BarStream6.json",
-          "value": "/home/sahan/SI/sink/BarStream6.json"
-        }
-      },
-      "seriesOverrides": [],
-      "spaceLength": 10,
-      "stack": false,
-      "steppedLine": false,
-      "targets": [
-        {
-          "expr": "rate(siddhi_file_sink_total_written_byte{file_path=~\"$sink\"}[1m])",
-          "instant": false,
-          "intervalFactor": 1,
-          "legendFormat": "KB",
-          "refId": "A"
-        }
-      ],
-      "thresholds": [],
-      "timeFrom": null,
-      "timeRegions": [],
-      "timeShift": null,
-      "title": "KB/Sec",
-      "tooltip": {
-        "shared": true,
-        "sort": 0,
-        "value_type": "individual"
-      },
-      "type": "graph",
-      "xaxis": {
-        "buckets": null,
-        "mode": "time",
-        "name": null,
-        "show": true,
-        "values": []
-      },
-      "yaxes": [
-        {
-          "format": "short",
-          "label": null,
-          "logBase": 1,
-          "max": null,
-          "min": "0",
-          "show": true
-        },
-        {
-          "format": "wps",
-          "label": null,
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": true
-        }
-      ],
-      "yaxis": {
-        "align": false,
-        "alignLevel": null
-      }
-    },
-    {
-      "cacheTimeout": null,
-      "colorBackground": false,
-      "colorValue": false,
-      "colors": [
-        "#299c46",
-        "rgba(237, 129, 40, 0.89)",
-        "#d44a3a"
-      ],
-      "datasource": null,
-      "format": "decbytes",
-      "gauge": {
-        "maxValue": 100,
-        "minValue": 0,
-        "show": false,
-        "thresholdLabels": false,
-        "thresholdMarkers": true
-      },
-      "gridPos": {
-        "h": 4,
-        "w": 3,
-        "x": 0,
-        "y": 5
-      },
-      "id": 6,
-      "interval": null,
-      "links": [],
-      "mappingType": 2,
-      "mappingTypes": [
-        {
-          "name": "value to text",
-          "value": 1
-        },
-        {
-          "name": "range to text",
-          "value": 2
-        }
-      ],
-      "maxDataPoints": 100,
-      "nullPointMode": "connected",
-      "nullText": null,
-      "options": {},
-      "postfix": "",
-      "postfixFontSize": "30%",
-      "prefix": "",
-      "prefixFontSize": "50%",
-      "rangeMaps": [
-        {
-          "from": "null",
-          "text": "0",
-          "to": "null"
-        },
-        {
-          "from": "0",
-          "text": "0",
-          "to": "-3000"
-        }
-      ],
-      "scopedVars": {
-        "sink": {
-          "selected": false,
-          "text": "/home/sahan/SI/sink/BarStream6.json",
-          "value": "/home/sahan/SI/sink/BarStream6.json"
-        }
-      },
-      "sparkline": {
-        "fillColor": "rgba(255, 135, 0, 0.52)",
-        "full": true,
-        "lineColor": "#f47b20",
-        "show": true,
-        "ymax": null,
-        "ymin": null
-      },
-      "tableColumn": "",
-      "targets": [
-        {
-          "expr": "rate(siddhi_file_sink_total_written_byte{app_name=~\"$app\", file_path=~\"$sink\"}[1m])",
-          "instant": false,
-          "legendFormat": "",
-          "refId": "A"
-        }
-      ],
-      "thresholds": "",
-      "timeFrom": null,
-      "timeShift": null,
-      "title": "Write Bytes Per Sec",
-      "type": "singlestat",
-      "valueFontSize": "80%",
-      "valueMaps": [
-        {
-          "op": "=",
-          "text": "0",
-          "value": "null"
-        },
-        {
-          "op": "=",
-          "text": "",
-          "value": ""
         }
       ],
       "valueName": "current"
@@ -620,115 +382,15 @@
     {
       "cacheTimeout": null,
       "colorBackground": false,
-      "colorValue": false,
+      "colorValue": true,
       "colors": [
-        "#299c46",
+        "#C4162A",
         "rgba(237, 129, 40, 0.89)",
-        "#d44a3a"
+        "#E02F44"
       ],
-      "datasource": null,
-      "format": "short",
-      "gauge": {
-        "maxValue": 100,
-        "minValue": 0,
-        "show": false,
-        "thresholdLabels": false,
-        "thresholdMarkers": true
-      },
-      "gridPos": {
-        "h": 4,
-        "w": 3,
-        "x": 3,
-        "y": 5
-      },
-      "id": 8,
-      "interval": null,
-      "links": [],
-      "mappingType": 2,
-      "mappingTypes": [
-        {
-          "name": "value to text",
-          "value": 1
-        },
-        {
-          "name": "range to text",
-          "value": 2
-        }
-      ],
-      "maxDataPoints": 100,
-      "nullPointMode": "connected",
-      "nullText": null,
-      "options": {},
-      "postfix": "",
-      "postfixFontSize": "30%",
-      "prefix": "",
-      "prefixFontSize": "50%",
-      "rangeMaps": [
-        {
-          "from": "null",
-          "text": "0",
-          "to": "null"
-        },
-        {
-          "from": "0",
-          "text": "0",
-          "to": "-3000"
-        }
-      ],
-      "scopedVars": {
-        "sink": {
-          "selected": false,
-          "text": "/home/sahan/SI/sink/BarStream6.json",
-          "value": "/home/sahan/SI/sink/BarStream6.json"
-        }
-      },
-      "sparkline": {
-        "fillColor": "rgba(255, 135, 0, 0.52)",
-        "full": true,
-        "lineColor": "#f47b20",
-        "show": true,
-        "ymax": null,
-        "ymin": null
-      },
-      "tableColumn": "",
-      "targets": [
-        {
-          "expr": "rate(siddhi_file_sink_event_count{app_name=~\"$app\", file_path=~\"$sink\"}[1m])",
-          "instant": false,
-          "legendFormat": "",
-          "refId": "A"
-        }
-      ],
-      "thresholds": "",
-      "timeFrom": null,
-      "timeShift": null,
-      "title": "Events Per Sec",
-      "type": "singlestat",
-      "valueFontSize": "80%",
-      "valueMaps": [
-        {
-          "op": "=",
-          "text": "0",
-          "value": "null"
-        },
-        {
-          "op": "=",
-          "text": "",
-          "value": ""
-        }
-      ],
-      "valueName": "current"
-    },
-    {
-      "cacheTimeout": null,
-      "colorBackground": true,
-      "colorValue": false,
-      "colors": [
-        "#212a32",
-        "rgba(237, 129, 40, 0.89)",
-        "#d44a3a"
-      ],
-      "datasource": null,
+      "datasource": "Prometheus",
+      "decimals": null,
+      "description": "Number of errors occured while capturing the data from the table.",
       "format": "none",
       "gauge": {
         "maxValue": 100,
@@ -738,10 +400,275 @@
         "thresholdMarkers": true
       },
       "gridPos": {
+        "h": 4,
+        "w": 4,
+        "x": 20,
+        "y": 1
+      },
+      "id": 31,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "options": {},
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false,
+        "ymax": null,
+        "ymin": null
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "expr": "siddhi_store_rdbms_total_error_count{app=~\"$app\", db_url=~\"$db_url\"}",
+          "instant": true,
+          "refId": "A"
+        }
+      ],
+      "thresholds": "",
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Error Count",
+      "type": "singlestat",
+      "valueFontSize": "50%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "-",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": false,
+      "colorValue": false,
+      "colors": [
+        "#299c46",
+        "rgba(237, 129, 40, 0.89)",
+        "#d44a3a"
+      ],
+      "datasource": "Prometheus",
+      "decimals": null,
+      "format": "dateTimeFromNow",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
         "h": 2,
-        "w": 3,
-        "x": 11,
-        "y": 5
+        "w": 5,
+        "x": 5,
+        "y": 3
+      },
+      "id": 8,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "options": {},
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false,
+        "ymax": null,
+        "ymin": null
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "expr": "siddhi_store_rdbms_last_insert_time{app=~\"$app\", db_url=~\"$db_url\"}",
+          "instant": true,
+          "refId": "A"
+        }
+      ],
+      "thresholds": "",
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Last Insert",
+      "type": "singlestat",
+      "valueFontSize": "50%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "-",
+          "value": "null"
+        },
+        {
+          "op": "=",
+          "text": "-",
+          "value": "0"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": false,
+      "colorValue": false,
+      "colors": [
+        "#299c46",
+        "rgba(237, 129, 40, 0.89)",
+        "#d44a3a"
+      ],
+      "datasource": "Prometheus",
+      "decimals": null,
+      "format": "dateTimeFromNow",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 2,
+        "w": 5,
+        "x": 10,
+        "y": 3
+      },
+      "id": 12,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "options": {},
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false,
+        "ymax": null,
+        "ymin": null
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "expr": "siddhi_store_rdbms_last_update_time{app=~\"$app\", db_url=~\"$db_url\"}",
+          "instant": true,
+          "refId": "A"
+        }
+      ],
+      "thresholds": "",
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Last Update",
+      "type": "singlestat",
+      "valueFontSize": "50%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "-",
+          "value": "null"
+        },
+        {
+          "op": "=",
+          "text": "-",
+          "value": "0"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": false,
+      "colorValue": false,
+      "colors": [
+        "#299c46",
+        "rgba(237, 129, 40, 0.89)",
+        "#d44a3a"
+      ],
+      "datasource": "Prometheus",
+      "decimals": null,
+      "format": "dateTimeFromNow",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 2,
+        "w": 5,
+        "x": 15,
+        "y": 3
       },
       "id": 16,
       "interval": null,
@@ -772,55 +699,53 @@
           "to": "null"
         }
       ],
-      "scopedVars": {
-        "sink": {
-          "selected": false,
-          "text": "/home/sahan/SI/sink/BarStream6.json",
-          "value": "/home/sahan/SI/sink/BarStream6.json"
-        }
-      },
       "sparkline": {
-        "fillColor": "rgba(255, 135, 0, 0.52)",
+        "fillColor": "rgba(31, 118, 189, 0.18)",
         "full": false,
-        "lineColor": "#f47b20",
-        "show": true,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false,
         "ymax": null,
         "ymin": null
       },
       "tableColumn": "",
       "targets": [
         {
-          "expr": "siddhi_file_sink_event_count{app_name=~\"$app\", file_path=~\"$sink\"}",
+          "expr": "siddhi_store_rdbms_last_delete_time{app=~\"$app\", db_url=~\"$db_url\"}",
           "instant": true,
-          "legendFormat": "",
           "refId": "A"
         }
       ],
       "thresholds": "",
       "timeFrom": null,
       "timeShift": null,
-      "title": "Successful Writes",
+      "title": "Last Delete",
       "type": "singlestat",
       "valueFontSize": "50%",
       "valueMaps": [
         {
           "op": "=",
-          "text": "0",
+          "text": "-",
           "value": "null"
+        },
+        {
+          "op": "=",
+          "text": "-",
+          "value": "0"
         }
       ],
       "valueName": "current"
     },
     {
       "cacheTimeout": null,
-      "colorBackground": true,
-      "colorValue": false,
+      "colorBackground": false,
+      "colorValue": true,
       "colors": [
-        "#212a32",
-        "rgba(237, 129, 40, 0.89)",
+        "#37872D",
+        "#FF780A",
         "#d44a3a"
       ],
       "datasource": null,
+      "description": "`Connected` - The connection with the table has been successfully made, but no changes have been made to the table.      \n `Processing` - The table is currently doing some operations(Insert, Update, Delete)\n`Idle` - The table is currently not doing any operations",
       "format": "none",
       "gauge": {
         "maxValue": 100,
@@ -830,9 +755,298 @@
         "thresholdMarkers": true
       },
       "gridPos": {
-        "h": 2,
-        "w": 3,
-        "x": 14,
+        "h": 4,
+        "w": 6,
+        "x": 0,
+        "y": 5
+      },
+      "id": 20,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "options": {},
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false,
+        "ymax": null,
+        "ymin": null
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "expr": "siddhi_store_rdbms_db_status{app=~\"$app\", db_url=~\"$db_url\"}",
+          "format": "time_series",
+          "instant": true,
+          "legendFormat": "",
+          "refId": "A"
+        }
+      ],
+      "thresholds": "1,2",
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Table Status",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "-",
+          "value": "null"
+        },
+        {
+          "op": "=",
+          "text": "Processing",
+          "value": "0"
+        },
+        {
+          "op": "=",
+          "text": "Idle",
+          "value": "1"
+        },
+        {
+          "op": "=",
+          "text": "Error",
+          "value": "2"
+        },
+        {
+          "op": "=",
+          "text": "Connected",
+          "value": "-1"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": false,
+      "colorValue": false,
+      "colors": [
+        "#299c46",
+        "rgba(237, 129, 40, 0.89)",
+        "#d44a3a"
+      ],
+      "datasource": "Prometheus",
+      "decimals": 0,
+      "description": "This shows how long the table stays in the `Idle` mode(Without doing any CUD operations)",
+      "format": "ms",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 6,
+        "x": 6,
+        "y": 5
+      },
+      "id": 22,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "options": {},
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false,
+        "ymax": null,
+        "ymin": null
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "expr": "siddhi_store_rdbms_idle_time{app=~\"$app\", db_url=~\"$db_url\"}",
+          "instant": true,
+          "refId": "A"
+        }
+      ],
+      "thresholds": "",
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Idle Time",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        },
+        {
+          "op": "=",
+          "text": "-",
+          "value": "0"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": false,
+      "colorValue": false,
+      "colors": [
+        "#299c46",
+        "rgba(237, 129, 40, 0.89)",
+        "#d44a3a"
+      ],
+      "datasource": "Prometheus",
+      "decimals": 0,
+      "description": "When the `Table Status` becomes `Processing` this shows how long the table stays in the processing mode",
+      "format": "ms",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 6,
+        "x": 12,
+        "y": 5
+      },
+      "id": 27,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "options": {},
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false,
+        "ymax": null,
+        "ymin": null
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "expr": "siddhi_store_rdbms_processing_time{app=~\"$app\", db_url=~\"$db_url\"}",
+          "instant": true,
+          "refId": "A"
+        }
+      ],
+      "thresholds": "",
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Process Time",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        },
+        {
+          "op": "=",
+          "text": "-",
+          "value": "0"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": false,
+      "colorValue": false,
+      "colors": [
+        "#299c46",
+        "rgba(237, 129, 40, 0.89)",
+        "#d44a3a"
+      ],
+      "datasource": "Prometheus",
+      "decimals": null,
+      "format": "dateTimeAsUS",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 6,
+        "x": 18,
         "y": 5
       },
       "id": 18,
@@ -864,232 +1078,45 @@
           "to": "null"
         }
       ],
-      "scopedVars": {
-        "sink": {
-          "selected": false,
-          "text": "/home/sahan/SI/sink/BarStream6.json",
-          "value": "/home/sahan/SI/sink/BarStream6.json"
-        }
-      },
       "sparkline": {
-        "fillColor": "rgba(255, 135, 0, 0.52)",
+        "fillColor": "rgba(31, 118, 189, 0.18)",
         "full": false,
-        "lineColor": "#f47b20",
-        "show": true,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false,
         "ymax": null,
         "ymin": null
       },
       "tableColumn": "",
       "targets": [
         {
-          "expr": "siddhi_file_sink_dropped_events{app_name=~\"$app\", file_path=~\"$sink\"}",
+          "expr": "siddhi_store_rdbms_last_change_time{app=~\"$app\", db_url=~\"$db_url\"}",
           "instant": true,
-          "legendFormat": "",
           "refId": "A"
         }
       ],
       "thresholds": "",
       "timeFrom": null,
       "timeShift": null,
-      "title": "Dropped Events",
+      "title": "Last Change Occured At",
       "type": "singlestat",
-      "valueFontSize": "50%",
+      "valueFontSize": "80%",
       "valueMaps": [
         {
           "op": "=",
-          "text": "0",
+          "text": "N/A",
           "value": "null"
-        }
-      ],
-      "valueName": "current"
-    },
-    {
-      "cacheTimeout": null,
-      "colorBackground": true,
-      "colorValue": false,
-      "colors": [
-        "rgba(41, 44, 46, 0.71)",
-        "rgba(237, 129, 40, 0.89)",
-        "#d44a3a"
-      ],
-      "datasource": null,
-      "format": "dateTimeAsUS",
-      "gauge": {
-        "maxValue": 100,
-        "minValue": 0,
-        "show": false,
-        "thresholdLabels": false,
-        "thresholdMarkers": true
-      },
-      "gridPos": {
-        "h": 2,
-        "w": 3,
-        "x": 11,
-        "y": 7
-      },
-      "id": 22,
-      "interval": null,
-      "links": [],
-      "mappingType": 1,
-      "mappingTypes": [
-        {
-          "name": "value to text",
-          "value": 1
         },
         {
-          "name": "range to text",
-          "value": 2
-        }
-      ],
-      "maxDataPoints": 100,
-      "nullPointMode": "connected",
-      "nullText": null,
-      "options": {},
-      "postfix": "",
-      "postfixFontSize": "50%",
-      "prefix": "",
-      "prefixFontSize": "50%",
-      "rangeMaps": [
-        {
-          "from": "null",
-          "text": "N/A",
-          "to": "null"
-        }
-      ],
-      "scopedVars": {
-        "sink": {
-          "selected": false,
-          "text": "/home/sahan/SI/sink/BarStream6.json",
-          "value": "/home/sahan/SI/sink/BarStream6.json"
-        }
-      },
-      "sparkline": {
-        "fillColor": "rgba(122, 77, 11, 0.43)",
-        "full": false,
-        "lineColor": "#f47b20",
-        "show": false,
-        "ymax": null,
-        "ymin": null
-      },
-      "tableColumn": "",
-      "targets": [
-        {
-          "expr": "siddhi_file_sink_last_published_time{app_name=~\"$app\", file_path=~\"$sink\"}",
-          "instant": true,
-          "legendFormat": "",
-          "refId": "A"
-        }
-      ],
-      "thresholds": "",
-      "timeFrom": null,
-      "timeShift": null,
-      "title": "Last Event Published at",
-      "type": "singlestat",
-      "valueFontSize": "50%",
-      "valueMaps": [
-        {
           "op": "=",
-          "text": "0",
-          "value": "null"
-        }
-      ],
-      "valueName": "current"
-    },
-    {
-      "cacheTimeout": null,
-      "colorBackground": true,
-      "colorValue": false,
-      "colors": [
-        "rgba(41, 44, 46, 0.71)",
-        "rgba(237, 129, 40, 0.89)",
-        "#d44a3a"
-      ],
-      "datasource": null,
-      "format": "ms",
-      "gauge": {
-        "maxValue": 100,
-        "minValue": 0,
-        "show": false,
-        "thresholdLabels": false,
-        "thresholdMarkers": true
-      },
-      "gridPos": {
-        "h": 2,
-        "w": 3,
-        "x": 14,
-        "y": 7
-      },
-      "id": 20,
-      "interval": null,
-      "links": [],
-      "mappingType": 1,
-      "mappingTypes": [
-        {
-          "name": "value to text",
-          "value": 1
-        },
-        {
-          "name": "range to text",
-          "value": 2
-        }
-      ],
-      "maxDataPoints": 100,
-      "nullPointMode": "connected",
-      "nullText": null,
-      "options": {},
-      "postfix": "",
-      "postfixFontSize": "50%",
-      "prefix": "",
-      "prefixFontSize": "50%",
-      "rangeMaps": [
-        {
-          "from": "null",
-          "text": "N/A",
-          "to": "null"
-        }
-      ],
-      "scopedVars": {
-        "sink": {
-          "selected": false,
-          "text": "/home/sahan/SI/sink/BarStream6.json",
-          "value": "/home/sahan/SI/sink/BarStream6.json"
-        }
-      },
-      "sparkline": {
-        "fillColor": "rgba(122, 77, 11, 0.43)",
-        "full": false,
-        "lineColor": "#f47b20",
-        "show": false,
-        "ymax": null,
-        "ymin": null
-      },
-      "tableColumn": "",
-      "targets": [
-        {
-          "expr": "siddhi_file_sink_elapsed_time{app_name=~\"$app\", file_path=~\"$sink\"}",
-          "instant": true,
-          "legendFormat": "",
-          "refId": "A"
-        }
-      ],
-      "thresholds": "",
-      "timeFrom": null,
-      "timeShift": null,
-      "title": "Elapse Time",
-      "type": "singlestat",
-      "valueFontSize": "50%",
-      "valueMaps": [
-        {
-          "op": "=",
-          "text": "0",
-          "value": "null"
+          "text": "-",
+          "value": "0"
         }
       ],
       "valueName": "current"
     },
     {
       "aliasColors": {
-        "Events": "#f47b20"
+        "Events per min": "rgb(236, 124, 36)"
       },
       "bars": false,
       "dashLength": 10,
@@ -1099,28 +1126,29 @@
       "fill": 3,
       "fillGradient": 10,
       "gridPos": {
-        "h": 8,
+        "h": 13,
         "w": 24,
         "x": 0,
         "y": 9
       },
       "hiddenSeries": false,
-      "id": 26,
+      "id": 24,
+      "interval": "1m",
       "legend": {
         "alignAsTable": true,
         "avg": true,
-        "current": false,
+        "current": true,
         "hideEmpty": false,
         "hideZero": false,
         "max": true,
-        "min": true,
-        "rightSide": true,
+        "min": false,
+        "rightSide": false,
         "show": true,
-        "total": false,
+        "total": true,
         "values": true
       },
       "lines": true,
-      "linewidth": 1,
+      "linewidth": 2,
       "nullPointMode": "null",
       "options": {
         "dataLinks": []
@@ -1129,31 +1157,44 @@
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
-      "scopedVars": {
-        "sink": {
-          "selected": false,
-          "text": "/home/sahan/SI/sink/BarStream6.json",
-          "value": "/home/sahan/SI/sink/BarStream6.json"
-        }
-      },
       "seriesOverrides": [],
       "spaceLength": 10,
       "stack": false,
       "steppedLine": false,
       "targets": [
         {
-          "expr": "rate(siddhi_file_sink_event_count{file_path=~\"$sink\"}[1m])",
+          "expr": "increase(siddhi_store_rdbms_insert_rows_count{app=~\"$app\", db_url=~\"$db_url\"}[1m])",
+          "format": "time_series",
           "instant": false,
+          "interval": "",
           "intervalFactor": 1,
-          "legendFormat": "Events",
+          "legendFormat": "Insert",
+          "refId": "B"
+        },
+        {
+          "expr": "increase(siddhi_store_rdbms_update_rows_count{app=~\"$app\", db_url=~\"$db_url\"}[1m])",
+          "format": "time_series",
+          "instant": false,
+          "interval": "",
+          "intervalFactor": 1,
+          "legendFormat": "Updates",
           "refId": "A"
+        },
+        {
+          "expr": "increase(siddhi_store_rdbms_delete_rows_count{app=~\"$app\", db_url=~\"$db_url\"}[1m])",
+          "format": "time_series",
+          "instant": false,
+          "interval": "",
+          "intervalFactor": 1,
+          "legendFormat": "Delete",
+          "refId": "C"
         }
       ],
       "thresholds": [],
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "Events/Sec",
+      "title": "Total Changes per Min",
       "tooltip": {
         "shared": true,
         "sort": 0,
@@ -1169,6 +1210,7 @@
       },
       "yaxes": [
         {
+          "decimals": null,
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -1191,7 +1233,7 @@
       }
     }
   ],
-  "refresh": false,
+  "refresh": "5s",
   "schemaVersion": 21,
   "style": "dark",
   "tags": [],
@@ -1200,22 +1242,24 @@
       {
         "allValue": null,
         "current": {
-          "text": "TestSink1",
-          "value": "TestSink1"
+          "isNone": true,
+          "selected": false,
+          "text": "None",
+          "value": ""
         },
         "datasource": "Prometheus",
-        "definition": "label_values(siddhi_file_apps, app_name)",
-        "hide": 2,
+        "definition": "label_values(siddhi_store_rdbms_apps, app)",
+        "hide": 0,
         "includeAll": false,
         "label": "App Name",
         "multi": false,
         "name": "app",
         "options": [],
-        "query": "label_values(siddhi_file_apps, app_name)",
+        "query": "label_values(siddhi_store_rdbms_apps, app)",
         "refresh": 1,
         "regex": "",
         "skipUrlSync": false,
-        "sort": 0,
+        "sort": 1,
         "tagValuesQuery": "",
         "tags": [],
         "tagsQuery": "",
@@ -1225,24 +1269,23 @@
       {
         "allValue": null,
         "current": {
+          "selected": false,
           "text": "All",
-          "value": [
-            "$__all"
-          ]
+          "value": "$__all"
         },
         "datasource": "Prometheus",
-        "definition": "label_values(siddhi_file_sink_event_count{app_name=~\"$app\"}, file_path)",
+        "definition": "label_values(siddhi_store_rdbms_total_writes{app=~\"$app\"}, db_url)",
         "hide": 0,
         "includeAll": true,
-        "label": "Files",
+        "label": "Database URL",
         "multi": true,
-        "name": "sink",
+        "name": "db_url",
         "options": [],
-        "query": "label_values(siddhi_file_sink_event_count{app_name=~\"$app\"}, file_path)",
+        "query": "label_values(siddhi_store_rdbms_total_writes{app=~\"$app\"}, db_url)",
         "refresh": 1,
-        "regex": "/\\./i",
+        "regex": "",
         "skipUrlSync": false,
-        "sort": 0,
+        "sort": 1,
         "tagValuesQuery": "",
         "tags": [],
         "tagsQuery": "",
@@ -1252,7 +1295,7 @@
     ]
   },
   "time": {
-    "from": "now-5m",
+    "from": "now-30m",
     "to": "now"
   },
   "timepicker": {
@@ -1270,7 +1313,7 @@
     ]
   },
   "timezone": "",
-  "title": "WSO2 Streaming Integration - File Sink Statistics",
-  "uid": "RMcQSPuZk",
-  "version": 21
+  "title": "WSO2 Streaming Integrator - RDBMS Table Statistics",
+  "uid": "sXoDGygMk",
+  "version": 37
 }
