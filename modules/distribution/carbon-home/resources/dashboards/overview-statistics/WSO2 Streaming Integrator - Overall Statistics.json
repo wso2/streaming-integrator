@@ -22,7 +22,7 @@
       "icon": "dashboard",
       "tags": [],
       "targetBlank": true,
-      "title": "WSO2 Streaming Integration App Statistics",
+      "title": "WSO2 Streaming Integrator App Statistics",
       "tooltip": "",
       "type": "link",
       "url": "/d/JrLwmmmGz/wso2-streaming-app-statistics?orgId=1&from=now-30m&to=now&refresh=5s"
@@ -496,7 +496,7 @@
     "wso2",
     "prometheus",
     "siddhi",
-    "streaming-integration"
+    "streaming-integrator"
   ],
   "templating": {
     "list": [
@@ -548,7 +548,7 @@
     ]
   },
   "timezone": "",
-  "title": "WSO2 Streaming Integration Overall Statistics",
+  "title": "WSO2 Streaming Integrator Overall Statistics",
   "uid": "92VL7ekMk",
   "version": 42
 }

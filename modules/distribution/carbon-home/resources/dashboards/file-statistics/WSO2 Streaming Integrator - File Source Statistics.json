@@ -21,7 +21,7 @@
     {
       "icon": "dashboard",
       "tags": [],
-      "title": "WSO2 Streaming Integration - File Statistics",
+      "title": "WSO2 Streaming Integrator - File Statistics",
       "type": "link",
       "url": "/d/XURMQjsZk/siddhi-io-file-overview?orgId=1&var_app=$app&refresh=5s"
     }
@@ -1560,7 +1560,7 @@
     ]
   },
   "timezone": "",
-  "title": "WSO2 Streaming Integration - File Source Statistics",
+  "title": "WSO2 Streaming Integrator - File Source Statistics",
   "uid": "dTYbaauWk",
   "version": 32
 }

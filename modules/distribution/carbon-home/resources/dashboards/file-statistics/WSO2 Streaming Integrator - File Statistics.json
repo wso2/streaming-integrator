@@ -22,7 +22,7 @@
       "icon": "dashboard",
       "tags": [],
       "targetBlank": true,
-      "title": "WSO2 Streaming Integration - File Source Statistics",
+      "title": "WSO2 Streaming Integrator - File Source Statistics",
       "type": "link",
       "url": "/d/dTYbaauWk/siddhi-io-file-source?orgId=1&var-app=$app&var-source=All&from=now-30m&to=now&refresh=5s"
     },
@@ -30,7 +30,7 @@
       "icon": "dashboard",
       "tags": [],
       "targetBlank": true,
-      "title": "WSO2 Streaming Integration - File Sink Statistics",
+      "title": "WSO2 Streaming Integrator - File Sink Statistics",
       "type": "link",
       "url": "/d/RMcQSPuZk/siddhi-io-file-sink?orgId=1&var-app=$app&refresh=5s&var-sink=All"
     }
@@ -3306,7 +3306,7 @@
     ]
   },
   "timezone": "",
-  "title": "WSO2 Streaming Integration - File Statistics",
+  "title": "WSO2 Streaming Integrator - File Statistics",
   "uid": "XURMQjsZk",
   "version": 358
 }

@@ -22,9 +22,9 @@
       "icon": "dashboard",
       "tags": [],
       "targetBlank": true,
-      "title": "WSO2 Streaming Integration - RDBMS Table Statistics",
+      "title": "WSO2 Streaming Integrator - RDBMS Table Statistics",
       "type": "link",
-      "url": "/d/sXoDGygMk/wso2-streaming-integration-rdbms-table-statistics?orgId=1&var-app=$app&var-db_url=All&from=now-30m&to=now&refresh=5s"
+      "url": "/d/sXoDGygMk/wso2-streaming-integrator-rdbms-table-statistics?orgId=1&var-app=$app&var-db_url=All&from=now-30m&to=now&refresh=5s"
     }
   ],
   "panels": [
@@ -650,7 +650,7 @@
           "link": true,
           "linkTargetBlank": true,
           "linkTooltip": "$__cell_5",
-          "linkUrl": "/d/sXoDGygMk/wso2-streaming-integration-rdbms-table-statistics?orgId=1&var-app=$app&var-db_url=$__cell_5&from=now-30m&to=now&refresh=5s",
+          "linkUrl": "/d/sXoDGygMk/wso2-streaming-integrator-rdbms-table-statistics?orgId=1&var-app=$app&var-db_url=$__cell_5&from=now-30m&to=now&refresh=5s",
           "mappingType": 1,
           "pattern": "D_tablename",
           "thresholds": [],
@@ -780,7 +780,7 @@
   "tags": [
     "wso2",
     "RDBMS",
-    "streaming-integration"
+    "streaming-integrator"
   ],
   "templating": {
     "list": [
@@ -832,7 +832,7 @@
     ]
   },
   "timezone": "",
-  "title": "WSO2 Streaming Integration - RDBMS Statistics",
+  "title": "WSO2 Streaming Integrator - RDBMS Statistics",
   "uid": "3tPjCPgMz",
   "version": 36
 }

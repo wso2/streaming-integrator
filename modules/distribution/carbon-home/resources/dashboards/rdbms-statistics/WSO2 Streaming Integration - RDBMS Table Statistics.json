@@ -21,9 +21,9 @@
     {
       "icon": "dashboard",
       "tags": [],
-      "title": "WSO2 Streaming Integration - RDBMS Statistics",
+      "title": "WSO2 Streaming Integrator - RDBMS Statistics",
       "type": "link",
-      "url": "/d/3tPjCPgMz/wso2-streaming-integration-rdbms-statistic?orgId=1&var-app=$app&refresh=5s&from=now-30m&to=now"
+      "url": "/d/3tPjCPgMz/wso2-streaming-integrator-rdbms-statistic?orgId=1&var-app=$app&refresh=5s&from=now-30m&to=now"
     }
   ],
   "panels": [
@@ -1313,7 +1313,7 @@
     ]
   },
   "timezone": "",
-  "title": "WSO2 Streaming Integration - RDBMS Table Statistics",
+  "title": "WSO2 Streaming Integrator - RDBMS Table Statistics",
   "uid": "sXoDGygMk",
   "version": 37
 }

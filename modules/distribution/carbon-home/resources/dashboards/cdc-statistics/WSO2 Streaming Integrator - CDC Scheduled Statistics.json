@@ -21,9 +21,9 @@
     {
       "icon": "dashboard",
       "tags": [],
-      "title": "WSO2 Streaming Integration - CDC Statistics",
+      "title": "WSO2 Streaming Integrator - CDC Statistics",
       "type": "link",
-      "url": "/d/_MLjsAqWz/wso2-streaming-integration-cdc-statistics?orgId=1&var-app=$app&refresh=5s"
+      "url": "/d/_MLjsAqWz/wso2-streaming-integrator-cdc-statistics?orgId=1&var-app=$app&refresh=5s"
     }
   ],
   "panels": [
@@ -898,7 +898,7 @@
     ]
   },
   "timezone": "",
-  "title": "WSO2 Streaming Integration - CDC Scheduled Statistics",
+  "title": "WSO2 Streaming Integrator - CDC Scheduled Statistics",
   "uid": "6quI2aqZz",
   "version": 43
 }
