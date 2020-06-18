@@ -413,6 +413,12 @@
                                     <version>${siddhi.map.xml.version}</version>
                                     <type>jar</type>
                                 </artifactItem>
+                                <dependency>
+                                    <groupId>io.siddhi.extension.map.avro</groupId>
+                                    <artifactId>siddhi-map-avro</artifactId>
+                                    <version>${siddhi.map.avro.version}</version>
+                                    <type>jar</type>
+                                </dependency>
                                 <artifactItem>
                                     <groupId>io.siddhi.extension.map.json</groupId>
                                     <artifactId>siddhi-map-json</artifactId>
