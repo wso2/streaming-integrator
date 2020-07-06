@@ -307,6 +307,23 @@ state.persistence:
   config:
     location: siddhi-app-persistence
 
+  # Siddhi Error Store Configuration
+error.store:
+  enabled: false
+
+  # Size of the buffer which is used in publishing erroneous events to the error store. Must be a power of 2.
+  bufferSize: 1024
+
+  # Whether to drop erroneous events when the buffer is full.
+  dropWhenBufferFull: true
+
+  # Class that has the implementation of the error store.
+  errorStore: org.wso2.carbon.streaming.integrator.core.siddhi.error.handler.DBErrorStore
+
+  config:
+    datasource: WSO2_CARBON_DB
+    table: SIDDHI_ERROR_STORE_TABLE
+
   # Secure Vault Configuration
 wso2.securevault:
   secretRepository:

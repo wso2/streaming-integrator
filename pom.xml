@@ -708,6 +708,19 @@
                 <version>${forgetme.tool.version}</version>
             </dependency>
 
+            <!-- Siddhi Error Handler -->
+            <dependency>
+                <groupId>org.wso2.carbon.analytics</groupId>
+                <artifactId>org.wso2.carbon.siddhi.error.handler.core</artifactId>
+                <version>${carbon.analytics.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.wso2.carbon.analytics</groupId>
+                <artifactId>org.wso2.carbon.siddhi.error.handler.core.feature</artifactId>
+                <version>${carbon.analytics.version}</version>
+                <type>zip</type>
+            </dependency>
+
             <!-- Extension Installer -->
             <dependency>
                 <groupId>org.wso2.carbon.analytics</groupId>

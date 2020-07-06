@@ -260,6 +260,13 @@
             <artifactId>org.wso2.carbon.siddhi.extensions.installer.core.feature</artifactId>
             <type>zip</type>
         </dependency>
+
+        <!-- Siddhi Error Handler -->
+        <dependency>
+            <groupId>org.wso2.carbon.analytics</groupId>
+            <artifactId>org.wso2.carbon.siddhi.error.handler.core.feature</artifactId>
+            <type>zip</type>
+        </dependency>
     </dependencies>
 
     <build>
@@ -756,6 +763,12 @@
                                     <id>org.wso2.carbon.siddhi.extensions.installer.core.feature</id>
                                     <version>${carbon.analytics.version}</version>
                                 </feature>
+
+                                <!-- Siddhi Error Handler -->
+                                <feature>
+                                    <id>org.wso2.carbon.siddhi.error.handler.core.feature</id>
+                                    <version>${carbon.analytics.version}</version>
+                                </feature>
                             </features>
                         </configuration>
                     </execution>
@@ -967,6 +980,11 @@
                                 <!-- Extension Installer -->
                                 <feature>
                                     <id>org.wso2.carbon.siddhi.extensions.installer.core.feature.group</id>
+                                    <version>${carbon.analytics.version}</version>
+                                </feature>
+                                <!-- Siddhi Error Handler -->
+                                <feature>
+                                    <id>org.wso2.carbon.siddhi.error.handler.core.feature.group</id>
                                     <version>${carbon.analytics.version}</version>
                                 </feature>
                             </features>
