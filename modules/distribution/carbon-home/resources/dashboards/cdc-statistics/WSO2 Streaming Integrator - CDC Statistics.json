@@ -763,7 +763,7 @@
           "expr": "increase(siddhi_cdc_source_polling_mode_event_count{app=~\"$app\"}[$__interval])",
           "instant": false,
           "intervalFactor": 1,
-          "legendFormat": "{{tablename}}",
+          "legendFormat": "{{D_tablename}}",
           "refId": "B"
         }
       ],
