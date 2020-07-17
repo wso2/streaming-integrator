@@ -4,7 +4,7 @@ In order to use these dashboards with grafana you have to follow these instructi
 
 ## 1. Configuring Prometheus Reporter.  
 To enable statistics for the Prometheus Reporter, add the following configuration to deployment.yaml
-1. Navigate to `<WSO2_SI_HOME>/conf/runner/deployment.yaml`.
+1. Navigate to `<WSO2_SI_HOME>/conf/server/deployment.yaml`.
 2. Add following Configurations,
     ````
     wso2.metrics:
@@ -50,24 +50,24 @@ the Siddhi application name in the Siddhi file as shown in below.
 3. Add following configurations under the `scrape_configs:`  
     ````
     scrape_configs:
-      - job_name: 'prometheus'
+      - job_name: 'wso2'
         static_configs:
         - targets: ['localhost:9005']
     ````  
 4. Start the prometheus server by executing following command in the terminal `./prometheus`
 
-## 4. Start & Configure the grafana Server.
-1. Download grafana from the following URL  https://grafana.com/grafana/download  
+## 4. Start & Configure the Grafana Server.
+1. Download Grafana from the following URL  https://grafana.com/grafana/download  
 2. Extract the downloaded file and Navigate to grafana directory.  
 3. Issue following command in the console `bin/grafana-server`.  
 4. Navigate to grafana home with following URL `localhost:3000`.
-5. Then navigate `Create you first data source` and select `Prometheus`.
+5. Then navigate `Create your first data source` and select `Prometheus`.
 6. Then update the configurations as shown in below,    
 ![](./image-2.jpg)
 
 
-## 5. Load dashboards into grafana.
-Once you have login to the grafana follow these steps to import dashboards into grafana
+## 5. Load dashboards into Grafana.
+Once you have login to the Grafana follow these steps to import dashboards into Grafana
 
 1. Navigate to +(plus) icon at the left upper corner.  
 ![](./image-1.png)
