@@ -956,7 +956,7 @@
         <siddhi.io.file.version>2.0.10</siddhi.io.file.version>
         <siddhi.io.tcp.version>3.0.5</siddhi.io.tcp.version>
         <siddhi.io.email.version>2.0.6</siddhi.io.email.version>
-        <siddhi.io.kafka.version>5.0.8</siddhi.io.kafka.version>
+        <siddhi.io.kafka.version>5.0.9</siddhi.io.kafka.version>
         <siddhi.io.http.version>2.2.2</siddhi.io.http.version>
         <siddhi.io.websocket.version>3.0.1</siddhi.io.websocket.version>
         <siddhi.io.cdc.version>2.0.7</siddhi.io.cdc.version>
