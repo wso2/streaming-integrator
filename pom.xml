@@ -829,7 +829,7 @@
         </pluginManagement>
     </build>
     <properties>
-        <carbon.analytics.version>3.0.40</carbon.analytics.version>
+        <carbon.analytics.version>3.0.401/carbon.analytics.version>
         <siddhi.version>5.1.15</siddhi.version>
 
         <carbon.analytics-common.version>6.1.46</carbon.analytics-common.version>
