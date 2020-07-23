@@ -16,7 +16,7 @@ Name                                                                            
 _________________________________________________________________________________________________________________________________________________
 slf4j-api-1.7.12.jar                                                                                bundle         mit
 slf4j-log4j12-1.7.12.jar                                                                            bundle         mit
-org.wso2.carbon.siddhi.extensions.installer.cli-3.0.40.jar                                          bundle         apache2
+org.wso2.carbon.siddhi.extensions.installer.cli-3.0.41.jar                                          bundle         apache2
 log4j-1.2.17.jar                                                                                    bundle         apache2
 gson-2.8.5.jar                                                                                      bundle         apache2
 org.eclipse.osgi-3.10.2.v20150203-1939.jar                                                          bundle         epl1
@@ -59,7 +59,7 @@ org.eclipse.equinox.cm_1.1.200.v20160324-1850.jar                               
 javax.validation.api_1.1.0.Final.jar                                                                bundle         apache2
 org.wso2.carbon.analytics.idp.client_6.1.46.jar                                                     bundle         apache2
 org.eclipse.equinox.concurrent_1.1.0.v20130327-1442.jar                                             bundle         epl1
-org.wso2.carbon.streaming.integrator.common_3.0.40.jar                                              bundle         apache2
+org.wso2.carbon.streaming.integrator.common_3.0.41.jar                                              bundle         apache2
 javax.ws.rs-api_2.0.0.jar                                                                           bundle         cddl1
 org.eclipse.equinox.frameworkadmin.equinox_1.0.700.v20160102-2223.jar                               bundle         epl1
 tapestry-json_5.4.1.wso2v1.jar                                                                      bundle         apache2
@@ -73,11 +73,11 @@ org.wso2.carbon.config_2.1.16.jar                                               
 org.apache.felix.gogo.shell_0.10.0.v201212101605.jar                                                bundle         apache2
 org.wso2.carbon.cluster.coordinator.service_2.1.7.jar                                               bundle         apache2
 com.zaxxer.HikariCP_3.3.1.jar                                                                       bundle         apache2
-org.wso2.carbon.siddhi.error.handler.core_3.0.40.jar                                                bundle         apache2
+org.wso2.carbon.siddhi.error.handler.core_3.0.41.jar                                                bundle         apache2
 org.eclipse.equinox.common_3.8.0.v20160509-1230.jar                                                 bundle         epl1
 org.wso2.carbon.jndi_1.0.5.jar                                                                      bundle         apache2
 com.google.gson_2.2.4.jar                                                                           bundle         apache2
-org.wso2.carbon.siddhi.store.api.rest_3.0.40.jar                                                    bundle         apache2
+org.wso2.carbon.siddhi.store.api.rest_3.0.41.jar                                                    bundle         apache2
 org.wso2.carbon.databridge.receiver.binary_6.1.46.jar                                               bundle         apache2
 org.apache.ws.commons.axiom.axiom-impl_1.2.20.jar                                                   bundle         apache2
 h2_1.4.199.wso2v1.jar                                                                               bundle         apache2
@@ -91,12 +91,12 @@ msf4j-core_2.7.7.jar                                                            
 io.netty.codec-http2_4.1.34.Final.jar                                                               bundle         apache2
 okio_1.13.0.wso2v1.jar                                                                              bundle         apache2
 org.apache.commons.io_2.4.0.jar                                                                     bundle         apache2
-org.wso2.carbon.analytics.msf4j.interceptor.common_3.0.40.jar                                       bundle         apache2
+org.wso2.carbon.analytics.msf4j.interceptor.common_3.0.41.jar                                       bundle         apache2
 org.ops4j.pax.logging.pax-logging-api_1.10.0.jar                                                    bundle         apache2
 io.swagger.models_1.5.16.jar                                                                        bundle         apache2
 slf4j.log4j12_1.7.12.jar                                                                            bundle         mit
 io.dropwizard.metrics.jvm_3.2.5.jar                                                                 bundle         apache2
-org.wso2.carbon.siddhi.extensions.installer.core_3.0.40.jar                                         bundle         apache2
+org.wso2.carbon.siddhi.extensions.installer.core_3.0.41.jar                                         bundle         apache2
 org.wso2.carbon.databridge.commons_6.1.46.jar                                                       bundle         apache2
 com.fasterxml.jackson.core.jackson-core_2.9.8.jar                                                   bundle         apache2
 disruptor_3.4.2.wso2v1.jar                                                                          bundle         apache2
@@ -105,7 +105,7 @@ org.wso2.carbon.caching_1.1.3.jar                                               
 io.netty.common_4.1.34.Final.jar                                                                    bundle         apache2
 org.wso2.transport.http.netty_6.1.9.jar                                                             bundle         apache2
 jaxen_1.1.6.jar                                                                                     bundle         apache2
-org.wso2.siddhi.parser_3.0.40.jar                                                                   bundle         apache2
+org.wso2.siddhi.parser_3.0.41.jar                                                                   bundle         apache2
 org.wso2.carbon.secvault_5.0.13.jar                                                                 bundle         apache2
 javassist_3.19.0.GA.jar                                                                             bundle         apache2 + lgpl2 + mpl11
 org.apache.commons.lang3_3.4.0.jar                                                                  bundle         apache2
@@ -122,21 +122,21 @@ org.wso2.carbon.analytics.permissions_6.1.46.jar                                
 org.wso2.carbon.deployment.engine_5.2.1.jar                                                         bundle         apache2
 org.wso2.carbon.cluster.coordinator.commons_2.1.7.jar                                               bundle         apache2
 io.swagger.core_1.5.16.jar                                                                          bundle         apache2
-org.wso2.carbon.si.metrics.core_3.0.40.jar                                                          bundle         apache2
+org.wso2.carbon.si.metrics.core_3.0.41.jar                                                          bundle         apache2
 javax.servlet-api_3.1.0.jar                                                                         bundle         cddl1
 com.google.guava_20.0.0.jar                                                                         bundle         apache2
 commons-pool_1.5.6.wso2v1.jar                                                                       bundle         apache2
-org.wso2.carbon.streaming.integrator.core_3.0.40.jar                                                bundle         apache2
+org.wso2.carbon.streaming.integrator.core_3.0.41.jar                                                bundle         apache2
 antlr4-runtime_4.7.2.wso2v1.jar                                                                     bundle         bsd
-org.wso2.carbon.streaming.integrator.statistics_3.0.40.jar                                          bundle         apache2
+org.wso2.carbon.streaming.integrator.statistics_3.0.41.jar                                          bundle         apache2
 org.wso2.carbon.databridge.receiver.thrift_6.1.46.jar                                               bundle         apache2
 jaxrs-delegates_2.7.7.jar                                                                           bundle         apache2
 org.eclipse.equinox.frameworkadmin_2.0.300.v20160504-1450.jar                                       bundle         epl1
 quartz_2.1.1.wso2v1.jar                                                                             bundle         apache2
-org.wso2.carbon.permissions.rest.api_3.0.40.jar                                                     bundle         apache2
+org.wso2.carbon.permissions.rest.api_3.0.41.jar                                                     bundle         apache2
 siddhi-core_5.1.15.jar                                                                              bundle         apache2
 siddhi-annotations_5.1.15.jar                                                                       bundle         apache2
-org.wso2.carbon.si.coordination.listener_3.0.40.jar                                                 bundle         apache2
+org.wso2.carbon.si.coordination.listener_3.0.41.jar                                                 bundle         apache2
 com.fasterxml.jackson.core.jackson-databind_2.9.8.jar                                               bundle         apache2
 org.apache.servicemix.bundles.commons-beanutils_1.8.3.2.jar                                         bundle         apache2
 org.apache.ws.commons.axiom.axiom-api_1.2.20.jar                                                    bundle         apache2
@@ -164,7 +164,7 @@ io.swagger.annotations_1.5.16.jar                                               
 org.eclipse.equinox.util_1.0.500.v20130404-1337.jar                                                 bundle         epl1
 org.wso2.carbon.database.query.manager_6.1.46.jar                                                   bundle         apache2
 org.hdrhistogram.HdrHistogram_2.1.10.jar                                                            bundle         apache2
-org.wso2.carbon.health.check.core_3.0.40.jar                                                        bundle         apache2
+org.wso2.carbon.health.check.core_3.0.41.jar                                                        bundle         apache2
 org.wso2.carbon.databridge.commons.thrift_6.1.46.jar                                                bundle         apache2
 org.eclipse.equinox.ds_1.4.400.v20160226-2036.jar                                                   bundle         epl1
 io.netty.buffer_4.1.34.Final.jar                                                                    bundle         apache2
