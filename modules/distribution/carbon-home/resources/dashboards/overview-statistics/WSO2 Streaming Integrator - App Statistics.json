@@ -137,6 +137,7 @@
       },
       "hiddenSeries": false,
       "id": 10,
+      "interval": "1m",
       "legend": {
         "alignAsTable": true,
         "avg": true,
