@@ -22,7 +22,7 @@
     <parent>
         <groupId>org.wso2.ei</groupId>
         <artifactId>wso2-streaming-integrator-parent</artifactId>
-        <version>1.1.0-SNAPSHOT</version>
+        <version>1.1.1-SNAPSHOT</version>
         <relativePath>../../pom.xml</relativePath>
     </parent>
 
@@ -260,6 +260,13 @@
             <artifactId>org.wso2.carbon.siddhi.extensions.installer.core.feature</artifactId>
             <type>zip</type>
         </dependency>
+
+        <!-- Siddhi Error Handler -->
+        <dependency>
+            <groupId>org.wso2.carbon.analytics</groupId>
+            <artifactId>org.wso2.carbon.siddhi.error.handler.core.feature</artifactId>
+            <type>zip</type>
+        </dependency>
     </dependencies>
 
     <build>
@@ -353,6 +360,12 @@
                                     <groupId>io.siddhi.extension.execution.json</groupId>
                                     <artifactId>siddhi-execution-json</artifactId>
                                     <version>${siddhi.execution.json.version}</version>
+                                    <type>jar</type>
+                                </artifactItem>
+                                <artifactItem>
+                                    <groupId>io.siddhi.extension.execution.list</groupId>
+                                    <artifactId>siddhi-execution-list</artifactId>
+                                    <version>${siddhi.execution.list.version}</version>
                                     <type>jar</type>
                                 </artifactItem>
 
@@ -756,6 +769,12 @@
                                     <id>org.wso2.carbon.siddhi.extensions.installer.core.feature</id>
                                     <version>${carbon.analytics.version}</version>
                                 </feature>
+
+                                <!-- Siddhi Error Handler -->
+                                <feature>
+                                    <id>org.wso2.carbon.siddhi.error.handler.core.feature</id>
+                                    <version>${carbon.analytics.version}</version>
+                                </feature>
                             </features>
                         </configuration>
                     </execution>
@@ -967,6 +986,11 @@
                                 <!-- Extension Installer -->
                                 <feature>
                                     <id>org.wso2.carbon.siddhi.extensions.installer.core.feature.group</id>
+                                    <version>${carbon.analytics.version}</version>
+                                </feature>
+                                <!-- Siddhi Error Handler -->
+                                <feature>
+                                    <id>org.wso2.carbon.siddhi.error.handler.core.feature.group</id>
                                     <version>${carbon.analytics.version}</version>
                                 </feature>
                             </features>
