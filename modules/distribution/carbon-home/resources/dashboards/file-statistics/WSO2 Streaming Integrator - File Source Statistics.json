@@ -229,7 +229,7 @@
       "thresholds": "",
       "timeFrom": null,
       "timeShift": null,
-      "title": "Read Lines",
+      "title": "Total Lines",
       "type": "singlestat",
       "valueFontSize": "80%",
       "valueMaps": [
@@ -1494,7 +1494,7 @@
           "text": "None",
           "value": ""
         },
-        "datasource": "PrometheusGrafana",
+        "datasource": "Prometheus",
         "definition": "label_values(siddhi_file_apps, app)",
         "hide": 2,
         "includeAll": false,

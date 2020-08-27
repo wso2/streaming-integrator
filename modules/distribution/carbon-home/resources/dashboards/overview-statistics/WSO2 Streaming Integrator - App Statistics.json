@@ -1027,7 +1027,7 @@
           "refId": "E"
         },
         {
-          "expr": "sum(siddhi_file_source_dropped_events{ app=~\"$app\"} + (siddhi_file_source_event_count{app=~\"$app\"} - ignoring(file_name, mode, stream_name)siddhi_file_source_total_valid_events_count{app=~\"$app\"}) + siddhi_file_source_error_count{app=~\"$app\"}) by (file_path)",
+          "expr": "sum((siddhi_file_source_event_count{app=~\"$app\"} - ignoring(file_name, mode, stream_name)siddhi_file_source_total_valid_events_count{app=~\"$app\"}) + siddhi_file_source_error_count{app=~\"$app\"}) by (file_path)",
           "format": "table",
           "hide": false,
           "instant": true,
