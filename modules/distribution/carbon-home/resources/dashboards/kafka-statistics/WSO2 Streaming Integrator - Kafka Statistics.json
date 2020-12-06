@@ -16,7 +16,7 @@
   "gnetId": null,
   "graphTooltip": 0,
   "id": 9,
-  "iteration": 1607098963935,
+  "iteration": 1607258577236,
   "links": [
     {
       "icon": "dashboard",
@@ -114,7 +114,7 @@
       "tableColumn": "",
       "targets": [
         {
-          "expr": "siddhi_kafka_source_read_count_per_stream{app=~\"$app\"}",
+          "expr": "sum(siddhi_kafka_source_read_count_per_stream{app=~\"$app\"})",
           "instant": true,
           "refId": "A"
         }
@@ -179,7 +179,7 @@
       "targets": [
         {
           "expr": "sum(rate(siddhi_kafka_source_read_count_per_stream{app=~\"$app\"}[5m])) by (topic)",
-          "legendFormat": "Received Events",
+          "legendFormat": "{{topic}}",
           "refId": "B"
         }
       ],
@@ -439,7 +439,7 @@
             "rgba(50, 172, 45, 0.97)"
           ],
           "dateFormat": "YYYY-MM-DD HH:mm:ss",
-          "decimals": null,
+          "decimals": 2,
           "mappingType": 1,
           "pattern": "Value #B",
           "thresholds": [],
@@ -487,7 +487,7 @@
             "rgba(50, 172, 45, 0.97)"
           ],
           "dateFormat": "YYYY-MM-DD HH:mm:ss",
-          "decimals": null,
+          "decimals": 2,
           "mappingType": 1,
           "pattern": "Value #D",
           "thresholds": [],
@@ -848,7 +848,7 @@
       "colorBackground": false,
       "colorValue": true,
       "colors": [
-        "#d44a3a",
+        "#F2495C",
         "rgba(237, 129, 40, 0.89)",
         "#299c46"
       ],
@@ -908,7 +908,7 @@
       "tableColumn": "",
       "targets": [
         {
-          "expr": "sum(siddhi_kafka_sink_error_count_without_partition{app=~\"$app\"}) ",
+          "expr": "sum(siddhi_kafka_sink_error_count_without_partition{app=~\"$app\"}) or vector(0)",
           "format": "table",
           "instant": true,
           "refId": "B"
@@ -995,7 +995,7 @@
             "rgba(50, 172, 45, 0.97)"
           ],
           "dateFormat": "YYYY-MM-DD HH:mm:ss",
-          "decimals": null,
+          "decimals": 2,
           "mappingType": 1,
           "pattern": "Value #C",
           "thresholds": [],
@@ -1198,7 +1198,7 @@
     ]
   },
   "time": {
-    "from": "now-6h",
+    "from": "now-30m",
     "to": "now"
   },
   "timepicker": {
@@ -1218,5 +1218,5 @@
   "timezone": "",
   "title": "WSO2 Streaming Integrator - Kafka Statistics",
   "uid": "7wkYtntGz",
-  "version": 76
+  "version": 79
 }

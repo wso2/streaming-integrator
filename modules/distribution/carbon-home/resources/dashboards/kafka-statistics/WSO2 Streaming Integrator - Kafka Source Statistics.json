@@ -16,7 +16,7 @@
   "gnetId": null,
   "graphTooltip": 0,
   "id": 10,
-  "iteration": 1606843043824,
+  "iteration": 1607258663294,
   "links": [
     {
       "icon": "dashboard",
@@ -661,7 +661,7 @@
             "rgba(50, 172, 45, 0.97)"
           ],
           "dateFormat": "YYYY-MM-DD HH:mm:ss",
-          "decimals": null,
+          "decimals": 2,
           "mappingType": 1,
           "pattern": "Value #F",
           "thresholds": [],
@@ -842,5 +842,5 @@
   "timezone": "",
   "title": "WSO2 Streaming Integrator - Kafka Source Statistics",
   "uid": "nQiGWLpMz",
-  "version": 51
+  "version": 52
 }

@@ -16,7 +16,7 @@
   "gnetId": null,
   "graphTooltip": 0,
   "id": 12,
-  "iteration": 1607098189333,
+  "iteration": 1607258708489,
   "links": [
     {
       "icon": "dashboard",
@@ -122,7 +122,7 @@
       "fill": 0,
       "fillGradient": 0,
       "gridPos": {
-        "h": 9,
+        "h": 7,
         "w": 21,
         "x": 3,
         "y": 0
@@ -295,89 +295,6 @@
     {
       "cacheTimeout": null,
       "colorBackground": false,
-      "colorValue": false,
-      "colors": [
-        "#299c46",
-        "rgba(237, 129, 40, 0.89)",
-        "#d44a3a"
-      ],
-      "datasource": null,
-      "format": "none",
-      "gauge": {
-        "maxValue": 100,
-        "minValue": 0,
-        "show": false,
-        "thresholdLabels": false,
-        "thresholdMarkers": true
-      },
-      "gridPos": {
-        "h": 2,
-        "w": 3,
-        "x": 0,
-        "y": 5
-      },
-      "id": 12,
-      "interval": null,
-      "links": [],
-      "mappingType": 1,
-      "mappingTypes": [
-        {
-          "name": "value to text",
-          "value": 1
-        },
-        {
-          "name": "range to text",
-          "value": 2
-        }
-      ],
-      "maxDataPoints": 100,
-      "nullPointMode": "connected",
-      "nullText": null,
-      "options": {},
-      "postfix": "",
-      "postfixFontSize": "50%",
-      "prefix": "",
-      "prefixFontSize": "50%",
-      "rangeMaps": [
-        {
-          "from": "null",
-          "text": "N/A",
-          "to": "null"
-        }
-      ],
-      "sparkline": {
-        "fillColor": "rgba(31, 118, 189, 0.18)",
-        "full": false,
-        "lineColor": "rgb(31, 120, 193)",
-        "show": false,
-        "ymax": null,
-        "ymin": null
-      },
-      "tableColumn": "",
-      "targets": [
-        {
-          "expr": "siddhi_kafka_sink_current_offset",
-          "refId": "A"
-        }
-      ],
-      "thresholds": "",
-      "timeFrom": null,
-      "timeShift": null,
-      "title": "Last committed offset",
-      "type": "singlestat",
-      "valueFontSize": "50%",
-      "valueMaps": [
-        {
-          "op": "=",
-          "text": "N/A",
-          "value": "null"
-        }
-      ],
-      "valueName": "avg"
-    },
-    {
-      "cacheTimeout": null,
-      "colorBackground": false,
       "colorValue": true,
       "colors": [
         "#d44a3a",
@@ -398,7 +315,7 @@
         "h": 2,
         "w": 3,
         "x": 0,
-        "y": 7
+        "y": 5
       },
       "id": 10,
       "interval": null,
@@ -471,7 +388,7 @@
         "h": 8,
         "w": 24,
         "x": 0,
-        "y": 9
+        "y": 7
       },
       "hiddenSeries": false,
       "id": 14,
@@ -556,7 +473,7 @@
         "h": 12,
         "w": 24,
         "x": 0,
-        "y": 17
+        "y": 15
       },
       "id": 2,
       "options": {},
@@ -614,7 +531,7 @@
             "rgba(50, 172, 45, 0.97)"
           ],
           "dateFormat": "YYYY-MM-DD HH:mm:ss",
-          "decimals": null,
+          "decimals": 2,
           "mappingType": 1,
           "pattern": "Value #C",
           "thresholds": [],
@@ -852,10 +769,8 @@
       {
         "allValue": null,
         "current": {
-          "isNone": true,
-          "selected": false,
-          "text": "None",
-          "value": ""
+          "text": "BulkOrdersStream",
+          "value": "BulkOrdersStream"
         },
         "datasource": "Prometheus",
         "definition": "label_values(siddhi_kafka_sink_write_count_per_stream{app=~\"$app\"}, stream_id)",
@@ -899,5 +814,5 @@
   "timezone": "",
   "title": "WSO2 Streaming Integrator - Kafka Sink Statistics",
   "uid": "nQiGWLpM1",
-  "version": 15
+  "version": 17
 }
