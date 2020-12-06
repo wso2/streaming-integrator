@@ -15,8 +15,8 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 2,
-  "id": 15,
-  "iteration": 1592238759950,
+  "id": 7,
+  "iteration": 1606843009088,
   "links": [
     {
       "icon": "dashboard",
@@ -93,7 +93,7 @@
       "tableColumn": "",
       "targets": [
         {
-          "expr": "sum(siddhi_total_reads{type=~\"cdc|file\"}) ",
+          "expr": "sum(siddhi_total_reads{type=~\"cdc|file|kafka\"}) ",
           "format": "time_series",
           "instant": true,
           "refId": "A"
@@ -224,6 +224,10 @@
             {
               "text": "CDC",
               "value": "cdc"
+            },
+            {
+              "text": "Kafka",
+              "value": "kafka"
             }
           ]
         },
@@ -262,28 +266,28 @@
       ],
       "targets": [
         {
-          "expr": "sum(siddhi_total_reads{type=~\"cdc|file\"}) by (app)",
+          "expr": "sum(siddhi_total_reads{type=~\"cdc|file|kafka\"}) by (app)",
           "format": "table",
           "hide": false,
           "instant": true,
           "refId": "B"
         },
         {
-          "expr": "sum by(app) (rate(siddhi_total_reads{type=~\"cdc|file\"}[$__interval]))",
+          "expr": "sum by(app) (rate(siddhi_total_reads{type=~\"cdc|file|kafka\"}[$__interval]))",
           "format": "table",
           "hide": false,
           "instant": true,
           "refId": "A"
         },
         {
-          "expr": "sum(siddhi_total_writes{type=~\"rdbms|file\"}) by (app)",
+          "expr": "sum(siddhi_total_writes{type=~\"rdbms|file|kafka\"}) by (app)",
           "format": "table",
           "hide": false,
           "instant": true,
           "refId": "C"
         },
         {
-          "expr": "sum (rate(siddhi_total_writes{type=~\"rdbms|file\"}[$__interval]))",
+          "expr": "sum (rate(siddhi_total_writes{type=~\"rdbms|file|kafka\"}[$__interval]))",
           "format": "table",
           "hide": false,
           "instant": true,
@@ -360,7 +364,7 @@
       "tableColumn": "",
       "targets": [
         {
-          "expr": "sum(siddhi_total_writes{type=~\"rdbms|file\"})",
+          "expr": "sum(siddhi_total_writes{type=~\"rdbms|file|kafka\"})",
           "format": "time_series",
           "instant": true,
           "refId": "A"
@@ -432,14 +436,14 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "sum(rate(siddhi_total_reads{type=~\"cdc|file\"}[$__interval]))",
+          "expr": "sum(rate(siddhi_total_reads{type=~\"cdc|file|kafka\"}[$__interval]))",
           "instant": false,
           "intervalFactor": 1,
           "legendFormat": "Inputs",
           "refId": "A"
         },
         {
-          "expr": "sum(rate(siddhi_total_writes{type=~\"file|rdbms\"}[$__interval]))",
+          "expr": "sum(rate(siddhi_total_writes{type=~\"file|rdbms|kafka\"}[$__interval]))",
           "instant": false,
           "intervalFactor": 1,
           "legendFormat": "Outputs",
@@ -551,5 +555,5 @@
   "timezone": "",
   "title": "WSO2 Streaming Integrator Overall Statistics",
   "uid": "92VL7ekMk",
-  "version": 42
+  "version": 1
 }
