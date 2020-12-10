@@ -15,8 +15,8 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 2,
-  "id": 16,
-  "iteration": 1592291951673,
+  "id": 2,
+  "iteration": 1607095230756,
   "links": [],
   "panels": [
     {
@@ -95,7 +95,7 @@
       "tableColumn": "",
       "targets": [
         {
-          "expr": "sum(siddhi_total_reads{app=~\"$app\", type=~\"file|cdc\"}) ",
+          "expr": "sum(siddhi_total_reads{app=~\"$app\", type=~\"file|cdc|kafka\"}) ",
           "format": "time_series",
           "instant": true,
           "refId": "A"
@@ -249,6 +249,7 @@
         "#d44a3a"
       ],
       "datasource": null,
+      "decimals": 2,
       "format": "none",
       "gauge": {
         "maxValue": 100,
@@ -389,7 +390,7 @@
       "tableColumn": "",
       "targets": [
         {
-          "expr": "sum(siddhi_total_writes{app=~\"$app\", type=~\"file|rdbms\"})",
+          "expr": "sum(siddhi_total_writes{app=~\"$app\", type=~\"file|rdbms|kafka\"})",
           "format": "time_series",
           "hide": false,
           "instant": true,
@@ -421,6 +422,7 @@
         "#d44a3a"
       ],
       "datasource": null,
+      "decimals": 2,
       "format": "none",
       "gauge": {
         "maxValue": 100,
@@ -562,7 +564,7 @@
       "tableColumn": "",
       "targets": [
         {
-          "expr": "(sum(siddhi_store_rdbms_total_error_count{app=~\"$app\"}) or vector(0)) + (sum(siddhi_file_source_error_count{app=~\"$app\"}) or vector(0)) + (sum(siddhi_cdc_source_listening_mode_total_error_count{app=~\"$app\"}) or vector(0)) + (sum(siddhi_cdc_source_polling_mode_total_error_count{app=~\"$app\"}) or vector(0)) + (sum(siddhi_file_sink_total_error_count{app=~\"$app\"}) or vector(0))",
+          "expr": "(sum(siddhi_store_rdbms_total_error_count{app=~\"$app\"}) or vector(0)) + (sum(siddhi_file_source_error_count{app=~\"$app\"}) or vector(0)) + (sum(siddhi_cdc_source_listening_mode_total_error_count{app=~\"$app\"}) or vector(0)) + (sum(siddhi_cdc_source_polling_mode_total_error_count{app=~\"$app\"}) or vector(0)) + (sum(siddhi_file_sink_total_error_count{app=~\"$app\"}) or vector(0)) + (sum(siddhi_kafka_source_error_count_per_stream{app=~\"$app\"}) or vector(0)) + (sum(siddhi_kafka_sink_error_count{app=~\"$app\"}) or vector(0))",
           "format": "time_series",
           "hide": false,
           "instant": true,
@@ -649,7 +651,7 @@
       "tableColumn": "",
       "targets": [
         {
-          "expr": "(sum(siddhi_total_reads{app=~\"$app\", type=~\"file|cdc\"}) or vector(0)) - ((sum(siddhi_file_source_total_valid_events_count{app=~\"$app\"}) or vector(0)) + (sum(siddhi_cdc_source_listening_mode_total_valid_events_count{app=~\"$app\"}) or vector(0)) +(sum(siddhi_cdc_source_polling_mode_total_valid_events_count{app=~\"$app\"}) or vector(0))) ",
+          "expr": "(sum(siddhi_total_reads{app=~\"$app\", type=~\"file|cdc|kafka\"}) or vector(0)) - ((sum(siddhi_file_source_total_valid_events_count{app=~\"$app\"}) or vector(0)) + (sum(siddhi_cdc_source_listening_mode_total_valid_events_count{app=~\"$app\"}) or vector(0)) +(sum(siddhi_cdc_source_polling_mode_total_valid_events_count{app=~\"$app\"}) or vector(0)) + (sum(siddhi_kafka_source_per_topic_total_valid_events_count{app=~\"$app\"}) or vector(0))) ",
           "format": "time_series",
           "hide": false,
           "instant": false,
@@ -686,7 +688,7 @@
       "type": "row"
     },
     {
-      "content": "<h2><center>File</center></h2>\n",
+      "content": "<h2><center>Kafka</center></h2>\n",
       "datasource": null,
       "gridPos": {
         "h": 2,
@@ -695,6 +697,339 @@
         "y": 16
       },
       "id": 29,
+      "links": [
+        {
+          "targetBlank": true,
+          "title": "Show Kafka Statistics",
+          "url": "d/7wkYtntGz/wso2-streaming-integrator-kafka-statistics"
+        }
+      ],
+      "mode": "html",
+      "options": {},
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "",
+      "transparent": true,
+      "type": "text"
+    },
+    {
+      "columns": [],
+      "datasource": "Prometheus",
+      "fontSize": "120%",
+      "gridPos": {
+        "h": 7,
+        "w": 24,
+        "x": 0,
+        "y": 18
+      },
+      "id": 45,
+      "options": {},
+      "pageSize": null,
+      "showHeader": true,
+      "sort": {
+        "col": 5,
+        "desc": true
+      },
+      "styles": [
+        {
+          "alias": "Time",
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "pattern": "Time",
+          "type": "hidden"
+        },
+        {
+          "alias": "",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "mappingType": 1,
+          "pattern": "__name__",
+          "thresholds": [],
+          "type": "hidden",
+          "unit": "short"
+        },
+        {
+          "alias": "",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "mappingType": 1,
+          "pattern": "job",
+          "thresholds": [],
+          "type": "hidden",
+          "unit": "short"
+        },
+        {
+          "alias": "",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "mappingType": 1,
+          "pattern": "instance",
+          "thresholds": [],
+          "type": "hidden",
+          "unit": "short"
+        },
+        {
+          "alias": "Messages Received",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": null,
+          "mappingType": 1,
+          "pattern": "Value #A",
+          "thresholds": [],
+          "type": "number",
+          "unit": "short"
+        },
+        {
+          "alias": "Connection Status",
+          "colorMode": "cell",
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": null,
+          "mappingType": 1,
+          "pattern": "Value #B",
+          "preserveFormat": false,
+          "sanitize": false,
+          "thresholds": [
+            "-1",
+            "0",
+            "1"
+          ],
+          "type": "hidden",
+          "unit": "short",
+          "valueMaps": [
+            {
+              "text": "Connected",
+              "value": "0"
+            },
+            {
+              "text": "Connection Unavailable",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "alias": "Events Received/Sec",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "mappingType": 1,
+          "pattern": "Value #D",
+          "thresholds": [],
+          "type": "number",
+          "unit": "short"
+        },
+        {
+          "alias": "Siddhi App Name",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "mappingType": 1,
+          "pattern": "app",
+          "thresholds": [],
+          "type": "hidden",
+          "unit": "short"
+        },
+        {
+          "alias": "Partition ID",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": null,
+          "mappingType": 1,
+          "pattern": "partition",
+          "thresholds": [],
+          "type": "string",
+          "unit": "short"
+        },
+        {
+          "alias": "Last message consumed at",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": null,
+          "mappingType": 1,
+          "pattern": "Value #C",
+          "thresholds": [],
+          "type": "number",
+          "unit": "dateTimeFromNow"
+        },
+        {
+          "alias": "Last message consumed at",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": null,
+          "mappingType": 1,
+          "pattern": "Value #E",
+          "thresholds": [],
+          "type": "number",
+          "unit": "dateTimeFromNow"
+        },
+        {
+          "alias": "Error Count",
+          "colorMode": "value",
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": null,
+          "mappingType": 1,
+          "pattern": "Value #F",
+          "thresholds": [],
+          "type": "number",
+          "unit": "short"
+        },
+        {
+          "alias": "Consumer Group",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "mappingType": 1,
+          "pattern": "group_id",
+          "thresholds": [],
+          "type": "string",
+          "unit": "short"
+        },
+        {
+          "alias": "Consumer Lag (seconds)",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": null,
+          "mappingType": 1,
+          "pattern": "Value #G",
+          "thresholds": [],
+          "type": "number",
+          "unit": "short"
+        },
+        {
+          "alias": "Stream Name",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "link": true,
+          "linkTargetBlank": true,
+          "linkTooltip": "View Kafka Statistics for App: $app",
+          "linkUrl": "d/7wkYtntGz/wso2-streaming-integrator-kafka-statistics?orgId=1&var-app=$app",
+          "mappingType": 1,
+          "pattern": "stream_id",
+          "thresholds": [],
+          "type": "number",
+          "unit": "short"
+        }
+      ],
+      "targets": [
+        {
+          "expr": "sum(siddhi_kafka_source_read_count_per_stream{app=~\"$app\"}) by (stream_id)",
+          "format": "table",
+          "instant": true,
+          "refId": "A"
+        },
+        {
+          "expr": "sum(rate(siddhi_kafka_source_read_count_per_stream{app=~\"$app\"}[1h])) by (stream_id)",
+          "format": "table",
+          "instant": true,
+          "refId": "D"
+        },
+        {
+          "expr": "sum(siddhi_kafka_source_per_stream_last_message_consumed_at{app=~\"$app\"}) by (stream_id)",
+          "format": "table",
+          "instant": true,
+          "refId": "C"
+        },
+        {
+          "expr": "sum(siddhi_kafka_source_per_stream_with_partition_consumer_lag{app=~\"$app\"}) by (stream_id) / 1000",
+          "format": "table",
+          "instant": true,
+          "refId": "G"
+        },
+        {
+          "expr": "sum(siddhi_kafka_source_error_count_per_stream{app=~\"$app\"}) by (stream_id)",
+          "format": "table",
+          "instant": true,
+          "refId": "F"
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Kafka Statistics",
+      "transform": "table",
+      "type": "table"
+    },
+    {
+      "content": "<h2><center>File</center></h2>\n",
+      "datasource": null,
+      "gridPos": {
+        "h": 2,
+        "w": 24,
+        "x": 0,
+        "y": 25
+      },
+      "id": 46,
       "mode": "html",
       "options": {},
       "timeFrom": null,
@@ -711,7 +1046,7 @@
         "h": 8,
         "w": 24,
         "x": 0,
-        "y": 18
+        "y": 27
       },
       "id": 25,
       "options": {},
@@ -1047,7 +1382,7 @@
         "h": 2,
         "w": 24,
         "x": 0,
-        "y": 26
+        "y": 35
       },
       "id": 28,
       "mode": "html",
@@ -1066,7 +1401,7 @@
         "h": 8,
         "w": 24,
         "x": 0,
-        "y": 28
+        "y": 37
       },
       "id": 31,
       "options": {},
@@ -1371,7 +1706,7 @@
         "h": 8,
         "w": 24,
         "x": 0,
-        "y": 36
+        "y": 45
       },
       "id": 39,
       "options": {},
@@ -1675,12 +2010,284 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 44
+        "y": 53
       },
       "id": 8,
       "panels": [],
       "title": "Destinations",
       "type": "row"
+    },
+    {
+      "content": "\n<h2><center>Kafka</center></h2>\n",
+      "datasource": null,
+      "gridPos": {
+        "h": 2,
+        "w": 24,
+        "x": 0,
+        "y": 54
+      },
+      "id": 35,
+      "mode": "html",
+      "options": {},
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "",
+      "transparent": true,
+      "type": "text"
+    },
+    {
+      "columns": [],
+      "datasource": null,
+      "fontSize": "120%",
+      "gridPos": {
+        "h": 7,
+        "w": 24,
+        "x": 0,
+        "y": 56
+      },
+      "id": 49,
+      "options": {},
+      "pageSize": null,
+      "showHeader": true,
+      "sort": {
+        "col": 8,
+        "desc": false
+      },
+      "styles": [
+        {
+          "alias": "Time",
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "pattern": "Time",
+          "type": "hidden"
+        },
+        {
+          "alias": "Messages published",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": null,
+          "mappingType": 1,
+          "pattern": "Value #A",
+          "thresholds": [],
+          "type": "number",
+          "unit": "short"
+        },
+        {
+          "alias": "Error count",
+          "colorMode": "value",
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": null,
+          "mappingType": 1,
+          "pattern": "Value #B",
+          "thresholds": [],
+          "type": "number",
+          "unit": "short"
+        },
+        {
+          "alias": "Error rate",
+          "colorMode": "value",
+          "colors": [
+            "rgba(50, 172, 45, 0.97)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(245, 54, 54, 0.9)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": null,
+          "mappingType": 1,
+          "pattern": "Value #C",
+          "thresholds": [
+            "0.3",
+            " 0.7",
+            "1"
+          ],
+          "type": "number",
+          "unit": "percentunit"
+        },
+        {
+          "alias": "Avg message size",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": null,
+          "mappingType": 1,
+          "pattern": "Value #D",
+          "thresholds": [],
+          "type": "number",
+          "unit": "bytes"
+        },
+        {
+          "alias": "Avg time taken to Ack",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": null,
+          "mappingType": 1,
+          "pattern": "Value #E",
+          "thresholds": [],
+          "type": "number",
+          "unit": "ms"
+        },
+        {
+          "alias": "Last commited offset",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": null,
+          "mappingType": 1,
+          "pattern": "Value #F",
+          "thresholds": [],
+          "type": "number",
+          "unit": "short"
+        },
+        {
+          "alias": "Events published/Sec",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "mappingType": 1,
+          "pattern": "Value #G",
+          "thresholds": [],
+          "type": "number",
+          "unit": "short"
+        },
+        {
+          "alias": "Last message published at",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": null,
+          "mappingType": 1,
+          "pattern": "Value #H",
+          "thresholds": [],
+          "type": "number",
+          "unit": "dateTimeFromNow"
+        },
+        {
+          "alias": "Topic",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "link": false,
+          "linkTargetBlank": true,
+          "linkTooltip": "View Kafka Statistics for Topic: $__cell in App: $app",
+          "linkUrl": "d/7wkYtntGz/wso2-streaming-integrator-kafka-statistics?orgId=1&var-app=$app&var-topic=$__cell",
+          "mappingType": 1,
+          "pattern": "topic",
+          "thresholds": [],
+          "type": "string",
+          "unit": "short"
+        },
+        {
+          "alias": "Stream Name",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "link": true,
+          "linkTargetBlank": true,
+          "linkTooltip": "View Kafka Statistics for App: $app",
+          "linkUrl": "d/7wkYtntGz/wso2-streaming-integrator-kafka-statistics?orgId=1&var-app=$__cell",
+          "mappingType": 1,
+          "pattern": "stream_id",
+          "thresholds": [],
+          "type": "string",
+          "unit": "short"
+        }
+      ],
+      "targets": [
+        {
+          "expr": "sum(siddhi_kafka_sink_current_offset{app=~\"$app\"}) by (stream_id)",
+          "format": "table",
+          "instant": true,
+          "refId": "F"
+        },
+        {
+          "expr": "sum(siddhi_kafka_sink_write_count_per_stream{app=~\"$app\"}) by (stream_id)",
+          "format": "table",
+          "instant": true,
+          "refId": "A"
+        },
+        {
+          "expr": "sum(rate(siddhi_kafka_sink_write_count_per_stream{app=~\"$app\"}[1h])) by (stream_id)",
+          "format": "table",
+          "instant": true,
+          "refId": "G"
+        },
+        {
+          "expr": "avg(siddhi_kafka_sink_per_stream_last_message_size_in_bytes{app=~\"$app\"}) by (stream_id)",
+          "format": "table",
+          "instant": true,
+          "refId": "D"
+        },
+        {
+          "expr": "avg(siddhi_kafka_sink_per_stream_last_message_latency_in_millis{app=~\"$app\"}) by (stream_id)",
+          "format": "table",
+          "instant": true,
+          "refId": "E"
+        },
+        {
+          "expr": "sum(siddhi_kafka_sink_error_count_per_stream{app=~\"$app\"}) by (stream_id) ",
+          "format": "table",
+          "instant": true,
+          "refId": "B"
+        },
+        {
+          "expr": "(sum(siddhi_kafka_sink_error_count_per_stream{app=~\"$app\"}) by (stream_id) / sum(siddhi_kafka_sink_write_count_per_stream{app=~\"$app\"}) by (stream_id)) ",
+          "format": "table",
+          "instant": true,
+          "refId": "C"
+        },
+        {
+          "expr": "sum(siddhi_kafka_sink_per_stream_last_message_published_at{app=~\"$app\"}) by (stream_id)",
+          "format": "table",
+          "instant": true,
+          "refId": "H"
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Kafka Statistics",
+      "transform": "table",
+      "type": "table"
     },
     {
       "content": "\n<h2><center>File</center></h2>\n",
@@ -1689,9 +2296,9 @@
         "h": 2,
         "w": 24,
         "x": 0,
-        "y": 45
+        "y": 63
       },
-      "id": 35,
+      "id": 47,
       "mode": "html",
       "options": {},
       "timeFrom": null,
@@ -1708,7 +2315,7 @@
         "h": 8,
         "w": 24,
         "x": 0,
-        "y": 47
+        "y": 65
       },
       "id": 33,
       "options": {},
@@ -2041,7 +2648,7 @@
         "h": 2,
         "w": 24,
         "x": 0,
-        "y": 55
+        "y": 73
       },
       "id": 34,
       "mode": "html",
@@ -2060,7 +2667,7 @@
         "h": 8,
         "w": 24,
         "x": 0,
-        "y": 57
+        "y": 75
       },
       "id": 37,
       "options": {},
@@ -2419,5 +3026,5 @@
   "timezone": "",
   "title": "WSO2 Streaming Integrator App Statistics",
   "uid": "JrLwmmmGz",
-  "version": 35
+  "version": 1
 }
