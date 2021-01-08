@@ -829,7 +829,7 @@
         </pluginManagement>
     </build>
     <properties>
-        <carbon.analytics.version>3.0.44</carbon.analytics.version>
+        <carbon.analytics.version>3.0.47</carbon.analytics.version>
         <siddhi.version>5.1.15</siddhi.version>
 
         <carbon.analytics-common.version>6.1.46</carbon.analytics-common.version>
@@ -953,7 +953,7 @@
         <siddhi.execution.map.version>5.0.6</siddhi.execution.map.version>
         <siddhi.execution.list.version>1.0.1</siddhi.execution.list.version>
 
-        <siddhi.io.file.version>2.0.11</siddhi.io.file.version>
+        <siddhi.io.file.version>2.0.10</siddhi.io.file.version>
         <siddhi.io.tcp.version>3.0.5</siddhi.io.tcp.version>
         <siddhi.io.email.version>2.0.6</siddhi.io.email.version>
         <siddhi.io.kafka.version>5.0.9</siddhi.io.kafka.version>
