@@ -15,8 +15,8 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 2,
-  "id": 7,
-  "iteration": 1606843009088,
+  "id": 13,
+  "iteration": 1610953923188,
   "links": [
     {
       "icon": "dashboard",
@@ -39,6 +39,12 @@
         "#d44a3a"
       ],
       "datasource": null,
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
       "format": "none",
       "gauge": {
         "maxValue": 100,
@@ -70,7 +76,6 @@
       "maxDataPoints": 100,
       "nullPointMode": "connected",
       "nullText": null,
-      "options": {},
       "postfix": "",
       "postfixFontSize": "50%",
       "prefix": "",
@@ -93,9 +98,11 @@
       "tableColumn": "",
       "targets": [
         {
-          "expr": "sum(siddhi_total_reads{type=~\"cdc|file|kafka\"}) ",
+          "expr": "sum(siddhi_total_reads{type=~\"cdc|file|kafka|http\"}) ",
           "format": "time_series",
           "instant": true,
+          "interval": "",
+          "legendFormat": "",
           "refId": "A"
         }
       ],
@@ -117,6 +124,12 @@
     {
       "columns": [],
       "datasource": null,
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
       "fontSize": "120%",
       "gridPos": {
         "h": 8,
@@ -125,7 +138,6 @@
         "y": 0
       },
       "id": 20,
-      "options": {},
       "pageSize": 5,
       "showHeader": true,
       "sort": {
@@ -135,6 +147,7 @@
       "styles": [
         {
           "alias": "App name",
+          "align": "auto",
           "colorMode": null,
           "colors": [
             "rgba(245, 54, 54, 0.9)",
@@ -155,6 +168,7 @@
         },
         {
           "alias": "",
+          "align": "auto",
           "colorMode": null,
           "colors": [
             "rgba(245, 54, 54, 0.9)",
@@ -171,6 +185,7 @@
         },
         {
           "alias": "Inputs/Sec",
+          "align": "auto",
           "colorMode": "value",
           "colors": [
             "#56A64B",
@@ -187,6 +202,7 @@
         },
         {
           "alias": "Total Inputs",
+          "align": "auto",
           "colorMode": null,
           "colors": [
             "#3274D9",
@@ -203,6 +219,7 @@
         },
         {
           "alias": "Sources",
+          "align": "auto",
           "colorMode": null,
           "colors": [
             "rgba(245, 54, 54, 0.9)",
@@ -233,6 +250,7 @@
         },
         {
           "alias": "Total Outputs",
+          "align": "auto",
           "colorMode": null,
           "colors": [
             "rgba(245, 54, 54, 0.9)",
@@ -249,6 +267,7 @@
         },
         {
           "alias": "Outputs/Sec",
+          "align": "auto",
           "colorMode": "value",
           "colors": [
             "#56A64B",
@@ -266,31 +285,39 @@
       ],
       "targets": [
         {
-          "expr": "sum(siddhi_total_reads{type=~\"cdc|file|kafka\"}) by (app)",
+          "expr": "sum(siddhi_total_reads{type=~\"cdc|file|kafka|http\"}) by (app)",
           "format": "table",
           "hide": false,
           "instant": true,
+          "interval": "",
+          "legendFormat": "",
           "refId": "B"
         },
         {
-          "expr": "sum by(app) (rate(siddhi_total_reads{type=~\"cdc|file|kafka\"}[$__interval]))",
+          "expr": "sum by(app) (rate(siddhi_total_reads{type=~\"cdc|file|kafka|http\"}[$__interval]))",
           "format": "table",
           "hide": false,
           "instant": true,
+          "interval": "",
+          "legendFormat": "",
           "refId": "A"
         },
         {
-          "expr": "sum(siddhi_total_writes{type=~\"rdbms|file|kafka\"}) by (app)",
+          "expr": "sum(siddhi_total_writes{type=~\"rdbms|file|kafka|http\"}) by (app)",
           "format": "table",
           "hide": false,
           "instant": true,
+          "interval": "",
+          "legendFormat": "",
           "refId": "C"
         },
         {
-          "expr": "sum (rate(siddhi_total_writes{type=~\"rdbms|file|kafka\"}[$__interval]))",
+          "expr": "sum (rate(siddhi_total_writes{type=~\"rdbms|file|kafka|http\"}[$__interval]))",
           "format": "table",
           "hide": false,
           "instant": true,
+          "interval": "",
+          "legendFormat": "",
           "refId": "D"
         }
       ],
@@ -298,7 +325,7 @@
       "timeShift": null,
       "title": "Overview Statistics",
       "transform": "table",
-      "type": "table"
+      "type": "table-old"
     },
     {
       "cacheTimeout": null,
@@ -310,6 +337,12 @@
         "#d44a3a"
       ],
       "datasource": null,
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
       "format": "none",
       "gauge": {
         "maxValue": 100,
@@ -341,7 +374,6 @@
       "maxDataPoints": 100,
       "nullPointMode": "connected",
       "nullText": null,
-      "options": {},
       "postfix": "",
       "postfixFontSize": "50%",
       "prefix": "",
@@ -364,9 +396,11 @@
       "tableColumn": "",
       "targets": [
         {
-          "expr": "sum(siddhi_total_writes{type=~\"rdbms|file|kafka\"})",
+          "expr": "sum(siddhi_total_writes{type=~\"rdbms|file|kafka|http\"})",
           "format": "time_series",
           "instant": true,
+          "interval": "",
+          "legendFormat": "",
           "refId": "A"
         }
       ],
@@ -396,6 +430,13 @@
       "dashes": false,
       "datasource": null,
       "decimals": 0,
+      "fieldConfig": {
+        "defaults": {
+          "custom": {},
+          "links": []
+        },
+        "overrides": []
+      },
       "fill": 0,
       "fillGradient": 10,
       "gridPos": {
@@ -424,9 +465,10 @@
       "linewidth": 2,
       "nullPointMode": "null",
       "options": {
-        "dataLinks": []
+        "alertThreshold": true
       },
       "percentage": false,
+      "pluginVersion": "7.3.1",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -436,15 +478,17 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "sum(rate(siddhi_total_reads{type=~\"cdc|file|kafka\"}[$__interval]))",
+          "expr": "sum(rate(siddhi_total_reads{type=~\"cdc|file|kafka|http\"}[$__interval]))",
           "instant": false,
+          "interval": "",
           "intervalFactor": 1,
           "legendFormat": "Inputs",
           "refId": "A"
         },
         {
-          "expr": "sum(rate(siddhi_total_writes{type=~\"file|rdbms|kafka\"}[$__interval]))",
+          "expr": "sum(rate(siddhi_total_writes{type=~\"file|rdbms|kafka|http\"}[$__interval]))",
           "instant": false,
+          "interval": "",
           "intervalFactor": 1,
           "legendFormat": "Outputs",
           "refId": "B"
@@ -495,7 +539,7 @@
     }
   ],
   "refresh": "5s",
-  "schemaVersion": 21,
+  "schemaVersion": 26,
   "style": "dark",
   "tags": [
     "wso2",
@@ -515,6 +559,7 @@
         },
         "datasource": "Prometheus",
         "definition": "label_values(siddhi_stream_throughput_total, app)",
+        "error": null,
         "hide": 2,
         "includeAll": false,
         "label": "Appname",
@@ -555,5 +600,5 @@
   "timezone": "",
   "title": "WSO2 Streaming Integrator Overall Statistics",
   "uid": "92VL7ekMk",
-  "version": 1
+  "version": 3
 }
