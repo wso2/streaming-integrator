@@ -829,10 +829,10 @@
         </pluginManagement>
     </build>
     <properties>
-        <carbon.analytics.version>3.0.49</carbon.analytics.version>
-        <siddhi.version>5.1.15</siddhi.version>
+        <carbon.analytics.version>3.0.50</carbon.analytics.version>
+        <siddhi.version>5.1.17</siddhi.version>
 
-        <carbon.analytics-common.version>6.1.46</carbon.analytics-common.version>
+        <carbon.analytics-common.version>6.1.47</carbon.analytics-common.version>
         <!-- Maven plugins -->
         <!--Bundle Plugin - Overridden from parent due to a bug in latest version related to capability providers-->
         <maven.bundle.plugin.version>2.5.4</maven.bundle.plugin.version>
@@ -966,7 +966,7 @@
         <siddhi.map.avro.version>2.1.0</siddhi.map.avro.version>
         <siddhi.map.binary.version>2.1.0</siddhi.map.binary.version>
         <siddhi.map.text.version>2.1.0</siddhi.map.text.version>
-        <siddhi.map.xml.version>5.1.0</siddhi.map.xml.version>
+        <siddhi.map.xml.version>5.2.0</siddhi.map.xml.version>
         <siddhi.map.keyvalue.version>2.1.0</siddhi.map.keyvalue.version>
         <siddhi.map.csv.version>2.1.0</siddhi.map.csv.version>
 

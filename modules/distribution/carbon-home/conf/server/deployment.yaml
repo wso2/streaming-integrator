@@ -420,6 +420,14 @@ auth.configs:
            id: 1
            displayName: admin
 
+# Async API service catalogue configuration
+async.api.configs:
+  enabled: false
+  hostname: localhost
+  port: 9443
+  username: admin
+  password: admin
+
   # Sample of deployment.config for Two node HA
 #deployment.config:
 #  type: ha
