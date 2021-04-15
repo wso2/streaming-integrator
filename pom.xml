@@ -829,10 +829,10 @@
         </pluginManagement>
     </build>
     <properties>
-        <carbon.analytics.version>3.0.53</carbon.analytics.version>
+        <carbon.analytics.version>3.0.54</carbon.analytics.version>
         <siddhi.version>5.1.17</siddhi.version>
 
-        <carbon.analytics-common.version>6.1.48</carbon.analytics-common.version>
+        <carbon.analytics-common.version>6.1.50</carbon.analytics-common.version>
         <!-- Maven plugins -->
         <!--Bundle Plugin - Overridden from parent due to a bug in latest version related to capability providers-->
         <maven.bundle.plugin.version>2.5.4</maven.bundle.plugin.version>
@@ -861,7 +861,7 @@
 
         <carbon.deployment.version>5.2.1</carbon.deployment.version>
 
-        <carbon.datasources.version>1.1.8</carbon.datasources.version>
+        <carbon.datasources.version>1.1.9</carbon.datasources.version>
         <carbon.metrics.version>2.3.13</carbon.metrics.version>
         <carbon.jndi.version>1.0.5</carbon.jndi.version>
 
@@ -953,12 +953,12 @@
         <siddhi.execution.map.version>5.0.6</siddhi.execution.map.version>
         <siddhi.execution.list.version>1.0.1</siddhi.execution.list.version>
 
-        <siddhi.io.file.version>2.0.15</siddhi.io.file.version>
+        <siddhi.io.file.version>2.0.16</siddhi.io.file.version>
         <siddhi.io.tcp.version>3.0.5</siddhi.io.tcp.version>
         <siddhi.io.email.version>2.0.6</siddhi.io.email.version>
         <siddhi.io.kafka.version>5.0.12</siddhi.io.kafka.version>
-        <siddhi.io.http.version>2.3.1</siddhi.io.http.version>
-        <siddhi.io.websocket.version>3.0.1</siddhi.io.websocket.version>
+        <siddhi.io.http.version>2.3.3</siddhi.io.http.version>
+        <siddhi.io.websocket.version>3.0.2</siddhi.io.websocket.version>
         <siddhi.io.cdc.version>2.0.10</siddhi.io.cdc.version>
         <siddhi.io.grpc.version>1.0.9</siddhi.io.grpc.version>
 
@@ -970,7 +970,7 @@
         <siddhi.map.keyvalue.version>2.1.1</siddhi.map.keyvalue.version>
         <siddhi.map.csv.version>2.1.0</siddhi.map.csv.version>
 
-        <siddhi.store.rdbms.version>7.0.8</siddhi.store.rdbms.version>
+        <siddhi.store.rdbms.version>7.0.11</siddhi.store.rdbms.version>
         <siddhi.store.mongodb.version>2.1.2</siddhi.store.mongodb.version>
 
         <siddhi.script.js.version>5.0.4</siddhi.script.js.version>
