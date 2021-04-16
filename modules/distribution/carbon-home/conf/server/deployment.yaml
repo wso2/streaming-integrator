@@ -421,7 +421,7 @@ auth.configs:
            displayName: admin
 
 # Async API service catalogue configuration
-async.api.configs:
+service.catalog.configs:
   enabled: false
   hostname: localhost
   port: 9443
