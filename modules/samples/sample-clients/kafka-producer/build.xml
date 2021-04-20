@@ -61,6 +61,7 @@
             <include name="org.wso2.carbon.transport.http.netty_*.jar"/>
             <include name="io.netty.*.jar"/>
             <include name="commons-pool_*.jar"/>
+            <include name="org.wso2.carbon.si.metrics.core_*.jar"/>
         </fileset>
     </path>
 
