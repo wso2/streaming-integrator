@@ -40,6 +40,7 @@
             <include name="org.ops4j.*.jar"/>
             <include name="slf4j.api_*.jar"/>
             <include name="siddhi-*.jar"/>
+            <include name="org.wso2.carbon.si.metrics.core_*.jar"/>
         </fileset>
     </path>
 
