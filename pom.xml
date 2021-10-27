@@ -635,16 +635,6 @@
                 <version>${siddhi.io.rabbitmq.version}</version>
             </dependency>
             <dependency>
-                <groupId>io.siddhi.extension.io.mqtt</groupId>
-                <artifactId>siddhi-io-mqtt</artifactId>
-                <version>${siddhi.io.mqtt.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.wso2.extension.siddhi.io.twitter</groupId>
-                <artifactId>siddhi-io-twitter</artifactId>
-                <version>${siddhi.io.twitter.version}</version>
-            </dependency>
-            <dependency>
                 <groupId>org.wso2.extension.siddhi.websocket</groupId>
                 <artifactId>siddhi-io-websocket</artifactId>
                 <version>${siddhi.io.websocket.version}</version>
@@ -829,8 +819,8 @@
         </pluginManagement>
     </build>
     <properties>
-        <carbon.analytics.version>3.0.54</carbon.analytics.version>
-        <siddhi.version>5.1.17</siddhi.version>
+        <carbon.analytics.version>3.0.55</carbon.analytics.version>
+        <siddhi.version>5.1.19</siddhi.version>
 
         <carbon.analytics-common.version>6.1.50</carbon.analytics-common.version>
         <!-- Maven plugins -->
@@ -953,13 +943,13 @@
         <siddhi.execution.map.version>5.0.6</siddhi.execution.map.version>
         <siddhi.execution.list.version>1.0.1</siddhi.execution.list.version>
 
-        <siddhi.io.file.version>2.0.16</siddhi.io.file.version>
+        <siddhi.io.file.version>2.0.17</siddhi.io.file.version>
         <siddhi.io.tcp.version>3.0.5</siddhi.io.tcp.version>
         <siddhi.io.email.version>2.0.6</siddhi.io.email.version>
         <siddhi.io.kafka.version>5.0.12</siddhi.io.kafka.version>
         <siddhi.io.http.version>2.3.3</siddhi.io.http.version>
         <siddhi.io.websocket.version>3.0.2</siddhi.io.websocket.version>
-        <siddhi.io.cdc.version>2.0.10</siddhi.io.cdc.version>
+        <siddhi.io.cdc.version>2.0.11</siddhi.io.cdc.version>
         <siddhi.io.grpc.version>1.0.9</siddhi.io.grpc.version>
 
         <siddhi.map.json.version>5.2.1</siddhi.map.json.version>
