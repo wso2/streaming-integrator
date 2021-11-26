@@ -458,17 +458,6 @@
                 <artifactId>pax-logging-api</artifactId>
                 <version>${pax.logging.api.version}</version>
             </dependency>
-            <dependency>
-                <groupId>org.wso2.transport.http</groupId>
-                <artifactId>org.wso2.transport.http.netty</artifactId>
-                <version>${org.wso2.transport.http.netty.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.wso2.transport.http</groupId>
-                <artifactId>org.wso2.transport.http.netty.feature</artifactId>
-                <version>${org.wso2.transport.http.netty.version}</version>
-                <type>zip</type>
-            </dependency>
 
             <dependency>
                 <groupId>org.wso2.carbon.analytics</groupId>
@@ -924,13 +913,12 @@
         <common.collections4.version>4.0</common.collections4.version>
 
         <!--MSF4J related-->
-        <msf4j.version>2.7.7</msf4j.version>
+        <msf4j.version>2.8.3</msf4j.version>
         <com.fasterxml.jackson.core.version>2.9.8</com.fasterxml.jackson.core.version>
         <io.swagger.version>1.5.22</io.swagger.version>
         <javax.ws.rs-api.version>2.0</javax.ws.rs-api.version>
         <pax.logging.api.version>1.10.1</pax.logging.api.version>
         <javax.servlet.version>3.1.0</javax.servlet.version>
-        <org.wso2.transport.http.netty.version>6.3.24</org.wso2.transport.http.netty.version>
 
 
         <!--Event simulator-->

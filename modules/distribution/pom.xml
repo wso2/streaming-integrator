@@ -82,11 +82,6 @@
             <type>zip</type>
         </dependency>
         <dependency>
-            <groupId>org.wso2.transport.http</groupId>
-            <artifactId>org.wso2.transport.http.netty.feature</artifactId>
-            <type>zip</type>
-        </dependency>
-        <dependency>
             <groupId>org.wso2.carbon.datasources</groupId>
             <artifactId>org.wso2.carbon.datasource.core.feature</artifactId>
             <type>zip</type>
@@ -620,10 +615,6 @@
                                     <version>${carbon.kernel.version}</version>
                                 </feature>
                                 <feature>
-                                    <id>org.wso2.transport.http.netty.feature</id>
-                                    <version>${org.wso2.transport.http.netty.version}</version>
-                                </feature>
-                                <feature>
                                     <id>org.wso2.carbon.caching.feature</id>
                                     <version>${carbon.cache.version}</version>
                                 </feature>
@@ -863,10 +854,6 @@
                                 <feature>
                                     <id>org.wso2.carbon.runtime.feature.group</id>
                                     <version>${carbon.kernel.version}</version>
-                                </feature>
-                                <feature>
-                                    <id>org.wso2.transport.http.netty.feature</id>
-                                    <version>${org.wso2.transport.http.netty.version}</version>
                                 </feature>
                                 <feature>
                                     <id>org.wso2.carbon.jndi.feature.group</id>
