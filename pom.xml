@@ -458,6 +458,17 @@
                 <artifactId>pax-logging-api</artifactId>
                 <version>${pax.logging.api.version}</version>
             </dependency>
+            <dependency>
+                <groupId>org.wso2.transport.http</groupId>
+                <artifactId>org.wso2.transport.http.netty</artifactId>
+                <version>${org.wso2.transport.http.netty.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.wso2.transport.http</groupId>
+                <artifactId>org.wso2.transport.http.netty.feature</artifactId>
+                <version>${org.wso2.transport.http.netty.version}</version>
+                <type>zip</type>
+            </dependency>
 
             <dependency>
                 <groupId>org.wso2.carbon.analytics</groupId>
@@ -919,6 +930,8 @@
         <javax.ws.rs-api.version>2.0</javax.ws.rs-api.version>
         <pax.logging.api.version>1.10.1</pax.logging.api.version>
         <javax.servlet.version>3.1.0</javax.servlet.version>
+        <org.wso2.transport.http.netty.version>6.3.24</org.wso2.transport.http.netty.version>
+
 
         <!--Event simulator-->
         <org.wso2.json.version>3.0.0.wso2v1</org.wso2.json.version>
