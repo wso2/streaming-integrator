@@ -961,7 +961,7 @@
         <siddhi.map.keyvalue.version>2.1.1</siddhi.map.keyvalue.version>
         <siddhi.map.csv.version>2.1.0</siddhi.map.csv.version>
 
-        <siddhi.store.rdbms.version>7.0.11</siddhi.store.rdbms.version>
+        <siddhi.store.rdbms.version>7.0.12</siddhi.store.rdbms.version>
         <siddhi.store.mongodb.version>2.1.2</siddhi.store.mongodb.version>
 
         <siddhi.script.js.version>5.0.4</siddhi.script.js.version>
