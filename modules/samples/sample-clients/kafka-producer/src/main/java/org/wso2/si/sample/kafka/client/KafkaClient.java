@@ -20,7 +20,8 @@ package org.wso2.si.sample.kafka.client;
 import io.siddhi.core.SiddhiAppRuntime;
 import io.siddhi.core.SiddhiManager;
 import io.siddhi.core.stream.input.InputHandler;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.io.File;
 import java.io.IOException;
@@ -34,7 +35,7 @@ import java.util.Scanner;
  */
 public class KafkaClient {
 
-    private static Logger log = Logger.getLogger(KafkaClient.class);
+    private static final Logger log = LogManager.getLogger(KafkaClient.class);
 
     /**
      * Main method to start the test client.

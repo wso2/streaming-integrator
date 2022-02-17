@@ -20,7 +20,8 @@ package org.wso2.si.http.server;
 
 
 import com.sun.net.httpserver.HttpServer;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;
@@ -29,7 +30,7 @@ import java.net.InetSocketAddress;
  * Http test sever listener.
  */
 public class HttpServerListenerHandler {
-    private static final Logger logger = Logger.getLogger(HttpServerListenerHandler.class);
+    private static final Logger logger = LogManager.getLogger(HttpServerListenerHandler.class);
     private HttpServerListener sl;
     private HttpServer server;
     private int port;
