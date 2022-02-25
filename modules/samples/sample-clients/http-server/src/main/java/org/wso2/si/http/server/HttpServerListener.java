@@ -21,7 +21,8 @@ package org.wso2.si.http.server;
 import com.sun.net.httpserver.Headers;
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -34,7 +35,7 @@ import java.util.concurrent.atomic.AtomicBoolean;
  * Test Server Listener Manger.
  */
 public class HttpServerListener implements HttpHandler {
-    private static final Logger logger = Logger.getLogger(HttpServerListener.class);
+    private static final Logger logger = LogManager.getLogger(HttpServerListener.class);
     private AtomicBoolean isEventArraved = new AtomicBoolean(false);
     private StringBuilder strBld = new StringBuilder();
     private Headers headers;
