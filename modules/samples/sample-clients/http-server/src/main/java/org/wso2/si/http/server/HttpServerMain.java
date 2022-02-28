@@ -23,7 +23,6 @@ package org.wso2.si.http.server;
  * This is a sample HTTP server to receive events through HTTP/HTTPS protocol.
  */
 public class HttpServerMain {
-    private static final org.apache.log4j.Logger logger = org.apache.log4j.Logger.getLogger(HttpServerMain.class);
 
     public static void main(String[] args) throws InterruptedException {
         HttpServerListenerHandler lst = new HttpServerListenerHandler(8080);
