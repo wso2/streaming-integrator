@@ -16,7 +16,8 @@
 
 package org.sp.tests.ha;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.sp.tests.base.SPBaseTest;
 import org.sp.tests.util.HTTPResponse;
 import org.sp.tests.util.TestUtil;
@@ -47,7 +48,7 @@ import static org.sp.tests.util.Constants.SINGLE_EVENT_SIMULATION_STARTED_SUCCES
 import static org.sp.tests.util.TestUtil.waitThread;
 
 public class StateSyncIT extends SPBaseTest {
-    private static final Logger log = Logger.getLogger(StateSyncIT.class);
+    private static final Logger log = LogManager.getLogger(StateSyncIT.class);
     private static final String SIDDHI_APP_NAME = "TestMinimumHA";
     private static final String TEST_NAME = "cclassName:com.sp.test.StateSync";
 
