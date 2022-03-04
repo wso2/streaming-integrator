@@ -18,7 +18,8 @@
 
 package org.wso2.sp.tcp.client;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.wso2.extension.siddhi.io.tcp.transport.TCPNettyClient;
 import org.wso2.extension.siddhi.map.binary.sinkmapper.BinaryEventConverter;
 import org.wso2.siddhi.core.event.Event;
@@ -39,7 +40,7 @@ public class TCPClient {
     private static final long EVENT_COUNT = 100000000L;
     private static final String STREAM_NAME = "inputStream"; //TCP_Benchmark
     private static final Attribute.Type[] TYPES = new Attribute.Type[]{Attribute.Type.LONG, Attribute.Type.FLOAT};
-    private static final Logger LOG = Logger.getLogger(TCPClient.class);
+    private static final Logger LOG = LogManager.getLogger(TCPClient.class);
     private static final int BATCH_SIZE = 1000;
     private static long startTime = 0;
 

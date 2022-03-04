@@ -19,7 +19,8 @@
 package org.wso2.extension.siddhi.execution.throughput;
 
 import org.HdrHistogram.Histogram;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.wso2.extension.siddhi.execution.throughput.util.filewriting.BothFileWriting;
 import org.wso2.extension.siddhi.execution.throughput.util.filewriting.LatencyFileWriting;
 import org.wso2.extension.siddhi.execution.throughput.util.filewriting.ThroughputFileWriting;
@@ -121,7 +122,7 @@ import java.util.concurrent.ExecutorService;
 )
 
 public class CalculatePerformanceStreamProcessorExtension extends StreamProcessor {
-    private static final Logger log = Logger.getLogger(CalculatePerformanceStreamProcessorExtension.class);
+    private static final Logger log = LogManager.getLogger(CalculatePerformanceStreamProcessorExtension.class);
     private static int  recordWindow = 1000;
     private static final Histogram histogram = new Histogram(2);
     private static final Histogram histogram2 = new Histogram(2);

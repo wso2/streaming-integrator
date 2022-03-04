@@ -16,7 +16,8 @@
 
 package org.sp.tests.ha.util;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.sp.tests.util.HTTPResponse;
 import org.sp.tests.util.TestUtil;
 
@@ -32,7 +33,7 @@ import static org.sp.tests.util.TestUtil.waitThread;
 
 public class SiddhiAppUtil {
 
-    private static final Logger log = Logger.getLogger(SiddhiAppUtil.class);
+    private static final Logger log = LogManager.getLogger(SiddhiAppUtil.class);
 
     public static HTTPResponse deployPassThroughSiddhiApp(URI nodeURI, String siddhiAppName) throws IOException {
 

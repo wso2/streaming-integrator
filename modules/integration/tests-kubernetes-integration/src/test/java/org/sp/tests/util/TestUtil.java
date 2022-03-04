@@ -19,7 +19,8 @@ package org.sp.tests.util;
 
 
 import io.netty.handler.codec.http.HttpMethod;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -34,7 +35,7 @@ import java.net.URL;
  * TestUtil class
  */
 public class TestUtil {
-    private static final Logger logger = Logger.getLogger(TestUtil.class);
+    private static final Logger logger = LogManager.getLogger(TestUtil.class);
 
     public static HTTPResponse sendHRequest(String body, URI baseURI, String path, String contentType,
                                             String methodType, String userName, String password)

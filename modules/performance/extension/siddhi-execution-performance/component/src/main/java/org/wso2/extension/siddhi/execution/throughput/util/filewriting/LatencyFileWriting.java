@@ -19,7 +19,8 @@
 package org.wso2.extension.siddhi.execution.throughput.util.filewriting;
 
 import org.HdrHistogram.Histogram;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.io.IOException;
 import java.io.Writer;
@@ -29,7 +30,7 @@ import java.io.Writer;
  * Writes Latency calculations in the csv file.
  */
 public class LatencyFileWriting implements Runnable {
-    private final Logger log = Logger.getLogger(LatencyFileWriting.class);
+    private final Logger log = LogManager.getLogger(LatencyFileWriting.class);
     private long recordWindow;
     private long timeSpent;
     private long totalTimeSpent;
