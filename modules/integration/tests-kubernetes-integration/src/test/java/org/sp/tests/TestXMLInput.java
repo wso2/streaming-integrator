@@ -17,7 +17,8 @@
 */
 package org.sp.tests;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.sp.tests.base.SPBaseTest;
 import org.sp.tests.util.HTTPResponse;
 import org.sp.tests.util.TestResults;
@@ -43,7 +44,7 @@ import static org.sp.tests.util.TestUtil.waitThread;
  * TestXMLInput class.
  */
 public class TestXMLInput extends SPBaseTest {
-    private static final Logger log = Logger.getLogger(TestXMLInput.class);
+    private static final Logger log = LogManager.getLogger(TestXMLInput.class);
     private URI msf4jbaseURI;
     //private final URI appApibaseURI = URI.create(SIDDHI_APP_API);
     private URI appApibaseURI;

@@ -17,7 +17,6 @@ ________________________________________________________________________________
 slf4j-api-1.7.12.jar                                                                                bundle         mit
 org.wso2.carbon.siddhi.extensions.installer.cli-3.0.54.jar                                          bundle         apache2
 slf4j-log4j12-1.7.12.jar                                                                            bundle         mit
-log4j-1.2.17.jar                                                                                    bundle         apache2
 gson-2.8.5.jar                                                                                      bundle         apache2
 org.eclipse.osgi-3.10.2.v20150203-1939.jar                                                          bundle         epl1
 commons-lang3-3.5.jar                                                                               bundle         apache2
@@ -83,8 +82,6 @@ org.wso2.carbon.jndi_1.0.5.jar                                                  
 com.google.gson_2.2.4.jar                                                                           bundle         apache2
 org.wso2.carbon.streaming.integrator.common_3.0.54.jar                                              bundle         apache2
 org.apache.ws.commons.axiom.axiom-impl_1.2.20.jar                                                   bundle         apache2
-h2_1.4.199.wso2v1.jar                                                                               bundle         apache2
-h2-1.4.199.jar                                                                                      jarinbundle    apache2
 okhttp_3.8.0.wso2v2.jar                                                                             bundle         apache2
 com.fasterxml.jackson.core.jackson-annotations_2.9.8.jar                                            bundle         apache2
 org.eclipse.osgi.compatibility.state_1.0.200.v20160504-1419.jar                                     bundle         epl1

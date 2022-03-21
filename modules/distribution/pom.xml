@@ -22,7 +22,7 @@
     <parent>
         <groupId>org.wso2.ei</groupId>
         <artifactId>wso2-streaming-integrator-parent</artifactId>
-        <version>4.0.0</version>
+        <version>4.1.0-SNAPSHOT</version>
         <relativePath>../../pom.xml</relativePath>
     </parent>
 
@@ -342,12 +342,6 @@
                                     <groupId>io.siddhi.extension.execution.regex</groupId>
                                     <artifactId>siddhi-execution-regex</artifactId>
                                     <version>${siddhi.execution.regex.version}</version>
-                                    <type>jar</type>
-                                </artifactItem>
-                                <artifactItem>
-                                    <groupId>org.wso2.extension.siddhi.execution.geo</groupId>
-                                    <artifactId>siddhi-execution-geo</artifactId>
-                                    <version>${siddhi.execution.geo.version}</version>
                                     <type>jar</type>
                                 </artifactItem>
                                 <artifactItem>

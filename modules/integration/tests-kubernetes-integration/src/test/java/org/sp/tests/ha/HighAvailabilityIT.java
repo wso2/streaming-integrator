@@ -16,7 +16,8 @@
 
 package org.sp.tests.ha;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.sp.tests.base.SPBaseTest;
 import org.sp.tests.util.HTTPResponse;
 import org.testng.Assert;
@@ -43,7 +44,7 @@ import static org.sp.tests.util.TestUtil.sendHRequest;
 import static org.sp.tests.util.TestUtil.waitThread;
 
 public class HighAvailabilityIT extends SPBaseTest {
-    private static final Logger log = Logger.getLogger(HighAvailabilityIT.class);
+    private static final Logger log = LogManager.getLogger(HighAvailabilityIT.class);
     private static final String SIDDHI_APP_NAME = "TestMinimumHA";
     private static final String TEST_NAME = "cclassName:com.sp.test.HighAvailabilityIT";
 
