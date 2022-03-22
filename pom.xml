@@ -969,7 +969,7 @@
         <siddhi.io.http.version>2.3.5</siddhi.io.http.version>
         <siddhi.io.websocket.version>3.0.3</siddhi.io.websocket.version>
         <siddhi.io.cdc.version>2.0.12</siddhi.io.cdc.version>
-        <siddhi.io.grpc.version>1.0.11</siddhi.io.grpc.version>
+        <siddhi.io.grpc.version>1.0.12</siddhi.io.grpc.version>
 
         <siddhi.map.json.version>5.2.3</siddhi.map.json.version>
         <siddhi.map.avro.version>2.2.3</siddhi.map.avro.version>
