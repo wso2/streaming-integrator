@@ -209,31 +209,31 @@ istack-commons-runtime-3.0.8.jar                                                
 jaxb-api-2.3.0.jar                                                                                  bundle         cddl1
 jaxb-impl-2.4.0-b180830.0438.jar                                                                    bundle         cddl1
 javax.activation-1.2.0.jar                                                                          bundle         cddl1 + gpl1
-siddhi-execution-math-5.0.5.jar                                                                     bundle         apache2
+siddhi-execution-math-5.0.6.jar                                                                     bundle         apache2
 siddhi-execution-time-5.0.8.jar                                                                     bundle         apache2
 siddhi-script-js-5.0.4.jar                                                                          bundle         apache2
 siddhi-execution-string-5.0.12.jar                                                                  bundle         apache2
-siddhi-store-rdbms-7.0.14.jar                                                                       bundle         apache2
+siddhi-store-rdbms-7.0.16.jar                                                                       bundle         apache2
 siddhi-map-keyvalue-2.1.2.jar                                                                       bundle         apache2
-siddhi-store-mongodb-2.1.2.jar                                                                      bundle         apache2
+siddhi-store-mongodb-2.1.4.jar                                                                      bundle         apache2
 siddhi-io-file-2.0.18.jar                                                                           bundle         apache2
 siddhi-io-cdc-2.0.12.jar                                                                            bundle         apache2
 siddhi-execution-json-2.0.10.jar                                                                    bundle         apache2
 siddhi-map-csv-2.1.1.jar                                                                            bundle         apache2
-siddhi-io-websocket-3.0.2.jar                                                                       bundle         apache2
+siddhi-io-websocket-3.0.3.jar                                                                       bundle         apache2
 siddhi-map-text-2.1.1.jar                                                                           bundle         apache2
 siddhi-io-kafka-5.0.16.jar                                                                          bundle         apache2
 siddhi-map-binary-2.1.1.jar                                                                         bundle         apache2
 siddhi-io-tcp-3.0.6.jar                                                                             bundle         apache2
 siddhi-map-xml-5.2.2.jar                                                                            bundle         apache2
-siddhi-map-json-5.2.2.jar                                                                           bundle         apache2
+siddhi-map-json-5.2.3.jar                                                                           bundle         apache2
 siddhi-io-email-2.0.7.jar                                                                           bundle         apache2
 siddhi-execution-list-1.0.1.jar                                                                     bundle         apache2
-siddhi-io-grpc-1.0.11.jar                                                                           bundle         apache2
+siddhi-io-grpc-1.0.12.jar                                                                           bundle         apache2
 auto-generated-gRPC-classes.jar                                                                     jarinbundle    apache2
-siddhi-io-http-2.3.4.jar                                                                            bundle         apache2
+siddhi-io-http-2.3.5.jar                                                                            bundle         apache2
 siddhi-execution-map-5.0.7.jar                                                                      bundle         apache2
-siddhi-map-avro-2.2.2.jar                                                                           bundle         apache2
+siddhi-map-avro-2.2.3.jar                                                                           bundle         apache2
 siddhi-execution-regex-5.0.7.jar                                                                    bundle         apache2
 
 
