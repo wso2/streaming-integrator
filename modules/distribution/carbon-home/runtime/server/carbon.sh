@@ -302,6 +302,8 @@ do
     -Djavax.net.ssl.keyStorePassword="wso2carbon" \
     -Djavax.net.ssl.trustStore="$CARBON_HOME/resources/security/client-truststore.jks" \
     -Djavax.net.ssl.trustStorePassword="wso2carbon" \
+    -Dorg.ops4j.pax.logging.logReaderEnabled=false \
+    -Dorg.ops4j.pax.logging.eventAdminEnabled=false \
     org.wso2.carbon.launcher.Main $*
     status=$?
 done
