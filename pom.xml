@@ -837,7 +837,7 @@
         </pluginManagement>
     </build>
     <properties>
-        <carbon.analytics.version>3.0.59</carbon.analytics.version>
+        <carbon.analytics.version>3.0.60</carbon.analytics.version>
         <siddhi.version>5.1.23</siddhi.version>
 
         <carbon.analytics-common.version>6.1.59</carbon.analytics-common.version>
@@ -969,7 +969,7 @@
         <siddhi.io.http.version>2.3.5</siddhi.io.http.version>
         <siddhi.io.websocket.version>3.0.3</siddhi.io.websocket.version>
         <siddhi.io.cdc.version>2.0.12</siddhi.io.cdc.version>
-        <siddhi.io.grpc.version>1.0.11</siddhi.io.grpc.version>
+        <siddhi.io.grpc.version>1.0.12</siddhi.io.grpc.version>
 
         <siddhi.map.json.version>5.2.3</siddhi.map.json.version>
         <siddhi.map.avro.version>2.2.3</siddhi.map.avro.version>
@@ -979,7 +979,7 @@
         <siddhi.map.keyvalue.version>2.1.2</siddhi.map.keyvalue.version>
         <siddhi.map.csv.version>2.1.1</siddhi.map.csv.version>
 
-        <siddhi.store.rdbms.version>7.0.15</siddhi.store.rdbms.version>
+        <siddhi.store.rdbms.version>7.0.16</siddhi.store.rdbms.version>
         <siddhi.store.mongodb.version>2.1.4</siddhi.store.mongodb.version>
 
         <siddhi.script.js.version>5.0.4</siddhi.script.js.version>
