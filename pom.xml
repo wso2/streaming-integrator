@@ -101,6 +101,14 @@
                 <type>zip</type>
             </dependency>
             <dependency>
+                <groupId>org.wso2.ei</groupId>
+                <artifactId>wso2-streaming-integrator-test-distribution</artifactId>
+                <version>${project.version}</version>
+                <type>zip</type>
+                <scope>test</scope>
+            </dependency>
+
+            <dependency>
                 <groupId>org.testng</groupId>
                 <artifactId>testng</artifactId>
                 <version>${testng.version}</version>
@@ -316,6 +324,46 @@
                 <type>zip</type>
             </dependency>
 
+            <dependency>
+                <groupId>commons-io</groupId>
+                <artifactId>commons-io</artifactId>
+                <version>${commons-io.version}</version>
+                <scope>test</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-io</artifactId>
+                <version>${apache.commons.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.wso2.carbon.analytics</groupId>
+                <artifactId>org.wso2.carbon.streaming.integrator.statistics</artifactId>
+                <version>${carbon.analytics.version}</version>
+                <scope>test</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.wso2.carbon</groupId>
+                <artifactId>carbon-kernel-osgi-test-util</artifactId>
+                <version>${carbon.kernel.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>${junit.version}</version>
+                <scope>test</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.wso2.carbon</groupId>
+                <artifactId>osgi-test-util</artifactId>
+                <version>${osgi.test.util.version}</version>
+                <scope>test</scope>
+            </dependency>
+
             <!-- Health Check API related -->
             <dependency>
                 <groupId>org.wso2.carbon.analytics</groupId>
@@ -385,11 +433,6 @@
                 <groupId>com.google.guava</groupId>
                 <artifactId>guava</artifactId>
                 <version>${guava.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.quartz-scheduler.wso2</groupId>
-                <artifactId>quartz</artifactId>
-                <version>${quartz.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.dropwizard.metrics</groupId>
@@ -647,13 +690,9 @@
                 <artifactId>siddhi-io-kafka</artifactId>
                 <version>${siddhi.io.kafka.version}</version>
             </dependency>
+
             <dependency>
-                <groupId>io.siddhi.extension.io.rabbitmq</groupId>
-                <artifactId>siddhi-io-rabbitmq</artifactId>
-                <version>${siddhi.io.rabbitmq.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.wso2.extension.siddhi.websocket</groupId>
+                <groupId>io.siddhi.extension.io.websocket</groupId>
                 <artifactId>siddhi-io-websocket</artifactId>
                 <version>${siddhi.io.websocket.version}</version>
             </dependency>
@@ -728,6 +767,165 @@
                 <artifactId>org.wso2.carbon.siddhi.extensions.installer.cli</artifactId>
                 <version>${carbon.analytics.version}</version>
             </dependency>
+
+
+            <dependency>
+                <groupId>org.awaitility</groupId>
+                <artifactId>awaitility</artifactId>
+                <version>${awaitility.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.ops4j.pax.exam</groupId>
+                <artifactId>pax-exam</artifactId>
+                <version>${pax.exam.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.ops4j.pax.url</groupId>
+                <artifactId>pax-url-aether</artifactId>
+                <version>${pax.url.aether.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.ops4j.pax.exam</groupId>
+                <artifactId>pax-exam-link-mvn</artifactId>
+                <version>${pax.exam.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.ops4j.pax.exam</groupId>
+                <artifactId>pax-exam-container-native</artifactId>
+                <version>${pax.exam.container.native.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.ops4j.pax.exam</groupId>
+                <artifactId>pax-exam-testng</artifactId>
+                <version>${pax.exam.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.jacoco</groupId>
+                <artifactId>org.jacoco.ant</artifactId>
+                <version>${org.jacoco.ant.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.ow2.spec.ee</groupId>
+                <artifactId>ow2-jta-1.1-spec</artifactId>
+                <version>${ow2.jta.spec.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.jacoco</groupId>
+                <artifactId>org.jacoco.agent</artifactId>
+                <classifier>runtime</classifier>
+                <version>${jacoco.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>javax.inject</groupId>
+                <artifactId>javax.inject</artifactId>
+                <version>${javax.inject.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.wso2.carbon</groupId>
+                <artifactId>org.wso2.carbon.container</artifactId>
+                <version>${carbon.kernel.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.h2database</groupId>
+                <artifactId>h2</artifactId>
+                <version>${h2.connector.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.powermock</groupId>
+                <artifactId>powermock-api-mockito</artifactId>
+                <version>${powermock.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.powermock</groupId>
+                <artifactId>powermock-module-testng</artifactId>
+                <version>${powermock.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.testng</groupId>
+                        <artifactId>testng</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.powermock</groupId>
+                        <artifactId>powermock-core</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.powermock</groupId>
+                        <artifactId>powermock-reflect</artifactId>
+                    </exclusion>
+                </exclusions>
+                <scope>test</scope>
+            </dependency>
+
+            <!--Dependencies for database feed simulation begins here-->
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql.connector.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.oracle</groupId>
+                <artifactId>ojdbc6</artifactId>
+                <version>${ojdbc6.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.postgresql</groupId>
+                <artifactId>postgresql</artifactId>
+                <version>${postgresql.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.microsoft.sqlserver</groupId>
+                <artifactId>mssql-jdbc</artifactId>
+                <version>${mssql-jdbc.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.101tec</groupId>
+                <artifactId>zkclient</artifactId>
+                <version>${zkclient.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>log4j</groupId>
+                        <artifactId>log4j</artifactId>
+                    </exclusion>
+                </exclusions>
+                <scope>provided</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.curator</groupId>
+                <artifactId>curator-test</artifactId>
+                <version>${curator-test.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>log4j</groupId>
+                        <artifactId>log4j</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.zookeeper</groupId>
+                <artifactId>zookeeper</artifactId>
+                <version>${zookeeper.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>log4j</groupId>
+                        <artifactId>log4j</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <!-- Carbon external dependencies -->
+            <dependency>
+                <groupId>org.wso2.carbon</groupId>
+                <artifactId>org.wso2.carbon.pax.exam.feature</artifactId>
+                <version>${carbon.kernel.version}</version>
+                <type>zip</type>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
@@ -736,7 +934,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
-                <!-- <inherited>false</inherited> -->
+<!--                 <inherited>false</inherited> -->
                 <configuration>
                     <environmentVariables>
                         <testEnvironmentVariable>EnvironmentVariable</testEnvironmentVariable>
@@ -750,6 +948,11 @@
                     <preparationGoals>clean install</preparationGoals>
                     <autoVersionSubmodules>true</autoVersionSubmodules>
                 </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-antrun-plugin</artifactId>
+                <version>${maven.antrun.plugin.version}</version>
             </plugin>
         </plugins>
 
@@ -833,10 +1036,62 @@
                     <artifactId>docker-maven-plugin</artifactId>
                     <version>${docker.maven.plugin.version}</version>
                 </plugin>
+                <plugin>
+                    <groupId>org.jacoco</groupId>
+                    <artifactId>jacoco-maven-plugin</artifactId>
+                    <version>${jacoco.version}</version>
+                    <configuration>
+                        <excludes>
+                            <exclude>**/JacksonJsonProvider.class</exclude>
+                            <exclude>**/RFC3339DateFormat.class</exclude>
+                            <exclude>**/StringUtil.class</exclude>
+                            <exclude>**/ApiOriginFilter.class</exclude>
+                            <exclude>**/ApiResponseMessage.class</exclude>
+                            <exclude>**/*Exception.class</exclude>
+                            <exclude>**/model/**</exclude>
+                        </excludes>
+                    </configuration>
+                    <executions>
+                        <execution>
+                            <id>jacoco-initialize</id>
+                            <goals>
+                                <goal>prepare-agent</goal>
+                            </goals>
+                            <configuration>
+                                <destFile>${basedir}/target/jacoco.exec</destFile>
+                                <propertyName>surefireArgLine</propertyName>
+                            </configuration>
+                        </execution>
+                        <execution>
+                            <id>jacoco-site</id>
+                            <phase>post-integration-test</phase>
+                            <goals>
+                                <goal>report</goal>
+                            </goals>
+                            <configuration>
+                                <dataFile>${basedir}/target/jacoco.exec</dataFile>
+                                <outputDirectory>${basedir}/target/coverage-reports/</outputDirectory>
+                            </configuration>
+                        </execution>
+                    </executions>
+                </plugin>
+                <plugin>
+                    <groupId>io.fabric8</groupId>
+                    <artifactId>docker-maven-plugin</artifactId>
+                    <version>${io.fabric8.version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-failsafe-plugin</artifactId>
+                    <version>${maven.failsafe.plugin.version}</version>
+                </plugin>
             </plugins>
         </pluginManagement>
     </build>
+
+
     <properties>
+        <streaming.integration.version>4.1.0-SNAPSHOT</streaming.integration.version>
         <carbon.analytics.version>3.0.61</carbon.analytics.version>
         <siddhi.version>5.1.24</siddhi.version>
 
@@ -868,6 +1123,10 @@
         <carbon.kernel.pax.version>5.2.17</carbon.kernel.pax.version>
 
         <carbon.deployment.version>5.2.2</carbon.deployment.version>
+
+        <powermock.version>1.6.2</powermock.version>
+        <junit.version>4.10</junit.version>
+        <osgi.test.util.version>5.1.1</osgi.test.util.version>
 
         <carbon.datasources.version>1.1.11</carbon.datasources.version>
         <carbon.metrics.version>2.3.15</carbon.metrics.version>
@@ -910,11 +1169,14 @@
 
         <!--pax-exam dependencies-->
         <javax.inject.version>1</javax.inject.version>
-        <pax.exam.version>4.13.1</pax.exam.version>
+        <pax.exam.version>4.6.0</pax.exam.version>
+        <pax.exam.container.native.version>4.6.0</pax.exam.container.native.version>
+        <pax.url.aether.version>1.6.0</pax.url.aether.version>
         <pax.exam.testng.version>4.13.1</pax.exam.testng.version>
         <pax.exam.link.mvn.version>4.13.1</pax.exam.link.mvn.version>
         <ow2.jta.spec.version>1.0.12</ow2.jta.spec.version>
         <jacoco.version>0.8.3</jacoco.version>
+        <org.jacoco.ant.version>0.8.3</org.jacoco.ant.version>
         <maven.paxexam.plugin.version>1.2.4</maven.paxexam.plugin.version>
         <mockito.version>1.9.0</mockito.version>
 
@@ -948,7 +1210,18 @@
         <apache.commons.fileupload.version>1.3.2</apache.commons.fileupload.version>
         <fabricator.wso2v1.version>2.1.4.wso2v1</fabricator.wso2v1.version>
         <generex.wso2v1.version>1.0.0.wso2v1</generex.wso2v1.version>
+
         <mysql.connector.version>5.1.38</mysql.connector.version>
+        <ojdbc6.version>12.1.0.1-atlassian-hosted</ojdbc6.version>
+        <postgresql.version>42.1.4</postgresql.version>
+        <h2.connector.version>2.1.210</h2.connector.version>
+        <mssql-jdbc.version>8.2.0.jre8</mssql-jdbc.version>
+        <zkclient.version>0.10</zkclient.version>
+        <curator-test.version>2.7.1</curator-test.version>
+        <zookeeper.version>3.7.0</zookeeper.version>
+        <io.fabric8.version>0.20.0</io.fabric8.version>
+        <awaitility.version>3.1.6</awaitility.version>
+
         <kafka.version>0.9.0.0</kafka.version>
         <google.collections.version>1.0</google.collections.version>
         <project.scm.id>scm-server</project.scm.id>
@@ -990,6 +1263,7 @@
         <testng.version>6.9.10</testng.version>
         <commons-httpclient.version>4.3.2.wso2v1</commons-httpclient.version>
         <commons.logging.version>1.2</commons.logging.version>
+        <commons-io.version>2.5</commons-io.version>
         <apache.commons.version>1.3.2</apache.commons.version>
         <json.version>3.0.0.wso2v1</json.version>
         <codehaus.jackson.version>1.9.13</codehaus.jackson.version>
@@ -1002,7 +1276,6 @@
 
         <!--Performance Testing Versions-->
         <HdrHistogram.version>2.1.9</HdrHistogram.version>
-        <jacoco.maven.version>0.7.8</jacoco.maven.version>
 
         <!-- Forget me tool -->
         <forgetme.tool.version>1.4.0</forgetme.tool.version>
@@ -1020,7 +1293,7 @@
 
     <modules>
         <module>modules/distribution</module>
-        <module>modules/tests</module>
+        <module>modules/osgi-tests</module>
         <module>modules/integration</module>
         <module>modules/performance</module>
     </modules>

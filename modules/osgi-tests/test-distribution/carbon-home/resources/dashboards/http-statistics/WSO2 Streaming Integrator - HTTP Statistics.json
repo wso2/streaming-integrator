@@ -1,0 +1,1358 @@
+{
+    "annotations": {
+      "list": [
+        {
+          "builtIn": 1,
+          "datasource": "-- Grafana --",
+          "enable": true,
+          "hide": true,
+          "iconColor": "rgba(0, 211, 255, 1)",
+          "name": "Annotations & Alerts",
+          "type": "dashboard"
+        }
+      ]
+    },
+    "editable": true,
+    "gnetId": null,
+    "graphTooltip": 0,
+    "id": 10,
+    "iteration": 1610951327329,
+    "links": [
+      {
+        "icon": "dashboard",
+        "tags": [],
+        "targetBlank": true,
+        "title": "WSO2 Streaming Integrator - HTTP Source Statistics",
+        "type": "link",
+        "url": "/d/zQqkWz1Gk/wso2-streaming-integrator-http-source-statistics?orgId=1&var-app=$app&var-url=All&from=now-5m&to=now&refresh=5s"
+      },
+      {
+        "icon": "dashboard",
+        "tags": [],
+        "targetBlank": true,
+        "title": "WSO2 Streaming Integrator - HTTP Sink Statistics",
+        "type": "link",
+        "url": "/d/Z5CYZzJGz/wso2-streaming-integrator-http-sink-statistics?orgId=1&var-app=$app&var-url=All&from=now-5m&to=now&refresh=5s"
+      }
+    ],
+    "panels": [
+      {
+        "collapsed": false,
+        "datasource": null,
+        "gridPos": {
+          "h": 1,
+          "w": 24,
+          "x": 0,
+          "y": 0
+        },
+        "id": 11,
+        "panels": [],
+        "title": "Source",
+        "type": "row"
+      },
+      {
+        "cacheTimeout": null,
+        "colorBackground": false,
+        "colorValue": false,
+        "colors": [
+          "#299c46",
+          "rgba(237, 129, 40, 0.89)",
+          "#d44a3a"
+        ],
+        "datasource": null,
+        "description": "",
+        "fieldConfig": {
+          "defaults": {
+            "custom": {}
+          },
+          "overrides": []
+        },
+        "format": "none",
+        "gauge": {
+          "maxValue": 100,
+          "minValue": 0,
+          "show": false,
+          "thresholdLabels": false,
+          "thresholdMarkers": true
+        },
+        "gridPos": {
+          "h": 5,
+          "w": 4,
+          "x": 0,
+          "y": 1
+        },
+        "id": 4,
+        "interval": null,
+        "links": [],
+        "mappingType": 1,
+        "mappingTypes": [
+          {
+            "name": "value to text",
+            "value": 1
+          },
+          {
+            "name": "range to text",
+            "value": 2
+          }
+        ],
+        "maxDataPoints": 100,
+        "nullPointMode": "connected",
+        "nullText": null,
+        "postfix": "",
+        "postfixFontSize": "50%",
+        "prefix": "",
+        "prefixFontSize": "50%",
+        "rangeMaps": [
+          {
+            "from": "null",
+            "text": "N/A",
+            "to": "null"
+          }
+        ],
+        "sparkline": {
+          "fillColor": "rgba(192, 216, 255, 0.26)",
+          "full": true,
+          "lineColor": "rgb(31, 120, 193)",
+          "show": true,
+          "ymax": null,
+          "ymin": null
+        },
+        "tableColumn": "",
+        "targets": [
+          {
+            "expr": "sum(siddhi_http_source_event_count{app=~\"$app\"})",
+            "format": "time_series",
+            "instant": true,
+            "interval": "",
+            "legendFormat": "",
+            "refId": "A"
+          }
+        ],
+        "thresholds": "",
+        "timeFrom": null,
+        "timeShift": null,
+        "title": "Total Requests",
+        "type": "singlestat",
+        "valueFontSize": "80%",
+        "valueMaps": [
+          {
+            "op": "=",
+            "text": "0",
+            "value": "null"
+          }
+        ],
+        "valueName": "avg"
+      },
+      {
+        "columns": [],
+        "datasource": null,
+        "fieldConfig": {
+          "defaults": {
+            "custom": {}
+          },
+          "overrides": []
+        },
+        "fontSize": "120%",
+        "gridPos": {
+          "h": 8,
+          "w": 20,
+          "x": 4,
+          "y": 1
+        },
+        "id": 9,
+        "pageSize": 5,
+        "showHeader": true,
+        "sort": {
+          "col": null,
+          "desc": false
+        },
+        "styles": [
+          {
+            "alias": "Stream Name",
+            "align": "auto",
+            "colorMode": null,
+            "colors": [
+              "rgba(245, 54, 54, 0.9)",
+              "rgba(237, 129, 40, 0.89)",
+              "rgba(50, 172, 45, 0.97)"
+            ],
+            "dateFormat": "YYYY-MM-DD HH:mm:ss",
+            "decimals": 2,
+            "mappingType": 1,
+            "pattern": "stream_name",
+            "thresholds": [],
+            "type": "string",
+            "unit": "short"
+          },
+          {
+            "alias": "URL",
+            "align": "auto",
+            "colorMode": null,
+            "colors": [
+              "rgba(245, 54, 54, 0.9)",
+              "rgba(237, 129, 40, 0.89)",
+              "rgba(50, 172, 45, 0.97)"
+            ],
+            "dateFormat": "YYYY-MM-DD HH:mm:ss",
+            "decimals": 2,
+            "link": true,
+            "linkTargetBlank": true,
+            "linkUrl": "/d/zQqkWz1Gk/wso2-streaming-integrator-http-source-statistics?orgId=1&var-app=$app&var-url=$__cell&from=now-5m&to=now&refresh=5s",
+            "mappingType": 1,
+            "pattern": "url",
+            "thresholds": [],
+            "type": "string",
+            "unit": "short"
+          },
+          {
+            "alias": "",
+            "align": "auto",
+            "colorMode": null,
+            "colors": [
+              "rgba(245, 54, 54, 0.9)",
+              "rgba(237, 129, 40, 0.89)",
+              "rgba(50, 172, 45, 0.97)"
+            ],
+            "dateFormat": "YYYY-MM-DD HH:mm:ss",
+            "decimals": 2,
+            "mappingType": 1,
+            "pattern": "Time",
+            "thresholds": [],
+            "type": "hidden",
+            "unit": "short"
+          },
+          {
+            "alias": "Event Count",
+            "align": "auto",
+            "colorMode": null,
+            "colors": [
+              "rgba(245, 54, 54, 0.9)",
+              "rgba(237, 129, 40, 0.89)",
+              "rgba(50, 172, 45, 0.97)"
+            ],
+            "dateFormat": "YYYY-MM-DD HH:mm:ss",
+            "decimals": 0,
+            "mappingType": 1,
+            "pattern": "Value #B",
+            "thresholds": [],
+            "type": "number",
+            "unit": "locale"
+          },
+          {
+            "alias": "Event/Sec",
+            "align": "auto",
+            "colorMode": null,
+            "colors": [
+              "rgba(245, 54, 54, 0.9)",
+              "rgba(237, 129, 40, 0.89)",
+              "rgba(50, 172, 45, 0.97)"
+            ],
+            "dateFormat": "YYYY-MM-DD HH:mm:ss",
+            "decimals": 2,
+            "mappingType": 1,
+            "pattern": "Value #C",
+            "thresholds": [],
+            "type": "number",
+            "unit": "short"
+          },
+          {
+            "alias": "Status",
+            "align": "auto",
+            "colorMode": "cell",
+            "colors": [
+              "rgba(245, 54, 54, 0.9)",
+              "rgba(237, 129, 40, 0.89)",
+              "rgba(50, 172, 45, 0.97)"
+            ],
+            "dateFormat": "YYYY-MM-DD HH:mm:ss",
+            "decimals": 2,
+            "mappingType": 1,
+            "pattern": "Value #D",
+            "thresholds": [
+              "1",
+              "1"
+            ],
+            "type": "string",
+            "unit": "short",
+            "valueMaps": [
+              {
+                "text": "Online",
+                "value": "1"
+              },
+              {
+                "text": "Offline",
+                "value": "0"
+              },
+              {
+                "text": "Connecting",
+                "value": "-1"
+              }
+            ]
+          },
+          {
+            "alias": "Average Size",
+            "align": "auto",
+            "colorMode": null,
+            "colors": [
+              "rgba(245, 54, 54, 0.9)",
+              "rgba(237, 129, 40, 0.89)",
+              "rgba(50, 172, 45, 0.97)"
+            ],
+            "dateFormat": "YYYY-MM-DD HH:mm:ss",
+            "decimals": 2,
+            "mappingType": 1,
+            "pattern": "Value #E",
+            "thresholds": [],
+            "type": "number",
+            "unit": "decbytes"
+          }
+        ],
+        "targets": [
+          {
+            "expr": "sum(siddhi_http_source_event_count{app=~\"$app\"}) by (url, stream_name)",
+            "format": "table",
+            "hide": false,
+            "instant": true,
+            "interval": "",
+            "legendFormat": "",
+            "refId": "B"
+          },
+          {
+            "expr": "sum(rate(siddhi_http_source_event_count{app=~\"$app\"}[5m])) by (url, stream_name)",
+            "format": "table",
+            "hide": false,
+            "instant": true,
+            "interval": "",
+            "legendFormat": "",
+            "refId": "C"
+          },
+          {
+            "expr": "sum(siddhi_http_source_error_count{app=~\"$app\"}) by (url, stream_name)",
+            "format": "table",
+            "instant": true,
+            "interval": "",
+            "legendFormat": "",
+            "refId": "G"
+          },
+          {
+            "expr": "sum(siddhi_http_source_status{app=~\"$app\"}) by (url, stream_name)",
+            "format": "table",
+            "instant": true,
+            "interval": "",
+            "legendFormat": "",
+            "refId": "D"
+          },
+          {
+            "expr": "sum(siddhi_http_source_request_size{app=~\"$app\"}) by (url, stream_name) / sum(siddhi_http_source_event_count{app=~\"$app\"}) by (url, stream_name)",
+            "format": "table",
+            "hide": false,
+            "instant": true,
+            "interval": "",
+            "legendFormat": "",
+            "refId": "E"
+          }
+        ],
+        "timeFrom": null,
+        "timeShift": null,
+        "title": "HTTP Statistics",
+        "transform": "table",
+        "type": "table-old"
+      },
+      {
+        "cacheTimeout": null,
+        "colorBackground": false,
+        "colorValue": true,
+        "colors": [
+          "#299c46",
+          "rgba(237, 129, 40, 0.89)",
+          "#d44a3a"
+        ],
+        "datasource": null,
+        "description": "",
+        "fieldConfig": {
+          "defaults": {
+            "custom": {}
+          },
+          "overrides": []
+        },
+        "format": "none",
+        "gauge": {
+          "maxValue": 100,
+          "minValue": 0,
+          "show": false,
+          "thresholdLabels": false,
+          "thresholdMarkers": true
+        },
+        "gridPos": {
+          "h": 3,
+          "w": 2,
+          "x": 0,
+          "y": 6
+        },
+        "id": 26,
+        "interval": null,
+        "links": [],
+        "mappingType": 1,
+        "mappingTypes": [
+          {
+            "name": "value to text",
+            "value": 1
+          },
+          {
+            "name": "range to text",
+            "value": 2
+          }
+        ],
+        "maxDataPoints": 100,
+        "nullPointMode": "connected",
+        "nullText": null,
+        "postfix": "",
+        "postfixFontSize": "50%",
+        "prefix": "",
+        "prefixFontSize": "50%",
+        "rangeMaps": [
+          {
+            "from": "null",
+            "text": "N/A",
+            "to": "null"
+          }
+        ],
+        "sparkline": {
+          "fillColor": "rgba(192, 216, 255, 0.26)",
+          "full": true,
+          "lineColor": "rgb(31, 120, 193)",
+          "show": true,
+          "ymax": null,
+          "ymin": null
+        },
+        "tableColumn": "",
+        "targets": [
+          {
+            "expr": "sum(siddhi_http_source_event_count{app=~\"$app\"}) - (sum(siddhi_http_source_error_count{app=~\"$app\"}) or vector(0))",
+            "format": "time_series",
+            "instant": true,
+            "interval": "",
+            "legendFormat": "",
+            "refId": "A"
+          }
+        ],
+        "thresholds": "INF, INF",
+        "timeFrom": null,
+        "timeShift": null,
+        "title": "Success",
+        "type": "singlestat",
+        "valueFontSize": "80%",
+        "valueMaps": [
+          {
+            "op": "=",
+            "text": "0",
+            "value": "null"
+          }
+        ],
+        "valueName": "avg"
+      },
+      {
+        "cacheTimeout": null,
+        "colorBackground": false,
+        "colorValue": true,
+        "colors": [
+          "#299c46",
+          "rgba(237, 129, 40, 0.89)",
+          "#d44a3a"
+        ],
+        "datasource": null,
+        "description": "",
+        "fieldConfig": {
+          "defaults": {
+            "custom": {}
+          },
+          "overrides": []
+        },
+        "format": "none",
+        "gauge": {
+          "maxValue": 100,
+          "minValue": 0,
+          "show": false,
+          "thresholdLabels": false,
+          "thresholdMarkers": true
+        },
+        "gridPos": {
+          "h": 3,
+          "w": 2,
+          "x": 2,
+          "y": 6
+        },
+        "id": 27,
+        "interval": null,
+        "links": [],
+        "mappingType": 1,
+        "mappingTypes": [
+          {
+            "name": "value to text",
+            "value": 1
+          },
+          {
+            "name": "range to text",
+            "value": 2
+          }
+        ],
+        "maxDataPoints": 100,
+        "nullPointMode": "connected",
+        "nullText": null,
+        "postfix": "",
+        "postfixFontSize": "50%",
+        "prefix": "",
+        "prefixFontSize": "50%",
+        "rangeMaps": [
+          {
+            "from": "null",
+            "text": "N/A",
+            "to": "null"
+          }
+        ],
+        "sparkline": {
+          "fillColor": "rgba(192, 216, 255, 0.26)",
+          "full": true,
+          "lineColor": "rgb(31, 120, 193)",
+          "show": true,
+          "ymax": null,
+          "ymin": null
+        },
+        "tableColumn": "",
+        "targets": [
+          {
+            "expr": "sum(siddhi_http_source_error_count{app=~\"$app\"}) or vector(0)",
+            "format": "time_series",
+            "instant": true,
+            "interval": "",
+            "legendFormat": "",
+            "refId": "A"
+          }
+        ],
+        "thresholds": "0,0",
+        "timeFrom": null,
+        "timeShift": null,
+        "title": "Failed",
+        "type": "singlestat",
+        "valueFontSize": "80%",
+        "valueMaps": [
+          {
+            "op": "=",
+            "text": "0",
+            "value": "null"
+          }
+        ],
+        "valueName": "avg"
+      },
+      {
+        "aliasColors": {
+          "Events per min": "rgb(236, 124, 36)"
+        },
+        "bars": false,
+        "dashLength": 10,
+        "dashes": false,
+        "datasource": null,
+        "decimals": 2,
+        "fieldConfig": {
+          "defaults": {
+            "custom": {},
+            "links": []
+          },
+          "overrides": []
+        },
+        "fill": 1,
+        "fillGradient": 5,
+        "gridPos": {
+          "h": 8,
+          "w": 24,
+          "x": 0,
+          "y": 9
+        },
+        "hiddenSeries": false,
+        "id": 13,
+        "legend": {
+          "alignAsTable": true,
+          "avg": true,
+          "current": false,
+          "hideEmpty": false,
+          "hideZero": false,
+          "max": true,
+          "min": false,
+          "rightSide": true,
+          "show": true,
+          "total": false,
+          "values": true
+        },
+        "lines": true,
+        "linewidth": 2,
+        "nullPointMode": "null",
+        "options": {
+          "alertThreshold": true
+        },
+        "percentage": false,
+        "pluginVersion": "7.3.1",
+        "pointradius": 2,
+        "points": false,
+        "renderer": "flot",
+        "seriesOverrides": [],
+        "spaceLength": 10,
+        "stack": false,
+        "steppedLine": false,
+        "targets": [
+          {
+            "expr": "rate(siddhi_http_source_event_count{app=~\"$app\"}[1m])",
+            "instant": false,
+            "interval": "",
+            "intervalFactor": 1,
+            "legendFormat": "{{url}}",
+            "refId": "B"
+          }
+        ],
+        "thresholds": [],
+        "timeFrom": null,
+        "timeRegions": [],
+        "timeShift": null,
+        "title": "Received Events/Sec",
+        "tooltip": {
+          "shared": true,
+          "sort": 0,
+          "value_type": "individual"
+        },
+        "type": "graph",
+        "xaxis": {
+          "buckets": null,
+          "mode": "time",
+          "name": null,
+          "show": true,
+          "values": []
+        },
+        "yaxes": [
+          {
+            "decimals": null,
+            "format": "short",
+            "label": null,
+            "logBase": 1,
+            "max": null,
+            "min": "0",
+            "show": true
+          },
+          {
+            "format": "wps",
+            "label": null,
+            "logBase": 1,
+            "max": null,
+            "min": null,
+            "show": true
+          }
+        ],
+        "yaxis": {
+          "align": false,
+          "alignLevel": null
+        }
+      },
+      {
+        "collapsed": false,
+        "datasource": null,
+        "gridPos": {
+          "h": 1,
+          "w": 24,
+          "x": 0,
+          "y": 17
+        },
+        "id": 25,
+        "panels": [],
+        "title": "Sink",
+        "type": "row"
+      },
+      {
+        "cacheTimeout": null,
+        "colorBackground": false,
+        "colorValue": false,
+        "colors": [
+          "#299c46",
+          "rgba(237, 129, 40, 0.89)",
+          "#d44a3a"
+        ],
+        "datasource": null,
+        "description": "",
+        "fieldConfig": {
+          "defaults": {
+            "custom": {}
+          },
+          "overrides": []
+        },
+        "format": "none",
+        "gauge": {
+          "maxValue": 100,
+          "minValue": 0,
+          "show": false,
+          "thresholdLabels": false,
+          "thresholdMarkers": true
+        },
+        "gridPos": {
+          "h": 5,
+          "w": 4,
+          "x": 0,
+          "y": 18
+        },
+        "id": 15,
+        "interval": null,
+        "links": [],
+        "mappingType": 1,
+        "mappingTypes": [
+          {
+            "name": "value to text",
+            "value": 1
+          },
+          {
+            "name": "range to text",
+            "value": 2
+          }
+        ],
+        "maxDataPoints": 100,
+        "nullPointMode": "connected",
+        "nullText": null,
+        "postfix": "",
+        "postfixFontSize": "50%",
+        "prefix": "",
+        "prefixFontSize": "50%",
+        "rangeMaps": [
+          {
+            "from": "null",
+            "text": "N/A",
+            "to": "null"
+          }
+        ],
+        "sparkline": {
+          "fillColor": "rgba(192, 216, 255, 0.26)",
+          "full": true,
+          "lineColor": "rgb(31, 120, 193)",
+          "show": true,
+          "ymax": null,
+          "ymin": null
+        },
+        "tableColumn": "",
+        "targets": [
+          {
+            "expr": "sum(siddhi_http_sink_event_count{app=~\"$app\"})",
+            "format": "time_series",
+            "instant": true,
+            "interval": "",
+            "legendFormat": "",
+            "refId": "A"
+          }
+        ],
+        "thresholds": "",
+        "timeFrom": null,
+        "timeShift": null,
+        "title": "Total Requests",
+        "type": "singlestat",
+        "valueFontSize": "80%",
+        "valueMaps": [
+          {
+            "op": "=",
+            "text": "0",
+            "value": "null"
+          }
+        ],
+        "valueName": "avg"
+      },
+      {
+        "columns": [],
+        "datasource": null,
+        "fieldConfig": {
+          "defaults": {
+            "custom": {}
+          },
+          "overrides": []
+        },
+        "fontSize": "120%",
+        "gridPos": {
+          "h": 8,
+          "w": 20,
+          "x": 4,
+          "y": 18
+        },
+        "id": 23,
+        "pageSize": 5,
+        "showHeader": true,
+        "sort": {
+          "col": 2,
+          "desc": true
+        },
+        "styles": [
+          {
+            "alias": "Stream Name",
+            "align": "auto",
+            "colorMode": null,
+            "colors": [
+              "rgba(245, 54, 54, 0.9)",
+              "rgba(237, 129, 40, 0.89)",
+              "rgba(50, 172, 45, 0.97)"
+            ],
+            "dateFormat": "YYYY-MM-DD HH:mm:ss",
+            "decimals": 2,
+            "mappingType": 1,
+            "pattern": "stream_name",
+            "thresholds": [],
+            "type": "string",
+            "unit": "short"
+          },
+          {
+            "alias": "",
+            "align": "auto",
+            "colorMode": null,
+            "colors": [
+              "rgba(245, 54, 54, 0.9)",
+              "rgba(237, 129, 40, 0.89)",
+              "rgba(50, 172, 45, 0.97)"
+            ],
+            "dateFormat": "YYYY-MM-DD HH:mm:ss",
+            "decimals": 2,
+            "mappingType": 1,
+            "pattern": "Time",
+            "thresholds": [],
+            "type": "hidden",
+            "unit": "short"
+          },
+          {
+            "alias": "URL",
+            "align": "auto",
+            "colorMode": null,
+            "colors": [
+              "rgba(245, 54, 54, 0.9)",
+              "rgba(237, 129, 40, 0.89)",
+              "rgba(50, 172, 45, 0.97)"
+            ],
+            "dateFormat": "YYYY-MM-DD HH:mm:ss",
+            "decimals": 2,
+            "link": true,
+            "linkTargetBlank": true,
+            "linkUrl": "/d/Z5CYZzJGz/wso2-streaming-integrator-http-sink-statistics?orgId=1&var-app=$app&var-url=$__cell&from=now-5m&to=now&refresh=5s",
+            "mappingType": 1,
+            "pattern": "url",
+            "preserveFormat": false,
+            "thresholds": [],
+            "type": "string",
+            "unit": "short"
+          },
+          {
+            "alias": "Event Count",
+            "align": "auto",
+            "colorMode": null,
+            "colors": [
+              "rgba(245, 54, 54, 0.9)",
+              "rgba(237, 129, 40, 0.89)",
+              "rgba(50, 172, 45, 0.97)"
+            ],
+            "dateFormat": "YYYY-MM-DD HH:mm:ss",
+            "decimals": 0,
+            "mappingType": 1,
+            "pattern": "Value #B",
+            "thresholds": [],
+            "type": "number",
+            "unit": "locale"
+          },
+          {
+            "alias": "Error Count",
+            "align": "auto",
+            "colorMode": "value",
+            "colors": [
+              "rgba(50, 172, 45, 0.97)",
+              "rgba(237, 129, 40, 0.89)",
+              "rgba(245, 54, 54, 0.9)"
+            ],
+            "dateFormat": "YYYY-MM-DD HH:mm:ss",
+            "decimals": 0,
+            "mappingType": 1,
+            "pattern": "Value #D",
+            "thresholds": [
+              "0",
+              "0"
+            ],
+            "type": "number",
+            "unit": "locale"
+          },
+          {
+            "alias": "Event/sec",
+            "align": "auto",
+            "colorMode": null,
+            "colors": [
+              "rgba(245, 54, 54, 0.9)",
+              "rgba(237, 129, 40, 0.89)",
+              "rgba(50, 172, 45, 0.97)"
+            ],
+            "dateFormat": "YYYY-MM-DD HH:mm:ss",
+            "decimals": 2,
+            "mappingType": 1,
+            "pattern": "Value #A",
+            "thresholds": [],
+            "type": "number",
+            "unit": "short"
+          },
+          {
+            "alias": "Status",
+            "align": "auto",
+            "colorMode": "cell",
+            "colors": [
+              "rgba(245, 54, 54, 0.9)",
+              "rgba(237, 129, 40, 0.89)",
+              "rgba(50, 172, 45, 0.97)"
+            ],
+            "dateFormat": "YYYY-MM-DD HH:mm:ss",
+            "decimals": 2,
+            "mappingType": 1,
+            "pattern": "Value #C",
+            "thresholds": [
+              "1",
+              "1"
+            ],
+            "type": "string",
+            "unit": "short",
+            "valueMaps": [
+              {
+                "text": "Online",
+                "value": "1"
+              },
+              {
+                "text": "Offline",
+                "value": "0"
+              },
+              {
+                "text": "Connecting",
+                "value": "-1"
+              }
+            ]
+          },
+          {
+            "alias": "Average Size",
+            "align": "auto",
+            "colorMode": null,
+            "colors": [
+              "rgba(245, 54, 54, 0.9)",
+              "rgba(237, 129, 40, 0.89)",
+              "rgba(50, 172, 45, 0.97)"
+            ],
+            "dateFormat": "YYYY-MM-DD HH:mm:ss",
+            "decimals": 2,
+            "mappingType": 1,
+            "pattern": "Value #E",
+            "thresholds": [],
+            "type": "number",
+            "unit": "decbytes"
+          },
+          {
+            "alias": "Avg. Latency",
+            "align": "auto",
+            "colorMode": null,
+            "colors": [
+              "rgba(245, 54, 54, 0.9)",
+              "rgba(237, 129, 40, 0.89)",
+              "rgba(50, 172, 45, 0.97)"
+            ],
+            "dateFormat": "YYYY-MM-DD HH:mm:ss",
+            "decimals": 2,
+            "mappingType": 1,
+            "pattern": "Value #F",
+            "thresholds": [],
+            "type": "hidden",
+            "unit": "ms"
+          }
+        ],
+        "targets": [
+          {
+            "expr": "sum(siddhi_http_sink_event_count{app=~\"$app\"}) by (url, stream_name)",
+            "format": "table",
+            "hide": false,
+            "instant": true,
+            "interval": "",
+            "legendFormat": "",
+            "refId": "B"
+          },
+          {
+            "expr": "sum(siddhi_http_sink_error_count{app=~\"$app\"}) by (url, stream_name)",
+            "format": "table",
+            "hide": false,
+            "instant": true,
+            "interval": "",
+            "legendFormat": "",
+            "refId": "D"
+          },
+          {
+            "expr": "sum(rate(siddhi_http_sink_event_count{app=~\"$app\"}[1m])) by (url, stream_name)",
+            "format": "table",
+            "hide": false,
+            "instant": true,
+            "interval": "",
+            "legendFormat": "",
+            "refId": "A"
+          },
+          {
+            "expr": "sum(siddhi_http_sink_status{app=~\"$app\"}) by (url, stream_name)",
+            "format": "table",
+            "instant": true,
+            "interval": "",
+            "legendFormat": "",
+            "refId": "C"
+          },
+          {
+            "expr": "sum(siddhi_http_sink_request_size{app=~\"$app\"}) by (url, stream_name) / sum(siddhi_http_sink_event_count{app=~\"$app\"}) by (url, stream_name)",
+            "format": "table",
+            "instant": true,
+            "interval": "",
+            "legendFormat": "",
+            "refId": "E"
+          },
+          {
+            "expr": "sum(siddhi_http_sink_average_latency{app=~\"$app\"}) by (url, stream_name)",
+            "format": "table",
+            "instant": true,
+            "interval": "",
+            "legendFormat": "",
+            "refId": "F"
+          }
+        ],
+        "timeFrom": null,
+        "timeShift": null,
+        "title": "HTTP Statistics",
+        "transform": "table",
+        "type": "table-old"
+      },
+      {
+        "cacheTimeout": null,
+        "colorBackground": false,
+        "colorValue": true,
+        "colors": [
+          "#299c46",
+          "rgba(237, 129, 40, 0.89)",
+          "#d44a3a"
+        ],
+        "datasource": null,
+        "description": "",
+        "fieldConfig": {
+          "defaults": {
+            "custom": {}
+          },
+          "overrides": []
+        },
+        "format": "none",
+        "gauge": {
+          "maxValue": 100,
+          "minValue": 0,
+          "show": false,
+          "thresholdLabels": false,
+          "thresholdMarkers": true
+        },
+        "gridPos": {
+          "h": 3,
+          "w": 2,
+          "x": 0,
+          "y": 23
+        },
+        "id": 17,
+        "interval": null,
+        "links": [],
+        "mappingType": 1,
+        "mappingTypes": [
+          {
+            "name": "value to text",
+            "value": 1
+          },
+          {
+            "name": "range to text",
+            "value": 2
+          }
+        ],
+        "maxDataPoints": 100,
+        "nullPointMode": "connected",
+        "nullText": null,
+        "postfix": "",
+        "postfixFontSize": "50%",
+        "prefix": "",
+        "prefixFontSize": "50%",
+        "rangeMaps": [
+          {
+            "from": "null",
+            "text": "N/A",
+            "to": "null"
+          }
+        ],
+        "sparkline": {
+          "fillColor": "rgba(192, 216, 255, 0.26)",
+          "full": true,
+          "lineColor": "rgb(31, 120, 193)",
+          "show": true,
+          "ymax": null,
+          "ymin": null
+        },
+        "tableColumn": "",
+        "targets": [
+          {
+            "expr": "sum(siddhi_http_sink_event_count{app=~\"$app\"}) - (sum(siddhi_http_sink_error_count{app=~\"$app\"}) or vector(0))",
+            "format": "time_series",
+            "instant": true,
+            "interval": "",
+            "legendFormat": "",
+            "refId": "A"
+          }
+        ],
+        "thresholds": "INF, INF",
+        "timeFrom": null,
+        "timeShift": null,
+        "title": "Success",
+        "type": "singlestat",
+        "valueFontSize": "80%",
+        "valueMaps": [
+          {
+            "op": "=",
+            "text": "0",
+            "value": "null"
+          }
+        ],
+        "valueName": "avg"
+      },
+      {
+        "cacheTimeout": null,
+        "colorBackground": false,
+        "colorValue": true,
+        "colors": [
+          "#299c46",
+          "rgba(237, 129, 40, 0.89)",
+          "#d44a3a"
+        ],
+        "datasource": null,
+        "description": "",
+        "fieldConfig": {
+          "defaults": {
+            "custom": {}
+          },
+          "overrides": []
+        },
+        "format": "none",
+        "gauge": {
+          "maxValue": 100,
+          "minValue": 0,
+          "show": false,
+          "thresholdLabels": false,
+          "thresholdMarkers": true
+        },
+        "gridPos": {
+          "h": 3,
+          "w": 2,
+          "x": 2,
+          "y": 23
+        },
+        "id": 19,
+        "interval": null,
+        "links": [],
+        "mappingType": 1,
+        "mappingTypes": [
+          {
+            "name": "value to text",
+            "value": 1
+          },
+          {
+            "name": "range to text",
+            "value": 2
+          }
+        ],
+        "maxDataPoints": 100,
+        "nullPointMode": "connected",
+        "nullText": null,
+        "postfix": "",
+        "postfixFontSize": "50%",
+        "prefix": "",
+        "prefixFontSize": "50%",
+        "rangeMaps": [
+          {
+            "from": "null",
+            "text": "N/A",
+            "to": "null"
+          }
+        ],
+        "sparkline": {
+          "fillColor": "rgba(192, 216, 255, 0.26)",
+          "full": true,
+          "lineColor": "rgb(31, 120, 193)",
+          "show": true,
+          "ymax": null,
+          "ymin": null
+        },
+        "tableColumn": "",
+        "targets": [
+          {
+            "expr": "sum(siddhi_http_sink_error_count{app=~\"$app\"}) or vector(0)",
+            "format": "time_series",
+            "instant": true,
+            "interval": "",
+            "legendFormat": "",
+            "refId": "A"
+          }
+        ],
+        "thresholds": "0,0",
+        "timeFrom": null,
+        "timeShift": null,
+        "title": "Failed",
+        "type": "singlestat",
+        "valueFontSize": "80%",
+        "valueMaps": [
+          {
+            "op": "=",
+            "text": "0",
+            "value": "null"
+          }
+        ],
+        "valueName": "avg"
+      },
+      {
+        "aliasColors": {
+          "Events per min": "rgb(236, 124, 36)"
+        },
+        "bars": false,
+        "dashLength": 10,
+        "dashes": false,
+        "datasource": null,
+        "decimals": 2,
+        "fieldConfig": {
+          "defaults": {
+            "custom": {},
+            "links": []
+          },
+          "overrides": []
+        },
+        "fill": 1,
+        "fillGradient": 5,
+        "gridPos": {
+          "h": 8,
+          "w": 24,
+          "x": 0,
+          "y": 26
+        },
+        "hiddenSeries": false,
+        "id": 21,
+        "legend": {
+          "alignAsTable": true,
+          "avg": true,
+          "current": false,
+          "hideEmpty": false,
+          "hideZero": false,
+          "max": true,
+          "min": false,
+          "rightSide": true,
+          "show": true,
+          "total": false,
+          "values": true
+        },
+        "lines": true,
+        "linewidth": 2,
+        "nullPointMode": "null",
+        "options": {
+          "alertThreshold": true
+        },
+        "percentage": false,
+        "pluginVersion": "7.3.1",
+        "pointradius": 2,
+        "points": false,
+        "renderer": "flot",
+        "seriesOverrides": [],
+        "spaceLength": 10,
+        "stack": false,
+        "steppedLine": false,
+        "targets": [
+          {
+            "expr": "rate(siddhi_http_sink_event_count{app=~\"$app\"}[1m])",
+            "instant": false,
+            "interval": "",
+            "intervalFactor": 1,
+            "legendFormat": "{{url}}",
+            "refId": "B"
+          }
+        ],
+        "thresholds": [],
+        "timeFrom": null,
+        "timeRegions": [],
+        "timeShift": null,
+        "title": "Published Events/Sec",
+        "tooltip": {
+          "shared": true,
+          "sort": 0,
+          "value_type": "individual"
+        },
+        "type": "graph",
+        "xaxis": {
+          "buckets": null,
+          "mode": "time",
+          "name": null,
+          "show": true,
+          "values": []
+        },
+        "yaxes": [
+          {
+            "decimals": null,
+            "format": "short",
+            "label": null,
+            "logBase": 1,
+            "max": null,
+            "min": "0",
+            "show": true
+          },
+          {
+            "format": "wps",
+            "label": null,
+            "logBase": 1,
+            "max": null,
+            "min": null,
+            "show": true
+          }
+        ],
+        "yaxis": {
+          "align": false,
+          "alignLevel": null
+        }
+      }
+    ],
+    "refresh": "5s",
+    "schemaVersion": 26,
+    "style": "dark",
+    "tags": [],
+    "templating": {
+      "list": [
+        {
+          "allValue": null,
+          "current": {
+            "selected": false,
+            "text": "SweetApp",
+            "value": "SweetApp"
+          },
+          "datasource": "Prometheus",
+          "definition": "label_values(siddhi_http_apps, app)",
+          "error": null,
+          "hide": 0,
+          "includeAll": false,
+          "label": "App Name",
+          "multi": false,
+          "name": "app",
+          "options": [],
+          "query": "label_values(siddhi_http_apps, app)",
+          "refresh": 1,
+          "regex": "",
+          "skipUrlSync": false,
+          "sort": 1,
+          "tagValuesQuery": "",
+          "tags": [],
+          "tagsQuery": "",
+          "type": "query",
+          "useTags": false
+        }
+      ]
+    },
+    "time": {
+      "from": "now-5m",
+      "to": "now"
+    },
+    "timepicker": {},
+    "timezone": "",
+    "title": "WSO2 Streaming Integrator - HTTP Statistics",
+    "uid": "eMw9ERJGk",
+    "version": 27
+  }
