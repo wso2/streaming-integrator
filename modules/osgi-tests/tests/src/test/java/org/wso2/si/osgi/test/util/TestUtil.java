@@ -38,6 +38,7 @@ import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
 import java.net.HttpURLConnection;
+import java.net.Socket;
 import java.net.URI;
 import java.net.URL;
 import java.util.List;
@@ -227,6 +228,26 @@ public class TestUtil {
     private void setHeader(String key, String value) {
         if (key != null && value != null) {
             connection.setRequestProperty(key, value);
+        }
+    }
+
+    public static boolean isPortOccupied(String host, int port) {
+        Socket socket = null;
+        try {
+            socket = new Socket(host, port);
+            // Port is occupied
+            return true;
+        } catch (IOException e) {
+            // Port is not occupied
+            return false;
+        } finally {
+            if (socket != null) {
+                try {
+                    socket.close();
+                } catch (IOException e) {
+                    throw new RuntimeException("Unable to close connection ", e);
+                }
+            }
         }
     }
 

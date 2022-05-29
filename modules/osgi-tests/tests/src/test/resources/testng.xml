@@ -25,6 +25,9 @@ limitations under the License.
             <class name="org.wso2.si.osgi.test.DBPersistenceStoreTestcase"/>
             <class name="org.wso2.si.osgi.test.FileSystemPersistenceStoreConfigTestcase"/>
             <class name="org.wso2.si.osgi.test.ConfigReaderTestCase"/>
+            <class name="org.wso2.si.osgi.test.StreamingIntegratorOpenedPortTestcase"/>
+            <class name="org.wso2.si.osgi.test.ExtensionInstallationTestCase"/>
+            <class name="org.wso2.si.osgi.test.ExtensionInstallationVerificationTestCase"/>
         </classes>
     </test>
 </suite>

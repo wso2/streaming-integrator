@@ -25,5 +25,7 @@ public class TestConstants {
     public static final String DEFAULT_PASSWORD = "admin";
     public static final String CONTENT_TYPE_JSON = "application/json";
     public static final String CONTENT_TYPE_MULTIPART_FORMDATA = "multipart/form-data";
+    public static final int[] COMMON_SI_PORTS = new int[]{7611, 7711, 9611, 9711};
+    public static final int[] SERVER_RUNTIME_PORTS = new int[]{9090, 9443};
 
 }

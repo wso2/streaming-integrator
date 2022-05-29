@@ -1092,7 +1092,7 @@
 
     <properties>
         <streaming.integration.version>4.1.0-SNAPSHOT</streaming.integration.version>
-        <carbon.analytics.version>3.0.61</carbon.analytics.version>
+        <carbon.analytics.version>3.0.62</carbon.analytics.version>
         <siddhi.version>5.1.24</siddhi.version>
 
         <carbon.analytics-common.version>6.1.59</carbon.analytics-common.version>

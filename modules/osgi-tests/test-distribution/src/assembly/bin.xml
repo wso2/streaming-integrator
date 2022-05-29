@@ -141,7 +141,7 @@
             <fileMode>644</fileMode>
         </fileSet>
         <fileSet>
-            <directory>../samples</directory>
+            <directory>../../samples</directory>
             <outputDirectory>samples</outputDirectory>
             <excludes>
                 <exclude>target/**</exclude>
