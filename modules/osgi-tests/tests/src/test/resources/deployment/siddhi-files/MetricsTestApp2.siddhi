@@ -1,0 +1,26 @@
+@App:name('MetricsTestApp2')
+@app:statistics(reporter = 'jmx', interval = '2' )
+
+@async(buffer.size='2')
+define stream cseEventStream (symbol string, price float, volume int);
+
+@PrimaryKey('symbol')
+define table cseEventTable (symbol string, price float, volume int);
+
+define trigger FiveMinTriggerStream at every 5 min;
+
+@info(name = 'query1')
+from cseEventStream[price < 70]
+select * 
+insert into outputStream;
+
+@info(name = 'query2') 
+from cseEventStream[volume > 90] 
+select * 
+insert into outputStream;
+
+@info(name = 'query3') 
+from cseEventStream[volume > 90] 
+select * 
+insert into cseEventTable;
+

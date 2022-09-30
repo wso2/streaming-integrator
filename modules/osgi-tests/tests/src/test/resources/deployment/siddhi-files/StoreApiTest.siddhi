@@ -1,0 +1,12 @@
+@App:name("StoreApiTest")
+
+@Source(type = 'tcp', context='SmartHomeData',
+@map(type='binary'))
+define stream SmartHomeData (id string, value float, property bool, plugId int, householdId int, houseId int, currentTime string);
+
+@PrimaryKey('recordId')
+define table SmartHomeTable (recordId string, value float, property bool, plugId int, householdId int, houseId int, currentTime string);
+
+from SmartHomeData
+select id as recordId, value, property, plugId, householdId, houseId, currentTime
+insert into SmartHomeTable;
