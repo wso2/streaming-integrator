@@ -28,7 +28,7 @@
     <groupId>org.wso2.ei</groupId>
     <artifactId>wso2-streaming-integrator-parent</artifactId>
     <packaging>pom</packaging>
-    <version>4.1.0-SNAPSHOT</version>
+    <version>4.2.0-SNAPSHOT</version>
     <name>WSO2 Streaming Integrator - Parent</name>
 
     <url>http://wso2.org</url>
@@ -1091,7 +1091,7 @@
 
 
     <properties>
-        <streaming.integration.version>4.1.0-SNAPSHOT</streaming.integration.version>
+        <streaming.integration.version>4.2.0-SNAPSHOT</streaming.integration.version>
         <carbon.analytics.version>3.0.62</carbon.analytics.version>
         <siddhi.version>5.1.24</siddhi.version>
 
