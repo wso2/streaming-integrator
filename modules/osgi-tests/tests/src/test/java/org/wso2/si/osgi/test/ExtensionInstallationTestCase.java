@@ -114,11 +114,14 @@ public class ExtensionInstallationTestCase {
     @Test
     public void testGetExtensionInstallationStatuses() throws ExtensionsInstallerException {
         // Read configurations
-        String path = Paths.get("resources", "extensionsInstaller", "extensionDependencies.json").toString();
+        String path = Paths.get("resources", "extensionsInstaller", "extensionDependencies.json")
+                .toString();
         Map<String, ExtensionConfig> extensionConfigMap = ConfigMapper.loadAllExtensionConfigs(path);
         //removing redis and elasticsearch extensions from the test due to a maven central issue
         extensionConfigMap.remove("redis");
         extensionConfigMap.remove("elasticsearch");
+        //removing gcs, hbase, cassandra and google-cloud-storage extensions from the test due to 3rd party dependency
+        // version mismatch
         extensionConfigMap.remove("gcs");
         extensionConfigMap.remove("hbase");
         extensionConfigMap.remove("cassandra");

@@ -167,6 +167,7 @@ public class FileSystemPersistenceStoreTestcase {
         log.info("Deleting all the revisions of the persistence store of Siddhi App : " + SIDDHIAPP_NAME);
         siddhiAppRuntime.clearAllRevisions();
         Assert.assertEquals(file.list().length, 0, "All the revisions should be deleted");
+        siddhiAppRuntime.shutdown();
     }
 
 }
