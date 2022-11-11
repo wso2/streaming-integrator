@@ -345,7 +345,7 @@ wso2.datasources:
       definition:
         type: RDBMS
         configuration:
-          jdbcUrl: 'jdbc:h2:${sys:carbon.home}/wso2/${sys:wso2.runtime}/database/metrics;AUTO_SERVER=TRUE'
+          jdbcUrl: 'jdbc:h2:${sys:carbon.home}/wso2/${sys:wso2.runtime}/database/metrics'
           username: wso2carbon
           password: wso2carbon
           driverClassName: org.h2.Driver

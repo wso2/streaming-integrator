@@ -305,7 +305,7 @@ wso2.datasources:
         type: RDBMS
         # data source configuration
         configuration:
-          jdbcUrl: 'jdbc:h2:${sys:carbon.home}/wso2/${sys:wso2.runtime}/h2/spdb;AUTO_SERVER=true;DB_CLOSE_ON_EXIT=FALSE;LOCK_TIMEOUT=60000'
+          jdbcUrl: 'jdbc:h2:${sys:carbon.home}/wso2/${sys:wso2.runtime}/h2/spdb;DB_CLOSE_ON_EXIT=FALSE;LOCK_TIMEOUT=60000'
           username: root
           password: 'root'
           driverClassName: org.h2.Driver
