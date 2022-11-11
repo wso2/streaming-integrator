@@ -127,7 +127,7 @@ public class DBPersistenceStoreTestcase {
                 CarbonDistributionOption.copyOSGiLibBundle(maven(
                         "com.microsoft.sqlserver", "mssql-jdbc").versionAsInProject()),
                 carbonDistribution(Paths.get("target", "wso2si-test-" +
-                                System.getProperty("streaming.integration.version")), "server")
+                        System.getProperty("streaming.integration.version")), "server")
         };
     }
 
@@ -245,6 +245,7 @@ public class DBPersistenceStoreTestcase {
 
         Connection con = null;
         PreparedStatement stmt = null;
+        SiddhiManager siddhiManager = null;
         try {
             DataSource dataSource = (HikariDataSource) dataSourceService.getDataSource("WSO2_ANALYTICS_DB");
             con = dataSource.getConnection();
@@ -252,7 +253,7 @@ public class DBPersistenceStoreTestcase {
             Thread.sleep(60000); //await() cannot be used because number of persisted revisions do not change
 
             stmt = con.prepareStatement(selectLastQuery);
-            SiddhiManager siddhiManager = StreamProcessorDataHolder.getSiddhiManager();
+            siddhiManager = StreamProcessorDataHolder.getSiddhiManager();
             stmt.setString(1, siddhiManager.getSiddhiAppRuntime(SIDDHIAPP_NAME).getName());
             ResultSet resultSet = stmt.executeQuery();
             int count = 0;
@@ -284,12 +285,13 @@ public class DBPersistenceStoreTestcase {
 
         Connection con = null;
         PreparedStatement stmt = null;
+        SiddhiManager siddhiManager = null;
         try {
             DataSource dataSource = (HikariDataSource) dataSourceService.getDataSource("WSO2_ANALYTICS_DB");
             con = dataSource.getConnection();
             int count = 0;
 
-            SiddhiManager siddhiManager = StreamProcessorDataHolder.getSiddhiManager();
+            siddhiManager = StreamProcessorDataHolder.getSiddhiManager();
             SiddhiAppRuntime siddhiAppRuntime = siddhiManager.getSiddhiAppRuntime(SIDDHIAPP_NAME);
 
             stmt = con.prepareStatement(selectLastQuery);
@@ -324,6 +326,7 @@ public class DBPersistenceStoreTestcase {
                 if (stmt != null) {
                     stmt.close();
                 }
+                siddhiManager.shutdown();
             } catch (SQLException e) {
                 log.error("Error in closing connection to test datasource ", e);
             }

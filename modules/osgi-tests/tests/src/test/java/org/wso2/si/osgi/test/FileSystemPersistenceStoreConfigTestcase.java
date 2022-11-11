@@ -117,6 +117,7 @@ public class FileSystemPersistenceStoreConfigTestcase {
 
         Assert.assertEquals(file[0].exists() && file[0].isDirectory(), true);
         Assert.assertEquals(file[0].list().length, 3, "There should be three revisions persisted");
+        siddhiAppRuntime.shutdown();
 
     }
 }
