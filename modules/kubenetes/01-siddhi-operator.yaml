@@ -7,7 +7,7 @@ metadata:
 data:
   siddhiHome: /home/wso2carbon/wso2si/
   siddhiProfile: server
-  siddhiImage: wso2/streaming-integrator:1.0.0
+  siddhiImage: wso2/wso2si:4.1.0
   autoIngressCreation: "true"
   # ingressTLS: siddhi-tls
 ---

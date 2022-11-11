@@ -375,6 +375,22 @@
                                     <goal>run</goal>
                                 </goals>
                             </execution>
+                            <execution>
+                                <id>pre-integration-test</id>
+                                <phase>compile</phase>
+                                <configuration>
+                                    <target>
+                                        <mkdir dir="./target/extension-installer"/>
+                                        <mkdir dir="./target/extension-installer/installed-extensions"/>
+                                        <mkdir dir="./target/extension-installer/installed-jars"/>
+                                        <mkdir dir="./target/extension-installer/installed-bundles"/>
+                                        <mkdir dir="./target/extension-installer/installed-samples-lib"/>
+                                    </target>
+                                </configuration>
+                                <goals>
+                                    <goal>run</goal>
+                                </goals>
+                            </execution>
                         </executions>
                         <dependencies>
                             <dependency>
@@ -586,6 +602,22 @@
                                             </structure>
                                             <html destdir="${project.build.directory}/coverage-reports" />
                                         </jacoco:report>
+                                    </target>
+                                </configuration>
+                                <goals>
+                                    <goal>run</goal>
+                                </goals>
+                            </execution>
+                            <execution>
+                                <id>pre-integration-test</id>
+                                <phase>compile</phase>
+                                <configuration>
+                                    <target>
+                                        <mkdir dir="./target/extension-installer"/>
+                                        <mkdir dir="./target/extension-installer/installed-extensions"/>
+                                        <mkdir dir="./target/extension-installer/installed-jars"/>
+                                        <mkdir dir="./target/extension-installer/installed-bundles"/>
+                                        <mkdir dir="./target/extension-installer/installed-samples-lib"/>
                                     </target>
                                 </configuration>
                                 <goals>
@@ -808,6 +840,22 @@
                                     <goal>run</goal>
                                 </goals>
                             </execution>
+                            <execution>
+                                <id>pre-integration-test</id>
+                                <phase>compile</phase>
+                                <configuration>
+                                    <target>
+                                        <mkdir dir="./target/extension-installer"/>
+                                        <mkdir dir="./target/extension-installer/installed-extensions"/>
+                                        <mkdir dir="./target/extension-installer/installed-jars"/>
+                                        <mkdir dir="./target/extension-installer/installed-bundles"/>
+                                        <mkdir dir="./target/extension-installer/installed-samples-lib"/>
+                                    </target>
+                                </configuration>
+                                <goals>
+                                    <goal>run</goal>
+                                </goals>
+                            </execution>
                         </executions>
                         <dependencies>
                             <dependency>
@@ -1011,9 +1059,28 @@
                                                 <sourcefiles encoding="UTF-8">
                                                     <fileset dir="../org.wso2.carbon.streaming.integrator.core/src" />
                                                 </sourcefiles>
+                                                <resources>
+                                                    <fileset dir="../org.wso2.carbon.streaming.integrator.core/target/" />
+                                                </resources>
                                             </structure>
                                             <html destdir="${project.build.directory}/coverage-reports" />
                                         </jacoco:report>
+                                    </target>
+                                </configuration>
+                                <goals>
+                                    <goal>run</goal>
+                                </goals>
+                            </execution>
+                            <execution>
+                                <id>pre-integration-test</id>
+                                <phase>compile</phase>
+                                <configuration>
+                                    <target>
+                                        <mkdir dir="./target/extension-installer"/>
+                                        <mkdir dir="./target/extension-installer/installed-extensions"/>
+                                        <mkdir dir="./target/extension-installer/installed-jars"/>
+                                        <mkdir dir="./target/extension-installer/installed-bundles"/>
+                                        <mkdir dir="./target/extension-installer/installed-samples-lib"/>
                                     </target>
                                 </configuration>
                                 <goals>
@@ -1140,6 +1207,22 @@
                                             </structure>
                                             <html destdir="${project.build.directory}/coverage-reports" />
                                         </jacoco:report>
+                                    </target>
+                                </configuration>
+                                <goals>
+                                    <goal>run</goal>
+                                </goals>
+                            </execution>
+                            <execution>
+                                <id>pre-integration-test</id>
+                                <phase>compile</phase>
+                                <configuration>
+                                    <target>
+                                        <mkdir dir="./target/extension-installer"/>
+                                        <mkdir dir="./target/extension-installer/installed-extensions"/>
+                                        <mkdir dir="./target/extension-installer/installed-jars"/>
+                                        <mkdir dir="./target/extension-installer/installed-bundles"/>
+                                        <mkdir dir="./target/extension-installer/installed-samples-lib"/>
                                     </target>
                                 </configuration>
                                 <goals>

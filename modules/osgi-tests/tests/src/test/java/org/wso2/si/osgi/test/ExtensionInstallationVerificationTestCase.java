@@ -139,7 +139,7 @@ public class ExtensionInstallationVerificationTestCase {
         }
 
         File installedBundlesDirectory = new File(Paths.get(basedir,
-                "src", "test", "resources", "extension-installer", "installed-bundles").toString());
+                 "target", "extension-installer", "installed-bundles").toString());
         File[] bundles = installedBundlesDirectory.listFiles();
         for (File bundle : bundles) {
             if (bundle.isFile()) {
@@ -148,7 +148,7 @@ public class ExtensionInstallationVerificationTestCase {
         }
 
         File installedJarsDirectory = new File(Paths.get(basedir,
-                "src", "test", "resources", "extension-installer", "installed-jars").toString());
+                "target", "extension-installer", "installed-jars").toString());
         File[] jars = installedJarsDirectory.listFiles();
         for (File jar : jars) {
             if (jar.isFile()) {
@@ -157,7 +157,7 @@ public class ExtensionInstallationVerificationTestCase {
         }
 
         File installedSamplesLibDirectory = new File(Paths.get(basedir,
-                "src", "test", "resources", "extension-installer", "installed-samples-lib").toString());
+                 "target", "extension-installer", "installed-samples-lib").toString());
         File[] sampleLibs = installedSamplesLibDirectory.listFiles();
         for (File jar : sampleLibs) {
             if (jar.isFile()) {
@@ -176,7 +176,7 @@ public class ExtensionInstallationVerificationTestCase {
         String testsDirectory = Paths.get(basedir).getParent().getParent().getParent().getParent().toString();
         BufferedReader reader;
         reader = new BufferedReader(new FileReader(Paths.get(testsDirectory,
-                "src", "test", "resources", "extension-installer", "installed-extensions",
+                 "target", "extension-installer", "installed-extensions",
                 "installed-extensions.txt").toString()));
         String line = reader.readLine();
         while (line != null) {
@@ -254,13 +254,13 @@ public class ExtensionInstallationVerificationTestCase {
         }
         String testsDirectory = Paths.get(basedir).getParent().getParent().getParent().getParent().toString();
         String installedExtensionsPath = Paths.get(testsDirectory,
-                "src", "test", "resources", "extension-installer", "installed-extensions").toString();
+                "target", "extension-installer", "installed-extensions").toString();
         String installedJarsPath = Paths.get(testsDirectory,
-                "src", "test", "resources", "extension-installer", "installed-jars").toString();
+                "target", "extension-installer", "installed-jars").toString();
         String installedBundlesPath = Paths.get(testsDirectory,
-                "src", "test", "resources", "extension-installer", "installed-bundles").toString();
+                "target", "extension-installer", "installed-bundles").toString();
         String installedSamplesLibPath = Paths.get(testsDirectory,
-                "src", "test", "resources", "extension-installer", "installed-samples-lib").toString();
+                "target", "extension-installer", "installed-samples-lib").toString();
 
         File file = new File(installedExtensionsPath);
         FileUtils.deleteDirectory(file);
