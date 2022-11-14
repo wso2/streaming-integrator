@@ -1047,23 +1047,6 @@
                             <goal>run</goal>
                         </goals>
                     </execution>
-                    <execution>
-                        <id>prepare</id>
-                        <phase>install</phase>
-                        <configuration>
-                            <skip>${docker.skip}</skip>
-                            <target>
-                                <echo message="prepare phase" />
-                                <unzip src="${project.build.directory}/wso2si-${project.version}.zip" dest="${project.build.directory}/docker" />
-                                <move file="${project.build.directory}/docker/wso2si-${project.version}" tofile="${project.build.directory}/docker/wso2si" />
-                                <chmod file="${project.build.directory}/docker/wso2si/bin/*.sh" perm="+x" />
-                                <chmod file="${project.build.directory}/docker/wso2si/wso2/server/bin/*.sh" perm="+x" />
-                            </target>
-                        </configuration>
-                        <goals>
-                            <goal>run</goal>
-                        </goals>
-                    </execution>
                 </executions>
             </plugin>
             <plugin>
@@ -1087,6 +1070,29 @@
                             <finalName>wso2si-${project.version}</finalName>
                             <appendAssemblyId>false</appendAssemblyId>
                         </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-antrun-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>prepare</id>
+                        <phase>install</phase>
+                        <configuration>
+                            <skip>${docker.skip}</skip>
+                            <target>
+                                <echo message="prepare phase" />
+                                <unzip src="${project.build.directory}/wso2si-${project.version}.zip" dest="${project.build.directory}/docker" />
+                                <move file="${project.build.directory}/docker/wso2si-${project.version}" tofile="${project.build.directory}/docker/wso2si" />
+                                <chmod file="${project.build.directory}/docker/wso2si/bin/*.sh" perm="+x" />
+                                <chmod file="${project.build.directory}/docker/wso2si/wso2/server/bin/*.sh" perm="+x" />
+                            </target>
+                        </configuration>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
                     </execution>
                 </executions>
             </plugin>
