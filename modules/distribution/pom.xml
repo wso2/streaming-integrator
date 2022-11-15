@@ -1073,61 +1073,6 @@
                     </execution>
                 </executions>
             </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-antrun-plugin</artifactId>
-                <executions>
-                    <execution>
-                        <id>prepare</id>
-                        <phase>install</phase>
-                        <configuration>
-                            <skip>${docker.skip}</skip>
-                            <target>
-                                <echo message="prepare phase" />
-                                <unzip src="${project.build.directory}/wso2si-${project.version}.zip" dest="${project.build.directory}/docker" />
-                                <move file="${project.build.directory}/docker/wso2si-${project.version}" tofile="${project.build.directory}/docker/wso2si" />
-                                <chmod file="${project.build.directory}/docker/wso2si/bin/*.sh" perm="+x" />
-                                <chmod file="${project.build.directory}/docker/wso2si/wso2/server/bin/*.sh" perm="+x" />
-                            </target>
-                        </configuration>
-                        <goals>
-                            <goal>run</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-            <plugin>
-                <groupId>com.spotify</groupId>
-                <artifactId>docker-maven-plugin</artifactId>
-                <executions>
-                    <execution>
-                        <id>build-image</id>
-                        <phase>install</phase>
-                        <goals>
-                            <goal>build</goal>
-                        </goals>
-                        <configuration>
-                            <skipDocker>${docker.skip}</skipDocker>
-                            <imageName>anugayan/streaming-integrator</imageName>
-                            <imageTags>
-                                <imageTag>${project.version}</imageTag>
-                            </imageTags>
-                            <dockerDirectory>${basedir}/src/docker-distribution/static</dockerDirectory>
-                        </configuration>
-                    </execution>
-                    <!-- TODO Enable after configuring Jenkins to push docker -->
-<!--                    <execution>-->
-<!--                    <id>push-image</id>-->
-<!--                    <phase>deploy</phase>-->
-<!--                    <goals>-->
-<!--                    <goal>push</goal>-->
-<!--                    </goals>-->
-<!--                    <configuration>-->
-<!--                    <imageName>wso2/streaming-integrator:${project.version}</imageName>-->
-<!--                    </configuration>-->
-<!--                    </execution>-->
-                </executions>
-            </plugin>
         </plugins>
     </build>
 
