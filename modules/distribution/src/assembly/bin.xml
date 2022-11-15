@@ -39,7 +39,6 @@
                 <exclude>bin/jartobundle.bat</exclude>
                 <exclude>bin/osgi-lib.bat</exclude>
                 <exclude>bin/osgi-lib.sh</exclude>
-                <exclude>bin/kernel-version.txt</exclude>
                 <exclude>release-notes.html</exclude>
                 <exclude>conf/osgi/launch.properties</exclude>
                 <exclude>conf/deployment.yaml</exclude>
@@ -217,12 +216,12 @@
             <filtered>true</filtered>
             <fileMode>444</fileMode>
         </file>
-<!--        <file>-->
-<!--            <source>target/wso2carbon-kernel-${carbon.kernel.version}/bin/kernel-version.txt</source>-->
-<!--            <outputDirectory>bin/</outputDirectory>-->
-<!--            <filtered>true</filtered>-->
-<!--            <fileMode>444</fileMode>-->
-<!--        </file>-->
+        <file>
+            <source>target/wso2carbon-kernel-${carbon.kernel.version}/bin/kernel-version.txt</source>
+            <outputDirectory>bin/</outputDirectory>
+            <filtered>true</filtered>
+            <fileMode>444</fileMode>
+        </file>
         <file>
             <source>target/wso2carbon-kernel-${carbon.kernel.version}/bin/README.txt</source>
             <outputDirectory>bin/</outputDirectory>
@@ -231,12 +230,6 @@
         </file>
         <file>
             <source>carbon-home/bin/version.txt</source>
-            <outputDirectory>bin/</outputDirectory>
-            <filtered>true</filtered>
-            <fileMode>644</fileMode>
-        </file>
-        <file>
-            <source>carbon-home/bin/kernel-version.txt</source>
             <outputDirectory>bin/</outputDirectory>
             <filtered>true</filtered>
             <fileMode>644</fileMode>
