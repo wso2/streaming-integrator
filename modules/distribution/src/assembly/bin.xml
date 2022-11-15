@@ -223,12 +223,12 @@
 <!--            <filtered>true</filtered>-->
 <!--            <fileMode>444</fileMode>-->
 <!--        </file>-->
-        <file>
-            <source>target/wso2carbon-kernel-${carbon.kernel.version}/bin/README.txt</source>
-            <outputDirectory>bin/</outputDirectory>
-            <filtered>true</filtered>
-            <fileMode>444</fileMode>
-        </file>
+<!--        <file>-->
+<!--            <source>target/wso2carbon-kernel-${carbon.kernel.version}/bin/README.txt</source>-->
+<!--            <outputDirectory>bin/</outputDirectory>-->
+<!--            <filtered>true</filtered>-->
+<!--            <fileMode>444</fileMode>-->
+<!--        </file>-->
         <file>
             <source>carbon-home/bin/version.txt</source>
             <outputDirectory>bin/</outputDirectory>
@@ -237,6 +237,12 @@
         </file>
         <file>
             <source>carbon-home/bin/kernel-version.txt</source>
+            <outputDirectory>bin/</outputDirectory>
+            <filtered>true</filtered>
+            <fileMode>644</fileMode>
+        </file>
+        <file>
+            <source>carbon-home/bin/README.txt</source>
             <outputDirectory>bin/</outputDirectory>
             <filtered>true</filtered>
             <fileMode>644</fileMode>
