@@ -93,7 +93,7 @@ public class ExtensionInstallationTestCase {
                 copyCarbonYAMLOption(),
                 carbonDistribution(
                         Paths.get("target", "wso2si-test-" +
-                                System.getProperty("streaming.integration.version")), "server"),
+                                System.getProperty("project.version")), "server"),
         };
     }
 

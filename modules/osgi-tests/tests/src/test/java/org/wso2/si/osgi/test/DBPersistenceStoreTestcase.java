@@ -127,7 +127,7 @@ public class DBPersistenceStoreTestcase {
                 CarbonDistributionOption.copyOSGiLibBundle(maven(
                         "com.microsoft.sqlserver", "mssql-jdbc").versionAsInProject()),
                 carbonDistribution(Paths.get("target", "wso2si-test-" +
-                        System.getProperty("streaming.integration.version")), "server")
+                        System.getProperty("project.version")), "server")
         };
     }
 
