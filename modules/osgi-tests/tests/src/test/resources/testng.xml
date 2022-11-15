@@ -17,15 +17,15 @@ limitations under the License.
 <suite name="Streaming-Integrator-Test-Suite">
     <test name="streaming-integrator-tests" preserve-order="true" parallel="false" thread-count="1">
         <classes>
-            <class name="org.wso2.si.osgi.test.SiddhiMetricsAPITestcase"/>
+            <!--class name="org.wso2.si.osgi.test.SiddhiMetricsAPITestcase"/-->
             <!--class name="org.wso2.si.osgi.test.FileSystemPersistenceStoreTestcase"/-->
-            <class name="org.wso2.si.osgi.test.SiddhiAsAPITestcase"/>
-            <class name="org.wso2.si.osgi.test.SiddhiMetricsTestcase"/>
-            <class name="org.wso2.si.osgi.test.SiddhiStoreAPITestcase"/>
-            <class name="org.wso2.si.osgi.test.DBPersistenceStoreTestcase"/>
+            <!--class name="org.wso2.si.osgi.test.SiddhiAsAPITestcase"/-->
+            <!--class name="org.wso2.si.osgi.test.SiddhiMetricsTestcase"/-->
+            <!--class name="org.wso2.si.osgi.test.SiddhiStoreAPITestcase"/-->
+            <!--class name="org.wso2.si.osgi.test.DBPersistenceStoreTestcase"/-->
             <!--class name="org.wso2.si.osgi.test.FileSystemPersistenceStoreConfigTestcase"/-->
-            <class name="org.wso2.si.osgi.test.ConfigReaderTestCase"/>
-            <class name="org.wso2.si.osgi.test.StreamingIntegratorOpenedPortTestcase"/>
+<!--            <class name="org.wso2.si.osgi.test.ConfigReaderTestCase"/>-->
+<!--            <class name="org.wso2.si.osgi.test.StreamingIntegratorOpenedPortTestcase"/>-->
 <!--            <class name="org.wso2.si.osgi.test.ExtensionInstallationTestCase"/>-->
 <!--            <class name="org.wso2.si.osgi.test.ExtensionInstallationVerificationTestCase"/>-->
         </classes>
