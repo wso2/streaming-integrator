@@ -35,6 +35,7 @@ import org.testng.annotations.Test;
 import org.wso2.carbon.container.CarbonContainerFactory;
 import org.wso2.carbon.streaming.integrator.core.internal.StreamProcessorDataHolder;
 import org.wso2.si.osgi.test.util.SiddhiAppUtil;
+import org.wso2.si.osgi.test.util.TestConstants;
 
 import java.io.File;
 import java.nio.file.Path;
@@ -81,7 +82,7 @@ public class FileSystemPersistenceStoreTestcase {
                 copyCarbonYAMLOption(),
                 carbonDistribution(
                         Paths.get("target", "wso2si-test-" +
-                                System.getProperty("project.version")), "server")
+                                System.getProperty(TestConstants.STREAMING_INTEGRATION_VERSION)), "server")
         };
     }
 

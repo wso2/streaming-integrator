@@ -38,6 +38,7 @@ import org.wso2.carbon.streaming.integrator.common.SiddhiAppRuntimeService;
 import org.wso2.carbon.streaming.integrator.statistics.bean.WorkerMetrics;
 import org.wso2.carbon.streaming.integrator.statistics.bean.WorkerStatistics;
 import org.wso2.si.osgi.test.util.HTTPResponseMessage;
+import org.wso2.si.osgi.test.util.TestConstants;
 import org.wso2.si.osgi.test.util.TestUtil;
 
 import java.net.URI;
@@ -82,7 +83,7 @@ public class SiddhiMetricsAPITestcase {
                 copyCarbonYAMLOption(),
                 copySiddhiFileOption(),
                 carbonDistribution(Paths.get("target", "wso2si-test-"
-                                + System.getProperty("project.version")),
+                                + System.getProperty(TestConstants.STREAMING_INTEGRATION_VERSION)),
                         "server"),
 //                CarbonDistributionOption.debug(5005)
         };
