@@ -42,6 +42,7 @@ import org.wso2.carbon.metrics.core.MetricManagementService;
 import org.wso2.carbon.metrics.core.MetricService;
 import org.wso2.carbon.metrics.core.jmx.MetricsMXBean;
 import org.wso2.carbon.streaming.integrator.common.SiddhiAppRuntimeService;
+import org.wso2.si.osgi.test.util.TestConstants;
 
 import java.lang.management.ManagementFactory;
 import java.nio.file.Path;
@@ -110,7 +111,7 @@ public class SiddhiMetricsTestcase {
                 copySiddhiFileOption(),
                 carbonDistribution(
                         Paths.get("target", "wso2si-test-" +
-                                System.getProperty("project.version")), "server")
+                                System.getProperty(TestConstants.STREAMING_INTEGRATION_VERSION)), "server")
         };
     }
 

@@ -43,6 +43,7 @@ import org.wso2.carbon.streaming.integrator.core.internal.StreamProcessorDataHol
 import org.wso2.carbon.streaming.integrator.core.persistence.DBPersistenceStore;
 import org.wso2.si.osgi.test.util.RDBMSConfig;
 import org.wso2.si.osgi.test.util.SiddhiAppUtil;
+import org.wso2.si.osgi.test.util.TestConstants;
 
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -127,7 +128,7 @@ public class DBPersistenceStoreTestcase {
                 CarbonDistributionOption.copyOSGiLibBundle(maven(
                         "com.microsoft.sqlserver", "mssql-jdbc").versionAsInProject()),
                 carbonDistribution(Paths.get("target", "wso2si-test-" +
-                        System.getProperty("project.version")), "server")
+                        System.getProperty(TestConstants.STREAMING_INTEGRATION_VERSION)), "server")
         };
     }
 

@@ -31,6 +31,7 @@ import org.testng.annotations.Test;
 import org.wso2.carbon.container.CarbonContainerFactory;
 import org.wso2.carbon.kernel.CarbonServerInfo;
 import org.wso2.si.osgi.test.util.HTTPResponseMessage;
+import org.wso2.si.osgi.test.util.TestConstants;
 import org.wso2.si.osgi.test.util.TestUtil;
 
 import java.net.URI;
@@ -64,7 +65,7 @@ public class ConfigReaderTestCase {
                 copyCarbonYAMLOption(),
                 carbonDistribution(
                         Paths.get("target", "wso2si-test-" +
-                                System.getProperty("project.version")), "server")
+                                System.getProperty(TestConstants.STREAMING_INTEGRATION_VERSION)), "server")
         };
     }
 

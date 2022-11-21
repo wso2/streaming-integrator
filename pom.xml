@@ -1086,7 +1086,7 @@
 
 
     <properties>
-        <streaming.integration.version>4.2.0-SNAPSHOT</streaming.integration.version>
+        <streaming.integration.version>${project.version}</streaming.integration.version>
         <carbon.analytics.version>3.0.64</carbon.analytics.version>
         <siddhi.version>5.1.25</siddhi.version>
 
@@ -1288,7 +1288,7 @@
 
     <modules>
         <module>modules/distribution</module>
-<!--        <module>modules/osgi-tests</module>--> <!-- todo need to uncomment and fix before alpha release -->
+        <module>modules/osgi-tests</module>
         <module>modules/integration</module>
         <module>modules/performance</module>
     </modules>
