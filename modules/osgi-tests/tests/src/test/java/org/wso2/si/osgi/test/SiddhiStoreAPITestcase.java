@@ -97,7 +97,7 @@ public class SiddhiStoreAPITestcase {
                 copySiddhiFileOption(),
                 carbonDistribution(
                         Paths.get("target", "wso2si-test-" +
-                                System.getProperty("streaming.integration.version")), "server")
+                                System.getProperty(TestConstants.STREAMING_INTEGRATION_VERSION)), "server")
         };
     }
 

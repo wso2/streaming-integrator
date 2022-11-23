@@ -94,7 +94,7 @@ public class ExtensionInstallationVerificationTestCase {
         options.add(copyCarbonYAMLOption());
         options.add(carbonDistribution(
                 Paths.get("target", "wso2si-test-" +
-                        System.getProperty("streaming.integration.version")), "server"));
+                        System.getProperty(TestConstants.STREAMING_INTEGRATION_VERSION)), "server"));
 
         return options.toArray(new Option[0]);
     }

@@ -39,6 +39,7 @@ import org.wso2.carbon.siddhi.extensions.installer.core.models.enums.ExtensionIn
 import org.wso2.carbon.streaming.integrator.common.EventStreamService;
 import org.wso2.carbon.streaming.integrator.common.SiddhiAppRuntimeService;
 import org.wso2.si.osgi.test.util.HTTPResponseMessage;
+import org.wso2.si.osgi.test.util.TestConstants;
 import org.wso2.si.osgi.test.util.TestUtil;
 
 import java.io.File;
@@ -93,7 +94,7 @@ public class ExtensionInstallationTestCase {
                 copyCarbonYAMLOption(),
                 carbonDistribution(
                         Paths.get("target", "wso2si-test-" +
-                                System.getProperty("streaming.integration.version")), "server"),
+                                System.getProperty(TestConstants.STREAMING_INTEGRATION_VERSION)), "server"),
         };
     }
 

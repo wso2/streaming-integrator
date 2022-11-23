@@ -17,9 +17,7 @@
   ~ */
   -->
 
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <artifactId>wso2-streaming-integrator-parent</artifactId>
         <groupId>org.wso2.ei</groupId>
@@ -380,11 +378,11 @@
                                 <phase>compile</phase>
                                 <configuration>
                                     <target>
-                                        <mkdir dir="./target/extension-installer"/>
-                                        <mkdir dir="./target/extension-installer/installed-extensions"/>
-                                        <mkdir dir="./target/extension-installer/installed-jars"/>
-                                        <mkdir dir="./target/extension-installer/installed-bundles"/>
-                                        <mkdir dir="./target/extension-installer/installed-samples-lib"/>
+                                        <mkdir dir="./target/extension-installer" />
+                                        <mkdir dir="./target/extension-installer/installed-extensions" />
+                                        <mkdir dir="./target/extension-installer/installed-jars" />
+                                        <mkdir dir="./target/extension-installer/installed-bundles" />
+                                        <mkdir dir="./target/extension-installer/installed-samples-lib" />
                                     </target>
                                 </configuration>
                                 <goals>
@@ -613,11 +611,11 @@
                                 <phase>compile</phase>
                                 <configuration>
                                     <target>
-                                        <mkdir dir="./target/extension-installer"/>
-                                        <mkdir dir="./target/extension-installer/installed-extensions"/>
-                                        <mkdir dir="./target/extension-installer/installed-jars"/>
-                                        <mkdir dir="./target/extension-installer/installed-bundles"/>
-                                        <mkdir dir="./target/extension-installer/installed-samples-lib"/>
+                                        <mkdir dir="./target/extension-installer" />
+                                        <mkdir dir="./target/extension-installer/installed-extensions" />
+                                        <mkdir dir="./target/extension-installer/installed-jars" />
+                                        <mkdir dir="./target/extension-installer/installed-bundles" />
+                                        <mkdir dir="./target/extension-installer/installed-samples-lib" />
                                     </target>
                                 </configuration>
                                 <goals>
@@ -845,11 +843,11 @@
                                 <phase>compile</phase>
                                 <configuration>
                                     <target>
-                                        <mkdir dir="./target/extension-installer"/>
-                                        <mkdir dir="./target/extension-installer/installed-extensions"/>
-                                        <mkdir dir="./target/extension-installer/installed-jars"/>
-                                        <mkdir dir="./target/extension-installer/installed-bundles"/>
-                                        <mkdir dir="./target/extension-installer/installed-samples-lib"/>
+                                        <mkdir dir="./target/extension-installer" />
+                                        <mkdir dir="./target/extension-installer/installed-extensions" />
+                                        <mkdir dir="./target/extension-installer/installed-jars" />
+                                        <mkdir dir="./target/extension-installer/installed-bundles" />
+                                        <mkdir dir="./target/extension-installer/installed-samples-lib" />
                                     </target>
                                 </configuration>
                                 <goals>
@@ -1076,11 +1074,11 @@
                                 <phase>compile</phase>
                                 <configuration>
                                     <target>
-                                        <mkdir dir="./target/extension-installer"/>
-                                        <mkdir dir="./target/extension-installer/installed-extensions"/>
-                                        <mkdir dir="./target/extension-installer/installed-jars"/>
-                                        <mkdir dir="./target/extension-installer/installed-bundles"/>
-                                        <mkdir dir="./target/extension-installer/installed-samples-lib"/>
+                                        <mkdir dir="./target/extension-installer" />
+                                        <mkdir dir="./target/extension-installer/installed-extensions" />
+                                        <mkdir dir="./target/extension-installer/installed-jars" />
+                                        <mkdir dir="./target/extension-installer/installed-bundles" />
+                                        <mkdir dir="./target/extension-installer/installed-samples-lib" />
                                     </target>
                                 </configuration>
                                 <goals>
@@ -1218,11 +1216,11 @@
                                 <phase>compile</phase>
                                 <configuration>
                                     <target>
-                                        <mkdir dir="./target/extension-installer"/>
-                                        <mkdir dir="./target/extension-installer/installed-extensions"/>
-                                        <mkdir dir="./target/extension-installer/installed-jars"/>
-                                        <mkdir dir="./target/extension-installer/installed-bundles"/>
-                                        <mkdir dir="./target/extension-installer/installed-samples-lib"/>
+                                        <mkdir dir="./target/extension-installer" />
+                                        <mkdir dir="./target/extension-installer/installed-extensions" />
+                                        <mkdir dir="./target/extension-installer/installed-jars" />
+                                        <mkdir dir="./target/extension-installer/installed-bundles" />
+                                        <mkdir dir="./target/extension-installer/installed-samples-lib" />
                                     </target>
                                 </configuration>
                                 <goals>
