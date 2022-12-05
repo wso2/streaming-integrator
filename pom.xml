@@ -1224,13 +1224,13 @@
         <!--Siddhi Extension Versions-->
         <siddhi.execution.math.version>5.0.6</siddhi.execution.math.version>
         <siddhi.execution.regex.version>5.0.7</siddhi.execution.regex.version>
-        <siddhi.execution.string.version>5.0.12</siddhi.execution.string.version>
+        <siddhi.execution.string.version>5.0.13</siddhi.execution.string.version>
         <siddhi.execution.time.version>5.0.8</siddhi.execution.time.version>
         <siddhi.execution.json.version>2.0.10</siddhi.execution.json.version>
         <siddhi.execution.map.version>5.0.7</siddhi.execution.map.version>
         <siddhi.execution.list.version>1.0.1</siddhi.execution.list.version>
 
-        <siddhi.io.file.version>2.0.19</siddhi.io.file.version>
+        <siddhi.io.file.version>2.0.20</siddhi.io.file.version>
         <siddhi.io.tcp.version>3.0.6</siddhi.io.tcp.version>
         <siddhi.io.email.version>2.0.8</siddhi.io.email.version>
         <siddhi.io.kafka.version>5.0.17</siddhi.io.kafka.version>
