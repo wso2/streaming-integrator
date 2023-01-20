@@ -727,14 +727,6 @@
                 <version>${siddhi.map.csv.version}</version>
             </dependency>
 
-
-            <!-- Forget me tool -->
-            <dependency>
-                <groupId>org.wso2.carbon.privacy</groupId>
-                <artifactId>org.wso2.carbon.privacy.forgetme.tool</artifactId>
-                <version>${forgetme.tool.version}</version>
-            </dependency>
-
             <!-- Siddhi Error Handler -->
             <dependency>
                 <groupId>org.wso2.carbon.analytics</groupId>
@@ -1271,9 +1263,6 @@
 
         <!--Performance Testing Versions-->
         <HdrHistogram.version>2.1.9</HdrHistogram.version>
-
-        <!-- Forget me tool -->
-        <forgetme.tool.version>1.4.0</forgetme.tool.version>
 
         <!-- Java 11 related dependencies -->
         <javax.annotation.version>1.3.2</javax.annotation.version>

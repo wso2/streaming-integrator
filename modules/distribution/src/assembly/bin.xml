@@ -160,32 +160,6 @@
             <fileMode>644</fileMode>
         </fileSet>
 
-        <!--Forget me tool-->
-        <!--This includes only the relevant dependencies -->
-        <fileSet>
-            <directory>target/forget-me/identity-anonymization-tool-${forgetme.tool.version}/</directory>
-            <outputDirectory>wso2/tools/identity-anonymization-tool/</outputDirectory>
-            <excludes>
-                <exclude>**/forget-me</exclude>
-                <exclude>**/forget-me.bat</exclude>
-            </excludes>
-            <includes>
-                <include>**/log4j.properties</include>
-                <include>**/conf/log-config/sp-patterns.xml</include>
-                <include>**/lib/**</include>
-            </includes>
-            <fileMode>644</fileMode>
-        </fileSet>
-         <!--Commented since we do not copy resources-->
-        <!--<fileSet>-->
-            <!--<directory>src/resources/dockerfiles</directory>-->
-            <!--<outputDirectory>dockerfiles</outputDirectory>-->
-            <!--<excludes>-->
-                <!--<exclude>**/Dockerfile</exclude>-->
-                <!--<exclude>**/.gitkeep</exclude>-->
-            <!--</excludes>-->
-        <!--</fileSet>-->
-
         <!-- Extension Installer CLI tool -->
         <fileSet>
             <directory>target/extension-installer/org.wso2.carbon.siddhi.extensions.installer.cli-${carbon.analytics.version}/</directory>
@@ -272,38 +246,6 @@
             <source>carbon-home/conf/server/log4j2.xml</source>
             <outputDirectory>conf/server</outputDirectory>
             <filtered>true</filtered>
-            <fileMode>644</fileMode>
-        </file>
-
-        <!--Forget me tool-->
-        <file>
-            <source>src/scripts/forgetme.sh</source>
-            <outputDirectory>bin/</outputDirectory>
-            <fileMode>744</fileMode>
-        </file>
-
-        <file>
-            <source>src/scripts/forgetme.bat</source>
-            <outputDirectory>bin/</outputDirectory>
-            <fileMode>744</fileMode>
-        </file>
-
-        <file>
-            <source>target/forget-me/identity-anonymization-tool-${forgetme.tool.version}/bin/forgetme.sh</source>
-            <outputDirectory>wso2/tools/identity-anonymization-tool/bin/</outputDirectory>
-            <fileMode>744</fileMode>
-        </file>
-
-        <file>
-            <source>target/forget-me/identity-anonymization-tool-${forgetme.tool.version}/bin/forgetme.bat</source>
-            <outputDirectory>wso2/tools/identity-anonymization-tool/bin/</outputDirectory>
-            <fileMode>744</fileMode>
-        </file>
-
-        <file>
-            <source>target/forget-me/identity-anonymization-tool-${forgetme.tool.version}/conf/product-config/config-sp.json</source>
-            <outputDirectory>wso2/tools/identity-anonymization-tool/conf/</outputDirectory>
-            <destName>config.json</destName>
             <fileMode>644</fileMode>
         </file>
 
