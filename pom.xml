@@ -946,18 +946,18 @@
         <pluginManagement>
             <plugins>
                 <plugin><!-- Overridden from parent pom to exclude generated sources -->
-                    <groupId>org.codehaus.mojo</groupId>
-                    <artifactId>findbugs-maven-plugin</artifactId>
+                    <groupId>com.github.spotbugs</groupId>
+                    <artifactId>spotbugs-maven-plugin</artifactId>
                     <configuration>
                         <effort>Max</effort>
                         <threshold>Low</threshold>
                         <xmlOutput>true</xmlOutput>
-                        <findbugsXmlOutputDirectory>${project.build.directory}/findbugs
-                        </findbugsXmlOutputDirectory>
-                        <excludeFilterFile>${maven.findbugsplugin.version.exclude}</excludeFilterFile>
+                        <spotbugsXmlOutputDirectory>${project.build.directory}/findbugs
+                        </spotbugsXmlOutputDirectory>
+                        <excludeFilterFile>${maven.spotbugsplugin.version.exclude}</excludeFilterFile>
                         <!--Exclude generated sources-->
                     </configuration>
-                    <version>${maven.findbugsplugin.version}</version>
+                    <version>${maven.spotbugsplugin.version}</version>
                     <executions>
                         <execution>
                             <id>analyze-compile</id>
@@ -1086,10 +1086,11 @@
         <!-- Maven plugins -->
         <!--Bundle Plugin - Overridden from parent due to a bug in latest version related to capability providers-->
         <maven.bundle.plugin.version>2.5.4</maven.bundle.plugin.version>
-        <maven.findbugsplugin.version.exclude>findbugs-exclude.xml</maven.findbugsplugin.version.exclude>
+        <maven.spotbugsplugin.version>3.1.10</maven.spotbugsplugin.version>
+        <maven.spotbugsplugin.version.exclude>findbugs-exclude.xml</maven.spotbugsplugin.version.exclude>
 
         <carbon.p2.plugin.version>1.5.4</carbon.p2.plugin.version>
-        <carbon.feature.plugin.version>3.1.3</carbon.feature.plugin.version>
+        <carbon.feature.plugin.version>3.1.5</carbon.feature.plugin.version>
 
         <testng.version>6.9.4</testng.version>
         <plugin.version.antlr>4.5.1</plugin.version.antlr>
@@ -1267,10 +1268,15 @@
         <!-- Java 11 related dependencies -->
         <javax.annotation.version>1.3.2</javax.annotation.version>
         <org.wso2.orbit.javax.xml.bind.version>2.3.1.wso2v1</org.wso2.orbit.javax.xml.bind.version>
-        <com.sun.xml.bind.version>2.4.0-b180830.0438</com.sun.xml.bind.version>
+        <com.sun.xml.bind.version>2.3.0</com.sun.xml.bind.version>
         <org.apache.geronimo.spec.version>1.1</org.apache.geronimo.spec.version>
         <com.sun.istack.version>3.0.8</com.sun.istack.version>
         <com.sun.activation.version>1.2.0</com.sun.activation.version>
+        <org.wso2.orbit.xml-apis.version>1.4.01.wso2v1</org.wso2.orbit.xml-apis.version>
+        <org.wso2.orbit.sun.xml.bind.version>2.3.2.wso2v1</org.wso2.orbit.sun.xml.bind.version>
+        <org.wso2.orbit.javax.activation.version>1.1.1.wso2v3</org.wso2.orbit.javax.activation.version>
+        <com.sun.activation.javax.activation.version>1.2.0</com.sun.activation.javax.activation.version>
+        <org.wso2.orbit.javax.transaction.jta.version>1.1.0.wso2v2</org.wso2.orbit.javax.transaction.jta.version>
 
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
