@@ -176,6 +176,8 @@ set JAVA_ENDORSED="%CARBON_HOME%\bin\bootstrap\endorsed";"%JAVA_HOME%\jre\lib\en
 
 if %jver% LSS 11000 set JAVA_VER_BASED_OPTS="-Djava.endorsed.dirs=%JAVA_ENDORSED_DIRS%"
 
+if %jver% GEQ 11000 set JAVA_VER_BASED_OPTS="--add-opens=java.base/sun.reflect.annotation=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens jdk.management/com.sun.management.internal=ALL-UNNAMED --add-opens=java.base/java.net=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens java.rmi/sun.rmi.transport=ALL-UNNAMED"
+
 set CMD_LINE_ARGS=-Xbootclasspath/a:%CARBON_XBOOTCLASSPATH% -Xms256m -Xmx1024m -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath="%RUNTIME_HOME%\logs\heap-dump.hprof" -Dcom.sun.management.jmxremote -classpath %CARBON_CLASSPATH% %JAVA_OPTS% %JAVA_VER_BASED_OPTS% -Dcarbon.home="%CARBON_HOME%" -Dwso2.runtime.path="%RUNTIME_HOME%" -Dwso2.runtime="%RUNTIME%" -Djava.command="%JAVA_HOME%\bin\java" -Djava.opts="%JAVA_OPTS%" -Djava.io.tmpdir="%CARBON_HOME%\tmp" -Dcarbon.classpath=%CARBON_CLASSPATH% -Dfile.encoding=UTF8  -Djavax.net.ssl.keyStore="%CARBON_HOME%\resources\security\wso2carbon.jks" -Djavax.net.ssl.keyStorePassword="wso2carbon" -Djavax.net.ssl.trustStore="%CARBON_HOME%\resources\security\client-truststore.jks" -Djavax.net.ssl.trustStorePassword="wso2carbon"
 set CMD_LINE_ARGS=%CMD_LINE_ARGS% -Dorg.ops4j.pax.logging.logReaderEnabled="false"
 set CMD_LINE_ARGS=%CMD_LINE_ARGS% -Dorg.ops4j.pax.logging.eventAdminEnabled="false"
