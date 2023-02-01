@@ -1080,7 +1080,7 @@
     <properties>
         <streaming.integration.version>${project.version}</streaming.integration.version>
         <carbon.analytics.version>3.0.66</carbon.analytics.version>
-        <siddhi.version>5.1.26</siddhi.version>
+        <siddhi.version>5.1.27</siddhi.version>
 
         <carbon.analytics-common.version>6.1.63</carbon.analytics-common.version>
         <!-- Maven plugins -->
@@ -1229,10 +1229,10 @@
         <siddhi.io.kafka.version>5.0.17</siddhi.io.kafka.version>
         <siddhi.io.http.version>2.3.6</siddhi.io.http.version>
         <siddhi.io.websocket.version>3.0.3</siddhi.io.websocket.version>
-        <siddhi.io.cdc.version>2.0.13</siddhi.io.cdc.version>
+        <siddhi.io.cdc.version>2.0.14</siddhi.io.cdc.version>
         <siddhi.io.grpc.version>1.0.12</siddhi.io.grpc.version>
 
-        <siddhi.map.json.version>5.2.3</siddhi.map.json.version>
+        <siddhi.map.json.version>5.2.4</siddhi.map.json.version>
         <siddhi.map.avro.version>2.2.3</siddhi.map.avro.version>
         <siddhi.map.binary.version>2.1.1</siddhi.map.binary.version>
         <siddhi.map.text.version>2.1.1</siddhi.map.text.version>
