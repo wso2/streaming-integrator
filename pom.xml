@@ -1079,7 +1079,7 @@
 
     <properties>
         <streaming.integration.version>${project.version}</streaming.integration.version>
-        <carbon.analytics.version>3.0.68</carbon.analytics.version>
+        <carbon.analytics.version>3.0.69</carbon.analytics.version>
         <siddhi.version>5.1.28</siddhi.version>
 
         <carbon.analytics-common.version>6.1.66</carbon.analytics-common.version>
