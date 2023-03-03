@@ -1226,7 +1226,7 @@
         <siddhi.io.file.version>2.0.20</siddhi.io.file.version>
         <siddhi.io.tcp.version>3.0.6</siddhi.io.tcp.version>
         <siddhi.io.email.version>2.0.8</siddhi.io.email.version>
-        <siddhi.io.kafka.version>5.0.17</siddhi.io.kafka.version>
+        <siddhi.io.kafka.version>5.0.18</siddhi.io.kafka.version>
         <siddhi.io.http.version>2.3.6</siddhi.io.http.version>
         <siddhi.io.websocket.version>3.0.3</siddhi.io.websocket.version>
         <siddhi.io.cdc.version>2.0.14</siddhi.io.cdc.version>
