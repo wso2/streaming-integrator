@@ -1202,7 +1202,7 @@
         <mysql.connector.version>5.1.38</mysql.connector.version>
         <ojdbc6.version>12.1.0.1-atlassian-hosted</ojdbc6.version>
         <postgresql.version>42.1.4</postgresql.version>
-        <h2.connector.version>2.1.210</h2.connector.version>
+        <h2.connector.version>2.2.224</h2.connector.version>
         <mssql-jdbc.version>8.2.0.jre8</mssql-jdbc.version>
         <zkclient.version>0.10</zkclient.version>
         <curator-test.version>2.7.1</curator-test.version>
