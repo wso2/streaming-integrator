@@ -188,7 +188,7 @@
                 <version>${geronimo.stax}</version>
             </dependency>
             <dependency>
-                <groupId>org.apache.james</groupId>
+                <groupId>org.wso2.orbit.org.apache.james</groupId>
                 <artifactId>apache-mime4j-core</artifactId>
                 <version>${mime4j.version}</version>
             </dependency>
@@ -1079,7 +1079,7 @@
 
     <properties>
         <streaming.integration.version>${project.version}</streaming.integration.version>
-        <carbon.analytics.version>3.0.69</carbon.analytics.version>
+        <carbon.analytics.version>3.0.70</carbon.analytics.version>
         <siddhi.version>5.1.28</siddhi.version>
 
         <carbon.analytics-common.version>6.1.66</carbon.analytics-common.version>
@@ -1153,7 +1153,7 @@
         <commons.logging.version>1.2</commons.logging.version>
         <geronimo.activation>1.1</geronimo.activation>
         <geronimo.stax>1.0.1</geronimo.stax>
-        <mime4j.version>0.7.2</mime4j.version>
+        <mime4j.version>0.8.10.wso2v1</mime4j.version>
 
         <!--pax-exam dependencies-->
         <javax.inject.version>1</javax.inject.version>
