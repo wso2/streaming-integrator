@@ -71,7 +71,7 @@ echo JAVA_HOME environment variable is set to %JAVA_HOME%
 echo CARBON_HOME environment variable is set to %CARBON_HOME%
 
 set CMD_LINE_ARGS= -Dcarbon.home="%CARBON_HOME%" -Dwso2.runtime.path="%RUNTIME_HOME%" -Dwso2.runtime="%RUNTIME%"
-java -cp "\bin\tools\*" -Dcarbon.home="%CARBON_HOME%" org.wso2.carbon.secvault.ciphertool.CipherToolInitializer %*
+java -cp "%CARBON_HOME%\bin\tools\*" -Dcarbon.home="%CARBON_HOME%" org.wso2.carbon.secvault.ciphertool.CipherToolInitializer %*
 
 :end
 goto endlocal
