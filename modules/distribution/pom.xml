@@ -235,6 +235,11 @@
             <artifactId>org.wso2.carbon.si.metrics.core.feature</artifactId>
             <type>zip</type>
         </dependency>
+        <dependency>
+            <groupId>org.wso2.carbon.analytics</groupId>
+            <artifactId>org.wso2.carbon.si.management.icp.feature</artifactId>
+            <type>zip</type>
+        </dependency>
         <!--Data Provider-->
         <dependency>
             <groupId>org.wso2.carbon.analytics</groupId>
@@ -455,12 +460,6 @@
                                     <version>${siddhi.store.rdbms.version}</version>
                                     <type>jar</type>
                                 </artifactItem>
-                                <artifactItem>
-                                    <groupId>io.siddhi.extension.store.mongodb</groupId>
-                                    <artifactId>siddhi-store-mongodb</artifactId>
-                                    <version>${siddhi.store.mongodb.version}</version>
-                                    <type>jar</type>
-                                </artifactItem>
 
                                 <!-- Script extensions -->
                                 <artifactItem>
@@ -645,6 +644,10 @@
                                     <version>${carbon.metrics.version}</version>
                                 </feature>
                                 <feature>
+                                    <id>org.wso2.carbon.si.management.icp.feature</id>
+                                    <version>${carbon.analytics.icp.version}</version>
+                                </feature>
+                                <feature>
                                     <id>org.wso2.carbon.metrics.jdbc.core.feature</id>
                                     <version>${carbon.metrics.version}</version>
                                 </feature>
@@ -659,6 +662,10 @@
                                 <feature>
                                     <id>org.wso2.carbon.si.metrics.core.feature</id>
                                     <version>${carbon.analytics.version}</version>
+                                </feature>
+                                <feature>
+                                    <id>org.wso2.carbon.si.management.icp.feature</id>
+                                    <version>${carbon.analytics.icp.version}</version>
                                 </feature>
 
                                 <!-- MSF4J Features -->
@@ -897,6 +904,10 @@
                                     <id>org.wso2.carbon.si.metrics.core.feature.group</id>
                                     <version>${carbon.analytics.version}</version>
                                 </feature>
+                                <feature>
+                                    <id>org.wso2.carbon.si.management.icp.feature</id>
+                                    <version>${carbon.analytics.icp.version}</version>
+                                </feature>
                                 <!-- MSF4J Features -->
                                 <feature>
                                     <id>org.wso2.msf4j.feature.group</id>
@@ -1014,20 +1025,6 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-antrun-plugin</artifactId>
                 <executions>
-                    <execution>
-                        <id>add-in-place-tool</id>
-                        <phase>prepare-package</phase>
-                        <goals>
-                            <goal>run</goal>
-                        </goals>
-                        <configuration>
-                            <target>
-                                <!-- download file -->
-                                <get src="https://product-dist.wso2.com/downloads/in-place/release/update.zip" dest="${project.build.directory}/update.zip" verbose="false" usetimestamp="true" />
-                                <unzip src="${project.build.directory}/update.zip" dest="${project.build.directory}" />
-                            </target>
-                        </configuration>
-                    </execution>
                     <execution>
                         <phase>package</phase>
                         <configuration>
