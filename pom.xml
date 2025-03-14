@@ -253,9 +253,24 @@
                 <version>${gson.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.jayway.jsonpath</groupId>
+                <groupId>org.wso2.orbit.com.jayway.jsonpath</groupId>
                 <artifactId>json-path</artifactId>
                 <version>${jayway.jsonpath.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>net.minidev</groupId>
+                <artifactId>json-smart</artifactId>
+                <version>${json.smart.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>net.minidev</groupId>
+                <artifactId>accessors-smart</artifactId>
+                <version>${accessors.smart.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.ow2.asm</groupId>
+                <artifactId>asm</artifactId>
+                <version>${asm.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.wso2.orbit.org.apache.tapestry</groupId>
@@ -673,6 +688,12 @@
             </dependency>
             <dependency>
                 <groupId>org.wso2.carbon.analytics</groupId>
+                <artifactId>org.wso2.carbon.si.management.icp.feature</artifactId>
+                <version>${carbon.analytics.icp.version}</version>
+                <type>zip</type>
+            </dependency>
+            <dependency>
+                <groupId>org.wso2.carbon.analytics</groupId>
                 <artifactId>org.wso2.carbon.permissions.rest.api.feature</artifactId>
                 <version>${carbon.analytics.version}</version>
                 <type>zip</type>
@@ -1079,10 +1100,11 @@
 
     <properties>
         <streaming.integration.version>${project.version}</streaming.integration.version>
-        <carbon.analytics.version>3.0.70</carbon.analytics.version>
-        <siddhi.version>5.1.28</siddhi.version>
+        <carbon.analytics.version>3.0.71</carbon.analytics.version>
+        <carbon.analytics.icp.version>3.0.71</carbon.analytics.icp.version>
+        <siddhi.version>5.1.31</siddhi.version>
 
-        <carbon.analytics-common.version>6.1.66</carbon.analytics-common.version>
+        <carbon.analytics-common.version>6.1.69</carbon.analytics-common.version>
         <!-- Maven plugins -->
         <!--Bundle Plugin - Overridden from parent due to a bug in latest version related to capability providers-->
         <maven.bundle.plugin.version>2.5.4</maven.bundle.plugin.version>
@@ -1106,7 +1128,7 @@
 
         <!-- Dependencies -->
         <open.tracing.version>0.31.0</open.tracing.version>
-        <carbon.kernel.version>5.3.0</carbon.kernel.version>
+        <carbon.kernel.version>5.3.2</carbon.kernel.version>
         <carbon.kernel.package.import.version.range>[5.2.0, 6.0.0)</carbon.kernel.package.import.version.range>
         <carbon.kernel.pax.version>5.2.17</carbon.kernel.pax.version>
 
@@ -1116,16 +1138,16 @@
         <junit.version>4.10</junit.version>
         <osgi.test.util.version>5.1.1</osgi.test.util.version>
 
-        <carbon.datasources.version>1.1.14</carbon.datasources.version>
-        <carbon.metrics.version>2.3.18</carbon.metrics.version>
+        <carbon.datasources.version>1.1.18</carbon.datasources.version>
+        <carbon.metrics.version>2.3.23</carbon.metrics.version>
         <carbon.jndi.version>1.0.5</carbon.jndi.version>
 
         <carbon.cache.version>1.1.3</carbon.cache.version>
         <carbon.touchpoint.version>1.1.1</carbon.touchpoint.version>
         <carbon.utils.version>2.1.1</carbon.utils.version>
-        <carbon.config.version>2.1.16</carbon.config.version>
+        <carbon.config.version>2.1.17</carbon.config.version>
         <carbon.config.version.range>[2.1.0, 3.0.0)</carbon.config.version.range>
-        <carbon.securevault.version>5.0.18</carbon.securevault.version>
+        <carbon.securevault.version>5.0.20</carbon.securevault.version>
 
         <slf4j.version>1.7.12</slf4j.version>
         <slf4j.logging.package.import.version.range>[1.7.1, 2.0.0)
@@ -1133,15 +1155,18 @@
 
         <antlr4.runtime.version>4.11.1</antlr4.runtime.version>
         <!--Dashboard-->
-        <carbon.uis.version>1.0.6</carbon.uis.version>
+        <carbon.uis.version>1.0.8</carbon.uis.version>
         <maven.exec.plugin.version>1.5.0</maven.exec.plugin.version>
 
         <!-- json dependencies -->
-        <gson.version>2.8.5</gson.version>
+        <gson.version>2.9.1</gson.version>
         <gson.import.version.range>[2.7, 3.0.0)</gson.import.version.range>
-        <jayway.jsonpath.version>2.2.0</jayway.jsonpath.version>
-        <jayway.jsonpath.import.version.range>[2.2.0,2.3.0)</jayway.jsonpath.import.version.range>
+        <jayway.jsonpath.version>2.9.0.wso2v1</jayway.jsonpath.version>
+        <jayway.jsonpath.import.version.range>[2.2.0,3.0)</jayway.jsonpath.import.version.range>
         <tapestry.json.orbit.version>5.4.1.wso2v1</tapestry.json.orbit.version>
+        <json.smart.version>2.5.2</json.smart.version>
+        <accessors.smart.version>2.5.2</accessors.smart.version>
+        <asm.version>9.6</asm.version>
 
         <!-- xml depependencies -->
         <orbit.version.axiom>1.2.20</orbit.version.axiom>
@@ -1170,9 +1195,9 @@
 
         <!-- Streaming Integrator Dependencies -->
         <disruptor.version>3.4.2.wso2v1</disruptor.version>
-        <guava.version>31.1-jre</guava.version>
-        <guava.bundle.version>31.1.0.jre</guava.bundle.version>
-        <gson.version>2.8.5</gson.version>
+        <guava.version>32.1.3-jre</guava.version>
+        <guava.bundle.version>32.1.3.jre</guava.bundle.version>
+        <gson.version>2.9.1</gson.version>
         <quartz.version>2.3.2.wso2v1</quartz.version>
         <metrics.version>3.2.5</metrics.version>
         <commons-lang3.version>3.3.2</commons-lang3.version>
@@ -1181,9 +1206,9 @@
         <common.collections4.version>4.0</common.collections4.version>
 
         <!--MSF4J related-->
-        <msf4j.version>2.8.11</msf4j.version>
-        <com.fasterxml.jackson.core.version>2.9.10</com.fasterxml.jackson.core.version>
-        <com.fasterxml.jackson.databind.version>2.9.10.8</com.fasterxml.jackson.databind.version>
+        <msf4j.version>2.8.12</msf4j.version>
+        <com.fasterxml.jackson.core.version>2.16.0</com.fasterxml.jackson.core.version>
+        <com.fasterxml.jackson.databind.version>2.16.0</com.fasterxml.jackson.databind.version>
         <io.swagger.version>1.5.22</io.swagger.version>
         <javax.ws.rs-api.version>2.0</javax.ws.rs-api.version>
         <pax.logging.api.version>2.1.0-wso2v3</pax.logging.api.version>
@@ -1219,33 +1244,33 @@
         <siddhi.execution.regex.version>5.0.7</siddhi.execution.regex.version>
         <siddhi.execution.string.version>5.0.13</siddhi.execution.string.version>
         <siddhi.execution.time.version>5.0.8</siddhi.execution.time.version>
-        <siddhi.execution.json.version>2.0.10</siddhi.execution.json.version>
+        <siddhi.execution.json.version>2.0.11</siddhi.execution.json.version>
         <siddhi.execution.map.version>5.0.7</siddhi.execution.map.version>
-        <siddhi.execution.list.version>1.0.1</siddhi.execution.list.version>
+        <siddhi.execution.list.version>1.0.2</siddhi.execution.list.version>
 
-        <siddhi.io.file.version>2.0.20</siddhi.io.file.version>
+        <siddhi.io.file.version>2.0.25</siddhi.io.file.version>
         <siddhi.io.tcp.version>3.0.6</siddhi.io.tcp.version>
         <siddhi.io.email.version>2.0.8</siddhi.io.email.version>
-        <siddhi.io.kafka.version>5.0.18</siddhi.io.kafka.version>
-        <siddhi.io.http.version>2.3.6</siddhi.io.http.version>
+        <siddhi.io.kafka.version>5.0.19</siddhi.io.kafka.version>
+        <siddhi.io.http.version>2.3.7</siddhi.io.http.version>
         <siddhi.io.websocket.version>3.0.3</siddhi.io.websocket.version>
-        <siddhi.io.cdc.version>2.0.14</siddhi.io.cdc.version>
-        <siddhi.io.grpc.version>1.0.12</siddhi.io.grpc.version>
+        <siddhi.io.cdc.version>2.0.17</siddhi.io.cdc.version>
+        <siddhi.io.grpc.version>1.0.13</siddhi.io.grpc.version>
 
-        <siddhi.map.json.version>5.2.4</siddhi.map.json.version>
-        <siddhi.map.avro.version>2.2.3</siddhi.map.avro.version>
+        <siddhi.map.json.version>5.2.5</siddhi.map.json.version>
+        <siddhi.map.avro.version>2.2.5</siddhi.map.avro.version>
         <siddhi.map.binary.version>2.1.1</siddhi.map.binary.version>
         <siddhi.map.text.version>2.1.1</siddhi.map.text.version>
         <siddhi.map.xml.version>5.2.2</siddhi.map.xml.version>
         <siddhi.map.keyvalue.version>2.1.2</siddhi.map.keyvalue.version>
         <siddhi.map.csv.version>2.1.2</siddhi.map.csv.version>
 
-        <siddhi.store.rdbms.version>7.0.17</siddhi.store.rdbms.version>
-        <siddhi.store.mongodb.version>2.1.4</siddhi.store.mongodb.version>
+        <siddhi.store.rdbms.version>7.0.19</siddhi.store.rdbms.version>
+        <siddhi.store.mongodb.version>3.0.0</siddhi.store.mongodb.version>
 
         <siddhi.script.js.version>5.0.4</siddhi.script.js.version>
 
-        <carbon.coordination.version>2.1.9</carbon.coordination.version>
+        <carbon.coordination.version>2.1.10</carbon.coordination.version>
 
         <!--Integration Test Framework Versions -->
         <testng.version>6.9.10</testng.version>
@@ -1255,10 +1280,10 @@
         <apache.commons.version>1.3.2</apache.commons.version>
         <json.version>3.0.0.wso2v1</json.version>
         <codehaus.jackson.version>1.9.13</codehaus.jackson.version>
-        <org.snakeyaml.version>1.17</org.snakeyaml.version>
+        <org.snakeyaml.version>2.2</org.snakeyaml.version>
         <mysql.con.version>6.0.5</mysql.con.version>
         <googlecode.json-simple.version>1.1.wso2v1</googlecode.json-simple.version>
-        <io.netty.version>4.1.74.Final</io.netty.version>
+        <io.netty.version>4.1.118.Final</io.netty.version>
         <log4j.version>2.17.1</log4j.version>
         <commons-codec.wso2.version>1.3.0.wso2v1</commons-codec.wso2.version>
 
