@@ -25,7 +25,7 @@
   [![GitHub Last Commit](https://img.shields.io/github/last-commit/wso2/streaming-integrator.svg)](https://github.com/wso2/streaming-integrator/commits/master)
   [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
   [![Stackoverflow](https://img.shields.io/badge/Ask%20for%20help%20on-Stackoverflow-orange)](https://stackoverflow.com/questions/tagged/wso2-streaming-integrator)
-  [![Discord](https://img.shields.io/badge/Join%20us%20on-Discord-%23e01563.svg)]([https://discord.gg/wso2](https://discord.com/channels/955510916064092180/1354094648381018142))
+  [![Discord](https://img.shields.io/badge/Join%20us%20on-Discord-%23e01563.svg)](https://discord.com/channels/955510916064092180/1354094648381018142)
 
 ## Overview
 
