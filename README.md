@@ -72,9 +72,9 @@ When building with dependencies, you need to build in the following order.
 
 To started with the Streaming Integrator follow the guides given below.
 
-* [Quick Start Guide](https://ei.docs.wso2.com/en/latest/streaming-integrator/quick-start-guide/quick-start-guide/): Step by step guide to get your first Siddhi application running in less than 5 minutes.
+* [Quick Start Guide](https://si.docs.wso2.com/quick-start-guide/quick-start-guide/): Step by step guide to get your first Siddhi application running in less than 5 minutes.
 
-* [Streaming Integrator 101](https://ei.docs.wso2.com/en/latest/streaming-integrator/quick-start-guide/getting-started/getting-started-guide-overview/): A 30 minute guide to explore the end to end development lifecycle of the Streaming Integrator.
+* [Streaming Integrator 101](https://si.docs.wso2.com/quick-start-guide/getting-started/getting-started-guide-overview/): A 30 minute guide to explore the end to end development lifecycle of the Streaming Integrator.
 
 
 ## Deploy in Docker
@@ -103,7 +103,7 @@ docker pull wso2/streaming-integrator
 WSO2 Streaming Integrator can be deployed in a Kubernetes cluster using Siddhi Operator.
 
 * [Siddhi operator](https://github.com/siddhi-io/siddhi-operator) enables the deployment of Siddhi applications directly in your Kubernetes cluster using a Kubernetes Custom Resource.
-For more details see [Installing Streaming Integrator Using Kubernetes](https://docs.wso2.com/display/INSTALL/Installing+Enterprise+Integrator+Using+Kubernetes).
+For more details see [Installing Streaming Integrator Using Kubernetes](https://si.docs.wso2.com/setup/installing-si-using-kubernetes/).
 
 ## Support
 
