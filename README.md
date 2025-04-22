@@ -13,6 +13,8 @@ WSO2 Streaming Integrator (SI) is a streaming data processing server that allows
 
 WSO2 SI is powered by [Siddhi.io](https://siddhi.io/), a well-known cloud native open source stream processing engine. Siddhi lets users write complex stream processing logic using a SQL-like language known as [SiddhiQL](https://siddhi.io/en/v5.0/docs/).
 
+To learn more about WSO2 Micro Integrator please visit [WSO2 Streaming Integrator](https://wso2.com/integrator/streaming-integrator/).
+
 ## Why Streaming Integrator? 
 
 WSO2 SI can be effectively used for:
