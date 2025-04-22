@@ -1,96 +1,72 @@
-<!--
-  ~  Copyright (c) 2017, WSO2 Inc. (http://wso2.com) All Rights Reserved.
-  ~
-  ~  WSO2 Inc. licenses this file to you under the Apache License,
-  ~  Version 2.0 (the "License"); you may not use this file except
-  ~  in compliance with the License.
-  ~  You may obtain a copy of the License at
-  ~
-  ~    http://www.apache.org/licenses/LICENSE-2.0
-  ~
-  ~  Unless required by applicable law or agreed to in writing,
-  ~  software distributed under the License is distributed on an
-  ~  "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-  ~  KIND, either express or implied.  See the License for the
-  ~  specific language governing permissions and limitations
-  ~  under the License.
-  -->
-  
-# Streaming Integrator
+<img src="https://wso2.cachefly.net/wso2/sites/all/image_resources/wso2-branding-logos/wso2-logo-orange.png" alt="WSO2 logo" width=30% height=30% />
 
-  [![Build Status](https://wso2.org/jenkins/buildStatus/icon?job=products/streaming-integrator)](https://wso2.org/jenkins/job/products/job/streaming-integrator/)
-  [![GitHub Release](https://img.shields.io/github/release-pre/wso2/streaming-integrator.svg)](https://github.com/wso2/streaming-integrator/releases/)
-  [![GitHub Release Date](https://img.shields.io/github/release-date-pre/wso2/streaming-integrator.svg)](https://github.com/wso2/streaming-integrator/releases)
-  [![GitHub Open Issues](https://img.shields.io/github/issues-raw/wso2/streaming-integrator.svg)](https://github.com/wso2/streaming-integrator/commits/master)
-  [![GitHub Last Commit](https://img.shields.io/github/last-commit/wso2/streaming-integrator.svg)](https://github.com/wso2/streaming-integrator/commits/master)
-  [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-  [![Stackoverflow](https://img.shields.io/badge/Ask%20for%20help%20on-Stackoverflow-orange)](https://stackoverflow.com/questions/tagged/wso2-streaming-integrator)
-  [![Discord](https://img.shields.io/badge/Join%20us%20on-Discord-%23e01563.svg)](https://discord.com/channels/955510916064092180/1354094648381018142)
+# WSO2 Streaming Integrator
 
-## Overview
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+[![stackoverflow](https://img.shields.io/badge/Get%20Support%20on%20Stack%20Overflow-Streaming%20Integrator-orange)](https://stackoverflow.com/questions/tagged/wso2-streaming-integrator)
+[![Join the community on Discord](https://img.shields.io/badge/Join%20us%20on%20Discord-wso2-orange)](https://discord.com/invite/wso2)
+[![X](https://img.shields.io/twitter/follow/wso2.svg?style=social&label=Follow%20Us)](https://twitter.com/intent/follow?screen_name=wso2)
 
 WSO2 Streaming Integrator (SI) is a streaming data processing server that allows you to integrate streaming data and take action based on streaming data.
 
-WSO2 SI can be effectively used for:
-- Realtime ETL with files, DBs, SaaS apps, HTTP endpoints, etc.
-- Working with streaming messaging systems such as Kafka and NATS.
-- Streaming data integration
-- Executing complex integrations based on streaming data with [WSO2 Micro Integrator](https://github.com/wso2/micro-integrator).
-
-WSO2 SI is powered by [Siddhi.io](https://siddhi.io/), a well-known cloud native open source stream processing engine. Siddhi lets users write complex stream processing logic using a SQL-like language known as [SiddhiQL](https://siddhi.io/en/v5.0/docs/). You can aggregate, transform, enrich, analyze, cleanse and correlate streams of data on the fly using Siddhi queries and constructs.
-
-WSO2 SI lets you connect to any data source with any destination regardless of different protocols and data formats that are used by different endpoints. The SI store API provides the capability to fetch stored and aggregated data kept in-memory and in DBs via a REST API on demand using ad-hoc queries.
-
-[SI tooling](https://github.com/wso2/streaming-integrator-tooling) provides a web-based IDE that allows you to build Siddhi applications with a drag-and-drop graphical editor, or a streaming SQL code editor. Its capability to simulate data streams and to debug Siddhi queries facilitates you to test your Siddhi applications. Created Siddhi applications can be directly deployed in a VM via the IDE, exported as a Docker image, or deployed as K8s artifacts that can be used with the Siddhi K8s Operator.
-
-SI has native support for Kubernetes with a [K8s Operator](https://siddhi.io/en/v5.1/docs/siddhi-as-a-kubernetes-microservice/) designed to provide a convenient way of deploying SI on K8s. SI has a very simple deployment architecture, and you can achieve high availability with zero data loss with two nodes of SI.
-
-Integration flows deployed in [WSO2 Micro Integrator (MI)](https://github.com/wso2/micro-integrator) can be invoked directly by SI in a seamless manner using low latency RPC. This allows you to build robust data processing and integration pipelines by combining powerful streaming and integration capabilities.
-
 ![Streaming Integrator/ Workflow](docs/images/streaming-integrator.png)
 
-## Download
+WSO2 SI is powered by [Siddhi.io](https://siddhi.io/), a well-known cloud native open source stream processing engine. Siddhi lets users write complex stream processing logic using a SQL-like language known as [SiddhiQL](https://siddhi.io/en/v5.0/docs/).
 
-WSO2 Streaming Integrator is currently in the development stage. Therefore, you can download the source of WSO2 Streaming Integrator and build it. For detailed instructions, see the [Building from the Source section](#building-from-the-source).
-<!-- Please download the latest WSO2 Streaming Integrator release from [here]()  -->
+## Why Streaming Integrator? 
 
-## Building from the Source
+WSO2 SI can be effectively used for:
+- Realtime ETL with files, DBs, SaaS apps, HTTP endpoints, etc.
+- Working with streaming messaging systems such as Kafka and NATS
+- Streaming data integration
+- Executing complex integrations based on streaming data
 
-To build WSO2 Streaming Integrator from source, follow the steps below.
+ You can aggregate, transform, enrich, analyze, cleanse, and correlate streams of data on the fly using Siddhi queries and constructs.
 
-1. Clone or download the source code from this repository.
-2. Run `mvn clean install` from the root directory of the repository.
-3. The generated Streaming Integrator distribution can be found at `streaming-integrator/modules/distribution/target/-streaming-integrator-<version>.zip`
+[SI tooling](https://github.com/wso2/streaming-integrator-tooling) provides a web-based IDE that allows you to build Siddhi applications with a drag-and-drop graphical editor or a streaming SQL code editor.
+
+SI has native support for Kubernetes with a [K8s Operator](https://siddhi.io/en/v5.1/docs/siddhi-as-a-kubernetes-microservice/) designed to provide a convenient way of deploying SI on K8s. 
+
+## Get started
+
+See the following topics to get started with the product:
+- [System prerequisites](https://si.docs.wso2.com/setup/installing-si-in-vm/#system-requirements)
+- [Quick start guide](https://si.docs.wso2.com/quick-start-guide/quick-start-guide/)
+
+See the [tutorials](https://si.docs.wso2.com/examples/tutorials-overview/) to try out the main integration use cases.
+
+## Contribute to Streaming Integrator
+
+### Build from the source
+
+To build the WSO2 Streaming Integrator from source, follow the steps below.
+
+  1. Clone or download the source code from this repository.
+  2. Run `mvn clean install` from the root directory of the repository.
+  3. The generated Streaming Integrator distribution can be found at `streaming-integrator/modules/distribution/target/-streaming-integrator-<version>.zip`
 
 When building with dependencies, you need to build in the following order.
-1. [siddhi](https://github.com/siddhi-io/siddhi)
-2. [carbon-analytics-common](https://github.com/wso2/carbon-analytics-common)
-3. [carbon-analytics](https://github.com/wso2/carbon-analytics)
-4. [carbon-dashboards](https://github.com/wso2/carbon-dashboards)
-5. [carbon-ui-server](https://github.com/wso2/carbon-ui-server)
+  1. [siddhi](https://github.com/siddhi-io/siddhi)
+  2. [carbon-analytics-common](https://github.com/wso2/carbon-analytics-common)
+  3. [carbon-analytics](https://github.com/wso2/carbon-analytics)
+  4. [carbon-dashboards](https://github.com/wso2/carbon-dashboards)
+  5. [carbon-ui-server](https://github.com/wso2/carbon-ui-server)
 
-## Getting Started
+## Deploy Streaming Integrator
 
-To started with the Streaming Integrator follow the guides given below.
-
-* [Quick Start Guide](https://si.docs.wso2.com/quick-start-guide/quick-start-guide/): Step by step guide to get your first Siddhi application running in less than 5 minutes.
-
-* [Streaming Integrator 101](https://si.docs.wso2.com/quick-start-guide/getting-started/getting-started-guide-overview/): A 30 minute guide to explore the end to end development lifecycle of the Streaming Integrator.
-
-
-## Deploy in Docker
+### Deploy in Docker
 
 WSO2 Streaming Integrator has a Docker distribution so that it can be deployed in any container-orchestration system.
 The Docker image can be built from the source, or downloaded directly from Docker Hub.
 
-### Build the Docker Image
+#### Build the Docker image
 
 Before building the docker image, install Docker on the host machine.
 
 To build the Docker image from the source, issue the following command from the root directory.<br/>
 `mvn clean install -Ddocker.skip=false`
 
-### Get the Image from Docker Hub
+#### Get the image from Docker Hub
 
 To get the Docker image from Docker Hub, issue the following command.
 
@@ -99,22 +75,41 @@ To get the Docker image from Docker Hub, issue the following command.
 docker pull wso2/streaming-integrator
 ```
 
-## Deploy in Kubernetes
+### Deploy in Kubernetes
 
-WSO2 Streaming Integrator can be deployed in a Kubernetes cluster using Siddhi Operator.
-
-* [Siddhi operator](https://github.com/siddhi-io/siddhi-operator) enables the deployment of Siddhi applications directly in your Kubernetes cluster using a Kubernetes Custom Resource.
+WSO2 Streaming Integrator can be deployed in a Kubernetes cluster using Siddhi Operator. [Siddhi operator](https://github.com/siddhi-io/siddhi-operator) enables the deployment of Siddhi applications directly in your Kubernetes cluster using a Kubernetes Custom Resource.
 For more details see [Installing Streaming Integrator Using Kubernetes](https://si.docs.wso2.com/setup/installing-si-using-kubernetes/).
 
-## Support
+## Report issues
 
-We are committed to ensuring that your enterprise middleware deployment is completely supported from evaluation to production. Our unique approach ensures that all support leverages our open development methodology and is provided by the very same engineers who build the technology.
+### Open an issue
 
-For more details and to take advantage of this unique opportunity please visit our [support site](http://wso2.com/support).
+Help us make our software better! Submit any bug reports or feature requests through [WSO2 Streaming Integrator GitHub](https://github.com/wso2/product-streaming-integrator) repo.
 
+### Report security issues
 
-## Reporting Issues
+Please **do not** report security issues via GitHub issues. Instead, follow the [WSO2 Security Vulnerability Reporting Guidelines](https://security.docs.wso2.com/en/latest/security-reporting/vulnerability-reporting-guidelines/).
 
-We encourage you to report issues, documentation faults and feature requests regarding WSO2 Streaming integrator through the [WSO2 SI Issue Tracker](https://github.com/wso2/streaming-integrator/issues).
+## Join the community!
 
-When reporting security issues, please report them to [security@wso2.com](mailto:security@wso2.com), and make sure that you adhere to [WSO2 Security Vulnerability Reporting Guidelines](https://docs.wso2.com/display/Security/WSO2+Security+Vulnerability+Reporting+Guidelines). 
+- Read our [documentation](https://si.docs.wso2.com/en/latest/).
+- Get help on [Stack Overflow](https://stackoverflow.com/questions/tagged/wso2-streaming-integrator).
+- Join the conversation on [Discord](https://discord.gg/wso2).
+- Learn more by reading articles from our [library](https://wso2.com/library).
+
+## Get commercial support
+
+You can take advantage of a WSO2 on-prem product subscription for the full range of software product benefits needed in your enterprise, like expert support, continuous product updates, vulnerability monitoring, and access to the licensed distribution for commercial use.
+
+To learn more, check [WSO2 Subscription](https://wso2.com/subscription/).
+
+## Can you fill out this survey?
+
+WSO2 wants to learn more about our open source software (OSS) community and your communication preferences to serve you better.
+In addition, we may reach out to a small number of respondents to ask additional questions and offer a small gift.
+
+The survey is available at: [WSO2 Open Source Software Communication Survey
+](https://forms.gle/h5q4M3K7vyXba3bK6)
+
+--------------------------------------------------------------------------------
+(c) Copyright 2012 - 2025 WSO2 Inc.
