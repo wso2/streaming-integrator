@@ -74,7 +74,7 @@ To get the Docker image from Docker Hub, issue the following command.
 
 
 ```bash
-docker pull wso2/streaming-integrator
+docker pull wso2/wso2si
 ```
 
 ### Deploy in Kubernetes
