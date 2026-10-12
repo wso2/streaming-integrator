@@ -62,7 +62,7 @@ org.eclipse.osgi_3.14.0.v20190517-1309.jar                                      
 org.wso2.carbon.caching_1.1.3.jar                                                                   bundle         apache2
 javassist_3.19.0.GA.jar                                                                             bundle         apache2 + lgpl2 + mpl11
 org.wso2.carbon.streaming.integrator.statistics_3.0.81.jar                                          bundle         apache2
-json_3.0.0.wso2v9.jar                                                                               bundle         apache2
+json_3.0.0.wso2v9.jar                                                                               bundle         publicdomain
 org.eclipse.equinox.util_1.0.500.v20130404-1337.jar                                                 bundle         epl1
 org.wso2.carbon.databridge.core_6.1.75.jar                                                          bundle         apache2
 msf4j-analytics_2.9.3.jar                                                                           bundle         apache2
@@ -128,6 +128,7 @@ io.netty.handler_4.1.138.Final.jar                                              
 org.wso2.carbon.health.check.core_3.0.81.jar                                                        bundle         apache2
 io.netty.transport_4.1.138.Final.jar                                                                bundle         apache2
 commons-beanutils_1.11.0.wso2v1.jar                                                                 bundle         apache2
+commons-beanutils-1.11.0.jar                                                                        jarinbundle    apache2
 org.apache.commons.collections_3.2.2.jar                                                            bundle         apache2
 org.apache.commons.logging_1.2.0.jar                                                                bundle         apache2
 org.wso2.carbon.metrics.das.reporter_2.3.26.jar                                                     bundle         apache2
@@ -151,8 +152,8 @@ msf4j-swagger_2.9.3.jar                                                         
 siddhi-query-api_5.1.35.jar                                                                         bundle         apache2
 apache-mime4j-core_0.8.11.wso2v1.jar                                                                bundle         apache2
 io.netty.resolver_4.1.138.Final.jar                                                                 bundle         apache2
-jaxb-impl-2.3.0.jar                                                                                 bundle         cddl1 + gpl1
-jaxb-core-2.3.0.jar                                                                                 bundle         cddl1 + gpl1
+jaxb-impl-2.3.0.jar                                                                                 bundle         cddl1 + gpl2 + classpathexception
+jaxb-core-2.3.0.jar                                                                                 bundle         cddl1 + gpl2 + classpathexception
 org.wso2.carbon.databridge.receiver.binary_6.1.75.jar                                               bundle         apache2
 io.netty.handler-proxy_4.1.138.Final.jar                                                            bundle         apache2
 org.wso2.carbon.siddhi.extensions.installer.core_3.0.81.jar                                         bundle         apache2
@@ -172,7 +173,7 @@ slf4j-api-1.7.36.jar                                                            
 log4j-slf4j-impl-2.25.5.jar                                                                         bundle         apache2
 org.wso2.carbon.siddhi.extensions.installer.cli-3.0.81.jar                                          bundle         apache2
 istack-commons-runtime-3.0.8.jar                                                                    bundle         edl1
-javax.activation-1.2.0.jar                                                                          bundle         cddl1 + gpl1
+javax.activation-1.2.0.jar                                                                          bundle         cddl1 + gpl2 + classpathexception
 geronimo-activation_1.1_spec-1.1.jar                                                                bundle         apache2
 jaxb-api-2.3.0.jar                                                                                  bundle         cddl1
 siddhi-map-csv-2.1.2.jar                                                                            bundle         apache2
@@ -190,8 +191,8 @@ siddhi-map-json-5.2.6.jar                                                       
 siddhi-execution-json-2.0.11.jar                                                                    bundle         apache2
 siddhi-map-avro-2.2.6.jar                                                                           bundle         apache2
 siddhi-io-http-2.3.8.jar                                                                            bundle         apache2
-siddhi-io-cdc-2.2.2.jar                                                                             jar            apache2
-protobuf-java-3.25.5.jar                                                                            bundle         upl1.0
+siddhi-io-cdc-2.2.2.jar                                                                             bundle         apache2
+protobuf-java-3.25.5.jar                                                                            bundle         bsd3
 siddhi-execution-list-1.0.2.jar                                                                     bundle         apache2
 siddhi-io-kafka-5.0.24.jar                                                                          bundle         apache2
 siddhi-io-email-2.0.8.jar                                                                           bundle         apache2
@@ -231,11 +232,9 @@ antlr3         ANTLR 3 License
                http://www.antlr.org/license.html
 bsd3           Berkeley License - 3
                http://opensource.org/licenses/BSD-3-Clause
-gpl1           General Public License Version 1.0
-               https://www.gnu.org/licenses/old-licenses/gpl-1.0.html
 mit            MIT License
                http://www.opensource.org/licenses/mit-license.php
 edl1           Eclipse Distribution License Version 1.0
                http://www.eclipse.org/org/documents/edl-v10.php
-upl1.0         Universal Permissive License, Version 1.0
-               http://opensource.org/licenses/UPL
+publicdomain   Public Domain
+               https://github.com/stleary/JSON-java/blob/master/LICENSE
